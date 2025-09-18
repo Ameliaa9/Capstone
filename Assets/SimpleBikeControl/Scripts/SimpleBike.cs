@@ -151,7 +151,7 @@ namespace KikiNgao.SimpleBikeControl
             powerUp = 1f;
             currentLegPower = legPower * 10 * powerUp;
         }
-        private void MovingBike()
+        public void MovingBike()
         {
             Freeze = false;
             m_Rigidbody.linearDamping = GetBikeSpeedMs() / m_Rigidbody.mass * airResistance;
