@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 19948703}
   - component: {fileID: 19948702}
   - component: {fileID: 19948701}
+  - component: {fileID: 19948705}
   m_Layer: 0
   m_Name: Third Person Aim Camera
   m_TagString: Untagged
@@ -235,6 +236,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.83500004, y: 1.52, z: -2.7610002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19948705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19948700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d91222276be624a97ad8befcea640f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 543450652418347286}
+  rotationSpeed: 70
+--- !u!1 &29995916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 29995917}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &29995917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29995916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9755721, y: 0.21755755, z: -0.007963711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3536,6 +3582,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupImage: {fileID: 1773842039}
+--- !u!114 &1968856456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968856450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a2a75af07b00d449f10df2ed12d64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biker: {fileID: 0}
 --- !u!1001 &2035325194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4065,6 +4124,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 820605280740181320, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968856455}
+    - targetCorrespondingSourceObject: {fileID: 820605280740181320, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968856456}
   m_SourcePrefab: {fileID: 100100000, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
 --- !u!1001 &9155854503940586365
 PrefabInstance:
@@ -4188,3 +4250,4 @@ SceneRoots:
   - {fileID: 2091903760}
   - {fileID: 2035325194}
   - {fileID: 640319960}
+  - {fileID: 29995917}

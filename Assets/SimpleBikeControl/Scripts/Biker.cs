@@ -254,7 +254,7 @@ namespace KikiNgao.SimpleBikeControl
             // Debug.Log("Exit Bike");
         }
 
-        private void EnterExitBike()
+        public void EnterExitBike()
         {
             if (riding) ExitBike();
             else EnterBike();

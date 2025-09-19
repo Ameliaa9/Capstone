@@ -5,7 +5,6 @@ namespace KikiNgao.SimpleBikeControl
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
     {
-
         [Header("Player Setting")]
         public bool disable;
         [SerializeField] private string AnimSpeedParaName = "Speed";
@@ -21,68 +20,66 @@ namespace KikiNgao.SimpleBikeControl
         private Vector3 m_Velocity;
 
         private CharacterController characterCtrl;
+        [HideInInspector] public Animator m_Animator;
 
-        [HideInInspector]
-        public Animator m_Animator;
         private Quaternion desiredRotation = Quaternion.identity;
         private Transform camTrans;
         private Vector3 camForward;
-        private InputManager inputManager;
-        private Vector3 offset;
         private Vector3 gravityMagnitude;
 
         private void Start()
         {
-            inputManager = GameManager.Instance.GetInputManager;
             characterCtrl = GetComponent<CharacterController>();
             m_Animator = GetComponent<Animator>();
             camTrans = Camera.main.transform;
             gravityMagnitude = new Vector3(0, gravity, 0);
         }
+
         public void DisablePlayerCtrl() { disable = true; characterCtrl.enabled = false; }
         public void EnablePlayerCtrl() { disable = false; characterCtrl.enabled = true; }
 
         void FixedUpdate()
         {
             if (disable) return;
-            // input
-            float inputSpeed = Mathf.Clamp01(Mathf.Abs(inputManager.horizontal) + Mathf.Abs(inputManager.vertical));
 
-            bool has_H_Input = !Mathf.Approximately(inputManager.horizontal, 0);
-            bool has_V_Input = !Mathf.Approximately(inputManager.vertical, 0);
+            // ✅ Arrow Key Inputs
+            float horizontal = 0f;
+            float vertical = 0f;
+
+            if (Input.GetKey(KeyCode.UpArrow)) vertical += 1f;
+            if (Input.GetKey(KeyCode.DownArrow)) vertical -= 1f;
+            if (Input.GetKey(KeyCode.RightArrow)) horizontal += 1f;
+            if (Input.GetKey(KeyCode.LeftArrow)) horizontal -= 1f;
+
+            float inputSpeed = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical));
+            bool has_H_Input = !Mathf.Approximately(horizontal, 0);
+            bool has_V_Input = !Mathf.Approximately(vertical, 0);
 
             if (!stopMoverment) moving = has_H_Input || has_V_Input;
             else moving = false;
-            // move vector 
+
+            // Direction vector
             if (camTrans != null)
             {
                 camForward = Vector3.Scale(camTrans.forward, new Vector3(1, 0, 1).normalized);
-                m_MoveVector = inputManager.vertical * camForward + inputManager.horizontal * camTrans.right;
+                m_MoveVector = vertical * camForward + horizontal * camTrans.right;
                 m_MoveVector.Normalize();
             }
 
+            // Movement
             m_Velocity = inputSpeed * m_MoveVector * runSpeed * Time.deltaTime;
-            if (!characterCtrl.isGrounded) m_Velocity += gravityMagnitude;
+            if (!characterCtrl.isGrounded)
+                m_Velocity += gravityMagnitude;
 
-            //animation    
-
-
-
-
-            //m_Animator.SetBool("Moving", moving);
+            // Animation
             m_Animator.SetFloat(AnimSpeedParaName, inputSpeed);
 
-            //move and rotate
-
+            // Rotation
             Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_MoveVector, turnSpeed * Time.deltaTime, 0f);
             desiredRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredForward), turnSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, Time.deltaTime * rotationDamping);
+
             characterCtrl.Move(m_Velocity);
-
-
         }
-
     }
 }
-
-
