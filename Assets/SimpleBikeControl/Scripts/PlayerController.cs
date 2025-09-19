@@ -58,13 +58,8 @@ namespace KikiNgao.SimpleBikeControl
             if (!stopMoverment) moving = has_H_Input || has_V_Input;
             else moving = false;
 
-            // Direction vector
-            if (camTrans != null)
-            {
-                camForward = Vector3.Scale(camTrans.forward, new Vector3(1, 0, 1).normalized);
-                m_MoveVector = vertical * camForward + horizontal * camTrans.right;
-                m_MoveVector.Normalize();
-            }
+            m_MoveVector = new Vector3(horizontal, 0f, vertical).normalized;
+
 
             // Movement
             m_Velocity = inputSpeed * m_MoveVector * runSpeed * Time.deltaTime;
