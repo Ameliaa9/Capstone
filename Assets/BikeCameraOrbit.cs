@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class BikeCameraOrbit : MonoBehaviour
@@ -8,6 +9,10 @@ public class BikeCameraOrbit : MonoBehaviour
     public float verticalSpeed = 50f;
     public float minPitch = -20f;
     public float maxPitch = 60f;
+
+    [Header("Aim Target")]
+    public Transform aimTarget;
+    public float aimDistance = 10f;
 
     private float yaw = 0f;
     private float pitch = 20f;
@@ -42,6 +47,10 @@ public class BikeCameraOrbit : MonoBehaviour
 
         transform.position = followTarget.position + rotatedOffset;
         transform.LookAt(followTarget.position + Vector3.up * 1.5f);
+
+        if (aimTarget != null)
+        {
+            aimTarget.position = followTarget.position + rotation * (Vector3.forward * aimDistance);
+        }
     }
 }
-

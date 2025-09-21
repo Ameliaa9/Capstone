@@ -44,7 +44,7 @@ namespace ProjectileCurveVisualizerSystem
         private float component;
         private float launchAngle;
 
-        // Bézier curve variables
+        
         private Vector3 startPoint = Vector3.zero;
         private Vector3 endPoint = Vector3.zero;
         private Vector3 controlPoint = Vector3.zero;
@@ -54,7 +54,7 @@ namespace ProjectileCurveVisualizerSystem
 
         void Awake()
         {
-            // Initialize variables
+            
             lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.positionCount = curveSubdivision;
 
@@ -92,13 +92,13 @@ namespace ProjectileCurveVisualizerSystem
 
             while (t < maximumInAirTime)
             {
-                // Move the detection sphere along the projectile curve
+                
                 nextDetectionPosition = updatedProjectileStartPosition + new Vector3(launchVelocity.x * t, launchVelocity.y * t - 4.9f * t * t, launchVelocity.z * t);
                 t += detectionInterval;
 
                 detectionPositionList.Add(nextDetectionPosition);
 
-                // Perform ray physics detection for each detection position pair, check whether there is obstacle blocked between them
+              
                 rayDirection = (nextDetectionPosition - previousDetectionPosition).normalized;
                 rayLength = Vector3.Distance(previousDetectionPosition, nextDetectionPosition);
 
@@ -131,7 +131,7 @@ namespace ProjectileCurveVisualizerSystem
                 }
                 else
                 {
-                    // Perform sphere physics detection at current position, check whether there is obstacle on either side of the curve
+                   
                     if (Physics.OverlapSphereNonAlloc(nextDetectionPosition, projectileRadius, hitColliderArray, ~ignoredLayers, QueryTriggerInteraction.Ignore) > 0)
                     {
                         notHit = false;
@@ -174,11 +174,11 @@ namespace ProjectileCurveVisualizerSystem
             else if (detectionPositionList.Count == 2)
                 controlPoint = (startPoint + endPoint) / 2.0f;
 
-            // Render Bézier curve
+          
             lineRenderer.SetPosition(0, startPoint);
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, endPoint);
 
-            // The following t is a parameter Bézier curve, not the time t above
+            
             t = 0.0f;
             for (int i = 0; i < lineRenderer.positionCount; i++)
             {
@@ -191,7 +191,7 @@ namespace ProjectileCurveVisualizerSystem
         {
             hit = defaultRaycastHit;
 
-            // Use the target object velocity to predict the end position
+     
             predictedProjectileTravelTime = (Vector3.Distance(projectileStartPosition, projectileEndPosition) - projectileStartPositionForwardOffset) / launchSpeed;
             predictedTargetPosition = projectileEndPosition + (targetObjectVelocity - throwerVelocity) * predictedProjectileTravelTime;
 
@@ -213,12 +213,11 @@ namespace ProjectileCurveVisualizerSystem
 
             component = Mathf.Sqrt(component);
 
-            // Only calculate the result with lower angle
             launchAngle = Mathf.Atan2(launchSpeedSquare - component, 9.8f * horizontalDistance);
 
             projectileLaunchVelocity = horizontalDirection * Mathf.Cos(launchAngle) * launchSpeed + Vector3.up * Mathf.Sin(launchAngle) * launchSpeed;
 
-            // Perform physics detection after obtaining the launch velocity
+        
             if (!lineRenderer.enabled)
                 lineRenderer.enabled = true;
 
@@ -230,13 +229,13 @@ namespace ProjectileCurveVisualizerSystem
 
             while (t < maximumInAirTime)
             {
-                // Move the detection sphere along the projectile curve
+                
                 nextDetectionPosition = updatedProjectileStartPosition + new Vector3(projectileLaunchVelocity.x * t, projectileLaunchVelocity.y * t - 4.9f * t * t, projectileLaunchVelocity.z * t);
                 t += detectionInterval;
 
                 detectionPositionList.Add(nextDetectionPosition);
 
-                // Perform ray physics detection for each detection position pair, check whether there is obstacle blocked between them
+               
                 rayDirection = (nextDetectionPosition - previousDetectionPosition).normalized;
                 rayLength = Vector3.Distance(previousDetectionPosition, nextDetectionPosition);
 
@@ -257,7 +256,7 @@ namespace ProjectileCurveVisualizerSystem
                 }
                 else
                 {
-                    // Perform sphere physics detection at current position, check whether there is obstacle on either side of the curve
+                 
                     if (Physics.OverlapSphereNonAlloc(nextDetectionPosition, projectileRadius, hitColliderArray, ~ignoredLayers, QueryTriggerInteraction.Ignore) > 0)
                     {
                         notHit = false;
@@ -290,11 +289,11 @@ namespace ProjectileCurveVisualizerSystem
             else if (detectionPositionList.Count == 2)
                 controlPoint = (startPoint + endPoint) / 2.0f;
 
-            // Render Bézier curve
+        
             lineRenderer.SetPosition(0, startPoint);
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, endPoint);
 
-            // The following t is a parameter Bézier curve, not the time t above
+      
             t = 0.0f;
             for (int i = 0; i < lineRenderer.positionCount; i++)
             {
