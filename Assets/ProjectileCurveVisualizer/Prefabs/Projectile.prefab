@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileRigidbody: {fileID: 7877657679694937259}
   projectileMeshCollider: {fileID: 4090084212195739673}
+  notificationUI: {fileID: 0}
 --- !u!1 &6486169691521818736
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c60e5e2899c382340a601fa190238c9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
