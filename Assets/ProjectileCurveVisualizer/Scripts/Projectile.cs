@@ -7,15 +7,28 @@ namespace ProjectileCurveVisualizerSystem
         public Rigidbody projectileRigidbody;
         public MeshCollider projectileMeshCollider;
 
-        public GameObject notificationUI;
-
+        private string targetTag;
+        private GameObject notificationUI;
         private bool hasHit = false;
+
+        public StartNextDeliveryTrigger deliveryTrigger;
 
         public void Throw(Vector3 velocity)
         {
             projectileMeshCollider.enabled = true;
             projectileRigidbody.useGravity = true;
             projectileRigidbody.linearVelocity = velocity;
+            hasHit = false;
+        }
+
+        public void SetTargetTag(string tag)
+        {
+            targetTag = tag;
+        }
+
+        public void SetNotificationUI(GameObject ui)
+        {
+            notificationUI = ui;
         }
 
         void OnCollisionEnter(Collision collision)
@@ -23,11 +36,13 @@ namespace ProjectileCurveVisualizerSystem
             if (hasHit) return;
             hasHit = true;
 
-            if (collision.gameObject.CompareTag("TargetBuilding"))
+            if (collision.gameObject.CompareTag(targetTag))
             {
-                if (notificationUI != null)
+                Debug.Log("Correct building hit!");
+
+                if (deliveryTrigger != null)
                 {
-                    notificationUI.SetActive(true);
+                    deliveryTrigger.MarkDeliveryComplete();
                 }
             }
         }
