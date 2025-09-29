@@ -7,11 +7,14 @@ namespace ProjectileCurveVisualizerSystem
         public Rigidbody projectileRigidbody;
         public MeshCollider projectileMeshCollider;
 
-        private string targetTag;
-        private GameObject notificationUI;
-        private bool hasHit = false;
-
+        [Header("Delivery Settings")]
         public StartNextDeliveryTrigger deliveryTrigger;
+
+        [Header("Building Tags + Notifications")]
+        public string[] buildingTags;              // assign TargetBuilding, TargetBuilding2, TargetBuilding3 in Inspector
+        public GameObject[] buildingNotificationUIs; // assign UI images for each building in Inspector
+
+        private bool hasHit = false;
 
         public void Throw(Vector3 velocity)
         {
@@ -21,30 +24,34 @@ namespace ProjectileCurveVisualizerSystem
             hasHit = false;
         }
 
-        public void SetTargetTag(string tag)
-        {
-            targetTag = tag;
-        }
-
-        public void SetNotificationUI(GameObject ui)
-        {
-            notificationUI = ui;
-        }
-
-        void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (hasHit) return;
             hasHit = true;
 
-            if (collision.gameObject.CompareTag(targetTag))
+            // Loop through all tags to see which one we hit
+            for (int i = 0; i < buildingTags.Length; i++)
             {
-                Debug.Log("Correct building hit!");
-
-                if (deliveryTrigger != null)
+                if (!string.IsNullOrEmpty(buildingTags[i]) && collision.gameObject.CompareTag(buildingTags[i]))
                 {
-                    deliveryTrigger.MarkDeliveryComplete();
+                    Debug.Log("Correct building hit: " + buildingTags[i]);
+
+                    // Show the notification UI for this building
+                    if (i < buildingNotificationUIs.Length && buildingNotificationUIs[i] != null)
+                    {
+                        buildingNotificationUIs[i].SetActive(true);
+                    }
+
+                    // Tell the delivery system that we succeeded
+                    if (deliveryTrigger != null)
+                    {
+                        deliveryTrigger.MarkDeliveryComplete();
+                    }
+
+                    break; // exit loop once matched
                 }
             }
         }
     }
 }
+

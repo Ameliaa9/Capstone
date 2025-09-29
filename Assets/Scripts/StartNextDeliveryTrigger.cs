@@ -36,9 +36,7 @@ public class StartNextDeliveryTrigger : MonoBehaviour
             if (ui != null) ui.SetActive(false);
         }
 
-        // Set new tag and notification
-        deliveryProjectile.SetTargetTag(targetTags[currentIndex]);
-        deliveryProjectile.SetNotificationUI(notificationUIs[currentIndex]);
+       
 
         // Set timer duration and reset
         if (deliveryTimer != null)
