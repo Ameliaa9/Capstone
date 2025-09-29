@@ -7,7 +7,7 @@ namespace ProjectileCurveVisualizerSystem
         public Rigidbody projectileRigidbody;
         public MeshCollider projectileMeshCollider;
 
-        public GameObject notificationUI; 
+        public GameObject notificationUI;
 
         private bool hasHit = false;
 
