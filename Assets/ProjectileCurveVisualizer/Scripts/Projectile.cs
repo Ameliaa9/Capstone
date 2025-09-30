@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Needed for IEnumerator
 
 namespace ProjectileCurveVisualizerSystem
 {
@@ -40,6 +41,7 @@ namespace ProjectileCurveVisualizerSystem
                     if (i < buildingNotificationUIs.Length && buildingNotificationUIs[i] != null)
                     {
                         buildingNotificationUIs[i].SetActive(true);
+                        StartCoroutine(HideAfterSeconds(buildingNotificationUIs[i], 5f)); // ? Hide after 5 seconds
                     }
 
                     // Tell the delivery system that we succeeded
@@ -52,6 +54,15 @@ namespace ProjectileCurveVisualizerSystem
                 }
             }
         }
+
+        // ? Coroutine to hide the notification UI
+        private IEnumerator HideAfterSeconds(GameObject obj, float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
     }
 }
-

@@ -331,6 +331,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3311439150536398537, guid: 8440ee49608ac2d46b8ee2749740384b, type: 3}
+      propertyPath: deliverySystem
+      value: 
+      objectReference: {fileID: 1938429292}
+    - target: {fileID: 3311439150536398537, guid: 8440ee49608ac2d46b8ee2749740384b, type: 3}
       propertyPath: notificationUI
       value: 
       objectReference: {fileID: 493159904}
@@ -28303,7 +28307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668408969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31371,15 +31375,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deliveryTimer: {fileID: 668408970}
-  deliveryProjectile: {fileID: 1702040905}
+  deliveryProjectile: {fileID: 0}
   notificationUIs:
   - {fileID: 493159904}
   - {fileID: 934767698}
   - {fileID: 1114441549}
-  targetTags:
-  - TargetBuilding
-  - TargetBuilding2
-  - TargetBuilding3
+  targetTags: []
   deliveryDurations: []
   playerTransform: {fileID: 1555228121}
 --- !u!1 &743627522 stripped
