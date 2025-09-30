@@ -1,73 +1,55 @@
 using UnityEngine;
-using TMPro;
 
 public class StartNextDeliveryTrigger : MonoBehaviour
 {
-    public Timer deliveryTimer;
-    public ProjectileCurveVisualizerSystem.Projectile deliveryProjectile;
-    public GameObject[] notificationUIs;
-    public string[] targetTags;
-    public float[] deliveryDurations; // Set custom timer durations in Inspector
-    public Transform playerTransform; // Drag your Player here in the Inspector
+    public DeliveryTimer deliveryTimer; // renamed version of your Timer.cs
+    public GameObject thankYouImage;    // image to show when timer starts
+    public float deliveryDuration = 5f; // custom time for this delivery
 
-    private int currentIndex = 0;
-    private bool waitingForDelivery = false;
+    private static GameObject currentlyShownImage = null;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform == playerTransform && !waitingForDelivery)
+        if (other.CompareTag("Player"))
         {
-            StartDeliveryRound();
+            StartDeliveryTimer();
         }
     }
 
-    private void StartDeliveryRound()
+    private void StartDeliveryTimer()
     {
-        // Prevent starting more than available rounds
-        if (currentIndex >= targetTags.Length || currentIndex >= notificationUIs.Length || currentIndex >= deliveryDurations.Length)
-        {
-            Debug.Log("No more deliveries.");
-            return;
-        }
-
-        // Turn off all UI notifications
-        foreach (GameObject ui in notificationUIs)
-        {
-            if (ui != null) ui.SetActive(false);
-        }
-
-       
-
-        // Set timer duration and reset
         if (deliveryTimer != null)
         {
-            float seconds = deliveryDurations[currentIndex];
-            deliveryTimer.seconds = (int)seconds;
-            deliveryTimer.ResetTimer();
+            deliveryTimer.SetDurationAndStart((int)deliveryDuration);
+
+
         }
 
-        waitingForDelivery = true;
-    }
-
-    public void MarkDeliveryComplete()
-    {
-        Debug.Log("Delivery completed!");
-
-        // Show success notification
-        if (currentIndex < notificationUIs.Length && notificationUIs[currentIndex] != null)
+        // Hide previous image if another was active
+        if (currentlyShownImage != null && currentlyShownImage != thankYouImage)
         {
-            notificationUIs[currentIndex].SetActive(true);
+            currentlyShownImage.SetActive(false);
         }
 
-        waitingForDelivery = false;
-        currentIndex++;
+        // Show new image
+        if (thankYouImage != null)
+        {
+            thankYouImage.SetActive(true);
+            currentlyShownImage = thankYouImage;
+
+            // Automatically hide it after the timer duration
+            StartCoroutine(HideAfterSeconds(thankYouImage, deliveryDuration));
+        }
     }
 
-    public void MarkDeliveryFailed()
+    private System.Collections.IEnumerator HideAfterSeconds(GameObject obj, float seconds)
     {
-        Debug.Log("Delivery failed.");
-
-        waitingForDelivery = false;
-        currentIndex++;
+        yield return new WaitForSeconds(seconds);
+        if (obj != null)
+        {
+            obj.SetActive(false);
+            if (currentlyShownImage == obj)
+                currentlyShownImage = null;
+        }
     }
 }

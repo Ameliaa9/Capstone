@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
 {
-    public Timer delivery1Timer;
-    public Timer delivery2Timer;
-    public Timer delivery3Timer;
+    public DeliveryTimer delivery1Timer;
+    public DeliveryTimer delivery2Timer;
+    public DeliveryTimer delivery3Timer;
 
     public GameObject startDelivery2Trigger;
     public GameObject startDelivery3Trigger;
