@@ -4,17 +4,17 @@ using System.Collections;
 
 public class DeliveryTimer : MonoBehaviour
 {
-    public float startTime = 30f;       // Time in seconds
+    public float startTime = 30f;     
     private float currentTime;
     private bool isRunning = false;
-    public int maxTime = 10; // default value if not set
+    public int maxTime = 10; 
 
     public TextMeshProUGUI countdownText;
 
-    // NEW: Optional image to show while this timer is active
+ 
     public GameObject associatedImage;
 
-    // NEW: Shared static reference to track the current visible image
+   
     private static GameObject currentlyShownImage = null;
 
     private void Start()
@@ -27,32 +27,32 @@ public class DeliveryTimer : MonoBehaviour
         maxTime = seconds;
     }
 
-    // NEW: Set the time and auto-start the timer with image
+
     public void SetDurationAndStart(int seconds)
     {
         SetDuration(seconds);
         StartTimerWithImage();
     }
 
-    // NEW: Starts the timer and shows the assigned image
+   
     public void StartTimerWithImage()
     {
         currentTime = maxTime;
         isRunning = true;
 
-        // Turn off any previously shown image
+       
         if (currentlyShownImage != null && currentlyShownImage != associatedImage)
         {
             currentlyShownImage.SetActive(false);
         }
 
-        // Show this image
+        
         if (associatedImage != null)
         {
             associatedImage.SetActive(true);
             currentlyShownImage = associatedImage;
 
-            // Hide it after the timer duration
+           
             StartCoroutine(HideAfterSeconds(associatedImage, maxTime));
         }
 
@@ -101,7 +101,7 @@ public class DeliveryTimer : MonoBehaviour
         }
     }
 
-    // NEW: Helper to hide the image after time ends
+   
     private IEnumerator HideAfterSeconds(GameObject obj, float seconds)
     {
         yield return new WaitForSeconds(seconds);

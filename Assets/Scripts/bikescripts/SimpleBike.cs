@@ -69,9 +69,7 @@ namespace KikiNgao.SimpleBikeControl
             return false;
         }
 
-        // ─────────────────────────────
-        // Projectile System Variables
-        // ─────────────────────────────
+       
         public ProjectileCurveVisualizer projectileCurveVisualizer;
         public GameObject projectileGameObject;
         private bool inProjectileMode = false;
@@ -279,6 +277,31 @@ namespace KikiNgao.SimpleBikeControl
             if (angle > 180)
                 return angle - 360;
             return angle;
+        }
+
+        private bool isSlowed = false;
+        private float originalLegPower;
+        private Coroutine slowRoutine;
+
+        public void ApplyTemporarySlowdown(float multiplier, float duration)
+        {
+            if (isSlowed) return;
+
+            isSlowed = true;
+            originalLegPower = legPower;
+            legPower *= multiplier;
+
+            if (slowRoutine != null)
+                StopCoroutine(slowRoutine);
+
+            slowRoutine = StartCoroutine(RemoveSlowdownAfterDelay(duration));
+        }
+
+        private System.Collections.IEnumerator RemoveSlowdownAfterDelay(float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            legPower = originalLegPower;
+            isSlowed = false;
         }
     }
 }

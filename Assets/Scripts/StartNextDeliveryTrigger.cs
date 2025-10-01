@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class StartNextDeliveryTrigger : MonoBehaviour
 {
-    public DeliveryTimer deliveryTimer; // renamed version of your Timer.cs
-    public GameObject thankYouImage;    // image to show when timer starts
-    public float deliveryDuration = 5f; // custom time for this delivery
+    public DeliveryTimer deliveryTimer; 
+    public GameObject thankYouImage;    
+    public float deliveryDuration = 5f; 
 
     private static GameObject currentlyShownImage = null;
 
@@ -25,19 +25,19 @@ public class StartNextDeliveryTrigger : MonoBehaviour
 
         }
 
-        // Hide previous image if another was active
+        
         if (currentlyShownImage != null && currentlyShownImage != thankYouImage)
         {
             currentlyShownImage.SetActive(false);
         }
 
-        // Show new image
+        
         if (thankYouImage != null)
         {
             thankYouImage.SetActive(true);
             currentlyShownImage = thankYouImage;
 
-            // Automatically hide it after the timer duration
+            
             StartCoroutine(HideAfterSeconds(thankYouImage, deliveryDuration));
         }
     }

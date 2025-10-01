@@ -4,10 +4,10 @@ using System.Collections;
 public class DeliverySpot : MonoBehaviour
 {
     [Header("Notification UI")]
-    public GameObject successPopup; // Assign success popup UI
+    public GameObject successPopup; 
 
     [Header("Timer for this Delivery")]
-    public DeliveryTimer deliveryTimer;     // Assign the timer GameObject's script
+    public DeliveryTimer deliveryTimer;    
 
     private bool delivered = false;
 
@@ -19,14 +19,14 @@ public class DeliverySpot : MonoBehaviour
 
         Debug.Log("Delivery successful at: " + gameObject.name);
 
-        // Show popup
+       
         if (successPopup != null)
         {
             successPopup.SetActive(true);
             StartCoroutine(HideAfterSeconds(successPopup, 5f));
         }
 
-        // Stop this building's timer
+        
         if (deliveryTimer != null)
         {
             deliveryTimer.StopTimer();

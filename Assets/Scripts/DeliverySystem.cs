@@ -9,7 +9,7 @@ public class DeliverySystem : MonoBehaviour
     public float[] deliveryTimes;
 
     [Header("Depot Triggers")]
-    public string[] depotTags; // e.g. "Depot1","Depot2","Depot3"
+    public string[] depotTags; 
 
     [Header("TMP Messages")]
     public TMP_Text collectedText;
@@ -25,7 +25,7 @@ public class DeliverySystem : MonoBehaviour
     public GameObject failImage;
 
     [Header("Phones (one per delivery)")]
-    public GameObject[] phones; // One phone popup per delivery
+    public GameObject[] phones; 
     private GameObject currentPhone;
 
     private int currentDelivery = 0;
@@ -44,7 +44,7 @@ public class DeliverySystem : MonoBehaviour
         if (successImage != null) successImage.SetActive(false);
         if (failImage != null) failImage.SetActive(false);
 
-        // hide all phones at start
+        
         if (phones != null)
         {
             foreach (var p in phones)
@@ -71,7 +71,7 @@ public class DeliverySystem : MonoBehaviour
                 hasPackage = false;
                 Debug.Log("Time ran out for house " + currentDelivery);
 
-                // hide current phone
+                
                 if (currentPhone != null)
                     currentPhone.SetActive(false);
 
@@ -89,7 +89,7 @@ public class DeliverySystem : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // check which depot triggered
+        
         for (int i = 0; i < depotTags.Length; i++)
         {
             if (other.CompareTag(depotTags[i]) && !hasPackage && currentDelivery < deliveryHouses.Length)
@@ -100,12 +100,12 @@ public class DeliverySystem : MonoBehaviour
                 if (collectedText != null)
                     StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 3f));
 
-                StartTimer(i); // pass index to show correct phone image
+                StartTimer(i); 
                 return;
             }
         }
 
-        // delivering to building
+      
         if (other.CompareTag("TargetBuilding") && hasPackage)
         {
             Debug.Log("Entered target building trigger.");
@@ -142,15 +142,15 @@ public class DeliverySystem : MonoBehaviour
             if (timerText != null)
                 timerText.text = $"Time left: {Mathf.Ceil(timer)}s";
 
-            // Show correct phone image
+           
             if (phones != null && depotIndex < phones.Length)
             {
                 if (currentPhone != null)
-                    currentPhone.SetActive(false); // hide previous
+                    currentPhone.SetActive(false); 
 
                 currentPhone = phones[depotIndex];
                 if (currentPhone != null)
-                    currentPhone.SetActive(true); // show current
+                    currentPhone.SetActive(true); 
             }
         }
     }
@@ -177,7 +177,7 @@ public class DeliverySystem : MonoBehaviour
         if (successImage != null)
             StartCoroutine(ShowImageForSeconds(successImage, 3f));
 
-        // hide phone
+      
         if (currentPhone != null)
             currentPhone.SetActive(false);
 
