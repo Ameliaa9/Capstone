@@ -4,17 +4,14 @@ using System.Collections;
 
 public class DeliveryTimer : MonoBehaviour
 {
-    public float startTime = 30f;     
+    public float startTime = 30f;
     private float currentTime;
     private bool isRunning = false;
-    public int maxTime = 10; 
+    public int maxTime = 10;
 
     public TextMeshProUGUI countdownText;
-
- 
     public GameObject associatedImage;
 
-   
     private static GameObject currentlyShownImage = null;
 
     private void Start()
@@ -27,32 +24,24 @@ public class DeliveryTimer : MonoBehaviour
         maxTime = seconds;
     }
 
-
     public void SetDurationAndStart(int seconds)
     {
         SetDuration(seconds);
         StartTimerWithImage();
     }
 
-   
     public void StartTimerWithImage()
     {
         currentTime = maxTime;
         isRunning = true;
 
-       
         if (currentlyShownImage != null && currentlyShownImage != associatedImage)
-        {
             currentlyShownImage.SetActive(false);
-        }
 
-        
         if (associatedImage != null)
         {
             associatedImage.SetActive(true);
             currentlyShownImage = associatedImage;
-
-           
             StartCoroutine(HideAfterSeconds(associatedImage, maxTime));
         }
 
@@ -61,19 +50,31 @@ public class DeliveryTimer : MonoBehaviour
 
     public void StartTimer()
     {
-        ResetTimer();
+        currentTime = maxTime;
         isRunning = true;
+        UpdateUI();
     }
 
     public void StopTimer()
     {
         isRunning = false;
+        if (countdownText != null)
+            countdownText.text = ""; // hide UI when stopped
+
+        if (associatedImage != null)
+            associatedImage.SetActive(false);
+
+        if (currentlyShownImage == associatedImage)
+            currentlyShownImage = null;
+
+        Debug.Log("Timer stopped for " + gameObject.name);
     }
 
     public void ResetTimer()
     {
         currentTime = startTime;
-        UpdateUI();
+        if (!isRunning && countdownText != null)
+            countdownText.text = ""; // only show while running
     }
 
     private void Update()
@@ -86,6 +87,7 @@ public class DeliveryTimer : MonoBehaviour
             currentTime = 0f;
             isRunning = false;
             Debug.Log("Timer ended for " + gameObject.name);
+            StopTimer();
         }
 
         UpdateUI();
@@ -93,7 +95,7 @@ public class DeliveryTimer : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (countdownText != null)
+        if (countdownText != null && isRunning)
         {
             int mins = Mathf.FloorToInt(currentTime / 60f);
             int secs = Mathf.FloorToInt(currentTime % 60f);
@@ -101,7 +103,6 @@ public class DeliveryTimer : MonoBehaviour
         }
     }
 
-   
     private IEnumerator HideAfterSeconds(GameObject obj, float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -113,4 +114,3 @@ public class DeliveryTimer : MonoBehaviour
         }
     }
 }
-

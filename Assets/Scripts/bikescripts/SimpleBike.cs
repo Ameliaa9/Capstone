@@ -27,8 +27,11 @@ namespace KikiNgao.SimpleBikeControl
         [SerializeField] private float restDrag = 2f;
         [SerializeField] private float restAngularDrag = .2f;
         [SerializeField] private float forceRatio = 2f;
-        [SerializeField] private AnimationCurve frontWheelRestrictCurve = new AnimationCurve(new Keyframe(0f, 35f), new Keyframe(50f, 1f));
+        [SerializeField]
+        private AnimationCurve frontWheelRestrictCurve =
+            new AnimationCurve(new Keyframe(0f, 35f), new Keyframe(50f, 1f));
 
+        // Restored IK target references
         public Transform leftHandTarget, rightHandTarget;
         public Transform leftPendalTarget, rightPendalTarget;
         public Transform leftStandTarget, rightStandTarget;
@@ -49,8 +52,9 @@ namespace KikiNgao.SimpleBikeControl
 
         public bool IsReverse() => inputManager.vertical < 0;
         public bool IsMovingToward => inputManager.vertical > 0;
-        private bool IsRest() => inputManager.vertical == 0 && inputManager.horizontal == 0 || inputManager.vertical == 0 && inputManager.horizontal != 0;
-        public bool IsMoving() => inputManager.vertical != 0;
+        public bool IsMoving() => inputManager.vertical != 0; // restored
+        private bool IsRest() => (inputManager.vertical == 0 && inputManager.horizontal == 0) ||
+                                 (inputManager.vertical == 0 && inputManager.horizontal != 0);
         private bool IsTurning() => inputManager.horizontal != 0;
         private bool IsSpeedUp() => inputManager.speedUp;
 
@@ -69,7 +73,7 @@ namespace KikiNgao.SimpleBikeControl
             return false;
         }
 
-       
+        // Projectile stuff (unchanged)
         public ProjectileCurveVisualizer projectileCurveVisualizer;
         public GameObject projectileGameObject;
         private bool inProjectileMode = false;
@@ -90,6 +94,15 @@ namespace KikiNgao.SimpleBikeControl
             reversePower = legPower * 3;
 
             Freeze = true;
+
+            // Auto-seat player at start
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null && bikerHolder != null)
+            {
+                player.transform.SetParent(bikerHolder);
+                player.transform.localPosition = Vector3.zero;
+                player.transform.localRotation = Quaternion.identity;
+            }
         }
 
         void Update()
@@ -108,7 +121,9 @@ namespace KikiNgao.SimpleBikeControl
                 launchVelocity = transform.forward + Vector3.up * 0.3f;
                 launchVelocity = launchVelocity.normalized * launchSpeed;
 
-                projectileCurveVisualizer.VisualizeProjectileCurve(transform.position, 1.0f, launchVelocity, 0.25f, 0.1f, true, out updatedProjectileStartPosition, out hit);
+                projectileCurveVisualizer.VisualizeProjectileCurve(
+                    transform.position, 1.0f, launchVelocity, 0.25f, 0.1f, true,
+                    out updatedProjectileStartPosition, out hit);
 
                 if (Input.GetMouseButtonUp(0))
                 {
@@ -242,8 +257,8 @@ namespace KikiNgao.SimpleBikeControl
             rearWheel.transform.position = temporaryVector;
 
             Quaternion rearWheelRot = rearWheel.transform.rotation;
-
-            rearWheel.transform.rotation = IsReverse() ? rearWheelRot * Quaternion.Euler(-GetBikeSpeedKm(), 0, 0)
+            rearWheel.transform.rotation = IsReverse()
+                ? rearWheelRot * Quaternion.Euler(-GetBikeSpeedKm(), 0, 0)
                 : rearWheelRot * Quaternion.Euler(GetBikeSpeedKm(), 0, 0);
 
             frontWheel.transform.localRotation = rearWheel.transform.localRotation;
@@ -274,11 +289,11 @@ namespace KikiNgao.SimpleBikeControl
         private static float WrapAngle(float angle)
         {
             angle %= 360;
-            if (angle > 180)
-                return angle - 360;
+            if (angle > 180) return angle - 360;
             return angle;
         }
 
+        // Restored slowdown system
         private bool isSlowed = false;
         private float originalLegPower;
         private Coroutine slowRoutine;

@@ -16,17 +16,17 @@ public class OilSpillSlowdown : MonoBehaviour
             var bike = rootObj.GetComponent<KikiNgao.SimpleBikeControl.SimpleBike>();
             if (bike != null)
             {
-                Debug.Log("? Slowdown applied to: " + rootObj.name);
+                Debug.Log(" Slowdown applied to: " + rootObj.name);
                 bike.ApplyTemporarySlowdown(slowdownMultiplier, duration);
             }
             else
             {
-                Debug.LogWarning("?? PlayerBike tagged object found but no SimpleBike script on it: " + rootObj.name);
+                Debug.LogWarning(" PlayerBike tagged object found but no SimpleBike script on it: " + rootObj.name);
             }
         }
         else
         {
-            Debug.LogWarning("? Object entered trigger but not tagged PlayerBike: " + rootObj.name);
+            Debug.LogWarning(" Object entered trigger but not tagged PlayerBike: " + rootObj.name);
         }
     }
 }

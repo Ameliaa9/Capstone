@@ -5,84 +5,64 @@ using System.Collections;
 public class DeliverySystem : MonoBehaviour
 {
     [Header("Delivery Setup")]
-    public Transform[] deliveryHouses;
+    public DeliverySpot[] deliverySpots;
     public float[] deliveryTimes;
+    public string[] depotTags;
 
-    [Header("Depot Triggers")]
-    public string[] depotTags; 
-
-    [Header("TMP Messages")]
+    [Header("UI")]
+    public TMP_Text timerText;
     public TMP_Text collectedText;
     public TMP_Text returnText;
     public TMP_Text successText;
     public TMP_Text failText;
 
-    [Header("Delivery Timer (ONE text only)")]
-    public TMP_Text timerText;
-
-    [Header("Images for Results")]
+    [Header("Images")]
     public GameObject successImage;
     public GameObject failImage;
 
-    [Header("Phones (one per delivery)")]
-    public GameObject[] phones; 
+    [Header("Phones (optional per delivery)")]
+    public GameObject[] phones;
     private GameObject currentPhone;
 
     private int currentDelivery = 0;
     private bool hasPackage = false;
     private bool timerRunning = false;
-    private float timer;
+    private float currentTimer;
 
     void Start()
     {
-        if (collectedText == null) Debug.LogWarning("collectedText not assigned!");
-        if (returnText == null) Debug.LogWarning("returnText not assigned!");
-        if (successText == null) Debug.LogWarning("successText not assigned!");
-        if (failText == null) Debug.LogWarning("failText not assigned!");
-        if (timerText == null) Debug.LogWarning("timerText not assigned!");
+        if (successImage) successImage.SetActive(false);
+        if (failImage) failImage.SetActive(false);
 
-        if (successImage != null) successImage.SetActive(false);
-        if (failImage != null) failImage.SetActive(false);
-
-        
         if (phones != null)
-        {
             foreach (var p in phones)
-            {
                 if (p != null) p.SetActive(false);
-            }
-        }
 
-        if (timerText != null) timerText.text = "";
+        if (timerText) timerText.text = "";
+        if (collectedText) collectedText.text = "";
+        if (returnText) returnText.text = "";
+        if (successText) successText.text = "";
+        if (failText) failText.text = "";
     }
 
     void Update()
     {
         if (timerRunning)
         {
-            timer -= Time.deltaTime;
+            currentTimer -= Time.deltaTime;
+            if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
 
-            if (timerText != null)
-                timerText.text = $"Time left: {Mathf.Ceil(timer)}s";
-
-            if (timer <= 0f)
+            if (currentTimer <= 0f)
             {
                 timerRunning = false;
                 hasPackage = false;
-                Debug.Log("Time ran out for house " + currentDelivery);
+                if (timerText) timerText.text = "";
+                if (currentPhone) currentPhone.SetActive(false);
 
-                
-                if (currentPhone != null)
-                    currentPhone.SetActive(false);
+                Debug.Log($"? Timer ran out for delivery {currentDelivery}");
 
-                if (timerText != null)
-                    timerText.text = "";
-
-                if (failText != null)
-                    StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 3f));
-
-                if (failImage != null)
-                    StartCoroutine(ShowImageForSeconds(failImage, 3f));
+                if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 3f));
+                if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 3f));
             }
         }
     }
@@ -92,108 +72,87 @@ public class DeliverySystem : MonoBehaviour
         
         for (int i = 0; i < depotTags.Length; i++)
         {
-            if (other.CompareTag(depotTags[i]) && !hasPackage && currentDelivery < deliveryHouses.Length)
+            if (other.CompareTag(depotTags[i]) && !hasPackage && currentDelivery < deliverySpots.Length)
             {
-                Debug.Log("Triggered depot " + i + " picking up package.");
+                Debug.Log($"Depot {i} triggered. Starting delivery {currentDelivery}");
                 hasPackage = true;
 
-                if (collectedText != null)
-                    StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 3f));
+                if (collectedText) StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 3f));
 
-                StartTimer(i); 
+                StartDelivery(i);
                 return;
             }
         }
 
-      
-        if (other.CompareTag("TargetBuilding") && hasPackage)
+        
+        if (other.CompareTag("TargetBuilding") && hasPackage && currentDelivery < deliverySpots.Length)
         {
-            Debug.Log("Entered target building trigger.");
             DeliverySpot spot = other.GetComponent<DeliverySpot>();
-            if (spot != null)
+            if (spot != null && spot.houseIndex == currentDelivery)
             {
-                Debug.Log($"House index of this building: {spot.houseIndex}, Current delivery: {currentDelivery}");
-                if (spot.houseIndex == currentDelivery)
-                {
-                    HandleDeliverySuccess();
-                }
-                else
-                {
-                    Debug.Log("Wrong house! Cannot deliver here yet.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("No DeliverySpot component on target building!");
+                CompleteDelivery();
             }
         }
     }
 
-
-    void StartTimer(int depotIndex)
+    void StartDelivery(int depotIndex)
     {
-        if (currentDelivery < deliveryTimes.Length)
+        currentTimer = deliveryTimes[currentDelivery];
+        timerRunning = true;
+
+        if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
+        Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
+
+        if (phones != null && depotIndex < phones.Length)
         {
-            timer = deliveryTimes[currentDelivery];
-            timerRunning = true;
-
-            Debug.Log($"Started timer for house {currentDelivery}: {timer} seconds");
-
-            if (timerText != null)
-                timerText.text = $"Time left: {Mathf.Ceil(timer)}s";
-
-           
-            if (phones != null && depotIndex < phones.Length)
-            {
-                if (currentPhone != null)
-                    currentPhone.SetActive(false); 
-
-                currentPhone = phones[depotIndex];
-                if (currentPhone != null)
-                    currentPhone.SetActive(true); 
-            }
+            if (currentPhone) currentPhone.SetActive(false);
+            currentPhone = phones[depotIndex];
+            if (currentPhone) currentPhone.SetActive(true);
         }
     }
 
-
-
-    void StopTimer()
+    void CompleteDelivery()
     {
         timerRunning = false;
-        if (timerText != null) timerText.text = "";
-        if (currentPhone != null) currentPhone.SetActive(false);
-        Debug.Log($"Stopped timer for house {currentDelivery}");
-    }
-
-    private void HandleDeliverySuccess()
-    {
-        StopTimer();
         hasPackage = false;
-        Debug.Log("Delivery successful at house " + currentDelivery);
 
-        if (successText != null)
-            StartCoroutine(ShowTMPMessage(successText, "Delivery successful!", 3f));
+        if (timerText) timerText.text = "";
+        if (currentPhone) currentPhone.SetActive(false);
 
-        if (successImage != null)
-            StartCoroutine(ShowImageForSeconds(successImage, 3f));
+        Debug.Log($"? Delivery {currentDelivery} successful!");
 
-      
-        if (currentPhone != null)
-            currentPhone.SetActive(false);
+        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful!", 3f));
+        if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
 
         currentDelivery++;
 
-        if (currentDelivery < deliveryHouses.Length)
+        if (currentDelivery < deliverySpots.Length)
         {
-            if (returnText != null)
-                StartCoroutine(ShowTMPMessage(returnText, "Return to depot to pick up the next package.", 3f));
+            if (returnText) StartCoroutine(ShowTMPMessage(returnText, "Return to depot for the next package.", 3f));
+        }
+        else
+        {
+            Debug.Log("?? All deliveries complete!");
+        }
+    }
+
+    
+    public void ProjectileHitHouse(int houseIndex)
+    {
+        if (hasPackage && houseIndex == currentDelivery)
+        {
+            Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
+            CompleteDelivery();
+        }
+        else
+        {
+            Debug.Log($"? Projectile hit wrong house {houseIndex}, expecting {currentDelivery}");
         }
     }
 
     private IEnumerator ShowTMPMessage(TMP_Text textField, string message, float duration)
     {
-        if (textField == null) yield break;
-
+        if (!textField) yield break;
         textField.gameObject.SetActive(true);
         textField.text = message;
         yield return new WaitForSeconds(duration);
@@ -202,22 +161,9 @@ public class DeliverySystem : MonoBehaviour
 
     private IEnumerator ShowImageForSeconds(GameObject imageObj, float duration)
     {
+        if (!imageObj) yield break;
         imageObj.SetActive(true);
         yield return new WaitForSeconds(duration);
         imageObj.SetActive(false);
-    }
-
-    public void DeliverToHouse(int houseIndex)
-    {
-        if (!hasPackage || !timerRunning) return;
-
-        if (houseIndex == currentDelivery)
-        {
-            HandleDeliverySuccess();
-        }
-        else
-        {
-            Debug.Log("Wrong house hit! Current delivery is " + currentDelivery);
-        }
     }
 }

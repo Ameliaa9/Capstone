@@ -13,7 +13,7 @@ public class DeliveryManager : MonoBehaviour
 
     void Start()
     {
-        delivery1Timer.StartTimer();
+        delivery1Timer.SetDurationAndStart(30);
     }
 
     public void CompleteDelivery(int deliveryNumber)
@@ -39,12 +39,12 @@ public class DeliveryManager : MonoBehaviour
     {
         if (nextDelivery == 2)
         {
-            delivery2Timer.StartTimer();
+            delivery2Timer.SetDurationAndStart(40);
             currentDelivery = 2;
         }
         else if (nextDelivery == 3)
         {
-            delivery3Timer.StartTimer();
+            delivery3Timer.SetDurationAndStart(60);
             currentDelivery = 3;
         }
     }

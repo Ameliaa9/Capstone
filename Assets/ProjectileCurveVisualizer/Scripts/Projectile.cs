@@ -19,15 +19,18 @@ namespace ProjectileCurveVisualizerSystem
             hasHit = false;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        void OnCollisionEnter(Collision collision)
         {
-            if (hasHit) return;
-            hasHit = true;
-
-            DeliverySpot target = collision.collider.GetComponent<DeliverySpot>();
-            if (target != null)
+            if (collision.gameObject.CompareTag("TargetBuilding"))
             {
-                target.OnPackageHit();
+                DeliverySpot spot = collision.gameObject.GetComponent<DeliverySpot>();
+                if (spot != null)
+                {
+                    // Find the DeliverySystem in the scene
+                    DeliverySystem system = FindObjectOfType<DeliverySystem>();
+                    if (system != null)
+                        system.ProjectileHitHouse(spot.houseIndex);
+                }
             }
         }
     }

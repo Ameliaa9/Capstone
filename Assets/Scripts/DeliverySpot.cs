@@ -4,14 +4,16 @@ using System.Collections;
 public class DeliverySpot : MonoBehaviour
 {
     [Header("Notification UI")]
-    public GameObject successPopup; 
+    public GameObject successPopup;
 
     [Header("Timer for this Delivery")]
-    public DeliveryTimer deliveryTimer;    
+    public DeliveryTimer deliveryTimer;
+
+    [Header("Index")]
+    public int houseIndex;
 
     private bool delivered = false;
 
-    public int houseIndex;
     public void OnPackageHit()
     {
         if (delivered) return;
@@ -19,14 +21,12 @@ public class DeliverySpot : MonoBehaviour
 
         Debug.Log("Delivery successful at: " + gameObject.name);
 
-       
         if (successPopup != null)
         {
             successPopup.SetActive(true);
             StartCoroutine(HideAfterSeconds(successPopup, 5f));
         }
 
-        
         if (deliveryTimer != null)
         {
             deliveryTimer.StopTimer();
