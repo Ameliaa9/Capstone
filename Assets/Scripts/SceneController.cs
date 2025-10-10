@@ -1,21 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    [Header("Scene Settings")]
-    [SerializeField] private string targetSceneName = "SampleScene 1"; // Default scene name
-
-    public void LoadScene()
+    public void LoadSceneByName(string sceneName)
     {
-        // Check if the scene exists in the build settings
-        if (Application.CanStreamedLevelBeLoaded(targetSceneName))
+        if (string.IsNullOrWhiteSpace(sceneName))
         {
-            SceneManager.LoadScene(targetSceneName);
+            Debug.LogError("[SceneLoader] Empty scene name.");
+            return;
         }
-        else
+
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
         {
-            Debug.LogError($"Scene '{targetSceneName}' not found in build settings.");
+            return;
         }
+
+        Debug.Log($"[SceneLoader] Loading '{sceneName}'…");
+        SceneManager.LoadScene(sceneName);
     }
 }
