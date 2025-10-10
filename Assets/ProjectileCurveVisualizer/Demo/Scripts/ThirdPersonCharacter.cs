@@ -60,34 +60,58 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     void HandleProjectileMode()
     {
-        if (!Settings.mouseControl) return;
-
-      
-        if (Input.GetKeyDown(KeyCode.R))
+        
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Joystick2Button2))
         {
             inProjectileMode = !inProjectileMode;
-
             if (!inProjectileMode)
                 projectileCurveVisualizer.HideProjectileCurve();
         }
 
         if (!inProjectileMode) return;
 
-       
-        launchSpeed = Mathf.Clamp(launchSpeed + Input.GetAxis("Mouse ScrollWheel") * 6f, 1f, 100f);
+        
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        float stickY = Input.GetAxis("Joystick2Axis5"); 
+        launchSpeed = Mathf.Clamp(launchSpeed + (scroll + stickY * 0.5f) * 6f, 1f, 100f);
 
-     
-        float mouseY = Input.GetAxis("Mouse Y");
-        aimDistance = Mathf.Clamp(aimDistance - mouseY * 0.5f, 2f, 30f); 
+        Vector3 aimTargetPosition = cameraTransform.position;
+        if (Input.mousePresent)
+        {
 
- 
-        Vector3 aimTargetPosition = cameraTransform.position + cameraTransform.forward * aimDistance;
+            float adjust = 0f;
 
+            aimTargetPosition += cameraTransform.forward * aimDistance;
+            float mouseY = Input.GetAxis("Mouse Y");
+            aimDistance = Mathf.Clamp(aimDistance - mouseY * 0.5f, 2f, 30f);
+
+            if (Input.GetKey(KeyCode.Joystick2Button4))
+                adjust -= 0.3f;
+            if (Input.GetKey(KeyCode.Joystick2Button6)) 
+                adjust += 0.3f;
+
+            aimDistance = Mathf.Clamp(aimDistance + adjust, 2f, 30f);
+
+
+
+
+        }
+        else
+        {
+          
+            float aimX = Input.GetAxis("Joystick2Axis3");
+            float aimY = Input.GetAxis("Joystick2Axis4");
+            Vector3 camForward = cameraTransform.forward;
+            camForward.y = 0;
+            Vector3 camRight = cameraTransform.right;
+            camRight.y = 0;
+            Vector3 aimDir = (camForward * aimY + camRight * aimX).normalized;
+            aimTargetPosition += aimDir * aimDistance;
+        }
 
         Vector3 direction = (aimTargetPosition - springArmTransform.position).normalized;
         launchVelocity = direction * launchSpeed;
 
-       
         projectileCurveVisualizer.VisualizeProjectileCurve(
             springArmTransform.position,
             1.0f,
@@ -99,15 +123,18 @@ public class ThirdPersonCharacter : MonoBehaviour
             out hit
         );
 
-       
-        if (Input.GetMouseButtonUp(0))
+        
+        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Joystick2Button7))
         {
             inProjectileMode = false;
             projectileCurveVisualizer.HideProjectileCurve();
 
-            Projectile projectile = Instantiate(projectileGameObject).GetComponent<Projectile>();
-            projectile.transform.position = updatedProjectileStartPosition;
-            projectile.Throw(launchVelocity);
+            if (projectileGameObject != null)
+            {
+                Projectile projectile = Instantiate(projectileGameObject).GetComponent<Projectile>();
+                projectile.transform.position = updatedProjectileStartPosition;
+                projectile.Throw(launchVelocity);
+            }
         }
     }
 }

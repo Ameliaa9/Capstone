@@ -31,7 +31,6 @@ namespace KikiNgao.SimpleBikeControl
         private AnimationCurve frontWheelRestrictCurve =
             new AnimationCurve(new Keyframe(0f, 35f), new Keyframe(50f, 1f));
 
-        // Restored IK target references
         public Transform leftHandTarget, rightHandTarget;
         public Transform leftPendalTarget, rightPendalTarget;
         public Transform leftStandTarget, rightStandTarget;
@@ -52,7 +51,7 @@ namespace KikiNgao.SimpleBikeControl
 
         public bool IsReverse() => inputManager.vertical < 0;
         public bool IsMovingToward => inputManager.vertical > 0;
-        public bool IsMoving() => inputManager.vertical != 0; // restored
+        public bool IsMoving() => inputManager.vertical != 0; 
         private bool IsRest() => (inputManager.vertical == 0 && inputManager.horizontal == 0) ||
                                  (inputManager.vertical == 0 && inputManager.horizontal != 0);
         private bool IsTurning() => inputManager.horizontal != 0;
@@ -73,7 +72,7 @@ namespace KikiNgao.SimpleBikeControl
             return false;
         }
 
-        // Projectile stuff (unchanged)
+        
         public ProjectileCurveVisualizer projectileCurveVisualizer;
         public GameObject projectileGameObject;
         private bool inProjectileMode = false;
@@ -95,7 +94,6 @@ namespace KikiNgao.SimpleBikeControl
 
             Freeze = true;
 
-            // Auto-seat player at start
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null && bikerHolder != null)
             {
@@ -109,7 +107,7 @@ namespace KikiNgao.SimpleBikeControl
         {
             if (!ReadyToRide()) return;
 
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Joystick2Button2))
             {
                 inProjectileMode = !inProjectileMode;
                 if (!inProjectileMode) projectileCurveVisualizer.HideProjectileCurve();
@@ -117,24 +115,31 @@ namespace KikiNgao.SimpleBikeControl
 
             if (inProjectileMode)
             {
-                launchSpeed = Mathf.Clamp(launchSpeed + Input.GetAxis("Mouse ScrollWheel") * 6.0f, 0.5f, 1000.0f);
-                launchVelocity = transform.forward + Vector3.up * 0.3f;
-                launchVelocity = launchVelocity.normalized * launchSpeed;
+                //float scroll = Input.GetAxis("Mouse ScrollWheel");
+                //float stickY = Input.GetAxis("Joystick2Axis5"); 
 
-                projectileCurveVisualizer.VisualizeProjectileCurve(
-                    transform.position, 1.0f, launchVelocity, 0.25f, 0.1f, true,
-                    out updatedProjectileStartPosition, out hit);
+                //float combined = scroll + (stickY * 0.02f);
 
-                if (Input.GetMouseButtonUp(0))
-                {
-                    inProjectileMode = false;
-                    projectileCurveVisualizer.HideProjectileCurve();
+                //launchSpeed = Mathf.Clamp(launchSpeed + combined * 200f * Time.deltaTime, 2f, 50f);
 
-                    Projectile projectile = Instantiate(projectileGameObject).GetComponent<Projectile>();
-                    projectile.transform.position = updatedProjectileStartPosition;
-                    projectile.Throw(launchVelocity);
-                }
+                //launchVelocity = transform.forward + Vector3.up * 0.3f;
+                //launchVelocity = launchVelocity.normalized * launchSpeed;
+
+                //projectileCurveVisualizer.VisualizeProjectileCurve(
+                  //  transform.position, 1.0f, launchVelocity, 0.25f, 0.1f, true,
+                    //out updatedProjectileStartPosition, out hit);
+
+                //if (Input.GetMouseButtonUp(0) || Input.GetButtonUp("Joystick2Fire1"))
+                //{
+                  //  inProjectileMode = false;
+                    //projectileCurveVisualizer.HideProjectileCurve();
+
+                    //Projectile projectile = Instantiate(projectileGameObject).GetComponent<Projectile>();
+                    //projectile.transform.position = updatedProjectileStartPosition;
+                    //projectile.Throw(launchVelocity);
+                //}
             }
+
         }
 
         private void CreateCenterOfMass()
@@ -293,7 +298,7 @@ namespace KikiNgao.SimpleBikeControl
             return angle;
         }
 
-        // Restored slowdown system
+        
         private bool isSlowed = false;
         private float originalLegPower;
         private Coroutine slowRoutine;

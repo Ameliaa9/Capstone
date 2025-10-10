@@ -1,0 +1,230 @@
+{
+    "name": "ps5controller",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "79cd6804-c992-4b87-9286-e9c3fcb3d1e4",
+            "actions": [
+                {
+                    "name": "move",
+                    "type": "Value",
+                    "id": "ad961c2e-2ac9-4ae1-a0b3-dc1d61c277f9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "boost",
+                    "type": "Button",
+                    "id": "ceeb97ae-0e61-4a23-ad9b-e6b60b8c6e5d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "mount",
+                    "type": "Button",
+                    "id": "dab31f96-70cc-484f-8759-14b7d7707914",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "camera",
+                    "type": "Value",
+                    "id": "16f3c560-ef27-45ec-9981-2f7e43ae48c6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3193ec79-5011-4187-837a-c6945788f722",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a00da74-ee98-42d3-a221-404fb89e86ab",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1238eb0b-e94d-42e7-a584-457112a7f5ef",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mount",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0cc6ae5-b574-4568-88a8-71cf6f515c2a",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "a420b5ed-e281-4efe-bc3d-aba8c7d81039",
+            "actions": [
+                {
+                    "name": "camera",
+                    "type": "Value",
+                    "id": "d1972bc1-be7f-46e0-8f89-a2747084226e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ThrowActivate",
+                    "type": "Button",
+                    "id": "dadef50f-fb34-4396-af1b-baef46a19dfc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AimDistance",
+                    "type": "Value",
+                    "id": "11d9e237-8186-4b6f-9788-c8941f40dcfc",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "throw",
+                    "type": "Button",
+                    "id": "78e5611a-5219-472d-9f51-3372d9d27318",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnterBike",
+                    "type": "Button",
+                    "id": "69d297aa-f814-4e6b-a75f-de76214ecbea",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1958bb8-42d5-4ede-8f39-0235f0f84b6f",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83e3657c-a924-4291-9eca-2c848a560202",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrowActivate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0934320-ebed-4df4-ab67-0104d77e4714",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimDistance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28023def-876d-48b6-a871-b25d6ff86526",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "089b3029-f4f6-4d7a-914c-e33031d6bab2",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterBike",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "507c9aa7-3144-45ba-ac1d-ed245bdfdff7",
+            "actions": [
+                {
+                    "name": "Join",
+                    "type": "Button",
+                    "id": "5e72a431-2f7b-4f23-a862-94ba0099ace4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ceb3d828-dd03-49db-a8c0-2a8da1b96759",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
