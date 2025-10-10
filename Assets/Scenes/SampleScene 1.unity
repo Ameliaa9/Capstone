@@ -3343,7 +3343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1f284b42849610642bfb5d418a57840b, type: 3}
       propertyPath: m_TagString
-      value: TargetBuilding3
+      value: TargetBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f284b42849610642bfb5d418a57840b, type: 3}
       propertyPath: m_RootOrder
@@ -4814,7 +4814,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000009338426, y: -0.00018924888, z: -0.004907904, w: -0.999988}
   m_LocalPosition: {x: -19.7, y: -0.04, z: 163.6}
-  m_LocalScale: {x: 2.94, y: 0.42, z: 4.89}
+  m_LocalScale: {x: 2.94, y: 0.39479998, z: 3.2274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 98183297}
@@ -4878,7 +4878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d0f752b32ae41214cae786a6f9ecf5fc, type: 2}
+  - {fileID: 2100000, guid: 11952d295363b8549bba907d2a35b5d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9374,7 +9374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hajar Sakaji
+  m_text: Customer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18927,8 +18927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae392df589f1e8439316f88b61b2776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 60
-  maxTime: 60
+  startTime: 150
+  maxTime: 150
   countdownText: {fileID: 436594776}
   associatedImage: {fileID: 1535759425}
 --- !u!114 &436594776
@@ -33727,7 +33727,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ffeea036132bef8498a3c23430943e69, type: 2}
+  - {fileID: 2100000, guid: e3de563328c4dc740ac69a088bddb514, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33767,7 +33767,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0034703556, y: -0.70708805, z: -0.0034704567, w: -0.70710844}
   m_LocalPosition: {x: 10.7, y: -0.04, z: 40.1}
-  m_LocalScale: {x: 2.9399998, y: 0.42, z: 4.89}
+  m_LocalScale: {x: 2.9399998, y: 0.39479998, z: 3.2274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1240913567}
@@ -56238,7 +56238,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.000021689131, y: 0.004418669, z: -0.0049078446, w: -0.99997824}
   m_LocalPosition: {x: -166.7, y: -0.04, z: 56.7}
-  m_LocalScale: {x: 2.94, y: 0.42, z: 4.89}
+  m_LocalScale: {x: 2.94, y: 0.39479998, z: 3.2274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2100198137}
@@ -56302,7 +56302,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c2b0ac059b827943bc1dca99f3c6a4b, type: 2}
+  - {fileID: 2100000, guid: 3e0ae034da7c52c49a8616efeb638a92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75178,8 +75178,8 @@ MonoBehaviour:
   - {fileID: 477988317}
   deliveryTimes:
   - 30
-  - 50
   - 60
+  - 80
   depotTags:
   - Depot
   - Depot1
@@ -98258,8 +98258,8 @@ MonoBehaviour:
   deliverySpots: []
   deliveryTimes:
   - 30
-  - 45
   - 60
+  - 150
   depotTags:
   - Depot
   - Depot1
@@ -109608,7 +109608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0064eb002f3790247969e12119bbf9d2, type: 3}
       propertyPath: m_TagString
-      value: TargetBuilding2
+      value: TargetBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0064eb002f3790247969e12119bbf9d2, type: 3}
       propertyPath: m_RootOrder
