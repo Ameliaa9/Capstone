@@ -5,7 +5,7 @@ using System.Collections;
 public class DeliveryTimer : MonoBehaviour
 {
     public float startTime = 30f;
-    private float currentTime;
+    public float currentTime;
     private bool isRunning = false;
     public int maxTime = 10;
 

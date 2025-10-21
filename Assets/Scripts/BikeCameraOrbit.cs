@@ -60,10 +60,10 @@ public class BikeCameraOrbit : MonoBehaviour
         // --- Keyboard fallback ---
         if (inputX == 0f && inputY == 0f)
         {
-            if (Input.GetKey(KeyCode.A)) inputX = -1f;
-            if (Input.GetKey(KeyCode.D)) inputX = 1f;
-            if (Input.GetKey(KeyCode.W)) inputY = 1f;
-            if (Input.GetKey(KeyCode.S)) inputY = -1f;
+            if (Input.GetKey(KeyCode.G)) inputX = -1f;
+            if (Input.GetKey(KeyCode.J)) inputX = 1f;
+            if (Input.GetKey(KeyCode.H)) inputY = 1f;
+            if (Input.GetKey(KeyCode.Y)) inputY = -1f;
         }
 
 

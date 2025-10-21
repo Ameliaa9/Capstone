@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using NUnit.Framework;
+using System;
 
 public class DeliverySpot : MonoBehaviour
 {
@@ -30,7 +32,9 @@ public class DeliverySpot : MonoBehaviour
         if (deliveryTimer != null)
         {
             deliveryTimer.StopTimer();
+            
         }
+
     }
 
     private IEnumerator HideAfterSeconds(GameObject obj, float seconds)

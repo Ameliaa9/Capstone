@@ -22,7 +22,6 @@ public class StartNextDeliveryTrigger : MonoBehaviour
         {
             deliveryTimer.SetDurationAndStart((int)deliveryDuration);
 
-
         }
 
         

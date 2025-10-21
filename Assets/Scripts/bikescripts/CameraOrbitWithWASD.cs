@@ -20,8 +20,8 @@ public class CameraOrbitWithWASD : MonoBehaviour
     {
         float camInput = 0f;
 
-        if (Input.GetKey(KeyCode.A)) camInput = -1f;
-        if (Input.GetKey(KeyCode.D)) camInput = 1f;
+        if (Input.GetKey(KeyCode.Z)) camInput = -1f;
+        if (Input.GetKey(KeyCode.C)) camInput = 1f;
 
         yaw += camInput * rotationSpeed * Time.deltaTime;
 

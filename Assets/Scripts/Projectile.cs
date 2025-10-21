@@ -27,7 +27,7 @@ namespace ProjectileCurveVisualizerSystem
                 if (spot != null)
                 {
                     // Find the DeliverySystem in the scene
-                    DeliverySystem system = FindObjectOfType<DeliverySystem>();
+                    DeliverySystem system = Object.FindFirstObjectByType<DeliverySystem>();
                     if (system != null)
                         system.ProjectileHitHouse(spot.houseIndex);
                 }

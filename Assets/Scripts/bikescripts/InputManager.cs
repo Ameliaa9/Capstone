@@ -15,6 +15,7 @@ namespace KikiNgao.SimpleBikeControl
         private void Update()
         {
             horizontal = Input.GetAxis("Horizontal");
+
             vertical = Input.GetAxis("Vertical");
 
             enterExitVehicle = Input.GetKeyDown(enterExitKey);
