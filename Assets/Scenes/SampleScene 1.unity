@@ -5932,7 +5932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deliveryTimer: {fileID: 436594775}
   thankYouImage: {fileID: 1535759425}
-  deliveryDuration: 50
+  deliveryDuration: 120
 --- !u!65 &128881849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10923,7 +10923,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a0a9c2a40c8611a48bf122e197365469, type: 3}
   m_Resource: {fileID: 8300000, guid: a0a9c2a40c8611a48bf122e197365469, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
@@ -36389,7 +36389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deliveryTimer: {fileID: 1563262293}
   thankYouImage: {fileID: 421651652}
-  deliveryDuration: 30
+  deliveryDuration: 240
 --- !u!1001 &742736444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57183,7 +57183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deliveryTimer: {fileID: 155891067}
   thankYouImage: {fileID: 1591118309}
-  deliveryDuration: 45
+  deliveryDuration: 120
 --- !u!65 &1218109415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75029,9 +75029,9 @@ MonoBehaviour:
   - {fileID: 2100198142}
   - {fileID: 477988317}
   deliveryTimes:
-  - 30
-  - 60
-  - 80
+  - 300
+  - 240
+  - 120
   depotTags:
   - Depot
   - Depot1
