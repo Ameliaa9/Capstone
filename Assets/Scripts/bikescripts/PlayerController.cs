@@ -33,6 +33,8 @@ namespace KikiNgao.SimpleBikeControl
             m_Animator = GetComponent<Animator>();
             camTrans = Camera.main.transform;
             gravityMagnitude = new Vector3(0, gravity, 0);
+
+            GameManager.LockCursor();
         }
 
         public void DisablePlayerCtrl() { disable = true; characterCtrl.enabled = false; }

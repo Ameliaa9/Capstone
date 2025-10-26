@@ -1,3 +1,4 @@
+using KikiNgao.SimpleBikeControl;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -36,6 +37,8 @@ public class OpenUpgrades : MonoBehaviour
             
             starWalletAmount = deliverySystemScript.totalStarsCollected;
             starWalletText.text = ("= " + starWalletAmount.ToString());
+
+            GameManager.UnlockCursor();
         }
     }
 
@@ -45,6 +48,8 @@ public class OpenUpgrades : MonoBehaviour
         {
             upgradeUI.SetActive(false);
             canvas1.SetActive(true);
+
+            GameManager.LockCursor();
         }
     }
 

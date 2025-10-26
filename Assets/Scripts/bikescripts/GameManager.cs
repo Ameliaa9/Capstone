@@ -28,5 +28,17 @@ namespace KikiNgao.SimpleBikeControl
             //Don't forget remove it OnDestroy because it's static
             if (Instance == this) instance = null;
         }
+
+        public static void LockCursor()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        public static void UnlockCursor()
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
