@@ -12,6 +12,8 @@ namespace KikiNgao.SimpleBikeControl
         [HideInInspector]
         public bool speedUp;
 
+        private bool hasMountedOnce = false;
+
         private void Update()
         {
             horizontal = Input.GetAxis("Horizontal");
@@ -20,8 +22,22 @@ namespace KikiNgao.SimpleBikeControl
 
             enterExitVehicle = Input.GetKeyDown(enterExitKey);
 
+            if (!hasMountedOnce)
+            {
+                enterExitVehicle = true;
+                hasMountedOnce = true;
+            }
+            else
+            {
+                enterExitVehicle = false;
+            }
+
             if (Input.GetKeyDown(speedUpKey)) speedUp = true;
             if (Input.GetKeyUp(speedUpKey)) speedUp = false;
+
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
+
         }
 
     }
