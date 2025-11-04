@@ -49,15 +49,12 @@ public class BikeCameraOrbit : MonoBehaviour
         float inputX = 0f;
         float inputY = 0f;
 
-        // --- D-Pad (PS5 Controller 2) ---
-        float dpadX = Input.GetAxisRaw("Joystick2Axis7"); // left/right
-        float dpadY = Input.GetAxisRaw("Joystick2Axis8"); // up/down
+        inputX = Input.GetAxis("Joystick2Horizontal");
+        inputY = -Input.GetAxis("Joystick2Vertical"); 
 
-        // only register if pushed significantly
-        if (Mathf.Abs(dpadX) > 0.3f) inputX = dpadX;
-        if (Mathf.Abs(dpadY) > 0.3f) inputY = dpadY;
+        if (Mathf.Abs(inputX) < 0.2f) inputX = 0f;
+        if (Mathf.Abs(inputY) < 0.2f) inputY = 0f;
 
-        // --- Keyboard fallback ---
         if (inputX == 0f && inputY == 0f)
         {
             if (Input.GetKey(KeyCode.G)) inputX = -1f;
@@ -65,9 +62,6 @@ public class BikeCameraOrbit : MonoBehaviour
             if (Input.GetKey(KeyCode.H)) inputY = 1f;
             if (Input.GetKey(KeyCode.Y)) inputY = -1f;
         }
-
-
-
 
         yaw += inputX * rotationSpeed * Time.deltaTime;
         pitch += inputY * verticalSpeed * Time.deltaTime;
@@ -80,9 +74,7 @@ public class BikeCameraOrbit : MonoBehaviour
         transform.LookAt(followTarget.position + Vector3.up * 1.5f);
 
         if (aimTarget != null)
-        {
             aimTarget.position = followTarget.position + rotation * (Vector3.forward * aimDistance);
-        }
-
     }
+
 }
