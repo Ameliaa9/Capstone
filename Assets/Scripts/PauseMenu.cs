@@ -3,17 +3,27 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using KikiNgao.SimpleBikeControl;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class PauseMenu : MonoBehaviour
 {
+    [Header("Panels")]
     public GameObject pausePanel;
     public GameObject nextPagePanel;
 
+    [Header("Buttons")]
     public Button resumeButton;
     public Button nextPageButton;
     public Button backButton;
-    public Button loadSceneButton; 
+    public Button loadSceneButton;
+    public Button exitButton;
+    public string sceneToLoad;
 
-    public string sceneToLoad; 
+    [Header("Player Cursors")]
+    public JoystickCursor player1Cursor;
+    public JoystickCursor player2Cursor;
 
     private bool isPaused = false;
 
@@ -25,13 +35,14 @@ public class PauseMenu : MonoBehaviour
         resumeButton.onClick.AddListener(ResumeGame);
         nextPageButton.onClick.AddListener(ShowNextPage);
         backButton.onClick.AddListener(ShowPausePage);
-        loadSceneButton.onClick.AddListener(LoadNewScene); 
+        loadSceneButton.onClick.AddListener(LoadNewScene);
+        exitButton.onClick.AddListener(ExitGame); 
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton9))
-            {
+        {
             if (isPaused)
                 ResumeGame();
             else
@@ -45,7 +56,17 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(true);
         nextPagePanel.SetActive(false);
         isPaused = true;
+
+        if (player1Cursor != null) player1Cursor.gameObject.SetActive(true);
+        if (player2Cursor != null) player2Cursor.gameObject.SetActive(true);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         GameManager.UnlockCursor();
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ResumeGame()
@@ -54,8 +75,16 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(false);
         nextPagePanel.SetActive(false);
         isPaused = false;
+
+        if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
+        if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         GameManager.LockCursor();
     }
+
 
     public void ShowNextPage()
     {
@@ -71,7 +100,17 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadNewScene()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneToLoad);
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        // If running in build, quit application
+        Application.Quit();
+#endif
     }
 }
