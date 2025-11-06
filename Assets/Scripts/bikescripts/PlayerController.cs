@@ -44,10 +44,11 @@ namespace KikiNgao.SimpleBikeControl
         {
             if (disable) return;
 
-            // ✅ Arrow Key Inputs
-            float horizontal = 0f;
-            float vertical = 0f;
+            // Only Player 1 input
+            float horizontal = Input.GetAxis("Joystick1Horizontal");
+            float vertical = Input.GetAxis("Joystick1Vertical");
 
+            // If using keyboard fallback:
             if (Input.GetKey(KeyCode.UpArrow)) vertical += 1f;
             if (Input.GetKey(KeyCode.DownArrow)) vertical -= 1f;
             if (Input.GetKey(KeyCode.RightArrow)) horizontal += 1f;
@@ -61,7 +62,6 @@ namespace KikiNgao.SimpleBikeControl
             else moving = false;
 
             m_MoveVector = new Vector3(horizontal, 0f, vertical).normalized;
-
 
             // Movement
             m_Velocity = inputSpeed * m_MoveVector * runSpeed * Time.deltaTime;
@@ -78,5 +78,6 @@ namespace KikiNgao.SimpleBikeControl
 
             characterCtrl.Move(m_Velocity);
         }
+
     }
 }
