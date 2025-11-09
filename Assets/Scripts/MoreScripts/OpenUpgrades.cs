@@ -8,37 +8,51 @@ using UnityEngine.UIElements;
 
 public class OpenUpgrades : MonoBehaviour
 {
+    // Upgrade UI Canvas
     private GameObject upgradeUI;
+    // Other Canvases it needs to hide when you open the upgrade shop
     private GameObject canvas1;
+
+    // Scripts the upgrades shop needs to reference to make purchases and give upgrades
     public DeliverySystem deliverySystemScript;
+    public SimpleBike bikeScript;
+
+    // Your personal star wallet ( separate from total amount of stars collected )
     public int starWalletAmount;
     public TextMeshProUGUI starWalletText;
+    public int starsSpent;
+
+    // The shops upgrade buttons
     public UnityEngine.UI.Button upgrade1;
+    public UnityEngine.UI.Button upgrade2;
 
     void Start()
     {
+        // Find all the canvases you want to use
         upgradeUI = GameObject.Find("UpgradeCanvas");
-        upgradeUI.SetActive(false);
         canvas1 = GameObject.Find("Canvas (1)");
+
+        // Turn the uprade UI off until you collide with the shop
+        upgradeUI.SetActive(false);
+
+        // Initialize the star wallet with 0 stars
         starWalletAmount = deliverySystemScript.totalStarsCollected;
         starWalletText.text = ("= " + starWalletAmount.ToString());
         
-
-
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Bike")
+        if (col.gameObject.tag == "Bike") // nothing but the bike can collide to activate the shop
         {
             upgradeUI.SetActive(true);
             canvas1.SetActive(false);
 
-            
-            starWalletAmount = deliverySystemScript.totalStarsCollected;
+            // Re-initialize so recently collected stars are added to wallet before entry
+            starWalletAmount = deliverySystemScript.totalStarsCollected - starsSpent;
             starWalletText.text = ("= " + starWalletAmount.ToString());
 
-            GameManager.UnlockCursor();
+            GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
         }
     }
 
@@ -53,11 +67,20 @@ public class OpenUpgrades : MonoBehaviour
         }
     }
 
-    public void PurchaseUpgrade()
+    public void PurchaseUpgrade(int cost) // Cost per upgrade can vary
     {
-        deliverySystemScript.totalStarsCollected -= 10000;
-        starWalletAmount = deliverySystemScript.totalStarsCollected;
+        starWalletAmount -= cost;
+        starsSpent += cost;
         starWalletText.text = ("= " + starWalletAmount.ToString());
     }
 
+    public void UpgradeSpeed(int upgradeAmount) // Upgrade increment can vary
+    {
+        bikeScript.legPower += upgradeAmount;
+    }
+
+    public void UpgradePackageInventory(int upgradeAmount)
+    {
+        //something.packageInventory += upgradeAmount;
+    }
 }

@@ -19,7 +19,7 @@ namespace KikiNgao.SimpleBikeControl
         public Transform handlerBar;
         public Transform cranksetTransform;
 
-        [SerializeField] private float legPower = 10;
+        [SerializeField] public float legPower = 10;
         [SerializeField] private float powerUpMax = 2;
         [SerializeField] private float powerUpSpeed = .5f;
         [SerializeField] private float airResistance = 6;
