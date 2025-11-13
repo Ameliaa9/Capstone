@@ -27,6 +27,8 @@ namespace KikiNgao.SimpleBikeControl
         [SerializeField] private float restDrag = 2f;
         [SerializeField] private float restAngularDrag = .2f;
         [SerializeField] private float forceRatio = 2f;
+        [SerializeField] public float bikeHealth = 100f;
+
         [SerializeField]
         private AnimationCurve frontWheelRestrictCurve =
             new AnimationCurve(new Keyframe(0f, 35f), new Keyframe(50f, 1f));
