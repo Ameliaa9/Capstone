@@ -77,7 +77,7 @@ public class DeliverySystem : MonoBehaviour
 
                 Debug.Log($"? Timer ran out for delivery {currentDelivery}");
 
-                if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 10f));
+                if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 7f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 3f));
             }
         }
@@ -100,7 +100,7 @@ public class DeliverySystem : MonoBehaviour
                 Debug.Log($"Depot {i} triggered. Starting delivery {currentDelivery}");
                 hasPackage = true;
 
-                if (collectedText) StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 5f));
+                if (collectedText) StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 3f));
 
                 StartDelivery(i);
                 return;
@@ -144,7 +144,7 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
-        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful!", 10f));
+        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful!", 3f));
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
 
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
@@ -216,7 +216,7 @@ public class DeliverySystem : MonoBehaviour
 
         if (currentDelivery < deliverySpots.Length)
         {
-            if (returnText) StartCoroutine(ShowTMPMessage(returnText, "Return to depot for the next package.", 10f));
+            if (returnText) StartCoroutine(ShowTMPMessage(returnText, "Return to depot for the next package.", 7f));
         }
         else
         {
