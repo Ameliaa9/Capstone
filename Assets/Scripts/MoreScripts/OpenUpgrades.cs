@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class OpenUpgrades : MonoBehaviour
 {
@@ -25,6 +24,10 @@ public class OpenUpgrades : MonoBehaviour
     // The shops upgrade buttons
     public UnityEngine.UI.Button upgrade1;
     public UnityEngine.UI.Button upgrade2;
+
+    //custom cursors
+    public JoystickCursor player1Cursor;
+    public JoystickCursor player2Cursor;
 
     void Start()
     {
@@ -53,6 +56,12 @@ public class OpenUpgrades : MonoBehaviour
             starWalletText.text = ("= " + starWalletAmount.ToString());
 
             GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
+
+            if (player1Cursor) player1Cursor.gameObject.SetActive(true);
+            if (player2Cursor) player2Cursor.gameObject.SetActive(true);
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -63,8 +72,31 @@ public class OpenUpgrades : MonoBehaviour
             upgradeUI.SetActive(false);
             canvas1.SetActive(true);
 
+            //hide custom cursors
+            if (player1Cursor) player1Cursor.gameObject.SetActive(false);
+            if (player2Cursor) player2Cursor.gameObject.SetActive(false);
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
             GameManager.LockCursor();
         }
+    }
+
+    //close upgrades with x button
+    public void CloseUpgradeUI()
+    {
+        upgradeUI.SetActive(false);
+        canvas1.SetActive(true);
+
+        //hide custom cursors
+        if (player1Cursor) player1Cursor.gameObject.SetActive(false);
+        if (player2Cursor) player2Cursor.gameObject.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        GameManager.LockCursor();
     }
 
     public void PurchaseUpgrade(int cost) // Cost per upgrade can vary
