@@ -4,7 +4,6 @@ using System.Collections;
 using System;
 using System.Threading.Tasks;
 using System.Threading;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -24,9 +23,10 @@ public class DeliverySystem : MonoBehaviour
     public GameObject successImage;
     public GameObject failImage;
 
-    [Header("Phones (optional per delivery)")]
+    [Header("Phones")]
     public GameObject[] phones;
     private GameObject currentPhone;
+
 
     [Header("Star System")]
     public int totalStarsCollected = 0;
