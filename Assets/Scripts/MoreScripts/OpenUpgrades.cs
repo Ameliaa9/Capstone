@@ -22,12 +22,23 @@ public class OpenUpgrades : MonoBehaviour
     public int starsSpent;
 
     // The shops upgrade buttons
-    public UnityEngine.UI.Button upgrade1;
-    public UnityEngine.UI.Button upgrade2;
+    public UnityEngine.UI.Button upgrade1; 
+    public UnityEngine.UI.Button upgrade2; 
 
     //custom cursors
     public JoystickCursor player1Cursor;
     public JoystickCursor player2Cursor;
+
+    // Cost in stars for each upgrade type
+    public int speedUpgradeCost = 10;      // Stars required to buy a speed upgrade
+    public int inventoryUpgradeCost = 25;  // Stars required to buy a package inventory upgrade
+
+
+    public int speedUpgradeAmount = 5;     // How much to increase bike leg power 
+    public int inventoryUpgradeAmount = 1; // How many extra packages the player can carry 
+
+
+    public GameObject notEnoughStarsPopup;
 
     void Start()
     {
@@ -38,10 +49,13 @@ public class OpenUpgrades : MonoBehaviour
         // Turn the uprade UI off until you collide with the shop
         upgradeUI.SetActive(false);
 
-        // Initialize the star wallet with 0 stars
+        // Initialize the star wallet with the total stars collected
         starWalletAmount = deliverySystemScript.totalStarsCollected;
         starWalletText.text = ("= " + starWalletAmount.ToString());
-        
+
+        // Make sure the "not enough stars" popup starts hidden
+        if (notEnoughStarsPopup != null)
+            notEnoughStarsPopup.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider col)
@@ -99,20 +113,71 @@ public class OpenUpgrades : MonoBehaviour
         GameManager.LockCursor();
     }
 
-    public void PurchaseUpgrade(int cost) // Cost per upgrade can vary
-    {
-        starWalletAmount -= cost;
-        starsSpent += cost;
-        starWalletText.text = ("= " + starWalletAmount.ToString());
-    }
 
     public void UpgradeSpeed(int upgradeAmount) // Upgrade increment can vary
     {
         bikeScript.legPower += upgradeAmount;
     }
 
+
     public void UpgradePackageInventory(int upgradeAmount)
     {
         //something.packageInventory += upgradeAmount;
+    }
+
+    // Attempt to buy the speed boost upgrade:
+    // If the player has enough stars, subtract the cost and apply the upgrade
+    // If not, show the "not enough stars" popup
+    public void BuySpeedUpgrade()
+    {
+        if (starWalletAmount >= speedUpgradeCost)
+        {
+            // subtract stars
+            starWalletAmount -= speedUpgradeCost;
+            starsSpent += speedUpgradeCost;
+            starWalletText.text = ("= " + starWalletAmount.ToString());
+
+            // apply speed upgrade
+            UpgradeSpeed(speedUpgradeAmount);
+        }
+        else
+        {
+            ShowNotEnoughStarsPopup();
+        }
+    }
+
+    // Attempt to buy the package inventory upgrade:
+    // If the player has enough stars, subtract the cost and apply the upgrade
+    // If not, show the "not enough stars" popup
+    public void BuyInventoryUpgrade()
+    {
+        if (starWalletAmount >= inventoryUpgradeCost)
+        {
+            // subtract stars
+            starWalletAmount -= inventoryUpgradeCost;
+            starsSpent += inventoryUpgradeCost;
+            starWalletText.text = ("= " + starWalletAmount.ToString());
+
+            // apply inventory upgrade
+            UpgradePackageInventory(inventoryUpgradeAmount);
+        }
+        else
+        {
+            ShowNotEnoughStarsPopup();
+        }
+    }
+
+    // turn on not enough stars pop for visual feedback
+    public void ShowNotEnoughStarsPopup()
+    {
+        if (notEnoughStarsPopup != null)
+            notEnoughStarsPopup.SetActive(true);
+    }
+
+    // Turn off the popup 
+    public void CloseNotEnoughStarsPopup()
+    {
+        if (notEnoughStarsPopup != null)
+            notEnoughStarsPopup.SetActive(false);
     }
 }
