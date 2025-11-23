@@ -6,32 +6,27 @@ namespace ProjectileCurveVisualizerSystem
     {
         public Rigidbody projectileRigidbody;
         public MeshCollider projectileMeshCollider;
-        public StartNextDeliveryTrigger deliveryTrigger;
-
-
-        private bool hasHit = false;
+        
+        public DeliverySystem deliverySystem;
 
         public void Throw(Vector3 velocity)
         {
             projectileMeshCollider.enabled = true;
             projectileRigidbody.useGravity = true;
             projectileRigidbody.linearVelocity = velocity;
-            hasHit = false;
         }
 
         void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("TargetBuilding"))
+            if (collision.gameObject == deliverySystem.DeliveryLocations[deliverySystem.currentDelivery])
             {
-                DeliverySpot spot = collision.gameObject.GetComponent<DeliverySpot>();
-                if (spot != null)
-                {
-                    // Find the DeliverySystem in the scene
-                    DeliverySystem system = Object.FindFirstObjectByType<DeliverySystem>();
-                    if (system != null)
-                        system.ProjectileHitHouse(spot.houseIndex);
-                }
+                deliverySystem.ProjectileHitHouse(deliverySystem.currentDelivery);
             }
+            else
+            {
+                Debug.Log($"Projectile collided with wrong gameObject" + collision.gameObject);
+            }
+            
         }
     }
 }

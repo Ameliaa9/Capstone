@@ -8,8 +8,15 @@ using System.Threading;
 public class DeliverySystem : MonoBehaviour
 {
     [Header("Delivery Setup")]
-    public DeliverySpot[] deliverySpots;
+    //public int deliverySpots = 3;
+    public GameObject[] DeliveryLocations;
+    public int currentDelivery = 0;
+    private bool hasPackage = false;
+
     public float[] deliveryTimes;
+    private float currentTimer;
+    private bool timerRunning = false;
+
     public string[] depotTags;
 
     [Header("UI")]
@@ -35,12 +42,6 @@ public class DeliverySystem : MonoBehaviour
     public GameObject starIcon2;
     public GameObject starIcon3;
     public GameObject starIcon4;
-
-    private int currentDelivery = 0;
-    private bool hasPackage = false;
-    private bool timerRunning = false;
-    private float currentTimer;
-
 
     void Start()
     {
@@ -90,35 +91,7 @@ public class DeliverySystem : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        
-        for (int i = 0; i < depotTags.Length; i++)
-        {
-            if (other.CompareTag(depotTags[i]) && !hasPackage && currentDelivery < deliverySpots.Length)
-            {
-                Debug.Log($"Depot {i} triggered. Starting delivery {currentDelivery}");
-                hasPackage = true;
-
-                if (collectedText) StartCoroutine(ShowTMPMessage(collectedText, "Package collected!", 3f));
-
-                StartDelivery(i);
-                return;
-            }
-        }
-
-        
-        if (other.CompareTag("TargetBuilding") && hasPackage && currentDelivery < deliverySpots.Length)
-        {
-            DeliverySpot spot = other.GetComponent<DeliverySpot>();
-            if (spot != null && spot.houseIndex == currentDelivery)
-            {
-                CompleteDelivery();
-            }
-        }
-    }
-
-    void StartDelivery(int depotIndex)
+    public void StartDelivery(int depotIndex)
     {
         currentTimer = deliveryTimes[currentDelivery];
         timerRunning = true;
@@ -214,14 +187,7 @@ public class DeliverySystem : MonoBehaviour
 
         currentDelivery++;
 
-        if (currentDelivery < deliverySpots.Length)
-        {
-            if (returnText) StartCoroutine(ShowTMPMessage(returnText, "Return to depot for the next package.", 7f));
-        }
-        else
-        {
-            Debug.Log("?? All deliveries complete!");
-        }
+       // if current delivery less than delivery number then back to depot, otherwise all delivery complete
     }
 
     
@@ -231,10 +197,6 @@ public class DeliverySystem : MonoBehaviour
         {
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
             CompleteDelivery();
-        }
-        else
-        {
-            Debug.Log($"? Projectile hit wrong house {houseIndex}, expecting {currentDelivery}");
         }
     }
 
