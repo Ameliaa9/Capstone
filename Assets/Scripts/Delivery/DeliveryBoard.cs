@@ -17,6 +17,9 @@ public class DeliveryBoard : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             deliveryUI.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
@@ -25,14 +28,24 @@ public class DeliveryBoard : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             deliveryUI.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
-    public void DeliveryInitiation()
+    public void DeliveryInitiation(int deliveryIndex)
     {
-        int deliveryIndex;
-        deliveryIndex = deliverySystem.currentDelivery;
-        deliverySystem.StartDelivery(deliveryIndex);
-        Debug.Log("THIS MESSAGE IS FROM THE FBI");
+        if (deliverySystem.hasPackage)
+        {
+            Debug.Log("Delivery can't be activated twice.");
+        }
+        else
+        {
+            deliverySystem.currentDelivery = deliveryIndex;
+            deliverySystem.StartDelivery(deliveryIndex);
+            
+        }
+
     }
 }

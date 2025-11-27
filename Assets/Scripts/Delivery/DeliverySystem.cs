@@ -8,16 +8,13 @@ using System.Threading;
 public class DeliverySystem : MonoBehaviour
 {
     [Header("Delivery Setup")]
-    //public int deliverySpots = 3;
     public GameObject[] DeliveryLocations;
     public int currentDelivery = 0;
-    private bool hasPackage = false;
+    public bool hasPackage = false;
 
     public float[] deliveryTimes;
     private float currentTimer;
     private bool timerRunning = false;
-
-    public string[] depotTags;
 
     [Header("UI")]
     public TMP_Text timerText;
@@ -95,6 +92,7 @@ public class DeliverySystem : MonoBehaviour
     {
         currentTimer = deliveryTimes[currentDelivery];
         timerRunning = true;
+        hasPackage = true;
 
         if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
         Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
@@ -185,9 +183,7 @@ public class DeliverySystem : MonoBehaviour
             Debug.Log(totalStarsCollected);
         }
 
-        currentDelivery++;
-
-       // if current delivery less than delivery number then back to depot, otherwise all delivery complete
+        //currentDelivery++;
     }
 
     
