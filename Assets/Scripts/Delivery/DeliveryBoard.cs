@@ -5,6 +5,7 @@ public class DeliveryBoard : MonoBehaviour
     // starts delivery, displays collected text, makes haspackage true
     public DeliverySystem deliverySystem;
     public GameObject deliveryUI;
+    private GameObject canvas1;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class DeliveryBoard : MonoBehaviour
             deliveryUI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Cursor.visible = false;
         }
     }
 
@@ -33,6 +34,15 @@ public class DeliveryBoard : MonoBehaviour
             Cursor.visible = false;
         }
     }
+
+    public void CloseDeliveryBoard()
+    {
+        deliveryUI.SetActive(false);
+        canvas1.SetActive(true);
+
+        
+    }
+
 
     public void DeliveryInitiation(int deliveryIndex)
     {

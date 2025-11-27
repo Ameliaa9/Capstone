@@ -22,8 +22,8 @@ namespace KikiNgao.SimpleBikeControl
             if (player1Cursor != null) player1Cursor.SetActive(true);
             if (player2Cursor != null) player2Cursor.SetActive(true);
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.None;
+           // Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.None;
         }
 
         public void OnPlayButton()
