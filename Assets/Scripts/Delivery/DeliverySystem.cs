@@ -26,11 +26,16 @@ public class DeliverySystem : MonoBehaviour
     [Header("Images")]
     public GameObject successImage;
     public GameObject failImage;
+    public GameObject successBackground;
+    public GameObject failBackground;
+
+    [Header("Minimap Arrows")]
+    public GameObject[] deliveryArrows;
+    private GameObject currentArrow;
 
     [Header("Phones")]
     public GameObject[] phones;
     private GameObject currentPhone;
-
 
     [Header("Star System")]
     public int totalStarsCollected = 0;
@@ -42,7 +47,6 @@ public class DeliverySystem : MonoBehaviour
 
     void Start()
     {
-     
         if (successImage) successImage.SetActive(false);
         if (failImage) failImage.SetActive(false);
 
@@ -50,14 +54,17 @@ public class DeliverySystem : MonoBehaviour
             foreach (var p in phones)
                 if (p != null) p.SetActive(false);
 
-        if (timerText) timerText.text = "";
-        if (collectedText) collectedText.text = "";
-        if (returnText) returnText.text = "";
-        if (successText) successText.text = "";
-        if (failText) failText.text = "";
-        
-    }
+        if (deliveryArrows != null)
+            foreach (var a in deliveryArrows)
+                if (a != null) a.SetActive(false);
 
+        if (timerText) timerText.text = "";
+
+        if (collectedText) collectedText.gameObject.SetActive(false);
+        if (returnText) returnText.gameObject.SetActive(false);
+        if (successText) successText.gameObject.SetActive(false);
+        if (failText) failText.gameObject.SetActive(false);
+    }
 
     void Update()
     {
@@ -72,10 +79,12 @@ public class DeliverySystem : MonoBehaviour
                 hasPackage = false;
                 if (timerText) timerText.text = "";
                 if (currentPhone) currentPhone.SetActive(false);
+                if (currentArrow) currentArrow.SetActive(false);
 
                 Debug.Log($"? Timer ran out for delivery {currentDelivery}");
 
-                if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 7f));
+                if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
+                if (failImage) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 3f));
             }
         }
@@ -84,8 +93,6 @@ public class DeliverySystem : MonoBehaviour
     public void GiveStars(int starsGained)
     {
         totalStarsCollected = totalStarsCollected + starsGained;
-
-
     }
 
     public void StartDelivery(int depotIndex)
@@ -103,6 +110,14 @@ public class DeliverySystem : MonoBehaviour
             currentPhone = phones[depotIndex];
             if (currentPhone) currentPhone.SetActive(true);
         }
+
+        int idx = currentDelivery;
+        if (deliveryArrows != null && idx < deliveryArrows.Length)
+        {
+            if (currentArrow) currentArrow.SetActive(false);
+            currentArrow = deliveryArrows[idx];
+            if (currentArrow) currentArrow.SetActive(true);
+        }
     }
 
     void CompleteDelivery()
@@ -112,11 +127,13 @@ public class DeliverySystem : MonoBehaviour
 
         if (timerText) timerText.text = "";
         if (currentPhone) currentPhone.SetActive(false);
+        if (currentArrow) currentArrow.SetActive(false);
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
-        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful!", 3f));
+        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful! Return to depot for another package", 5f));
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
+        if (successImage) StartCoroutine(ShowImageForSeconds(successBackground, 5f));
 
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
         if (currentTimer <= deliveryTimes[currentDelivery] / 5)
@@ -152,7 +169,6 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
             Debug.Log(totalStarsCollected);
-
         }
         else if (currentTimer <= deliveryTimes[currentDelivery] / 5 * 4)
         {
@@ -164,7 +180,6 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
             Debug.Log(totalStarsCollected);
-
         }
         else if (currentTimer > deliveryTimes[currentDelivery] / 5 * 4)
         {
@@ -186,7 +201,6 @@ public class DeliverySystem : MonoBehaviour
         //currentDelivery++;
     }
 
-    
     public void ProjectileHitHouse(int houseIndex)
     {
         if (hasPackage && houseIndex == currentDelivery)
