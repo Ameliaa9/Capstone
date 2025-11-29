@@ -48,6 +48,8 @@ public class DeliverySystem : MonoBehaviour
     // Track if the unlock message has already been shown
     private bool speedBoostUnlockShown = false;
 
+    public TaskManager coinTaskManager;
+
     void Start()
     {
         if (successImage) successImage.SetActive(false);
@@ -121,6 +123,9 @@ public class DeliverySystem : MonoBehaviour
             currentArrow = deliveryArrows[idx];
             if (currentArrow) currentArrow.SetActive(true);
         }
+
+        if (coinTaskManager != null)
+            coinTaskManager.OnDeliveryStarted();
     }
 
     void CompleteDelivery()
@@ -138,7 +143,6 @@ public class DeliverySystem : MonoBehaviour
         if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
 
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
-
 
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
         if (currentTimer <= deliveryTimes[currentDelivery] / 5)
@@ -204,6 +208,14 @@ public class DeliverySystem : MonoBehaviour
         }
 
         //currentDelivery++;
+
+        if (coinTaskManager != null)
+            coinTaskManager.OnDeliveryFinished();
+    }
+
+    public void AddBonusStar()
+    {
+        GiveStars(1);
     }
 
     public void ProjectileHitHouse(int houseIndex)
@@ -220,7 +232,6 @@ public class DeliverySystem : MonoBehaviour
     {
         // turn on the success background for the duration of the messages
         if (successBackground) successBackground.SetActive(true);
-
         // success message for 5 seconds
         yield return StartCoroutine(ShowTMPMessage(
             successText,
