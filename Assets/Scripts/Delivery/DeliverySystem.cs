@@ -45,6 +45,9 @@ public class DeliverySystem : MonoBehaviour
     public GameObject starIcon3;
     public GameObject starIcon4;
 
+    // Track if the unlock message has already been shown
+    private bool speedBoostUnlockShown = false;
+
     void Start()
     {
         if (successImage) successImage.SetActive(false);
@@ -131,9 +134,11 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
-        if (successText) StartCoroutine(ShowTMPMessage(successText, "Delivery successful! Return to depot for another package", 5f));
+        // coroutine for the pop ups 
+        if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
+
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
-        if (successImage) StartCoroutine(ShowImageForSeconds(successBackground, 5f));
+
 
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
         if (currentTimer <= deliveryTimes[currentDelivery] / 5)
@@ -208,6 +213,34 @@ public class DeliverySystem : MonoBehaviour
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
             CompleteDelivery();
         }
+    }
+
+    // Show success message, then show unlock message if players have 10 or more stars
+    private IEnumerator ShowSuccessThenUnlockMessage()
+    {
+        // turn on the success background for the duration of the messages
+        if (successBackground) successBackground.SetActive(true);
+
+        // success message for 5 seconds
+        yield return StartCoroutine(ShowTMPMessage(
+            successText,
+            "Delivery successful! Return to depot for another package",
+            5f));
+
+        // show unlock message if players have 10 or more stars, only once
+        if (!speedBoostUnlockShown && totalStarsCollected >= 10 && returnText != null)
+        {
+            speedBoostUnlockShown = true;
+
+            // Show speed boost unlock message for 5 seconds
+            yield return StartCoroutine(ShowTMPMessage(
+                returnText,
+                "You might wanna visit the upgrade shop...",
+                5f));
+        }
+
+        // turn off the success background after all messages are done
+        if (successBackground) successBackground.SetActive(false);
     }
 
     private IEnumerator ShowTMPMessage(TMP_Text textField, string message, float duration)
