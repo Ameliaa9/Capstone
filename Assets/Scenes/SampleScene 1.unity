@@ -767,6 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &5077859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!4 &6785558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0ee6d569ec3227e40888e8151b331e0f, type: 3}
@@ -2078,8 +2080,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &8477591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2099,8 +2106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.3940735, y: 1.84865, z: 5.3898926}
+  m_Center: {x: -0.068984985, y: 0.424325, z: 0.035247803}
 --- !u!4 &9177014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -2768,6 +2775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &15424385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6658,6 +6666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &31713300
 GameObject:
   m_ObjectHideFlags: 0
@@ -8181,6 +8190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &40304553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9448,6 +9458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &45843062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9634,6 +9645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &47009673 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8fa324388c16b5c4eac9846338b35b17, type: 3}
@@ -10183,6 +10195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &51239271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12548,6 +12561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &63016106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13343,6 +13357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &69703898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13477,6 +13492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &70718315
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13840,8 +13856,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &73178776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13861,8 +13882,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.706249, y: 1.84865, z: 6.245697}
+  m_Center: {x: 0.08664894, y: 0.424325, z: 0.19004822}
 --- !u!1001 &73510712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15164,6 +15185,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
   m_PrefabInstance: {fileID: 1560825815}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &79939090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79939091}
+  - component: {fileID: 79939093}
+  - component: {fileID: 79939092}
+  m_Layer: 5
+  m_Name: green smoke (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &79939091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79939090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19.1329, y: 10.872001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 111696986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.047263, y: 3.8474}
+  m_SizeDelta: {x: 100.36, y: 100.9665}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &79939092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79939090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6f8b8ba945380db4f836685bd4ebfe2e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &79939093
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79939090}
+  m_CullTransparentMesh: 1
 --- !u!1001 &80581114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16155,8 +16251,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.2769966, y: 1.84865, z: 5.234741}
+  m_Center: {x: -0.16638947, y: 0.424325, z: -0.0811615}
 --- !u!114 &82014416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16169,8 +16265,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &82202773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19302,6 +19403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &96003288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20480,6 +20582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &103561071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21200,7 +21303,7 @@ GameObject:
   - component: {fileID: 107955761}
   - component: {fileID: 107955763}
   - component: {fileID: 107955762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: playericon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21942,11 +22045,12 @@ RectTransform:
   - {fileID: 668052595}
   - {fileID: 1284786043}
   - {fileID: 668292761}
+  - {fileID: 79939091}
   - {fileID: 176104204}
-  - {fileID: 1219027535}
-  - {fileID: 2059358357}
-  - {fileID: 1581049101}
   - {fileID: 2093466101}
+  - {fileID: 1581049101}
+  - {fileID: 2059358357}
+  - {fileID: 1219027535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -22389,6 +22493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &114714983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24975,8 +25080,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.7821045, y: 1.84865, z: 5.7010193}
+  m_Center: {x: -0.027633667, y: 0.424325, z: -0.042678833}
 --- !u!114 &131004736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24989,8 +25094,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &131364109
 GameObject:
   m_ObjectHideFlags: 0
@@ -25068,6 +25178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &131364113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26455,6 +26566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &137000535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32362,6 +32474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &168531941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32717,6 +32830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &171747543
 GameObject:
   m_ObjectHideFlags: 0
@@ -32794,6 +32908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &171747547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33316,6 +33431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &175006928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34592,6 +34708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &183897318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38975,8 +39092,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &205778552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38996,8 +39118,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.3549805, y: 1.84865, z: 5.544647}
+  m_Center: {x: 0.06706238, y: 0.424325, z: -0.31547546}
 --- !u!4 &206367815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
@@ -40268,6 +40390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &212175912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40806,6 +40929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &214592501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42114,6 +42238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &221749027
 GameObject:
   m_ObjectHideFlags: 0
@@ -42191,6 +42316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &221749031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45096,8 +45222,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.250366, y: 1.84865, z: 7.959656}
+  m_Center: {x: 0.04788208, y: 0.424325, z: -0.19866943}
 --- !u!114 &236691035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45110,8 +45236,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &236805235
 GameObject:
   m_ObjectHideFlags: 0
@@ -45946,6 +46077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &239759156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46877,6 +47009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &242604749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -47696,6 +47829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &249465903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47957,6 +48091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &250341116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48637,6 +48772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &256323411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51460,8 +51596,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &272674885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53915,6 +54056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &284679938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55116,6 +55258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &289127857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55576,7 +55719,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 511
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -58775,6 +58918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &310490793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -64258,8 +64402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &334996242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66228,6 +66377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &350040322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 47ef019eb3bddab469e56e5a31eebf68, type: 3}
@@ -67779,6 +67929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &355851532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68885,6 +69036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &363268127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71396,6 +71548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &379283917
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71501,6 +71654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &379559014
 GameObject:
   m_ObjectHideFlags: 0
@@ -72647,6 +72801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &389650223
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75066,6 +75221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &401812402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75611,6 +75767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &403556267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2857b989c828950448ead142ca28e4a3, type: 3}
@@ -75922,6 +76079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &405176710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76430,6 +76588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &408852092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79225,6 +79384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &424317929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80292,6 +80452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &431385766
 GameObject:
   m_ObjectHideFlags: 0
@@ -81398,6 +81559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &434938138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82781,6 +82943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &439650573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
@@ -83120,6 +83283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &442122914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83845,6 +84009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &445335443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85354,6 +85519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &453338358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85667,6 +85833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &454707111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86005,6 +86172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &455546721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86199,6 +86367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &457099329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89294,6 +89463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &472637478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91383,6 +91553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &482265860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92512,6 +92683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &486280162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93965,6 +94137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &492638786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94506,6 +94679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &494298919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96557,6 +96731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &505883632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97771,6 +97946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &515626796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100094,6 +100270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &529324122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100879,6 +101056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &532136608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101154,6 +101332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &535350880
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -101861,6 +102040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &539558882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102278,6 +102458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &541776696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102985,6 +103166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &544208635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106012,6 +106194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &564822201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107687,6 +107870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &571963162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108429,6 +108613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &576494155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109850,6 +110035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &582543704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110668,6 +110854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &587092504
 GameObject:
   m_ObjectHideFlags: 0
@@ -111411,6 +111598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &588487146
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -111548,6 +111736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &589415927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113534,6 +113723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &597201768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114590,6 +114780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &601926339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115343,6 +115534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &605603213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116844,6 +117036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &616656016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -117399,6 +117592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &618794979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117963,6 +118157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &620499214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -118188,6 +118383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &622056610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -118238,6 +118434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &622056614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120192,6 +120389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &635887252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120722,8 +120920,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.588402, y: 1.84865, z: 5.3894653}
+  m_Center: {x: 0.028274536, y: 0.424325, z: 0.15174866}
 --- !u!114 &637686954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120736,8 +120934,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &638037979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121148,6 +121351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &639622373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122420,6 +122624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &647560605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122925,6 +123130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &650895940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -123172,6 +123378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &652961842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123364,6 +123571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &653952341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2100f10c342364479e7a527f9ef5429, type: 3}
@@ -124623,6 +124831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &663038958
 GameObject:
   m_ObjectHideFlags: 0
@@ -124902,6 +125111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &663375477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126062,6 +126272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &670009402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127888,8 +128099,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 12.003723, y: 1.84865, z: 10.649582}
+  m_Center: {x: 0.08657837, y: 0.424325, z: 0.09270477}
 --- !u!114 &677795172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127902,8 +128113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &677828666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128122,6 +128338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &678954014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128258,6 +128475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &680255434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128458,6 +128676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &681497493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132227,6 +132446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!4 &701463778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6458a4c9f91f22741a5064b5b7cfd892, type: 3}
@@ -133468,8 +133688,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &707868621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135981,6 +136206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &718565160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136874,6 +137100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &722100080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137747,6 +137974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &726582227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139591,6 +139819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &735530292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8365ae9a93a2e8498ae3c2646f3c455, type: 3}
@@ -140306,6 +140535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &739400533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141022,6 +141252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &745346334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143289,6 +143520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &756567254
 GameObject:
   m_ObjectHideFlags: 0
@@ -143431,6 +143663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &757756197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144968,6 +145201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &766362745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147015,8 +147249,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &776822476
 GameObject:
   m_ObjectHideFlags: 0
@@ -147316,8 +147555,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &777718925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147887,6 +148131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &778974610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151269,8 +151514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &800827950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151290,8 +151540,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.367813, y: 1.84865, z: 6.2070007}
+  m_Center: {x: 0.028114319, y: 0.424325, z: 0.015579224}
 --- !u!1001 &800996334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151642,6 +151892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &803751567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153828,6 +154079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &815692943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154119,8 +154371,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 12.156982, y: 1.84865, z: 9.282959}
+  m_Center: {x: -0.06919861, y: 0.424325, z: 0.035308838}
 --- !u!114 &817597513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154133,8 +154385,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &819389969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156061,6 +156318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &835649881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160516,6 +160774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &862053600
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -161285,8 +161544,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 9.430054, y: 1.84865, z: 7.9970093}
+  m_Center: {x: -0.030090332, y: 0.424325, z: -0.101257324}
 --- !u!114 &866050124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161299,8 +161558,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!4 &867507371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e1d9101af5d96d94ca99efe2de0bac21, type: 3}
@@ -161745,6 +162009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &869176444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -162118,6 +162383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &872419812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -162810,6 +163076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &875416823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162981,6 +163248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &875699547
 GameObject:
   m_ObjectHideFlags: 0
@@ -163974,8 +164242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &880786213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -166885,6 +167158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &895884236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170830,6 +171104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &915616970
 GameObject:
   m_ObjectHideFlags: 0
@@ -171157,6 +171432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &918655586 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 87cc36a45a321ad478c47c9fec13dbd3, type: 3}
@@ -172404,6 +172680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &924582978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -172732,6 +173009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &925427883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -173317,8 +173595,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &931723641
 GameObject:
   m_ObjectHideFlags: 0
@@ -174451,8 +174734,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 9.58551, y: 1.84865, z: 8.425934}
+  m_Center: {x: 0.04751587, y: 0.424325, z: -0.043319702}
 --- !u!114 &939373749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174465,8 +174748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &940119240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175009,8 +175297,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.9778748, y: 1.84865, z: 6.5567474}
+  m_Center: {x: 0.10598755, y: 0.424325, z: -0.08203888}
 --- !u!114 &940713480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175023,8 +175311,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &940816832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175796,6 +176089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &943366980
 GameObject:
   m_ObjectHideFlags: 0
@@ -181824,6 +182118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &949605115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -184075,8 +184370,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.3551674, y: 1.84865, z: 5.973175}
+  m_Center: {x: 0.02799797, y: 0.424325, z: 0.1322937}
 --- !u!114 &964179390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184089,8 +184384,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &965512017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185088,6 +185388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &969317948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185752,6 +186053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &970338431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187326,6 +187628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &978303677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187922,6 +188225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &981723787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -188277,8 +188581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &983418873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -188382,6 +188691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &983514809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -189018,6 +189328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &988066595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -192162,6 +192473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1002034948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -192249,6 +192561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1002793845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -192430,6 +192743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1003837605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -195978,6 +196292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1019159652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -196446,6 +196761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1021006183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -199437,8 +199753,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.379578, y: 1.84865, z: 7.375641}
+  m_Center: {x: -0.010559082, y: 0.424325, z: 0.092437744}
 --- !u!114 &1034540378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199451,8 +199767,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &1034767470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
@@ -204711,6 +205032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1037333398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -205955,6 +206277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1043157499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206828,8 +207151,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.7829895, y: 1.84865, z: 6.831238}
+  m_Center: {x: -0.03010559, y: 0.424325, z: 0.016311646}
 --- !u!114 &1046445158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206842,8 +207165,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &1047074738
 GameObject:
   m_ObjectHideFlags: 0
@@ -208877,6 +209205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1056781132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209010,8 +209339,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.680252, y: 1.84865, z: 5.505066}
+  m_Center: {x: 0.14525604, y: 0.424325, z: 0.0152282715}
 --- !u!114 &1056781136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209024,8 +209353,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &1057062938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: e1697ef5073defa458e40968ffff2b30, type: 3}
@@ -209066,6 +209400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1057821792
 GameObject:
   m_ObjectHideFlags: 0
@@ -210996,6 +211331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1062272614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee37198b24b2164fbbccfbe92fe5d35, type: 3}
@@ -212142,6 +212478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1071074863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -213637,6 +213974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1079589302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214250,6 +214588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1086333282
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -217297,6 +217636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1105623563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217514,6 +217854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1106023071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e0e851c58997b9c438fae494e3412749, type: 3}
@@ -220808,8 +221149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1123627997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -220829,8 +221175,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.0947266, y: 1.84865, z: 7.1013794}
+  m_Center: {x: 0.12557983, y: 0.424325, z: 0.034698486}
 --- !u!1001 &1124276275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222502,6 +222848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1131070474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224424,8 +224771,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1137838803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -224445,8 +224797,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.6670685, y: 1.84865, z: 6.48114}
+  m_Center: {x: 0.10617828, y: 0.424325, z: -0.0048828125}
 --- !u!1001 &1138231654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224840,6 +225192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1140033919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230606,8 +230959,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1171487294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230627,8 +230985,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 11.264633, y: 1.84865, z: 10.403763}
+  m_Center: {x: 0.02835083, y: 0.424325, z: 0.014945984}
 --- !u!1001 &1171835546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230979,6 +231337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1173849418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231510,6 +231869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1176256899
 GameObject:
   m_ObjectHideFlags: 0
@@ -232471,6 +232831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1182297910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233617,6 +233978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1188664639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234430,6 +234792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1192643771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238529,6 +238892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1216253167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239127,8 +239491,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.705429, y: 1.84865, z: 6.518463}
+  m_Center: {x: 0.047538757, y: 0.424325, z: 0.05445862}
 --- !u!114 &1218306978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239141,8 +239505,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &1219027534
 GameObject:
   m_ObjectHideFlags: 0
@@ -240587,8 +240956,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.417831, y: 1.84865, z: 8.581741}
+  m_Center: {x: 0.008811951, y: 0.424325, z: -0.04311371}
 --- !u!114 &1224820322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240601,8 +240970,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1224978047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240764,6 +241138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1225600675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240952,6 +241327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1226252279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241507,6 +241883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1230461420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242198,6 +242575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1238206231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243036,8 +243414,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &1243983787
 GameObject:
   m_ObjectHideFlags: 0
@@ -246183,6 +246566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1258845774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246537,6 +246921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1260774105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247291,8 +247676,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.145798, y: 1.84865, z: 8.81662}
+  m_Center: {x: -0.04965973, y: 0.424325, z: 0.11286926}
 --- !u!114 &1264731961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247305,8 +247690,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1264953450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248814,6 +249204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1272406965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252500,6 +252891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1291376011
 GameObject:
   m_ObjectHideFlags: 0
@@ -257427,8 +257819,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.7053833, y: 1.84865, z: 6.4796066}
+  m_Center: {x: 0.08644104, y: 0.424325, z: -0.0042533875}
 --- !u!114 &1319181354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257441,8 +257833,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1319469984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257628,8 +258025,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1319889292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -257649,8 +258051,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.484024, y: 1.84865, z: 6.6745605}
+  m_Center: {x: 0.008796692, y: 0.424325, z: 0.015563965}
 --- !u!1 &1320021351
 GameObject:
   m_ObjectHideFlags: 0
@@ -259370,6 +259772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1327048471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -260123,6 +260526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1333502077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260383,6 +260787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1334744174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2d5fb229ae2945742b900a405a5e7a0b, type: 3}
@@ -262616,6 +263021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1344950165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264783,6 +265189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1352995812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -266018,6 +266425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1357554792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267983,8 +268391,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &1372359585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268303,6 +268716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1374707672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269858,6 +270272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1383086413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -271893,6 +272308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1390946153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -272302,8 +272718,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1392771045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -272323,8 +272744,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.8226585, y: 1.84865, z: 5.8172607}
+  m_Center: {x: -0.049432755, y: 0.424325, z: 0.09326172}
 --- !u!4 &1392812665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -274157,6 +274578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1403898571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 52f3bf47c9c62af4588469ff668b805c, type: 3}
@@ -274207,6 +274629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1403898575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -274520,6 +274943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1406117178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274737,8 +275161,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.4713516, y: 1.84865, z: 5.3115234}
+  m_Center: {x: 0.008686066, y: 0.424325, z: -0.042877197}
 --- !u!114 &1406357165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274751,8 +275175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1406749466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275512,8 +275941,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &1410009289
 GameObject:
   m_ObjectHideFlags: 0
@@ -276359,6 +276793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1414325291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278251,6 +278686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1420578704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: f0ffa104f4ba20b40a0421d7c2b5f098, type: 3}
@@ -278291,6 +278727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1421254236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280081,6 +280518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1431195965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281179,6 +281617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1437813478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281584,6 +282023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1438416594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283342,8 +283782,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.783928, y: 1.84865, z: 5.271881}
+  m_Center: {x: 0.12564468, y: 0.424325, z: 0.093185425}
 --- !u!114 &1446624124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283356,8 +283796,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1 &1446813330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -284496,6 +284941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1452650242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286563,6 +287009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1463085298
 GameObject:
   m_ObjectHideFlags: 0
@@ -289425,6 +289872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1480154222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289843,6 +290291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1483214095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -291159,6 +291608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1493679805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -291585,6 +292035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1495993707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -291866,6 +292317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1496863449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292045,6 +292497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1496878109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294280,6 +294733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1510172399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294825,6 +295279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1512587546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -294961,6 +295416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1512980269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298444,6 +298900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1531696190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301480,8 +301937,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &1548266305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302055,6 +302517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1552208161
 GameObject:
   m_ObjectHideFlags: 0
@@ -303258,8 +303721,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1560103905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -303279,8 +303747,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.0431833, y: 1.84865, z: 5.546646}
+  m_Center: {x: -0.12736273, y: 0.424325, z: 0.152565}
 --- !u!1 &1560283310 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3a7e1c0a00828fd4196c8cd24886d2ed, type: 3}
@@ -305080,6 +305548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1566883913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
@@ -306396,6 +306865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!4 &1573619747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -306880,6 +307350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1577875535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -307385,6 +307856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1580419482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -307926,6 +308398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1585145496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308314,6 +308787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1589900355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -310149,8 +310623,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &1602607735 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee6d569ec3227e40888e8151b331e0f, type: 3}
@@ -311222,8 +311701,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.172577, y: 1.84865, z: 7.9986267}
+  m_Center: {x: -0.030349731, y: 0.424325, z: 0.24919128}
 --- !u!114 &1605077982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311236,8 +311715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1605686940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312622,6 +313106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1613636092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -314373,6 +314858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1621198642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -318788,6 +319274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1640103826
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -320510,6 +320997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1648028412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -321936,6 +322424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1655418129
 GameObject:
   m_ObjectHideFlags: 0
@@ -324770,6 +325259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1673583885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -325930,6 +326420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1680668175
 GameObject:
   m_ObjectHideFlags: 0
@@ -326105,6 +326596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1681036700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -327410,8 +327902,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1689752341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -327431,8 +327928,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 7.990795, y: 1.84865, z: 5.1951294}
+  m_Center: {x: 0.02819252, y: 0.424325, z: -1.3473663}
 --- !u!1 &1690388437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1b0084fb56aeb6e4e90f88a0def84cf0, type: 3}
@@ -328601,6 +329098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1698132242
 GameObject:
   m_ObjectHideFlags: 0
@@ -329247,6 +329745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1701847008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330927,6 +331426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1709311395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
@@ -331606,6 +332106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1714544239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -332427,6 +332928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1719262057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
@@ -335433,6 +335935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1731671696
 GameObject:
   m_ObjectHideFlags: 0
@@ -335845,6 +336348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1736618155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335942,6 +336446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1736728012
 GameObject:
   m_ObjectHideFlags: 0
@@ -336643,6 +337148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1739685323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ffa95796af8d5884f9d08f66e6bb627e, type: 3}
@@ -337303,8 +337809,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &1745275418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339697,6 +340208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1756472257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342102,6 +342614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1768711379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -342761,6 +343274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1771337431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -345388,6 +345902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1784998053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -345608,6 +346123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1786072862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345705,6 +346221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1787139747
 GameObject:
   m_ObjectHideFlags: 0
@@ -346662,8 +347179,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 9.743698, y: 1.84865, z: 9.400604}
+  m_Center: {x: -0.029563904, y: 0.424325, z: 0.17152405}
 --- !u!114 &1790570211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346676,8 +347193,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1793056521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347249,6 +347771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1794932616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347422,6 +347945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1795150509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347626,6 +348150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1796521151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347795,6 +348320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1796722730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349062,6 +349588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1803783154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -350739,6 +351266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1812057985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -352287,6 +352815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &1817031962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b74c48c2e73e17c418c9394124b75daf, type: 3}
@@ -352385,6 +352914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &1817092625
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -353323,6 +353853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1825672112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353536,6 +354067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1825934587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354075,6 +354607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1829196026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354815,6 +355348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &1830702465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -355101,6 +355635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1832109145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -356622,7 +357157,7 @@ GameObject:
   - component: {fileID: 1840113607}
   - component: {fileID: 1840113606}
   - component: {fileID: 1840113605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CanvasMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360139,6 +360674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &1858746339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -360671,8 +361207,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &1861505843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362250,8 +362791,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.121689, y: 1.84865, z: 5.584137}
+  m_Center: {x: -0.010955811, y: 0.424325, z: 0.093307495}
 --- !u!114 &1869478376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362264,8 +362805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1869958683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -364396,6 +364942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1879453750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -364546,6 +365093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &1881077825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -365396,6 +365944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &1885358047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -365671,6 +366220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1887656164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -365846,6 +366396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1001 &1888542378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366920,6 +367471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1892730934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367174,8 +367726,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 9.196907, y: 1.84865, z: 7.803192}
+  m_Center: {x: -0.14681625, y: 0.424325, z: -0.0816803}
 --- !u!114 &1894677441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367188,8 +367740,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1894715047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370014,8 +370571,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &1907214901
 GameObject:
   m_ObjectHideFlags: 0
@@ -376253,6 +376815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1936650651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376869,6 +377432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1937953977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377499,6 +378063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1941373852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -379929,8 +380494,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 6.4329376, y: 1.84865, z: 5.429077}
+  m_Center: {x: -0.08899689, y: 0.424325, z: 0.09364319}
 --- !u!114 &1955884665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379943,8 +380508,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &1956466395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381982,6 +382552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1970141323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382316,6 +382887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1971857062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384333,8 +384905,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &1981305632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -384354,8 +384931,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.068709, y: 1.84865, z: 7.101288}
+  m_Center: {x: -0.04938364, y: 0.424325, z: 0.07356262}
 --- !u!1001 &1981449098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384475,6 +385052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1982863826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385602,6 +386180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &1990868445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386617,6 +387196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &1994848302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -387331,8 +387911,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &1999409374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388813,6 +389398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2005265266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389351,8 +389937,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &2006663115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391185,6 +391776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2018736677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393148,6 +393740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &2026424607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -393780,6 +394373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &2030180766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -394203,6 +394797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &2034720421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
@@ -394825,8 +395420,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.301132, y: 1.84865, z: 7.7262573}
+  m_Center: {x: -0.010902405, y: 0.424325, z: -0.08175659}
 --- !u!114 &2037507732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394839,8 +395434,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &2038674525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -395493,8 +396093,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &2039650592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397358,6 +397963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &2046481442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -399285,8 +399891,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 8.029724, y: 1.84865, z: 7.8427124}
+  m_Center: {x: 0.047302246, y: 0.424325, z: -0.023498535}
 --- !u!114 &2059491818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399299,8 +399905,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!1001 &2059545168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -400746,6 +401357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &2066932925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -401955,6 +402567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &2073363010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -402441,6 +403054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &2075517706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -403160,8 +403774,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 668292762}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 668292762}
+  bigSmokeImage: {fileID: 668292762}
+  bikeHealth: {fileID: 2029217941}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.99
 --- !u!65 &2077784005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -403181,8 +403800,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.538639, y: 1.84865, z: 2.3523865}
-  m_Center: {x: 0.10621643, y: 0.424325, z: 0.07400513}
+  m_Size: {x: 9.784637, y: 1.84865, z: 8.548752}
+  m_Center: {x: 0.5911865, y: 0.424325, z: -0.06629181}
 --- !u!4 &2078506585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -404204,6 +404823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2083427246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405017,6 +405637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 5
 --- !u!1 &2087461889
 GameObject:
   m_ObjectHideFlags: 0
@@ -405194,6 +405815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &2088552563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cbc86bb57f673ba45a8426789eb0fac0, type: 3}
@@ -405359,6 +405981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2089820794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407473,6 +408096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2099323404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408083,6 +408707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2102260243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408612,6 +409237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!64 &2105954339
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -408858,8 +409484,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1001 &2106586383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410512,8 +411143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f72035972a614daf6a3e4859aac9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 176104205}
-  player: {fileID: 1555228131}
+  smallSmokeImage: {fileID: 0}
+  bigSmokeImage: {fileID: 0}
+  bikeHealth: {fileID: 0}
+  triggerDamagePerTick: 1
+  collisionDamagePerTick: 2
+  tickInterval: 1
+  fadeDuration: 0.3
 --- !u!1 &2117666033
 GameObject:
   m_ObjectHideFlags: 0
@@ -411088,6 +411724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &2119497546 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -411879,6 +412516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2123825209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -412939,6 +413577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!65 &2128289399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -413288,6 +413927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1 &2129628427
 GameObject:
   m_ObjectHideFlags: 0
@@ -414145,6 +414785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2132627614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415102,6 +415743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2139000151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415686,6 +416328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!4 &2142720904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
@@ -415815,6 +416458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2029217941}
+  damageAmount: 2
 --- !u!1001 &2146153380
 PrefabInstance:
   m_ObjectHideFlags: 0

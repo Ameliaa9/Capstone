@@ -5,13 +5,14 @@ public class HazardousObstacles : MonoBehaviour
     [SerializeField]
     private BikeHealth bikeHealth;
 
+    [SerializeField]
+    private int damageAmount = 2;
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bike"))
         {
-            bikeHealth.SetHealth(-2);
+            bikeHealth.SetHealth(-damageAmount);
         }
     }
-
 }
