@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     [Header("Panels")]
     public GameObject pausePanel;
     public GameObject nextPagePanel;
+    public GameObject mainMenuPanel;
 
     [Header("Buttons")]
     public Button resumeButton;
@@ -19,11 +20,15 @@ public class PauseMenu : MonoBehaviour
     public Button backButton;
     public Button loadSceneButton;
     public Button exitButton;
+    public Button mainmenuButton;
     public string sceneToLoad;
 
     [Header("Player Cursors")]
     public JoystickCursor player1Cursor;
     public JoystickCursor player2Cursor;
+
+    [Header("Main Menu")]
+    public GameObject mainMenuCanvas;
 
     private bool isPaused = false;
 
@@ -37,6 +42,8 @@ public class PauseMenu : MonoBehaviour
         backButton.onClick.AddListener(ShowPausePage);
         loadSceneButton.onClick.AddListener(LoadNewScene);
         exitButton.onClick.AddListener(ExitGame);
+
+        mainmenuButton.onClick.AddListener(GoToMainMenu);
     }
 
     void Update()
@@ -103,6 +110,24 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneToLoad);
     }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
+        if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        GameManager.UnlockCursor();
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
+    }
+
 
     public void ExitGame()
     {
