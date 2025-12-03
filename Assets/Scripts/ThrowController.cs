@@ -10,6 +10,7 @@ namespace ProjectileCurveVisualizerSystem
         public DeliverySystem deliverySystem;         // DeliverySystem on BikeTest
         public ProjectileCurveVisualizer curveVisualizer; // Trajectory visualization
 
+        public Camera throwCamera;
         [Header("Throw Settings")]
         public float throwSpeed = 10f;                // set as medium speed first
         public float projectileRadius = 0.25f;
@@ -48,7 +49,8 @@ namespace ProjectileCurveVisualizerSystem
 
         void UpdateAim()
         {
-            Camera cam = Camera.main;
+            Camera cam = throwCamera != null ? throwCamera : Camera.main;
+            if (cam == null) return;
 
             // Throw Direction
             Vector3 camForward = cam.transform.forward;
