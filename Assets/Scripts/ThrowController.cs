@@ -16,6 +16,11 @@ namespace ProjectileCurveVisualizerSystem
         public float projectileRadius = 0.25f;
         public float hitOffsetUp = 0.05f;
 
+        [Header("Gamepad Settings (Player 2)")]
+        public int gamepadPlayerIndex = 2;   // This is for Player2 to use
+        public int r2ButtonIndex = 7;        // PS5's R2 looks like Button7 if something error we can edit it
+
+
         [Header("Spawn Offset")]
         public float spawnHeightOffset = 0.0f;        // set as o first 
         private bool isAiming = false;
@@ -25,27 +30,48 @@ namespace ProjectileCurveVisualizerSystem
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(1))
+            // Mouse input
+            bool mouseAimDown = Input.GetMouseButtonDown(1);  
+            bool mouseAimUp = Input.GetMouseButtonUp(1);    
+            bool mouseAimHeld = Input.GetMouseButton(1);      
+
+            // PS5 R2 INPUT
+           
+            string r2KeyName = "Joystick" + gamepadPlayerIndex + "Button" + r2ButtonIndex;
+            KeyCode r2Key = (KeyCode)System.Enum.Parse(typeof(KeyCode), r2KeyName);
+
+            bool r2Down = Input.GetKeyDown(r2Key);   
+            bool r2Up = Input.GetKeyUp(r2Key);     
+            bool r2Held = Input.GetKey(r2Key);       
+
+            // Set up together
+            bool aimDown = mouseAimDown || r2Down;
+            bool aimUp = mouseAimUp || r2Up;
+            bool aimHeld = mouseAimHeld || r2Held;
+
+            
+            if (aimDown)
             {
                 isAiming = true;
             }
 
-            if (Input.GetMouseButtonUp(1))
+            if (aimUp)
             {
                 if (isAiming)
                 {
-                    Throw();
+                    Throw();                        // Throw when loose hand
                 }
 
                 isAiming = false;
                 curveVisualizer.HideProjectileCurve();
             }
 
-            if (isAiming)
+            if (isAiming && aimHeld)
             {
-                UpdateAim();
+                UpdateAim();                        // keep hoding to draw prediction curve line and aiming
             }
         }
+
 
         void UpdateAim()
         {
