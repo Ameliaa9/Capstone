@@ -67,13 +67,12 @@ public class PauseMenu : MonoBehaviour
         if (player1Cursor != null) player1Cursor.gameObject.SetActive(true);
         if (player2Cursor != null) player2Cursor.gameObject.SetActive(true);
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+    
 
         GameManager.UnlockCursor();
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void ResumeGame()

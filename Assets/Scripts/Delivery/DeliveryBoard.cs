@@ -20,7 +20,7 @@ public class DeliveryBoard : MonoBehaviour
             deliveryUI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = false;
+            Cursor.visible = true;
         }
     }
 

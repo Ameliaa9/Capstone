@@ -93,8 +93,8 @@ public class OpenUpgrades : MonoBehaviour
             if (player1Cursor) player1Cursor.gameObject.SetActive(true);
             if (player2Cursor) player2Cursor.gameObject.SetActive(true);
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
