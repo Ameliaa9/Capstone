@@ -5,11 +5,12 @@ public class DeliveryBoard : MonoBehaviour
     // starts delivery, displays collected text, makes haspackage true
     public DeliverySystem deliverySystem;
     public GameObject deliveryUI;
-    private GameObject canvas1;
+    public GameObject canvas1;
 
     private void Start()
     {
-        deliveryUI = GameObject.Find("DeliveryCanvas");
+        deliveryUI = GameObject.Find("DepotUI");
+        canvas1.SetActive(true);
         deliveryUI.SetActive(false);
     }
 
@@ -17,6 +18,7 @@ public class DeliveryBoard : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            canvas1.SetActive(false);
             deliveryUI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
@@ -29,6 +31,7 @@ public class DeliveryBoard : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             deliveryUI.SetActive(false);
+            canvas1.SetActive(true);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -40,9 +43,9 @@ public class DeliveryBoard : MonoBehaviour
         deliveryUI.SetActive(false);
         canvas1.SetActive(true);
 
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
-
 
     public void DeliveryInitiation(int deliveryIndex)
     {
@@ -54,8 +57,6 @@ public class DeliveryBoard : MonoBehaviour
         {
             deliverySystem.currentDelivery = deliveryIndex;
             deliverySystem.StartDelivery(deliveryIndex);
-            
         }
-
     }
 }
