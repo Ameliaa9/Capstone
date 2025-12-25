@@ -30,24 +30,18 @@ namespace KikiNgao.SimpleBikeControl
 
         public static void LockCursor()
         {
-            if (CursorManager.Instance != null)
-                CursorManager.Instance.ShowCursors(false);
-            else
-            {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-            }
+           
         }
 
         public static void UnlockCursor()
         {
-            if (CursorManager.Instance != null)
-                CursorManager.Instance.ShowCursors(true);
-            else
-            {
+          
+        
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-            }
+            
         }
     }
 }

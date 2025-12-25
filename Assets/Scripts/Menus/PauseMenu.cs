@@ -23,9 +23,9 @@ public class PauseMenu : MonoBehaviour
     public Button mainmenuButton;
     public string sceneToLoad;
 
-    [Header("Player Cursors")]
-    public JoystickCursor player1Cursor;
-    public JoystickCursor player2Cursor;
+    //[Header("Player Cursors")]
+    //public JoystickCursor player1Cursor;
+    //public JoystickCursor player2Cursor;
 
     [Header("Main Menu")]
     public GameObject mainMenuCanvas;
@@ -64,8 +64,8 @@ public class PauseMenu : MonoBehaviour
         nextPagePanel.SetActive(false);
         isPaused = true;
 
-        if (player1Cursor != null) player1Cursor.gameObject.SetActive(true);
-        if (player2Cursor != null) player2Cursor.gameObject.SetActive(true);
+       // if (player1Cursor != null) player1Cursor.gameObject.SetActive(true);
+        //if (player2Cursor != null) player2Cursor.gameObject.SetActive(true);
 
     
 
@@ -82,8 +82,8 @@ public class PauseMenu : MonoBehaviour
         nextPagePanel.SetActive(false);
         isPaused = false;
 
-        if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
-        if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
+       // if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
+        //if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -115,8 +115,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
-        if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
+        //if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
+       // if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

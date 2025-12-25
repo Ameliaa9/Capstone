@@ -26,8 +26,8 @@ public class oldOpenUpgrades : MonoBehaviour
     public UnityEngine.UI.Button upgrade2;
 
     //custom cursors
-    public JoystickCursor player1Cursor;
-    public JoystickCursor player2Cursor;
+   // public JoystickCursor player1Cursor;
+   // public JoystickCursor player2Cursor;
 
     void Start()
     {
@@ -57,8 +57,8 @@ public class oldOpenUpgrades : MonoBehaviour
 
             GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
 
-            if (player1Cursor) player1Cursor.gameObject.SetActive(true);
-            if (player2Cursor) player2Cursor.gameObject.SetActive(true);
+           // if (player1Cursor) player1Cursor.gameObject.SetActive(true);
+            //if (player2Cursor) player2Cursor.gameObject.SetActive(true);
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -73,8 +73,8 @@ public class oldOpenUpgrades : MonoBehaviour
             canvas1.SetActive(true);
 
             //hide custom cursors
-            if (player1Cursor) player1Cursor.gameObject.SetActive(false);
-            if (player2Cursor) player2Cursor.gameObject.SetActive(false);
+           // if (player1Cursor) player1Cursor.gameObject.SetActive(false);
+            //if (player2Cursor) player2Cursor.gameObject.SetActive(false);
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -90,8 +90,8 @@ public class oldOpenUpgrades : MonoBehaviour
         canvas1.SetActive(true);
 
         //hide custom cursors
-        if (player1Cursor) player1Cursor.gameObject.SetActive(false);
-        if (player2Cursor) player2Cursor.gameObject.SetActive(false);
+       // if (player1Cursor) player1Cursor.gameObject.SetActive(false);
+        //if (player2Cursor) player2Cursor.gameObject.SetActive(false);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
