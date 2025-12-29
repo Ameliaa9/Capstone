@@ -1,28 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class animatewater : MonoBehaviour
+public class animateWater : MonoBehaviour
 {
-    public float speedX = 0.1f;
-    public float speedY = 0.1f;
+    [Header("Scroll Speed")]
+    public float speedX = 0f;
+    public float speedY = -0.2f;  // negative to move downward
 
-    private float curX;
-    private float curY;
+    [Header("Texture Property")]
+    // For URP/HDRP Lit: use "_BaseMap"
+    // For Built-in Standard: use "_MainTex"
+    public string textureProperty = "_BaseMap";
 
-    // Use this for initialization
-    void Start()
+    private Renderer rend;
+    private Vector2 offset;
+
+    void Awake()
     {
-        curX = GetComponent<Renderer>().material.mainTextureOffset.x;
-        curY = GetComponent<Renderer>().material.mainTextureOffset.y;
+        rend = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
-        curX += Time.deltaTime * speedX;
-        curY += Time.deltaTime * speedY;
+        if (rend != null && rend.material != null)
+        {
+            offset = rend.material.GetTextureOffset(textureProperty);
+        }
+    }
 
-        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(curX, curY));
+    void Update()
+    {
+        if (rend == null || rend.material == null) return;
+
+        offset.x = Mathf.Repeat(offset.x + speedX * Time.deltaTime, 1f);
+        offset.y = Mathf.Repeat(offset.y + speedY * Time.deltaTime, 1f);
+
+        rend.material.SetTextureOffset(textureProperty, offset);
     }
 }
