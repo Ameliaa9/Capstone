@@ -2,54 +2,53 @@ using UnityEngine;
 
 public class BikeCameraOrbit : MonoBehaviour
 {
+    [Header("Follow")]
     public Transform followTarget;
     public Vector3 offset = new Vector3(0, 2, -6);
+
+    [Header("Rotation")]
     public float rotationSpeed = 70f;
     public float verticalSpeed = 50f;
     public float minPitch = -20f;
     public float maxPitch = 60f;
 
+    [Header("Camera Collision")]
+    public float collisionRadius = 0.25f;
+    public float collisionBuffer = 0.15f;
+    public float collisionSmooth = 12f;
+    public LayerMask collisionLayers = ~0;
+
     [Header("Aim Target")]
     public Transform aimTarget;
     public float aimDistance = 10f;
 
-    private float yaw = 0f;
+    private float yaw;
     private float pitch = 20f;
-
-
-    public void RotateFromController(float x, float y)
-    {
-        yaw += x * rotationSpeed * Time.deltaTime;
-        pitch += y * verticalSpeed * Time.deltaTime;
-        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
-
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
-        Vector3 rotatedOffset = rotation * offset;
-        transform.position = followTarget.position + rotatedOffset;
-        transform.LookAt(followTarget.position + Vector3.up * 1.5f);
-
-        if (aimTarget != null)
-            aimTarget.position = followTarget.position + rotation * (Vector3.forward * aimDistance);
-    }
+    private float currentDistance;
 
     void Start()
     {
-        if (followTarget == null)
+        if (!followTarget)
         {
             Debug.LogError("Follow target not assigned!");
+            enabled = false;
             return;
         }
 
         yaw = transform.eulerAngles.y;
+        currentDistance = offset.magnitude;
     }
 
     void Update()
     {
-        float inputX = 0f;
-        float inputY = 0f;
+        ReadInput();
+        UpdateCamera();
+    }
 
-        inputX = Input.GetAxis("Joystick2Horizontal");
-        inputY = -Input.GetAxis("Joystick2Vertical");
+    void ReadInput()
+    {
+        float inputX = Input.GetAxis("Joystick2Horizontal");
+        float inputY = -Input.GetAxis("Joystick2Vertical");
 
         if (Mathf.Abs(inputX) < 0.2f) inputX = 0f;
         if (Mathf.Abs(inputY) < 0.2f) inputY = 0f;
@@ -65,15 +64,44 @@ public class BikeCameraOrbit : MonoBehaviour
         yaw += inputX * rotationSpeed * Time.deltaTime;
         pitch += inputY * verticalSpeed * Time.deltaTime;
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
-
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
-        Vector3 rotatedOffset = rotation * offset;
-
-        transform.position = followTarget.position + rotatedOffset;
-        transform.LookAt(followTarget.position + Vector3.up * 1.5f);
-
-        if (aimTarget != null)
-            aimTarget.position = followTarget.position + rotation * (Vector3.forward * aimDistance);
     }
 
+    void UpdateCamera()
+    {
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
+
+        Vector3 targetPos = followTarget.position + Vector3.up * 1.5f;
+        Vector3 desiredOffset = rotation * offset;
+        float desiredDistance = offset.magnitude;
+
+        Vector3 desiredCamPos = targetPos + desiredOffset.normalized * desiredDistance;
+
+        // camera collision
+        RaycastHit hit;
+        if (Physics.SphereCast(
+            targetPos,
+            collisionRadius,
+            desiredOffset.normalized,
+            out hit,
+            desiredDistance,
+            collisionLayers,
+            QueryTriggerInteraction.Ignore))
+        {
+            desiredDistance = Mathf.Max(hit.distance - collisionBuffer, 0.5f);
+        }
+
+        currentDistance = Mathf.Lerp(
+            currentDistance,
+            desiredDistance,
+            Time.deltaTime * collisionSmooth
+        );
+
+        transform.position = targetPos + desiredOffset.normalized * currentDistance;
+        transform.LookAt(targetPos);
+
+        if (aimTarget)
+        {
+            aimTarget.position = targetPos + rotation * Vector3.forward * aimDistance;
+        }
+    }
 }
