@@ -43,7 +43,7 @@ public class LeaderboardUI : MonoBehaviour
         var bestEntry = manager.GetBestEntryForTeam(TeamNameManager.CurrentTeamName);
         int bestRank = manager.GetRankOfEntry(bestEntry);
 
-        int count = Mathf.Min(10, leaderboard.Count);
+        int count = Mathf.Min(5, leaderboard.Count);
         for (int i = 0; i < count; i++)
         {
             var entry = leaderboard[i];
@@ -68,4 +68,15 @@ public class LeaderboardUI : MonoBehaviour
             finalScoreText.text = "Your Best\n—";
         }
     }
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.PageDown))
+        {
+            LeaderboardManager.Instance.ResetLeaderboard();
+            Refresh();
+        }
+    }
+
 }
