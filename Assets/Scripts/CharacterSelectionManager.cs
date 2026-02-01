@@ -17,9 +17,9 @@ public class CharacterSelectionManager : MonoBehaviour
 
         if (player1.IsLockedIn() && player2.IsLockedIn())
         {
-            hasFaded = true;
-            StartCoroutine(FadeOut());
+            TeamNameOverlayManager.Instance.ShowKeyboard();
         }
+
     }
 
     IEnumerator FadeOut()

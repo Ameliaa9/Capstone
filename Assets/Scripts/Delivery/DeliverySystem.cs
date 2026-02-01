@@ -139,6 +139,23 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
+       
+        if (LeaderboardManager.Instance != null)
+        {
+            float timeTaken = deliveryTimes[currentDelivery] - currentTimer;
+
+            LeaderboardManager.Instance.AddScore(timeTaken);
+
+
+
+            Debug.Log("Leaderboard score saved: " + currentTimer);
+        }
+        else
+        {
+            Debug.LogWarning("LeaderboardManager not found!");
+        }
+
+
         // coroutine for the pop ups 
         if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
 
