@@ -147,6 +147,8 @@ public class OpenUpgrades : MonoBehaviour
     // If not, show the "not enough stars" popup
     public void BuySpeedUpgrade()
     {
+        Debug.Log("BuySpeedUpgrade CALLED");
+
         // Stop here if players already bought this upgrade once
         if (speedUpgradePurchased)
             return;

@@ -59,7 +59,7 @@ namespace KikiNgao.SimpleBikeControl
         private bool IsTurning() => inputManager.horizontal != 0;
         private bool IsSpeedUp() => inputManager.speedUp;
 
-        private float GetBikeSpeedKm() => GetBikeSpeedMs() * 3.6f;
+        public float GetBikeSpeedKm() => GetBikeSpeedMs() * 3.6f;
         private float GetBikeSpeedMs() => m_Rigidbody.linearVelocity.magnitude;
         private float GetBikeAngle() => WrapAngle(transform.eulerAngles.z);
         public bool TiltToRight() => WrapAngle(transform.eulerAngles.z) <= 0;
