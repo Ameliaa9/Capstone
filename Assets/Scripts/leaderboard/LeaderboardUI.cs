@@ -65,7 +65,7 @@ public class LeaderboardUI : MonoBehaviour
         }
         else
         {
-            finalScoreText.text = "Your Best\n—";
+            finalScoreText.text = "No Highscore Yet";
         }
     }
 
