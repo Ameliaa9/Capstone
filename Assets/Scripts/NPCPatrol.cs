@@ -8,6 +8,8 @@ public class NPCPatrol : MonoBehaviour
 
     private int currentWaypointIndex = 0;
 
+    public bool vehicleStopped;
+
     void Update()
     {
         if (waypoints.Length == 0) return;
@@ -15,8 +17,11 @@ public class NPCPatrol : MonoBehaviour
         Transform target = waypoints[currentWaypointIndex];
         Vector3 direction = (target.position - transform.position).normalized;
 
-        // Move towards the current waypoint
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        if (!vehicleStopped)
+        {
+            // Move towards the current waypoint
+            transform.position += direction * moveSpeed * Time.deltaTime;
+        }
 
         // Rotate towards movement direction (optional)
         if (direction != Vector3.zero)
