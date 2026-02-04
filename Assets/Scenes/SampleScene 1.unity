@@ -106688,7 +106688,11 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 360473971}
   m_HandleRect: {fileID: 360473970}
+<<<<<<< Updated upstream
   m_Direction: 3
+=======
+  m_Direction: 2
+>>>>>>> Stashed changes
   m_Value: 0.00000034838382
   m_Size: 0.6679814
   m_NumberOfSteps: 0
@@ -155398,6 +155402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749580620}
+  - component: {fileID: 749580621}
   m_Layer: 9
   m_Name: coins
   m_TagString: Untagged
@@ -155478,6 +155483,24 @@ RectTransform:
   m_AnchoredPosition: {x: 126.725, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &749580621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749580619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb554b1b14631478bef43c7f8fac69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatAxis: 2
+  floatAmplitude: 0.25
+  floatSpeed: 2
+  rotationAxis: 1
+  enableRotation: 1
+  rotationSpeed: 100
 --- !u!1001 &749898784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337141,6 +337164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581081226}
+  - component: {fileID: 1581081227}
   m_Layer: 9
   m_Name: Health pickups
   m_TagString: Untagged
@@ -337173,6 +337197,24 @@ RectTransform:
   m_AnchoredPosition: {x: -20.615385, y: -0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1581081227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581081225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb554b1b14631478bef43c7f8fac69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatAxis: 2
+  floatAmplitude: 0.25
+  floatSpeed: 2
+  rotationAxis: 2
+  enableRotation: 1
+  rotationSpeed: 100
 --- !u!1001 &1582464911
 PrefabInstance:
   m_ObjectHideFlags: 0
