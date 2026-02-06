@@ -29,7 +29,7 @@ TagManager:
   - map
   - megamap
   - car
-  - 
+  - minimap
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: arrow
+    uniqueID: 4118752397
     locked: 0
   m_RenderingLayers:
   - Default

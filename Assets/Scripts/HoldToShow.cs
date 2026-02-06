@@ -13,7 +13,7 @@ public class HoldShow : MonoBehaviour
     {
         if (!photo) return;
 
-        bool pressed = Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.Joystick1Button13);
+        bool pressed = Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.Joystick2Button13);
         photo.SetActive(pressed);
     }
 }
