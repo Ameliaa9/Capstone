@@ -25,7 +25,7 @@ public class TrafficLight : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Traffic" && !isGreen)
         {
@@ -37,6 +37,14 @@ public class TrafficLight : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.GetComponent<NPCPatrol>() == NPCPatrol)
+        {
+            NPCPatrol = null;
+        }
     }
 
     private void Update()
