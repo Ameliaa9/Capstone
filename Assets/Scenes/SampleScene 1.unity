@@ -1508,6 +1508,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6395075}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6395078}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &6395062 stripped
 Transform:
@@ -1573,7 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &6395075
 Rigidbody:
@@ -1602,6 +1605,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6395078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395063}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0030090208, y: 1.0939842, z: -0.19415745}
 --- !u!4 &6785558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0ee6d569ec3227e40888e8151b331e0f, type: 3}
@@ -1773,7 +1797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &7255796
 MeshCollider:
@@ -1844,6 +1868,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7255803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029632444, y: 1.0939842, z: -0.19418797}
 --- !u!1001 &7376448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4007,6 +4052,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 256267513}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 256267516}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &18731416
 PrefabInstance:
@@ -10616,6 +10664,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 404769327}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 404769330}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &45273801 stripped
 Transform:
@@ -10693,6 +10744,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 45767151}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 45767154}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &45767138 stripped
 Transform:
@@ -10758,7 +10812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &45767151
 Rigidbody:
@@ -10787,6 +10841,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &45767154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45767139}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.002993762, y: 1.0939842, z: -0.19415745}
 --- !u!1 &45843062
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,7 +15021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &66129204
 MeshCollider:
@@ -15017,6 +15092,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &66129211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66129199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029670596, y: 1.0939842, z: -0.1941613}
 --- !u!4 &66264694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2100f10c342364479e7a527f9ef5429, type: 3}
@@ -15730,7 +15826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &69475108
 Rigidbody:
@@ -15759,6 +15855,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &69475111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69475095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19416511}
 --- !u!1001 &69703898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16060,6 +16177,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1697976565}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1697976568}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &71730785
 PrefabInstance:
@@ -19551,7 +19671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &86598015
 MeshCollider:
@@ -19622,6 +19742,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &86598022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86598010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19414222}
 --- !u!1001 &86892240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24169,7 +24310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &103128770
 Rigidbody:
@@ -24198,6 +24339,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &103128773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103128757}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0030090208, y: 1.0939842, z: -0.19416508}
 --- !u!1001 &103561071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28991,6 +29153,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1566856727}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1566856730}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1001 &131004732
 PrefabInstance:
@@ -30597,6 +30762,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 136939644}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 136939647}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &136939631 stripped
 Transform:
@@ -30662,7 +30830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &136939644
 Rigidbody:
@@ -30691,6 +30859,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &136939647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136939632}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.050180905}
 --- !u!1001 &137000535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38056,6 +38245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 170781829}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 170781832}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &170781816 stripped
 Transform:
@@ -38121,7 +38313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &170781829
 Rigidbody:
@@ -38150,6 +38342,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &170781832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170781817}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1 &171747543
 GameObject:
   m_ObjectHideFlags: 0
@@ -38564,7 +38777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &173703535
 MeshCollider:
@@ -38635,6 +38848,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &173703542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173703530}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029632444, y: 1.0939842, z: -0.19415745}
 --- !u!1001 &174445651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48093,6 +48327,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 221445821}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 221445824}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &221445808 stripped
 Transform:
@@ -48158,7 +48395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &221445821
 Rigidbody:
@@ -48187,6 +48424,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &221445824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221445809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!1 &221749027
 GameObject:
   m_ObjectHideFlags: 0
@@ -48755,6 +49013,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 239002809}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 239002812}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &225638188
 GameObject:
@@ -52352,6 +52613,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 973762552}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973762555}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &237967020
 PrefabInstance:
@@ -52572,6 +52836,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 238150531}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 238150534}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &238150518 stripped
 Transform:
@@ -52637,7 +52904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &238150531
 Rigidbody:
@@ -52666,6 +52933,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &238150534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238150519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0030090213, y: 1.0939842, z: -0.19417274}
 --- !u!1 &239002800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
@@ -52688,7 +52976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &239002805
 MeshCollider:
@@ -52759,6 +53047,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &239002812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239002800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &239759156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53300,7 +53609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &241565075
 MeshCollider:
@@ -53371,6 +53680,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &241565082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241565070}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063893786, y: 1.2162137, z: -0.19321296}
 --- !u!1 &241599775
 GameObject:
   m_ObjectHideFlags: 0
@@ -54645,6 +54975,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1891128640}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1891128643}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &244854229 stripped
 GameObject:
@@ -54826,7 +55159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &246167291
 MeshCollider:
@@ -54897,6 +55230,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &246167298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246167286}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.05017709}
 --- !u!4 &246446920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -54973,6 +55327,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 635423987}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 635423990}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &247361761
 PrefabInstance:
@@ -56439,7 +56796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &256267513
 Rigidbody:
@@ -56468,6 +56825,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &256267516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256267500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19414604}
 --- !u!1001 &256323411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59623,6 +60001,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 362919279}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 362919282}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &269798812
 GameObject:
@@ -59821,6 +60202,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 86598019}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 86598022}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &270467149
 GameObject:
@@ -62501,7 +62885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &280072856
 MeshCollider:
@@ -62572,6 +62956,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &280072863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280072851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19414222}
 --- !u!1 &280229428
 GameObject:
   m_ObjectHideFlags: 0
@@ -66918,6 +67323,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1825569390}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825569393}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &298715445 stripped
 Transform:
@@ -67232,7 +67640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &301033990
 MeshCollider:
@@ -67303,6 +67711,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &301033997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301033985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029708743, y: 1.0939842, z: -0.19415748}
 --- !u!1001 &301200516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69451,7 +69880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &310109975
 MeshCollider:
@@ -69522,6 +69951,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &310109982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310109970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063931933, y: 1.2162137, z: -0.19318244}
 --- !u!1 &310450217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: 1dabf884aa0716149a1bc775f0b620d8, type: 3}
@@ -70603,6 +71053,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 718509400}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 718509403}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &313093343
 GameObject:
@@ -74916,6 +75369,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1312693259}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1312693262}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &331656653 stripped
 Transform:
@@ -78366,6 +78822,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 349661954}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 349661957}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &349661941 stripped
 Transform:
@@ -78431,7 +78890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &349661954
 Rigidbody:
@@ -78460,6 +78919,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &349661957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349661942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946056, y: 3.5785658, z: 9.302497}
+  m_Center: {x: -0.0013978485, y: 1.784227, z: -0.050180923}
 --- !u!1 &350040322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 47ef019eb3bddab469e56e5a31eebf68, type: 3}
@@ -81272,7 +81752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &362919275
 MeshCollider:
@@ -81343,6 +81823,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &362919282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362919270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029937625, y: 1.0939842, z: -0.19415748}
 --- !u!1 &363268123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -83780,6 +84281,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1944891826}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1944891829}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &375500327
 PrefabInstance:
@@ -90056,6 +90560,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 403134500}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403134503}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &403134487 stripped
 Transform:
@@ -90121,7 +90628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &403134500
 Rigidbody:
@@ -90150,6 +90657,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &403134503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403134488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19318244}
 --- !u!1 &403231619
 GameObject:
   m_ObjectHideFlags: 0
@@ -90482,7 +91010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &404769327
 Rigidbody:
@@ -90511,6 +91039,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &404769330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404769314}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.1941613}
 --- !u!1001 &405176710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95437,6 +95986,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731216868}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731216871}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &427526717
 PrefabInstance:
@@ -98495,6 +99047,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 439622317}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 439622320}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &439622304 stripped
 Transform:
@@ -98560,7 +99115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &439622317
 Rigidbody:
@@ -98589,6 +99144,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &439622320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439622305}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014131068, y: 1.784227, z: -0.050173275}
 --- !u!1 &439650573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
@@ -98784,7 +99360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &441808262
 MeshCollider:
@@ -98855,6 +99431,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &441808269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441808257}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &441986487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102083,6 +102680,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 455043317}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 455043320}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &455043304 stripped
 Transform:
@@ -102148,7 +102748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &455043317
 Rigidbody:
@@ -102177,6 +102777,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &455043320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455043305}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029937625, y: 1.0939842, z: -0.19415748}
 --- !u!1001 &455426654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102302,7 +102923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &456706468
 Rigidbody:
@@ -102331,6 +102952,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &456706471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456706455}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.002963245, y: 1.0939842, z: -0.19414222}
 --- !u!1001 &457099329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103990,6 +104632,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 662834637}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662834640}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &463437941
 PrefabInstance:
@@ -104781,6 +105426,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1003577721}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1003577724}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1001 &467579025
 PrefabInstance:
@@ -106074,6 +106722,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1479779841}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479779844}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &473171471
 GameObject:
@@ -111815,6 +112466,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 494192166}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 494192169}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &494192153 stripped
 Transform:
@@ -111880,7 +112534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &494192166
 Rigidbody:
@@ -111909,6 +112563,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &494192169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494192154}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.050165646}
 --- !u!1001 &494298919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112904,6 +113579,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 241565079}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 241565082}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &499795535
 PrefabInstance:
@@ -114430,6 +115108,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1237671164}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1237671167}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &507612711 stripped
 GameObject:
@@ -118051,6 +118732,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 529015662}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 529015665}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &529015649 stripped
 Transform:
@@ -118116,7 +118800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &529015662
 Rigidbody:
@@ -118145,6 +118829,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &529015665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529015650}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!1001 &529324122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119519,6 +120224,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 103128770}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 103128773}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &536017894 stripped
 GameObject:
@@ -120339,6 +121047,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 441808266}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 441808269}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &539903248
 PrefabInstance:
@@ -120569,6 +121280,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 541646342}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 541646345}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &541646329 stripped
 Transform:
@@ -120634,7 +121348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &541646342
 Rigidbody:
@@ -120663,6 +121377,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &541646345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541646330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!4 &541776625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
@@ -125407,6 +126142,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1939225511}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939225514}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &565727923
 GameObject:
@@ -127997,7 +128735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &576265827
 Rigidbody:
@@ -128026,6 +128764,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &576265830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576265814}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19317481}
 --- !u!1001 &576494155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132326,6 +133085,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1826891354}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1826891357}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &592634895
 GameObject:
@@ -132918,7 +133680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &592779676
 MeshCollider:
@@ -132989,6 +133751,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &592779683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592779671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!4 &593031301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2100f10c342364479e7a527f9ef5429, type: 3}
@@ -134193,6 +134976,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 597092003}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597092006}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &597091990 stripped
 Transform:
@@ -134258,7 +135044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &597092003
 Rigidbody:
@@ -134287,6 +135073,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &597092006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597091991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.1931977}
 --- !u!1001 &597201768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139416,6 +140223,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 620273834}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 620273837}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &620273821 stripped
 Transform:
@@ -139481,7 +140291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &620273834
 Rigidbody:
@@ -139510,6 +140320,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &620273837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620273822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1 &620499214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -139631,6 +140462,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 621856459}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 621856462}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &621856446 stripped
 Transform:
@@ -139696,7 +140530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &621856459
 Rigidbody:
@@ -139725,6 +140559,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &621856462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621856447}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946056, y: 3.5785658, z: 9.302497}
+  m_Center: {x: -0.0013978485, y: 1.784227, z: -0.050165664}
 --- !u!1 &622056610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -142930,7 +143785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &635423987
 Rigidbody:
@@ -142959,6 +143814,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &635423990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635423974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &635887252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147920,7 +148796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &662834637
 Rigidbody:
@@ -147949,6 +148825,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &662834640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662834624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.002963245, y: 1.0939842, z: -0.19415748}
 --- !u!1 &663038958
 GameObject:
   m_ObjectHideFlags: 0
@@ -148124,6 +149021,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 663147363}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 663147366}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &663147350 stripped
 Transform:
@@ -148189,7 +149089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &663147363
 Rigidbody:
@@ -148218,6 +149118,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &663147366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663147351}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19316718}
 --- !u!1001 &663375477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148442,7 +149363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &664658507
 MeshCollider:
@@ -148513,6 +149434,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &664658514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664658502}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19315192}
 --- !u!4 &664727878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2100f10c342364479e7a527f9ef5429, type: 3}
@@ -156765,6 +157707,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 701381059}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 701381062}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &701381046 stripped
 Transform:
@@ -156830,7 +157775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &701381059
 Rigidbody:
@@ -156859,6 +157804,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &701381062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701381047}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19413078}
 --- !u!4 &701463778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6458a4c9f91f22741a5064b5b7cfd892, type: 3}
@@ -157611,6 +158577,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 592779680}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 592779683}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &705092877 stripped
 GameObject:
@@ -160349,6 +161318,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1002930453}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1002930456}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &716991769
 PrefabInstance:
@@ -160701,7 +161673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &718509400
 Rigidbody:
@@ -160730,6 +161702,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &718509403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718509387}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &718565160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163244,7 +164237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &729697047
 MeshCollider:
@@ -163315,6 +164308,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &729697054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729697042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!1001 &730115925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164513,6 +165527,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 734936890}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 734936893}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &734936877 stripped
 Transform:
@@ -164578,7 +165595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &734936890
 Rigidbody:
@@ -164607,6 +165624,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &734936893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734936878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415745}
 --- !u!1001 &735292837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166063,6 +167101,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 456706468}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 456706471}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &743078825
 PrefabInstance:
@@ -166405,7 +167446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &745059056
 Rigidbody:
@@ -166434,6 +167475,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &745059059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745059043}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.050165646}
 --- !u!1001 &745346334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168974,6 +170036,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 173703539}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 173703542}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &758216512
 PrefabInstance:
@@ -183260,7 +184325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &832148619
 MeshCollider:
@@ -183331,6 +184396,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &832148626
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832148614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029632444, y: 1.0939842, z: -0.19415936}
 --- !u!1001 &832563198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187306,7 +188392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &850501374
 MeshCollider:
@@ -187377,6 +188463,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &850501381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850501369}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19315192}
 --- !u!1 &850784181
 GameObject:
   m_ObjectHideFlags: 0
@@ -189926,6 +191033,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 850501378}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 850501381}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &863965635
 PrefabInstance:
@@ -192488,6 +193598,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 874085505}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 874085508}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &874085492 stripped
 Transform:
@@ -192553,7 +193666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &874085505
 Rigidbody:
@@ -192582,6 +193695,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &874085508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874085493}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1 &874424485
 GameObject:
   m_ObjectHideFlags: 0
@@ -192745,6 +193879,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 875416837}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 875416840}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &875416824 stripped
 Transform:
@@ -192810,7 +193947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &875416837
 Rigidbody:
@@ -192839,6 +193976,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &875416840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875416825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014283656, y: 1.784227, z: -0.050180905}
 --- !u!1 &875699547
 GameObject:
   m_ObjectHideFlags: 0
@@ -197363,6 +198521,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 895025307}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 895025310}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &895025294 stripped
 Transform:
@@ -197428,7 +198589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &895025307
 Rigidbody:
@@ -197457,6 +198618,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &895025310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895025295}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.05017709}
 --- !u!1 &895422659
 GameObject:
   m_ObjectHideFlags: 0
@@ -202358,7 +203540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &914591576
 Rigidbody:
@@ -202387,6 +203569,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &914591579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914591563}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19417271}
 --- !u!1 &915616970
 GameObject:
   m_ObjectHideFlags: 0
@@ -208100,6 +209303,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 943077177}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 943077180}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &943077164 stripped
 Transform:
@@ -208165,7 +209371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &943077177
 Rigidbody:
@@ -208194,6 +209400,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &943077180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943077165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19317386}
 --- !u!1001 &943338476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213634,6 +214861,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 832148623}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 832148626}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &945397220
 PrefabInstance:
@@ -214837,6 +216067,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1136838942}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1136838945}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &951995132
 PrefabInstance:
@@ -218630,6 +219863,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 969215189}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969215192}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &969215176 stripped
 Transform:
@@ -218695,7 +219931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &969215189
 Rigidbody:
@@ -218724,6 +219960,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &969215192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969215177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &969317948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -219975,7 +221232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &973762548
 MeshCollider:
@@ -220046,6 +221303,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &973762555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973762543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &974748479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220519,6 +221797,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 745059056}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 745059059}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &976072516 stripped
 Transform:
@@ -222389,6 +223670,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 66129208}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 66129211}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &982897815
 PrefabInstance:
@@ -227992,7 +229276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1002930449
 MeshCollider:
@@ -228063,6 +229347,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1002930456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002930444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.1941422}
 --- !u!1 &1003577712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
@@ -228085,7 +229390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1003577717
 MeshCollider:
@@ -228156,6 +229461,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1003577724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003577712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014283656, y: 1.784227, z: -0.050196163}
 --- !u!1 &1003837603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -248363,6 +249689,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1306565439}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1306565442}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1059958584
 PrefabInstance:
@@ -248976,6 +250305,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1062048580}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1062048583}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1062048567 stripped
 Transform:
@@ -249041,7 +250373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1062048580
 Rigidbody:
@@ -249070,6 +250402,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1062048583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062048568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19418797}
 --- !u!1 &1062272614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee37198b24b2164fbbccfbe92fe5d35, type: 3}
@@ -252738,7 +254091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1087530689
 MeshCollider:
@@ -252809,6 +254162,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1087530696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087530684}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014283656, y: 1.784227, z: -0.050196163}
 --- !u!1 &1087639151
 GameObject:
   m_ObjectHideFlags: 0
@@ -257778,6 +259152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 310109979}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 310109982}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &1114022176
 PrefabInstance:
@@ -263324,7 +264701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1135254279
 MeshCollider:
@@ -263395,6 +264772,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1135254286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135254274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0064046374, y: 1.2162137, z: -0.193171}
 --- !u!1001 &1135353264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263894,7 +265292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1136838938
 MeshCollider:
@@ -263965,6 +265363,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1136838945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136838933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415367}
 --- !u!1001 &1136896087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273339,7 +274758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1182195397
 Rigidbody:
@@ -273368,6 +274787,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1182195400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182195384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1 &1182222530
 GameObject:
   m_ObjectHideFlags: 0
@@ -277640,7 +279080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1199002701
 MeshCollider:
@@ -277711,6 +279151,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1199002708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199002696}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19417274}
 --- !u!1001 &1199105072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280826,6 +282287,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1215473140}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215473143}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1215473127 stripped
 Transform:
@@ -280891,7 +282355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1215473140
 Rigidbody:
@@ -280920,6 +282384,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1215473143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215473128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.194188}
 --- !u!1001 &1216253167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284707,6 +286192,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1623072876}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1623072879}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &1236556617
 GameObject:
@@ -284880,7 +286368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1237671164
 Rigidbody:
@@ -284909,6 +286397,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1237671167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237671151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029479857, y: 1.0939842, z: -0.19414791}
 --- !u!1001 &1237748826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287249,6 +288758,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 914591576}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 914591579}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &1250624270
 PrefabInstance:
@@ -289692,6 +291204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1258537936}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258537939}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1258537923 stripped
 Transform:
@@ -289757,7 +291272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1258537936
 Rigidbody:
@@ -289786,6 +291301,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1258537939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258537924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!4 &1258679239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5029810784890142804, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -290553,6 +292089,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1199002705}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1199002708}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1263546702
 PrefabInstance:
@@ -299624,7 +301163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1306565435
 MeshCollider:
@@ -299695,6 +301234,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1306565442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306565430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19415748}
 --- !u!1 &1306584419
 GameObject:
   m_ObjectHideFlags: 0
@@ -300795,7 +302355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1312693255
 MeshCollider:
@@ -300866,6 +302426,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1312693262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312693250}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19414982}
 --- !u!1001 &1312871525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305447,6 +307028,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1334012849}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1334012852}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1334012836 stripped
 Transform:
@@ -305512,7 +307096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1334012849
 Rigidbody:
@@ -305541,6 +307125,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1334012852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334012837}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19318244}
 --- !u!1 &1334744174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2d5fb229ae2945742b900a405a5e7a0b, type: 3}
@@ -311154,7 +312759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1354775934
 MeshCollider:
@@ -311225,6 +312830,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1354775941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354775929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19315192}
 --- !u!1001 &1354817043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -311949,7 +313575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1357456072
 Rigidbody:
@@ -311978,6 +313604,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1357456075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357456059}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19317481}
 --- !u!1001 &1357554792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319918,6 +321565,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1867879395}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1867879398}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1394428628 stripped
 GameObject:
@@ -330730,6 +332380,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1437158070}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1437158073}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &1437158057 stripped
 Transform:
@@ -330795,7 +332448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1437158070
 Rigidbody:
@@ -330824,6 +332477,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1437158073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437158058}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.958062, y: 2.317875, z: 6.320543}
+  m_Center: {x: 0.0017923117, y: 1.1553164, z: -0.1931827}
 --- !u!1001 &1437813478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331125,6 +332799,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1438230010}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1438230013}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1438229997 stripped
 Transform:
@@ -331190,7 +332867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1438230010
 Rigidbody:
@@ -331219,6 +332896,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1438230013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438229998}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19417271}
 --- !u!1001 &1438416594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338547,6 +340245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1806435625}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1806435628}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1473167988 stripped
 GameObject:
@@ -340814,7 +342515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1479779841
 Rigidbody:
@@ -340843,6 +342544,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1479779844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479779828}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.006408452, y: 1.2162137, z: -0.19316623}
 --- !u!1001 &1480154222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344205,6 +345927,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1496863463}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1496863466}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1496863450 stripped
 Transform:
@@ -344270,7 +345995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1496863463
 Rigidbody:
@@ -344299,6 +346024,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1496863466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496863451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19417274}
 --- !u!1001 &1496878109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346642,6 +348388,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1087530693}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1087530696}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1512048518
 GameObject:
@@ -358715,7 +360464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1566856727
 Rigidbody:
@@ -358744,6 +360493,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1566856730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566856714}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014131068, y: 1.784227, z: -0.05017709}
 --- !u!1 &1566883913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
@@ -360217,6 +361987,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1573603461}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1573603464}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &1573603448 stripped
 Transform:
@@ -360282,7 +362055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1573603461
 Rigidbody:
@@ -360311,6 +362084,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1573603464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573603449}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.0014283656, y: 1.784227, z: -0.050165646}
 --- !u!4 &1573619747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -360799,6 +362593,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1577674058}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1577674061}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1577674045 stripped
 Transform:
@@ -360864,7 +362661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1577674058
 Rigidbody:
@@ -360893,6 +362690,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1577674061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577674046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415364}
 --- !u!1001 &1577875535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363376,6 +365194,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 301033994}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 301033997}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &1590660448
 GameObject:
@@ -364001,6 +365822,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7255800}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7255803}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &1592009829
 PrefabInstance:
@@ -367546,6 +369370,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1354775938}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1354775941}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &1608808087
 PrefabInstance:
@@ -370130,6 +371957,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 280072860}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 280072863}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1619354124
 PrefabInstance:
@@ -370866,7 +372696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1623072872
 MeshCollider:
@@ -370937,6 +372767,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1623072879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623072867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415745}
 --- !u!1001 &1623094816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371644,6 +373495,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1357456072}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357456075}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1627773381
 GameObject:
@@ -371925,6 +373779,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2146862857}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2146862860}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1628884623
 GameObject:
@@ -376444,6 +378301,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 69475108}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 69475111}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1647024239
 PrefabInstance:
@@ -385276,7 +387136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1697976565
 Rigidbody:
@@ -385305,6 +387165,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1697976568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697976552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029479857, y: 1.0939842, z: -0.19415745}
 --- !u!1 &1698132242
 GameObject:
   m_ObjectHideFlags: 0
@@ -387785,6 +389666,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1708967383}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708967386}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1708967370 stripped
 Transform:
@@ -387850,7 +389734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1708967383
 Rigidbody:
@@ -387879,6 +389763,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1708967386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708967371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19316718}
 --- !u!1 &1709311395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
@@ -388130,6 +390035,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 246167295}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246167298}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1001 &1710900268
 PrefabInstance:
@@ -393213,7 +395121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1731216864
 MeshCollider:
@@ -393284,6 +395192,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1731216871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731216859}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029632444, y: 1.0939842, z: -0.1941422}
 --- !u!4 &1731316591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 97229e82747352a43b48688ec573f8e4, type: 3}
@@ -396335,7 +398264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1749344815
 MeshCollider:
@@ -396406,6 +398335,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1749344822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749344810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19416511}
 --- !u!1 &1750845358
 GameObject:
   m_ObjectHideFlags: 0
@@ -401163,6 +403113,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 664658511}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 664658514}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &1769736268
 PrefabInstance:
@@ -404432,7 +406385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1782403788
 MeshCollider:
@@ -404503,6 +406456,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1782403795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782403783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029937625, y: 1.0939842, z: -0.19415748}
 --- !u!1001 &1783982415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409806,7 +411780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1806435621
 MeshCollider:
@@ -409877,6 +411851,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1806435628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806435616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.050150387}
 --- !u!1 &1806818963
 GameObject:
   m_ObjectHideFlags: 0
@@ -412943,6 +414938,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1816323053}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1816323056}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1816323040 stripped
 Transform:
@@ -413008,7 +415006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1816323053
 Rigidbody:
@@ -413037,6 +415035,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1816323056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816323041}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415745}
 --- !u!4 &1816764260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
@@ -415053,7 +417072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1825569386
 MeshCollider:
@@ -415124,6 +417143,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1825569393
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825569381}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063931933, y: 1.2162137, z: -0.19318244}
 --- !u!4 &1825572990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: d267fbb9e36c6e4458c9a8756d725a79, type: 3}
@@ -415533,7 +417573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1826891350
 MeshCollider:
@@ -415604,6 +417644,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1826891357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826891345}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415745}
 --- !u!1001 &1827133723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424862,7 +426923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1867879391
 MeshCollider:
@@ -424933,6 +426994,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1867879398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867879386}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0064160815, y: 1.2162137, z: -0.19318244}
 --- !u!1001 &1868245290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428001,6 +430083,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1878656005}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1878656008}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1878655992 stripped
 Transform:
@@ -428066,7 +430151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1878656005
 Rigidbody:
@@ -428095,6 +430180,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1878656008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878655993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.433641, z: 6.3205414}
+  m_Center: {x: -0.0063779345, y: 1.2162137, z: -0.19318244}
 --- !u!1 &1879182147
 GameObject:
   m_ObjectHideFlags: 0
@@ -428294,6 +430400,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1782403792}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782403795}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &1880299957 stripped
 GameObject:
@@ -429690,6 +431799,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1887656178}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1887656181}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1887656165 stripped
 Transform:
@@ -429755,7 +431867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &1887656178
 Rigidbody:
@@ -429784,6 +431896,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1887656181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887656166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19412693}
 --- !u!1001 &1888542378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -430830,7 +432963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1891128636
 MeshCollider:
@@ -430901,6 +433034,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1891128643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891128631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19420323}
 --- !u!1 &1892730930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -439706,6 +441860,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 576265827}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 576265830}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1927398709 stripped
 Transform:
@@ -442804,7 +444961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1939225507
 MeshCollider:
@@ -442875,6 +445032,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1939225514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939225502}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0030090208, y: 1.0939842, z: -0.1941422}
 --- !u!4 &1940197222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -443532,7 +445710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &1944891822
 MeshCollider:
@@ -443603,6 +445781,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1944891829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944891817}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029632444, y: 1.0939842, z: -0.19414982}
 --- !u!1001 &1945368740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446200,6 +448399,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1135254283}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1135254286}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1959288283 stripped
 GameObject:
@@ -451237,6 +453439,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 729697051}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729697054}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1983252258 stripped
 Transform:
@@ -462325,6 +464530,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2034542513}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2034542516}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &2034542500 stripped
 Transform:
@@ -462390,7 +464598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &2034542513
 Rigidbody:
@@ -462419,6 +464627,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2034542516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034542501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580617, y: 2.1952403, z: 6.3205423}
+  m_Center: {x: -0.0029785037, y: 1.0939842, z: -0.19414222}
 --- !u!1 &2034720421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
@@ -474679,6 +476908,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2087286103}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2087286106}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &2087286090 stripped
 Transform:
@@ -474744,7 +476976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!54 &2087286103
 Rigidbody:
@@ -474773,6 +477005,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2087286106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087286091}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9580615, y: 2.1952403, z: 6.3205414}
+  m_Center: {x: -0.0029785032, y: 1.0939842, z: -0.19415745}
 --- !u!1 &2087461889
 GameObject:
   m_ObjectHideFlags: 0
@@ -480926,6 +483179,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1182195397}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1182195400}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &2116148381
 PrefabInstance:
@@ -482006,6 +484262,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1749344819}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749344822}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &2123083836
 PrefabInstance:
@@ -487222,7 +489481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ac03ab864ab924ab4523d00616874b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeHealth: {fileID: 0}
+  bikeHealth: {fileID: 2080487968}
   damageAmount: 5
 --- !u!64 &2146862853
 MeshCollider:
@@ -487293,6 +489552,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2146862860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146862848}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6946042, y: 3.5785658, z: 9.302494}
+  m_Center: {x: -0.001397848, y: 1.784227, z: -0.050180905}
 --- !u!1 &11790194885525229
 GameObject:
   m_ObjectHideFlags: 0
