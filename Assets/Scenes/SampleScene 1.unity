@@ -347886,7 +347886,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceSource: {fileID: 1892013}
   sfxSource: {fileID: 1591739713}
-  customerVoiceTables: []
+  customerVoiceTables:
+  - customerId: Junior
+    voiceTable: {fileID: 11400000, guid: 1874df2e4bfc017458388ea9755a1e6a, type: 2}
+  - customerId: Valarie
+    voiceTable: {fileID: 11400000, guid: 51e2cf383d3729246a8e58e7996b50fb, type: 2}
+  - customerId: Zarah
+    voiceTable: {fileID: 11400000, guid: 144be95bc0e5344439d75574e6d17a28, type: 2}
   interruptVoice: 1
   avoidRepeat: 1
 --- !u!4 &1643776009
