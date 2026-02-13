@@ -65,10 +65,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Plays the customer's voice line based on star rating (1~5).
-    /// customerId example: "Junior"
-    /// </summary>
+    
     public void PlayCustomerVoice(string customerId, int stars)
     {
         if (string.IsNullOrWhiteSpace(customerId))
