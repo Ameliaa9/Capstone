@@ -105,44 +105,7 @@ namespace KikiNgao.SimpleBikeControl
             }
         }
 
-        void Update()
-        {
-            if (!ReadyToRide()) return;
-
-            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Joystick2Button2))
-            {
-                inProjectileMode = !inProjectileMode;
-                if (!inProjectileMode) projectileCurveVisualizer.HideProjectileCurve();
-            }
-
-            if (inProjectileMode)
-            {
-                //float scroll = Input.GetAxis("Mouse ScrollWheel");
-                //float stickY = Input.GetAxis("Joystick2Axis5"); 
-
-                //float combined = scroll + (stickY * 0.02f);
-
-                //launchSpeed = Mathf.Clamp(launchSpeed + combined * 200f * Time.deltaTime, 2f, 50f);
-
-                //launchVelocity = transform.forward + Vector3.up * 0.3f;
-                //launchVelocity = launchVelocity.normalized * launchSpeed;
-
-                //projectileCurveVisualizer.VisualizeProjectileCurve(
-                  //  transform.position, 1.0f, launchVelocity, 0.25f, 0.1f, true,
-                    //out updatedProjectileStartPosition, out hit);
-
-                //if (Input.GetMouseButtonUp(0) || Input.GetButtonUp("Joystick2Fire1"))
-                //{
-                  //  inProjectileMode = false;
-                    //projectileCurveVisualizer.HideProjectileCurve();
-
-                    //Projectile projectile = Instantiate(projectileGameObject).GetComponent<Projectile>();
-                    //projectile.transform.position = updatedProjectileStartPosition;
-                    //projectile.Throw(launchVelocity);
-                //}
-            }
-
-        }
+        
 
         private void CreateCenterOfMass()
         {

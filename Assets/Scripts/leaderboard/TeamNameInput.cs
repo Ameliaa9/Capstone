@@ -34,11 +34,19 @@ public class TeamNameInput : MonoBehaviour
 
     public void ConfirmName()
     {
-        TeamNameManager.CurrentTeamName = teamNameText.text;
+        string teamName = teamNameText.text;
 
-        if (teamName.Length == 0) return;
+        if (string.IsNullOrWhiteSpace(teamName))
+            return;
+
+        TeamNameManager.CurrentTeamName = teamName;
 
         LeaderboardManager.Instance.SetCurrentTeamName(teamName);
         TeamNameOverlayManager.Instance.ConfirmName();
+
+
+        TutorialManager.Instance.ShowTutorialChoiceAfterDelay(2f);
+
     }
+
 }

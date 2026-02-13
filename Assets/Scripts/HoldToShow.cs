@@ -4,6 +4,8 @@ public class HoldShow : MonoBehaviour
 {
     public GameObject photo;
 
+    private bool wasPressedLastFrame;
+
     void Start()
     {
         if (photo) photo.SetActive(false);
@@ -13,7 +15,17 @@ public class HoldShow : MonoBehaviour
     {
         if (!photo) return;
 
-        bool pressed = Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.Joystick2Button13);
+        bool pressed =
+            Input.GetKey(KeyCode.M) ||
+            Input.GetKey(KeyCode.Joystick2Button13);
+
         photo.SetActive(pressed);
+
+        if (pressed && !wasPressedLastFrame)
+        {
+            TutorialManager.Instance.MapOpened();
+        }
+
+        wasPressedLastFrame = pressed;
     }
 }

@@ -126,12 +126,17 @@ public class DeliverySystem : MonoBehaviour
 
         if (coinTaskManager != null)
             coinTaskManager.OnDeliveryStarted();
+
+        TutorialManager.Instance?.DeliveryStarted();
     }
 
     void CompleteDelivery()
     {
         timerRunning = false;
         hasPackage = false;
+
+        TutorialManager.Instance?.CorrectDeliveryHit();
+
 
         if (timerText) timerText.text = "";
         if (currentPhone) currentPhone.SetActive(false);
