@@ -2,8 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
-using System.Threading.Tasks;
-using System.Threading;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -22,6 +20,10 @@ public class DeliverySystem : MonoBehaviour
     public TMP_Text returnText;
     public TMP_Text successText;
     public TMP_Text failText;
+
+    [Header("Customer Voice")]
+    [Tooltip("Must match AudioManager customerId exactly. Index must match currentDelivery.")]
+    public string[] customerIds;
 
     [Header("Images")]
     public GameObject successImage;
@@ -45,7 +47,6 @@ public class DeliverySystem : MonoBehaviour
     public GameObject starIcon3;
     public GameObject starIcon4;
 
-    // Track if the unlock message has already been shown
     private bool speedBoostUnlockShown = false;
 
     public TaskManager coinTaskManager;
@@ -126,6 +127,8 @@ public class DeliverySystem : MonoBehaviour
 
         if (coinTaskManager != null)
             coinTaskManager.OnDeliveryStarted();
+
+        TutorialManager.Instance?.DeliveryStarted();
     }
 
     void CompleteDelivery()
@@ -133,21 +136,19 @@ public class DeliverySystem : MonoBehaviour
         timerRunning = false;
         hasPackage = false;
 
+        TutorialManager.Instance?.CorrectDeliveryHit();
+
+
         if (timerText) timerText.text = "";
         if (currentPhone) currentPhone.SetActive(false);
         if (currentArrow) currentArrow.SetActive(false);
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
-       
         if (LeaderboardManager.Instance != null)
         {
             float timeTaken = deliveryTimes[currentDelivery] - currentTimer;
-
             LeaderboardManager.Instance.AddScore(timeTaken);
-
-
-
             Debug.Log("Leaderboard score saved: " + currentTimer);
         }
         else
@@ -155,49 +156,53 @@ public class DeliverySystem : MonoBehaviour
             Debug.LogWarning("LeaderboardManager not found!");
         }
 
-
-        // coroutine for the pop ups 
         if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
-
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
 
+        //
+
+
+        int starsEarned = 0;
+
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
-        if (currentTimer <= deliveryTimes[currentDelivery] / 5)
+
+        if (currentTimer <= deliveryTimes[currentDelivery] / 5f)
         {
+            starsEarned = 1;
             GiveStars(1);
             Debug.Log("Gets 1 star.");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            Debug.Log(totalStarsCollected);
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5 * 1.5)
+        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 1.5f)
         {
+            starsEarned = 2;
             GiveStars(2);
             Debug.Log("Gets 2 stars.");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
-            Debug.Log(totalStarsCollected);
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5 * 2)
+        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 2f)
         {
+            starsEarned = 3;
             GiveStars(3);
             Debug.Log("Gets 3 stars.");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
-            Debug.Log(totalStarsCollected);
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5 * 3)
+        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 3f)
         {
+            starsEarned = 4;
             GiveStars(4);
             Debug.Log("Gets 4 stars.");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
-            Debug.Log(totalStarsCollected);
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5 * 4)
+        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 4f)
         {
+            starsEarned = 5;
             GiveStars(5);
             Debug.Log("Gets 5 stars.");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
@@ -205,26 +210,32 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
-            Debug.Log(totalStarsCollected);
         }
-        else if (currentTimer > deliveryTimes[currentDelivery] / 5 * 4)
+        else 
         {
+            starsEarned = 5;
             GiveStars(6);
-            Debug.Log("Gets 6 stars.  Omgosh!");
+            Debug.Log("Gets 6 stars. Omgosh! (Voice plays as 5-star)");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
-            Debug.Log(totalStarsCollected);
+        }
+
+        Debug.Log(totalStarsCollected);
+
+       
+        string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
+        if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
+        {
+            AudioManager.I.PlayCustomerVoice(customerId, starsEarned);
         }
         else
         {
-            Debug.Log("Gets 0 stars.");
-            Debug.Log(totalStarsCollected);
+            Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
         }
-
-        //currentDelivery++;
+       
 
         if (coinTaskManager != null)
             coinTaskManager.OnDeliveryFinished();
@@ -244,30 +255,25 @@ public class DeliverySystem : MonoBehaviour
         }
     }
 
-    // Show success message, then show unlock message if players have 10 or more stars
     private IEnumerator ShowSuccessThenUnlockMessage()
     {
-        // turn on the success background for the duration of the messages
         if (successBackground) successBackground.SetActive(true);
-        // success message for 5 seconds
+
         yield return StartCoroutine(ShowTMPMessage(
             successText,
             "Delivery successful! Return to depot for another package",
             5f));
 
-        // show unlock message if players have 10 or more stars, only once
         if (!speedBoostUnlockShown && totalStarsCollected >= 10 && returnText != null)
         {
             speedBoostUnlockShown = true;
 
-            // Show speed boost unlock message for 5 seconds
             yield return StartCoroutine(ShowTMPMessage(
                 returnText,
                 "You might wanna visit the upgrade shop...",
                 5f));
         }
 
-        // turn off the success background after all messages are done
         if (successBackground) successBackground.SetActive(false);
     }
 
@@ -287,4 +293,13 @@ public class DeliverySystem : MonoBehaviour
         yield return new WaitForSeconds(duration);
         imageObj.SetActive(false);
     }
+
+    private string GetCustomerIdFromDeliveryIndex(int index)
+    {
+        if (customerIds == null || index < 0 || index >= customerIds.Length)
+            return "";
+
+        return customerIds[index];
+    }
 }
+
