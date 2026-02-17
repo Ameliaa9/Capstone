@@ -158,7 +158,7 @@ public class TutorialManager : MonoBehaviour
     {
         foreach (var input in FindObjectsOfType<MonoBehaviour>())
         {
-            if (input.CompareTag("PlayerInput"))
+            if (input.CompareTag("Bike"))
                 input.enabled = enabled;
         }
     }
