@@ -22,8 +22,7 @@ public class TrafficVehicle : MonoBehaviour
         {
             Debug.Log("Vehicle Trigger Exited.");
             NPCPatrol = col.GetComponent<NPCPatrol>();
-            int random = Random.Range(8, 13);
-            NPCPatrol.moveSpeed = random;
+            NPCPatrol.moveSpeed = 10;
             NPCPatrol.vehicleStopped = false;
             Debug.Log(col);
         }

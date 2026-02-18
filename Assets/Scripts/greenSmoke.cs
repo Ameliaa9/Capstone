@@ -24,9 +24,6 @@ public class greenSmoke : MonoBehaviour
     Coroutine smallFadeRoutine;
     Coroutine bigFadeRoutine;
 
-   
-    private bool tutorialTriggered;
-
     void Start()
     {
         if (smallSmokeImage != null)
@@ -43,7 +40,6 @@ public class greenSmoke : MonoBehaviour
 
         inTriggerArea = true;
         UpdateDamageRoutine();
-        TryTriggerTutorial();
 
         if (smallSmokeImage != null)
             StartFade(ref smallFadeRoutine, smallSmokeImage, 1f);
@@ -68,7 +64,6 @@ public class greenSmoke : MonoBehaviour
 
         inCollision = true;
         UpdateDamageRoutine();
-        TryTriggerTutorial();
 
         if (bigSmokeImage != null)
             StartFade(ref bigFadeRoutine, bigSmokeImage, 1f);
@@ -85,27 +80,6 @@ public class greenSmoke : MonoBehaviour
         if (bigSmokeImage != null)
             StartFade(ref bigFadeRoutine, bigSmokeImage, 0f, true);
     }
-
-    void TryTriggerTutorial()
-    {
-        if (tutorialTriggered)
-            return;
-
-        if (TutorialManager.Instance != null)
-        {
-            TutorialManager.Instance.ManholeTriggered();
-            tutorialTriggered = true;
-        }
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-        if (!other.CompareTag("Bike"))
-            return;
-
-        TutorialManager.Instance?.ManholeTriggered();
-    }
-
 
     void UpdateDamageRoutine()
     {

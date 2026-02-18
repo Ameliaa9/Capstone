@@ -19,21 +19,20 @@ public class HealthPickup : MonoBehaviour
                 // If it's above max health, force it to max
                 if (newHealth > bikeHealth.maxHealth)
                 {
+                    
                     float amountNeeded = bikeHealth.maxHealth - bikeHealth.Health;
                     bikeHealth.SetHealth(amountNeeded);
                 }
                 else
                 {
+                    
                     bikeHealth.SetHealth(healAmount);
                 }
             }
 
-            if (TutorialManager.Instance != null)
-            {
-                TutorialManager.Instance.HealthPickupCollected();
-            }
-
+            
             gameObject.SetActive(false);
         }
     }
 }
+

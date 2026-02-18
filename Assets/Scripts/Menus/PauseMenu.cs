@@ -73,8 +73,6 @@ public class PauseMenu : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        TutorialManager.Instance.PauseOpened();
-
     }
 
     public void ResumeGame()
@@ -91,8 +89,6 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         GameManager.LockCursor();
-        TutorialManager.Instance.PauseClosed();
-
     }
 
 
