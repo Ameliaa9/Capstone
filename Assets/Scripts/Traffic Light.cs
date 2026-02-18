@@ -11,7 +11,21 @@ public class TrafficLight : MonoBehaviour
     public float lightInterval = 10f;
     private float currentTime = 0f;
 
-    public void OnTriggerEnter(Collider col)
+    private void Start()
+    {
+        if (isGreen)
+        {
+            greenLightCover.SetActive(false);
+            redLightCover.SetActive(true);
+        }
+        else
+        {
+            greenLightCover.SetActive(true);
+            redLightCover.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Traffic" && !isGreen)
         {
@@ -23,6 +37,14 @@ public class TrafficLight : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.GetComponent<NPCPatrol>() == NPCPatrol)
+        {
+            NPCPatrol = null;
+        }
     }
 
     private void Update()
@@ -37,7 +59,8 @@ public class TrafficLight : MonoBehaviour
 
         if(isGreen)
         {
-            NPCPatrol.moveSpeed = 10;
+            int random = Random.Range(8, 13);
+            NPCPatrol.moveSpeed = random;
             NPCPatrol.vehicleStopped = false;
         }
     }

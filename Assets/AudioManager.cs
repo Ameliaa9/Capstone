@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,12 @@ public class AudioManager : MonoBehaviour
     public static AudioManager I { get; private set; }
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource voiceSource;   
-    [SerializeField] private AudioSource sfxSource;     
+    [SerializeField] private AudioSource voiceSource;
+    [SerializeField] private AudioSource sfxSource;
 
-    [Header("Audio Tables")]
-    [SerializeField] private RatingVoiceTable ratingVoiceTable;
+    [Header("Customer Voice Tables")]
+    [Tooltip("Map customerId (e.g. Junior/Valarie/Zarah) -> CustomerVoiceTable asset")]
+    [SerializeField] private List<CustomerVoiceEntry> customerVoiceTables = new();
 
     [Header("Voice Settings")]
     [Tooltip("If true, new voice lines will interrupt the current one")]
@@ -20,6 +22,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private bool avoidRepeat = true;
 
     private AudioClip lastVoiceClip;
+
+    // runtime lookup
+    private Dictionary<string, CustomerVoiceTable> tableLookup;
+
+    [Serializable]
+    public class CustomerVoiceEntry
+    {
+        public string customerId;              // "Junior"
+        public CustomerVoiceTable voiceTable;  // Junior_VoiceTable
+    }
 
     private void Awake()
     {
@@ -32,24 +44,33 @@ public class AudioManager : MonoBehaviour
         I = this;
         DontDestroyOnLoad(gameObject);
 
-        
         if (voiceSource == null)
             voiceSource = GetComponent<AudioSource>();
+
+        BuildLookup();
     }
 
-   
-    public void PlayRatingVoice(int stars)
+    private void BuildLookup()
     {
-        if (ratingVoiceTable == null)
-        {
-            Debug.LogWarning("[AudioManager] RatingVoiceTable is not assigned.");
-            return;
-        }
+        tableLookup = new Dictionary<string, CustomerVoiceTable>(StringComparer.OrdinalIgnoreCase);
 
-        List<AudioClip> clips = ratingVoiceTable.GetClips(stars);
-        if (clips == null || clips.Count == 0)
+        foreach (var entry in customerVoiceTables)
         {
-            Debug.LogWarning($"[AudioManager] No voice clips configured for {stars} stars.");
+            if (entry == null) continue;
+            if (string.IsNullOrWhiteSpace(entry.customerId)) continue;
+            if (entry.voiceTable == null) continue;
+
+            // last one wins if duplicates
+            tableLookup[entry.customerId.Trim()] = entry.voiceTable;
+        }
+    }
+
+    
+    public void PlayCustomerVoice(string customerId, int stars)
+    {
+        if (string.IsNullOrWhiteSpace(customerId))
+        {
+            Debug.LogWarning("[AudioManager] customerId is null/empty.");
             return;
         }
 
@@ -59,37 +80,39 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        
+        if (tableLookup == null)
+            BuildLookup();
+
+        if (!tableLookup.TryGetValue(customerId.Trim(), out var table) || table == null)
+        {
+            Debug.LogWarning($"[AudioManager] No CustomerVoiceTable found for customerId='{customerId}'.");
+            return;
+        }
+
+        AudioClip clip = table.GetClipForStars(stars);
+        if (clip == null)
+        {
+            Debug.LogWarning($"[AudioManager] No clip configured for customerId='{customerId}', stars={stars}.");
+            return;
+        }
+
         if (!interruptVoice && voiceSource.isPlaying)
             return;
 
-        AudioClip chosenClip = PickClip(clips);
+        // avoid repeat (only matters if the chosen clip equals last)
+        if (avoidRepeat && clip == lastVoiceClip)
+        {
+            // if repeat happens and you have alternatives, you'd handle here.
+            // since this system is 1 clip per star, we just allow it.
+        }
 
         if (interruptVoice)
             voiceSource.Stop();
 
-        voiceSource.PlayOneShot(chosenClip);
-        lastVoiceClip = chosenClip;
+        voiceSource.PlayOneShot(clip);
+        lastVoiceClip = clip;
     }
 
-    private AudioClip PickClip(List<AudioClip> clips)
-    {
-        if (!avoidRepeat || clips.Count == 1)
-            return clips[0];
-
-        
-        for (int i = 0; i < 6; i++)
-        {
-            AudioClip clip = clips[Random.Range(0, clips.Count)];
-            if (clip != lastVoiceClip)
-                return clip;
-        }
-
-       
-        return clips[Random.Range(0, clips.Count)];
-    }
-
-    
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
         if (clip == null || sfxSource == null)

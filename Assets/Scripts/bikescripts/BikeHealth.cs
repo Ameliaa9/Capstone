@@ -10,8 +10,7 @@ public class BikeHealth : MonoBehaviour
     private RectTransform healthBar;
     [SerializeField]
     private TextMeshProUGUI value;
-    [SerializeField] private Transform respawnPoint;   
-
+    [SerializeField] private Transform respawnPoint;
 
     public float Health;
     public float maxHealth;
@@ -21,11 +20,16 @@ public class BikeHealth : MonoBehaviour
 
     public void Start()
     {
+        width = healthBar.sizeDelta.x;
+        height = healthBar.sizeDelta.y;
+
         SetMaxHealth(player.bikeHealth);
         Health = maxHealth;
 
+        float newWidth = (Health / maxHealth) * width;
+        healthBar.sizeDelta = new Vector2(newWidth, height);
+        value.text = Health.ToString();
     }
-
 
     public void SetMaxHealth(float setMaxHealth)
     {
@@ -35,6 +39,8 @@ public class BikeHealth : MonoBehaviour
     public void SetHealth(float setHealth)
     {
         Health += setHealth;
+        Health = Mathf.Clamp(Health, 0f, maxHealth);
+
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
         value.text = Health.ToString();
@@ -47,9 +53,9 @@ public class BikeHealth : MonoBehaviour
 
     private void Respawn()
     {
-        // teleport bike
         if (player != null && respawnPoint != null)
         {
+            // teleport bike
             var rb = player.GetRigidbody();
             if (rb != null)
             {
@@ -60,12 +66,12 @@ public class BikeHealth : MonoBehaviour
             player.transform.position = respawnPoint.position;
             player.transform.rotation = respawnPoint.rotation;
         }
-
         // reset health back to full
-        Health = maxHealth;          
+        Health = maxHealth;
+        Health = Mathf.Clamp(Health, 0f, maxHealth);
+
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
         value.text = Health.ToString();
     }
-
 }
