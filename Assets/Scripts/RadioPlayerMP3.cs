@@ -1,7 +1,9 @@
 using KikiNgao.SimpleBikeControl;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
+using System;
 
 public class RadioPlayerMP3 : MonoBehaviour
 {
@@ -12,12 +14,18 @@ public class RadioPlayerMP3 : MonoBehaviour
     private int songIndex;
     private int songPreviousIndex;
     private float songDuration;
+    private float songElapsed;
 
     [SerializeField]
     private Image songAlbumCoverImage;
 
     [SerializeField]
     private TextMeshProUGUI phoneTextUI;
+    [SerializeField]
+    private TextMeshProUGUI timeTextUI;
+
+    [SerializeField]
+    private Image songFill;
 
     private bool isShuffling = false;
 
@@ -29,13 +37,21 @@ public class RadioPlayerMP3 : MonoBehaviour
 
     void Start()
     {
-        songIndex = Random.Range(0, musicList.Length);
+        songIndex = UnityEngine.Random.Range(0, musicList.Length);
         songAudioSource = GetComponent<AudioSource>();
         PlaySong();
     }
 
     void Update()
     {
+        if (songAudioSource.isPlaying)
+        {
+            songElapsed = songAudioSource.time;
+            songFill.fillAmount = songElapsed / songDuration;
+            timeTextUI.text = MathF.Round(songElapsed,1).ToString() + " / " + MathF.Round(songDuration,1).ToString();
+        }
+
+        // Next three lines are only here for PC testing
         GameManager.UnlockCursor();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -45,10 +61,10 @@ public class RadioPlayerMP3 : MonoBehaviour
     {
         songPreviousIndex = songIndex;
         songAlbumCoverImage.sprite = musicList[songIndex].albumCover;
-        songDuration = musicList[songIndex].musicDuration;
         phoneTextUI.text = musicList[songIndex].name;
 
         songAudioSource.clip = musicList[songIndex].musicAudioClip;
+        songDuration = songAudioSource.clip.length;
         songAudioSource.Play();
     }
 
@@ -58,7 +74,7 @@ public class RadioPlayerMP3 : MonoBehaviour
 
         if (isShuffling)
         {
-            songIndex = Random.Range(0, musicList.Length);
+            songIndex = UnityEngine.Random.Range(0, musicList.Length);
             if (songIndex != songPreviousIndex)
             {
                 PlaySong();
