@@ -24,6 +24,8 @@ public class HoldShow : MonoBehaviour
         if (pressed && !wasPressedLastFrame)
         {
             TutorialManager.Instance.MapOpened();
+
+            FindObjectOfType<TaskManager>()?.OnMapOpened();
         }
 
         wasPressedLastFrame = pressed;
