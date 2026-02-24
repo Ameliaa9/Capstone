@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class VoiceTest : MonoBehaviour
 {
     void Update()
@@ -10,3 +10,4 @@ public class VoiceTest : MonoBehaviour
     }
 }
 
+*/

@@ -48,7 +48,7 @@ public class BikeCameraOrbit : MonoBehaviour
     void ReadInput()
     {
         float inputX = Input.GetAxis("Joystick2Horizontal");
-        float inputY = -Input.GetAxis("Joystick2Vertical");
+        float inputY = Input.GetAxis("Joystick2Vertical");
 
         if (Mathf.Abs(inputX) < 0.2f) inputX = 0f;
         if (Mathf.Abs(inputY) < 0.2f) inputY = 0f;
