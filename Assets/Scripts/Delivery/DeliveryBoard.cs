@@ -16,7 +16,7 @@ public class DeliveryBoard : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Bike"))
         {
             canvas1.SetActive(false);
             deliveryUI.SetActive(true);
@@ -28,7 +28,7 @@ public class DeliveryBoard : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Bike"))
         {
             deliveryUI.SetActive(false);
             canvas1.SetActive(true);

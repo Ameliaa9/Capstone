@@ -10,6 +10,8 @@ public class BikeMovement : MonoBehaviour
     public float leanAngle = 20f;
     public float leanSpeed = 8f;
 
+    public float maxHealth = 100f;
+
     Rigidbody rb;
 
     void Awake()
@@ -34,7 +36,6 @@ public class BikeMovement : MonoBehaviour
         float controllerMove = Input.GetAxis("Joystick1Vertical");
         float controllerTurn = Input.GetAxis("Joystick1Horizontal");
 
-       
         float move = Mathf.Abs(keyboardMove) > 0 ? keyboardMove : controllerMove;
         float turn = Mathf.Abs(keyboardTurn) > 0 ? keyboardTurn : controllerTurn;
 
@@ -60,5 +61,26 @@ public class BikeMovement : MonoBehaviour
                 leanSpeed * Time.fixedDeltaTime
             );
         }
+    }
+
+    public Rigidbody GetRigidbody()
+    {
+        return rb;
+    }
+
+    // check the speed 
+    public float GetBikeSpeedKm()
+    {
+        float keyboardMove = 0f;
+        if (Input.GetKey(KeyCode.UpArrow)) keyboardMove = 1f;
+        if (Input.GetKey(KeyCode.DownArrow)) keyboardMove = -1f;
+
+        float controllerMove = Input.GetAxis("Joystick1Vertical");
+
+        float moveInput = Mathf.Abs(keyboardMove) > 0 ? keyboardMove : controllerMove;
+
+        float currentSpeedMps = Mathf.Abs(moveInput * speed);
+
+        return currentSpeedMps * 3.6f;
     }
 }

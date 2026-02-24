@@ -1,4 +1,3 @@
-using KikiNgao.SimpleBikeControl;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +13,7 @@ public class OpenUpgrades : MonoBehaviour
 
     // Scripts the upgrades shop needs to reference to make purchases and give upgrades
     public DeliverySystem deliverySystemScript;
-    public SimpleBike bikeScript;
+    public BikeMovement bikeScript;
 
     // Your personal star wallet ( separate from total amount of stars collected )
     public int starWalletAmount;
@@ -42,7 +41,7 @@ public class OpenUpgrades : MonoBehaviour
     public bool speedUpgradePurchased = false;
     public bool inventoryUpgradePurchased = false;
 
-   
+    
     public GameObject speedUpgradeOwnedImage;      
     public GameObject inventoryUpgradeOwnedImage;  
 
@@ -88,7 +87,7 @@ public class OpenUpgrades : MonoBehaviour
             starWalletAmount = deliverySystemScript.totalStarsCollected - starsSpent;
             starWalletText.text = ("= " + starWalletAmount.ToString());
 
-            GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
+            //GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
 
            // if (player1Cursor) player1Cursor.gameObject.SetActive(true);
             //if (player2Cursor) player2Cursor.gameObject.SetActive(true);
@@ -112,7 +111,7 @@ public class OpenUpgrades : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
 
-            GameManager.LockCursor();
+            //GameManager.LockCursor();
         }
     }
 
@@ -129,12 +128,12 @@ public class OpenUpgrades : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        GameManager.LockCursor();
+        //GameManager.LockCursor();
     }
 
     public void UpgradeSpeed(int upgradeAmount) // Upgrade increment can vary
     {
-        bikeScript.legPower += upgradeAmount;
+        bikeScript.speed += upgradeAmount;
     }
 
     public void UpgradePackageInventory(int upgradeAmount)

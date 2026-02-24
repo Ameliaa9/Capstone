@@ -1,11 +1,10 @@
-using KikiNgao.SimpleBikeControl;
 using TMPro;
 using UnityEngine;
 
 public class BikeHealth : MonoBehaviour
 {
     [SerializeField]
-    private SimpleBike player;
+    private BikeMovement player;
     [SerializeField]
     private RectTransform healthBar;
     [SerializeField]
@@ -23,7 +22,7 @@ public class BikeHealth : MonoBehaviour
         width = healthBar.sizeDelta.x;
         height = healthBar.sizeDelta.y;
 
-        SetMaxHealth(player.bikeHealth);
+        SetMaxHealth(player.maxHealth);
         Health = maxHealth;
 
         float newWidth = (Health / maxHealth) * width;
@@ -66,9 +65,9 @@ public class BikeHealth : MonoBehaviour
             player.transform.position = respawnPoint.position;
             player.transform.rotation = respawnPoint.rotation;
         }
+
         // reset health back to full
         Health = maxHealth;
-        Health = Mathf.Clamp(Health, 0f, maxHealth);
 
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
