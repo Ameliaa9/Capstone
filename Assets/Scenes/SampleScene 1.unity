@@ -256,7 +256,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 544296067}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &499453
+--- !u!114 &499454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &499457
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,23 +290,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &499454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &591395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6267,7 +6267,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 2043704538}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &30991349
+--- !u!114 &30991350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30991347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &30991353
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6286,23 +6301,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &30991350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30991347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!4 &31503239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9118707013261704997, guid: fd8a03a7d71d72644af42d3254ff46e2, type: 3}
@@ -9848,7 +9848,7 @@ PrefabInstance:
       addedObject: {fileID: 50955754}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 50955753}
+      addedObject: {fileID: 50955755}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &50955751 stripped
 Transform:
@@ -9860,7 +9860,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 50955750}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &50955753
+--- !u!114 &50955754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50955752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &50955755
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9879,22 +9893,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &50955754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50955752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &51078061
 GameObject:
   m_ObjectHideFlags: 0
@@ -16872,7 +16872,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 823562796}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &84278151
+--- !u!114 &84278152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84278149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &84278155
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16891,23 +16906,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &84278152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84278149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &84746048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28087,8 +28087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.5, y: 9}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.56752, y: 9}
+  m_SizeDelta: {x: 421.47, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137004966
 MonoBehaviour:
@@ -28144,7 +28144,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28175,7 +28175,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -122.95756, y: 0, z: 0, w: 0}
+  m_margin: {x: 2.786049, y: 0, z: -0.30242154, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -30952,6 +30952,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9af6d300c4b48bb4ebe9539c44d73f0c, type: 3}
+--- !u!1 &151434235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8738092975626607809, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &151582125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32361,7 +32366,7 @@ PrefabInstance:
       addedObject: {fileID: 1757425255}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1757425254}
+      addedObject: {fileID: 1757425258}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &160163608
 PrefabInstance:
@@ -33645,7 +33650,7 @@ PrefabInstance:
       addedObject: {fileID: 1193823553}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1193823552}
+      addedObject: {fileID: 1193823556}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &164439099 stripped
 GameObject:
@@ -39448,7 +39453,7 @@ PrefabInstance:
       addedObject: {fileID: 486228400}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 486228399}
+      addedObject: {fileID: 486228403}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &195881018 stripped
 GameObject:
@@ -39853,7 +39858,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 718490834184948656, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2570019070509496261, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Name
@@ -39861,7 +39866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2857156927891175118, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2945734685990514047, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39905,7 +39910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7239619231078343460, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41662,7 +41667,7 @@ PrefabInstance:
       addedObject: {fileID: 207309813}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 207309812}
+      addedObject: {fileID: 207309814}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &207309810 stripped
 Transform:
@@ -41674,7 +41679,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 207309809}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &207309812
+--- !u!114 &207309813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207309811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &207309814
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41693,22 +41712,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &207309813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207309811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &207345731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45767,7 +45772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &228265345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46005,7 +46010,7 @@ PrefabInstance:
       addedObject: {fileID: 228886098}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 228886097}
+      addedObject: {fileID: 228886099}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &228886095 stripped
 Transform:
@@ -46017,7 +46022,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 228886094}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &228886097
+--- !u!114 &228886098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228886096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &228886099
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46036,22 +46055,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &228886098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228886096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &229110655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51122,7 +51127,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1381990587}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &247959345
+--- !u!114 &247959346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247959343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &247959349
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51141,23 +51161,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &247959346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247959343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &249013240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 65abb0f1b521f834bae80ea4c9d93734, type: 3}
@@ -54755,7 +54760,7 @@ PrefabInstance:
       addedObject: {fileID: 264995884}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 264995883}
+      addedObject: {fileID: 264995885}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &264995881 stripped
 Transform:
@@ -54767,7 +54772,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 264995880}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &264995883
+--- !u!114 &264995884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264995882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &264995885
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54786,22 +54805,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &264995884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264995882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &265741220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -68759,7 +68764,7 @@ PrefabInstance:
       addedObject: {fileID: 2063601892}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2063601891}
+      addedObject: {fileID: 2063601895}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &326997549 stripped
 GameObject:
@@ -70510,7 +70515,7 @@ PrefabInstance:
       addedObject: {fileID: 334996246}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 334996245}
+      addedObject: {fileID: 334996247}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &334996243 stripped
 Transform:
@@ -70522,7 +70527,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 334996242}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &334996245
+--- !u!114 &334996246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334996244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &334996247
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70541,22 +70560,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &334996246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334996244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &335022877
 GameObject:
   m_ObjectHideFlags: 0
@@ -70740,7 +70745,7 @@ PrefabInstance:
       addedObject: {fileID: 336470903}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 336470902}
+      addedObject: {fileID: 336470904}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &336470900 stripped
 Transform:
@@ -70752,7 +70757,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 336470899}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &336470902
+--- !u!114 &336470903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336470901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &336470904
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70771,22 +70790,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &336470903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336470901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &336992874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78656,7 +78661,7 @@ PrefabInstance:
       addedObject: {fileID: 1850363642}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1850363641}
+      addedObject: {fileID: 1850363645}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &382170907 stripped
 GameObject:
@@ -81813,6 +81818,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 97499599}
   m_SourcePrefab: {fileID: 100100000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
+--- !u!1 &395923981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4235225919463181533, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396062888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 800befcc62026a34693972077c91698d, type: 3}
@@ -81891,7 +81901,7 @@ PrefabInstance:
       addedObject: {fileID: 1463676986}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1463676985}
+      addedObject: {fileID: 1463676989}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &397087116
 PrefabInstance:
@@ -91461,12 +91471,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193860198404378337, guid: 2954f57b235ac094a8f5d1dd10aa0d3b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5375002473118078589, guid: 2954f57b235ac094a8f5d1dd10aa0d3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 44e6ca59ea7d72b4e8ff1defab2408f8, type: 2}
+    - target: {fileID: 5927561581965757736, guid: 2954f57b235ac094a8f5d1dd10aa0d3b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5927561581965757736, guid: 2954f57b235ac094a8f5d1dd10aa0d3b, type: 3}
       propertyPath: projectile
       value: 
@@ -99604,7 +99618,7 @@ PrefabInstance:
       addedObject: {fileID: 474676047}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 474676046}
+      addedObject: {fileID: 474676048}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &474676044 stripped
 Transform:
@@ -99616,7 +99630,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 474676043}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &474676046
+--- !u!114 &474676047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474676045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &474676048
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99635,22 +99663,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &474676047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474676045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &474787983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102078,7 +102092,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 195768237}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &486228399
+--- !u!114 &486228400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486228397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &486228403
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102097,23 +102126,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &486228400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486228397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &486280158
 GameObject:
   m_ObjectHideFlags: 0
@@ -105239,7 +105253,7 @@ PrefabInstance:
       addedObject: {fileID: 498251675}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 498251674}
+      addedObject: {fileID: 498251676}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &498251672 stripped
 Transform:
@@ -105251,7 +105265,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 498251671}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &498251674
+--- !u!114 &498251675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498251673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &498251676
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105270,22 +105298,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &498251675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498251673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &498566544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5029810784890142804, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -110108,7 +110122,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1840496615}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &525365905
+--- !u!114 &525365906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525365903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &525365909
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110127,23 +110156,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &525365906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525365903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &525406680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 35807f23e7899e541b60b2fb2bbb51ef, type: 3}
@@ -110778,7 +110792,7 @@ PrefabInstance:
       addedObject: {fileID: 529807144}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 529807143}
+      addedObject: {fileID: 529807145}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &529807141 stripped
 Transform:
@@ -110790,7 +110804,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 529807140}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &529807143
+--- !u!114 &529807144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529807142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &529807145
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110809,22 +110837,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &529807144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529807142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &529886883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113505,7 +113519,7 @@ PrefabInstance:
       addedObject: {fileID: 499454}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 499453}
+      addedObject: {fileID: 499457}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &544439823
 PrefabInstance:
@@ -114183,6 +114197,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dd3c656fc0e01f746b07825c92b09beb, type: 3}
+--- !u!1 &547695559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7988464781419777476, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &547922920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115245,7 +115264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &555556463
 Transform:
   m_ObjectHideFlags: 0
@@ -116668,7 +116687,7 @@ PrefabInstance:
       addedObject: {fileID: 562715124}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 562715123}
+      addedObject: {fileID: 562715125}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &562715121 stripped
 Transform:
@@ -116680,7 +116699,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 562715120}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &562715123
+--- !u!114 &562715124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562715122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &562715125
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116699,22 +116732,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &562715124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562715122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &562734065
 GameObject:
   m_ObjectHideFlags: 0
@@ -119435,7 +119454,7 @@ PrefabInstance:
       addedObject: {fileID: 641295709}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 641295708}
+      addedObject: {fileID: 641295712}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!4 &573563326 stripped
 Transform:
@@ -121389,6 +121408,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b14aef9a05449784da6735de9ec90b24, type: 3}
   m_PrefabInstance: {fileID: 582120892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &582474800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1669482728023955553, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &582514391
 PrefabInstance:
@@ -134330,7 +134354,7 @@ PrefabInstance:
       addedObject: {fileID: 635887256}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 635887255}
+      addedObject: {fileID: 635887257}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &635887253 stripped
 Transform:
@@ -134342,7 +134366,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 635887252}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &635887255
+--- !u!114 &635887256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635887254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &635887257
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134361,22 +134399,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &635887256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635887254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &636060920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -135465,7 +135489,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 572616005}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &641295708
+--- !u!114 &641295709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641295706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &641295712
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135484,23 +135523,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &641295709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641295706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &641819961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e1d9101af5d96d94ca99efe2de0bac21, type: 3}
@@ -137458,11 +137482,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfc399283e37c64489edf59e4d556fc6, type: 3}
   - {fileID: 21300000, guid: 568528842f0621a479f985962948617c, type: 3}
   charactersOnSeat:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1169959929}
+  - {fileID: 395923981}
+  - {fileID: 151434235}
+  - {fileID: 690925791}
+  - {fileID: 1919588595}
   lockedInImage: {fileID: 1700919879}
   playerIndex: 1
 --- !u!114 &651512779
@@ -144038,7 +144062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &682081961
 Transform:
   m_ObjectHideFlags: 0
@@ -145417,7 +145441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &689350272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145750,6 +145774,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
+--- !u!1 &690925791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3737761062572639004, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &692212043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 65abb0f1b521f834bae80ea4c9d93734, type: 3}
@@ -152698,7 +152727,7 @@ PrefabInstance:
       addedObject: {fileID: 722435930}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 722435929}
+      addedObject: {fileID: 722435931}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &722435927 stripped
 Transform:
@@ -152710,7 +152739,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 722435926}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &722435929
+--- !u!114 &722435930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722435928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &722435931
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152729,22 +152772,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &722435930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722435928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &722794366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154299,7 +154328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &732040983
 Transform:
   m_ObjectHideFlags: 0
@@ -156458,7 +156487,7 @@ PrefabInstance:
       addedObject: {fileID: 1473167991}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1473167990}
+      addedObject: {fileID: 1473167994}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!4 &743145673 stripped
 Transform:
@@ -157176,7 +157205,7 @@ PrefabInstance:
       addedObject: {fileID: 747158747}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 747158746}
+      addedObject: {fileID: 747158748}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &747158744 stripped
 Transform:
@@ -157188,7 +157217,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 747158743}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &747158746
+--- !u!114 &747158747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747158745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &747158748
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157207,22 +157250,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &747158747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747158745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &747418479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157401,7 +157430,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1014461082}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &747606096
+--- !u!114 &747606097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747606094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &747606100
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157420,23 +157464,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &747606097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747606094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &747711233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160379,7 +160408,7 @@ PrefabInstance:
       addedObject: {fileID: 766197504}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 766197503}
+      addedObject: {fileID: 766197505}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &766197501 stripped
 Transform:
@@ -160391,7 +160420,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 766197500}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &766197503
+--- !u!114 &766197504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766197502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &766197505
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160410,22 +160453,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &766197504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766197502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &766207252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161110,7 +161139,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1128772972}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &769408750
+--- !u!114 &769408751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769408748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &769408754
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161129,23 +161173,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &769408751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769408748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &769538573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -162710,7 +162739,7 @@ PrefabInstance:
       addedObject: {fileID: 775765158}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 775765157}
+      addedObject: {fileID: 775765159}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &775765155 stripped
 Transform:
@@ -162722,27 +162751,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 775765154}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &775765157
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775765156}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &775765158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162757,23 +162765,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
---- !u!1 &776048628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
-  m_PrefabInstance: {fileID: 1937205533}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &776048629 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
-  m_PrefabInstance: {fileID: 1937205533}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &776048630
+--- !u!65 &775765159
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776048628}
+  m_GameObject: {fileID: 775765156}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -162786,8 +162784,18 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
+--- !u!1 &776048628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+  m_PrefabInstance: {fileID: 1937205533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &776048629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
+  m_PrefabInstance: {fileID: 1937205533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &776048631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162803,6 +162811,27 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+--- !u!65 &776048634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776048628}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &776502556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596390231828929198, guid: 15d5c323aef854a98bb36b76e8b29e03, type: 3}
@@ -169241,7 +169270,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 980033821}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &812749980
+--- !u!114 &812749981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812749978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &812749984
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169260,23 +169304,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &812749981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812749978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &812821151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171024,7 +171053,7 @@ PrefabInstance:
       addedObject: {fileID: 84278152}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 84278151}
+      addedObject: {fileID: 84278155}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &823923912
 PrefabInstance:
@@ -172332,7 +172361,7 @@ PrefabInstance:
       addedObject: {fileID: 833280148}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 833280147}
+      addedObject: {fileID: 833280149}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &833280145 stripped
 Transform:
@@ -172344,7 +172373,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 833280144}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &833280147
+--- !u!114 &833280148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833280146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &833280149
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172363,22 +172406,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &833280148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833280146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &833940290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b549b1699e4cdad44b2c014041303df4, type: 3}
@@ -174011,7 +174040,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 961945892}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &841883435
+--- !u!114 &841883436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841883433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &841883439
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174030,23 +174074,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &841883436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841883433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &842183513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181717,7 +181746,7 @@ PrefabInstance:
       addedObject: {fileID: 879271200}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 879271199}
+      addedObject: {fileID: 879271201}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &879271197 stripped
 Transform:
@@ -181729,7 +181758,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 879271196}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &879271199
+--- !u!114 &879271200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879271198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &879271201
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181748,22 +181791,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &879271200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879271198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &880070784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596390231828929198, guid: 15d5c323aef854a98bb36b76e8b29e03, type: 3}
@@ -182464,7 +182493,7 @@ PrefabInstance:
       addedObject: {fileID: 884150509}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 884150508}
+      addedObject: {fileID: 884150510}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &884150506 stripped
 Transform:
@@ -182476,7 +182505,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 884150505}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &884150508
+--- !u!114 &884150509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884150507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &884150510
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182495,22 +182538,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &884150509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884150507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &884486369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -182828,7 +182857,7 @@ PrefabInstance:
       addedObject: {fileID: 1799777687}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1799777686}
+      addedObject: {fileID: 1799777690}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &886848475
 PrefabInstance:
@@ -183042,7 +183071,7 @@ PrefabInstance:
       addedObject: {fileID: 887125705}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 887125704}
+      addedObject: {fileID: 887125706}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &887125702 stripped
 Transform:
@@ -183054,7 +183083,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 887125701}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &887125704
+--- !u!114 &887125705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887125703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &887125706
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183073,22 +183116,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &887125705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887125703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &887159233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -187254,7 +187283,7 @@ PrefabInstance:
       addedObject: {fileID: 902852344}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 902852343}
+      addedObject: {fileID: 902852345}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &902852341 stripped
 Transform:
@@ -187266,7 +187295,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 902852340}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &902852343
+--- !u!114 &902852344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902852342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &902852345
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187285,22 +187328,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &902852344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902852342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &902867726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201374,7 +201403,7 @@ PrefabInstance:
       addedObject: {fileID: 948479004}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 948479003}
+      addedObject: {fileID: 948479005}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &948479001 stripped
 Transform:
@@ -201386,7 +201415,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 948479000}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &948479003
+--- !u!114 &948479004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948479002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &948479005
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201405,22 +201448,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &948479004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948479002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &948563063
 GameObject:
   m_ObjectHideFlags: 0
@@ -204183,7 +204212,7 @@ PrefabInstance:
       addedObject: {fileID: 841883436}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 841883435}
+      addedObject: {fileID: 841883439}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &962145370 stripped
 GameObject:
@@ -206954,7 +206983,7 @@ PrefabInstance:
       addedObject: {fileID: 973144589}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 973144588}
+      addedObject: {fileID: 973144590}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &973144586 stripped
 Transform:
@@ -206966,7 +206995,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 973144585}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &973144588
+--- !u!114 &973144589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973144587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &973144590
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206985,22 +207028,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &973144589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973144587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &973304172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208661,7 +208690,7 @@ PrefabInstance:
       addedObject: {fileID: 812749981}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 812749980}
+      addedObject: {fileID: 812749984}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &980447411
 PrefabInstance:
@@ -213292,7 +213321,7 @@ PrefabInstance:
       addedObject: {fileID: 998272672}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 998272671}
+      addedObject: {fileID: 998272673}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &998272669 stripped
 Transform:
@@ -213304,7 +213333,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 998272668}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &998272671
+--- !u!114 &998272672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998272670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &998272673
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213323,22 +213366,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &998272672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998272670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &998412097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218244,7 +218273,7 @@ PrefabInstance:
       addedObject: {fileID: 747606097}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 747606096}
+      addedObject: {fileID: 747606100}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1014608130
 PrefabInstance:
@@ -220610,7 +220639,7 @@ PrefabInstance:
       addedObject: {fileID: 1022265869}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1022265868}
+      addedObject: {fileID: 1022265870}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1022265866 stripped
 Transform:
@@ -220622,7 +220651,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1022265865}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1022265868
+--- !u!114 &1022265869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022265867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1022265870
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220641,22 +220684,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1022265869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022265867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1022933229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221797,7 +221826,7 @@ PrefabInstance:
       addedObject: {fileID: 1029173673}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1029173672}
+      addedObject: {fileID: 1029173674}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1029173670 stripped
 Transform:
@@ -221809,7 +221838,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1029173669}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1029173672
+--- !u!114 &1029173673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029173671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1029173674
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221828,22 +221871,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1029173673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029173671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1029185678
 GameObject:
   m_ObjectHideFlags: 0
@@ -246313,7 +246342,7 @@ PrefabInstance:
       addedObject: {fileID: 769408751}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 769408750}
+      addedObject: {fileID: 769408754}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1129140086
 PrefabInstance:
@@ -247341,7 +247370,7 @@ PrefabInstance:
       addedObject: {fileID: 1133541588}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1133541587}
+      addedObject: {fileID: 1133541589}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1133541585 stripped
 Transform:
@@ -247353,7 +247382,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1133541584}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1133541587
+--- !u!114 &1133541588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133541586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1133541589
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247372,22 +247415,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1133541588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133541586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1133679319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255599,6 +255628,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
   m_PrefabInstance: {fileID: 277230091}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1169959929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8945971721847613895, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1170263942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257958,7 +257992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1182540380
 Transform:
   m_ObjectHideFlags: 0
@@ -260464,7 +260498,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 164185492}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1193823552
+--- !u!114 &1193823553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193823550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1193823556
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260483,23 +260532,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1193823553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193823550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1193993736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264677,7 +264711,7 @@ PrefabInstance:
       addedObject: {fileID: 1216717878}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1216717877}
+      addedObject: {fileID: 1216717879}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1216717875 stripped
 Transform:
@@ -264689,7 +264723,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1216717874}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1216717877
+--- !u!114 &1216717878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216717876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1216717879
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264708,22 +264756,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1216717878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216717876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1216778780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e1d9101af5d96d94ca99efe2de0bac21, type: 3}
@@ -265123,7 +265157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1219027535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -269874,7 +269908,7 @@ PrefabInstance:
       addedObject: {fileID: 1837420378}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1837420377}
+      addedObject: {fileID: 1837420381}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &1248258167 stripped
 GameObject:
@@ -271413,7 +271447,7 @@ PrefabInstance:
       addedObject: {fileID: 1255015090}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1255015089}
+      addedObject: {fileID: 1255015091}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1255015087 stripped
 Transform:
@@ -271425,7 +271459,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1255015086}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1255015089
+--- !u!114 &1255015090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255015088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1255015091
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271444,22 +271492,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1255015090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255015088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1255029125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271669,7 +271703,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1396651811}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1255175909
+--- !u!114 &1255175910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255175907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1255175913
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271688,23 +271737,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1255175910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255175907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1255333164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271870,8 +271904,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!114 &1255399237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274473,7 +274507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697766993877367572, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1697766993877367572, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -274641,7 +274675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008080845424047618, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6008080845424047618, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -276279,11 +276313,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfc399283e37c64489edf59e4d556fc6, type: 3}
   - {fileID: 21300000, guid: 568528842f0621a479f985962948617c, type: 3}
   charactersOnSeat:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1777398972}
+  - {fileID: 547695559}
+  - {fileID: 1456099434}
+  - {fileID: 1575549531}
+  - {fileID: 582474800}
   lockedInImage: {fileID: 665323981}
   playerIndex: 0
 --- !u!114 &1278567956
@@ -280398,7 +280432,7 @@ PrefabInstance:
       addedObject: {fileID: 1294014004}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1294014003}
+      addedObject: {fileID: 1294014005}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1294014001 stripped
 Transform:
@@ -280410,7 +280444,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1294014000}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1294014003
+--- !u!114 &1294014004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294014002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1294014005
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280429,22 +280477,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1294014004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294014002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1294056173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -287654,7 +287688,7 @@ PrefabInstance:
       addedObject: {fileID: 1918147529}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1918147528}
+      addedObject: {fileID: 1918147532}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1338666308
 PrefabInstance:
@@ -294908,7 +294942,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 2125736664}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1367678568
+--- !u!114 &1367678569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367678566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1367678572
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294927,23 +294976,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1367678569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367678566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1368395090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297058,7 +297092,7 @@ PrefabInstance:
       addedObject: {fileID: 247959346}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 247959345}
+      addedObject: {fileID: 247959349}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1383965978
 PrefabInstance:
@@ -299393,7 +299427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1393321467
 Transform:
   m_ObjectHideFlags: 0
@@ -300241,7 +300275,7 @@ PrefabInstance:
       addedObject: {fileID: 1255175910}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1255175909}
+      addedObject: {fileID: 1255175913}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1397109498
 PrefabInstance:
@@ -310876,7 +310910,7 @@ PrefabInstance:
       addedObject: {fileID: 1443564676}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1443564675}
+      addedObject: {fileID: 1443564677}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1443564673 stripped
 Transform:
@@ -310888,7 +310922,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1443564672}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1443564675
+--- !u!114 &1443564676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443564674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1443564677
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310907,22 +310955,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1443564676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443564674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1444241677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313602,6 +313636,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456072141}
   m_CullTransparentMesh: 1
+--- !u!1 &1456099434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2198839069372321087, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1456974676
 GameObject:
   m_ObjectHideFlags: 0
@@ -315107,7 +315146,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 396458040}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1463676985
+--- !u!114 &1463676986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463676983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1463676989
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315126,23 +315180,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1463676986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463676983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &1464078486
 GameObject:
   m_ObjectHideFlags: 0
@@ -316089,7 +316128,7 @@ PrefabInstance:
       addedObject: {fileID: 1467977238}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1467977237}
+      addedObject: {fileID: 1467977239}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1467977235 stripped
 Transform:
@@ -316101,7 +316140,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1467977234}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1467977237
+--- !u!114 &1467977238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467977236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1467977239
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316120,22 +316173,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1467977238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467977236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1468542401
 GameObject:
   m_ObjectHideFlags: 0
@@ -316972,7 +317011,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 743079745}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1473167990
+--- !u!114 &1473167991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473167988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1473167994
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316991,23 +317045,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1473167991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473167988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1473395345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320985,7 +321024,7 @@ PrefabInstance:
       addedObject: {fileID: 1492830418}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1492830417}
+      addedObject: {fileID: 1492830419}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1492830415 stripped
 Transform:
@@ -320997,7 +321036,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1492830414}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1492830417
+--- !u!114 &1492830418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492830416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1492830419
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321016,22 +321069,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1492830418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492830416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1492840431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330947,7 +330986,7 @@ PrefabInstance:
       addedObject: {fileID: 1541913440}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1541913439}
+      addedObject: {fileID: 1541913441}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1541913437 stripped
 Transform:
@@ -330959,7 +330998,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1541913436}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1541913439
+--- !u!114 &1541913440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541913438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1541913441
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330978,22 +331031,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1541913440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541913438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1542556978
 GameObject:
   m_ObjectHideFlags: 0
@@ -333459,7 +333498,7 @@ PrefabInstance:
       addedObject: {fileID: 1792939058}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1792939057}
+      addedObject: {fileID: 1792939061}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1556076662
 PrefabInstance:
@@ -336955,7 +336994,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1701117044}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1573253405
+--- !u!114 &1573253406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573253403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1573253409
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336974,23 +337028,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1573253406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573253403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &1573488734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8439620028681342322, guid: ba77c23ea1b527744ad07b162dd6754c, type: 3}
@@ -337584,6 +337623,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575336775}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1575549531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3814730265015568637, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575668273
 GameObject:
   m_ObjectHideFlags: 0
@@ -343994,7 +344038,7 @@ PrefabInstance:
       addedObject: {fileID: 1973546843}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1973546842}
+      addedObject: {fileID: 1973546846}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1608084232
 PrefabInstance:
@@ -351144,7 +351188,7 @@ PrefabInstance:
       addedObject: {fileID: 1642733475}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1642733474}
+      addedObject: {fileID: 1642733476}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1642733472 stripped
 Transform:
@@ -351156,7 +351200,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1642733471}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1642733474
+--- !u!114 &1642733475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642733473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1642733476
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351175,22 +351233,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1642733475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642733473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1642835910
 GameObject:
   m_ObjectHideFlags: 0
@@ -359208,7 +359252,7 @@ PrefabInstance:
       addedObject: {fileID: 1686031511}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1686031510}
+      addedObject: {fileID: 1686031512}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1686031508 stripped
 Transform:
@@ -359220,7 +359264,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1686031507}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1686031510
+--- !u!114 &1686031511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686031509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1686031512
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359239,22 +359297,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1686031511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686031509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1686765756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361277,7 +361321,7 @@ PrefabInstance:
       addedObject: {fileID: 1573253406}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1573253405}
+      addedObject: {fileID: 1573253409}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &1701328066 stripped
 GameObject:
@@ -367214,7 +367258,7 @@ PrefabInstance:
       addedObject: {fileID: 1727009230}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1727009229}
+      addedObject: {fileID: 1727009231}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1727009227 stripped
 Transform:
@@ -367226,7 +367270,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1727009226}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1727009229
+--- !u!114 &1727009230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727009228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1727009231
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367245,22 +367303,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1727009230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727009228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1727258680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370502,7 +370546,7 @@ PrefabInstance:
       addedObject: {fileID: 1746414710}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1746414709}
+      addedObject: {fileID: 1746414711}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1746414707 stripped
 Transform:
@@ -370514,7 +370558,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1746414706}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1746414709
+--- !u!114 &1746414710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746414708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1746414711
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370533,22 +370591,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1746414710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746414708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1746595231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371474,7 +371518,7 @@ PrefabInstance:
       addedObject: {fileID: 1992381897}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1992381896}
+      addedObject: {fileID: 1992381900}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1752567332
 PrefabInstance:
@@ -372660,7 +372704,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 159099468}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1757425254
+--- !u!114 &1757425255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757425252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1757425258
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372679,23 +372738,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1757425255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757425252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!4 &1757692637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -377175,6 +377219,11 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!1 &1777398972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7221836001524995847, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778538201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -379753,7 +379802,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1555255480}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1792939057
+--- !u!114 &1792939058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792939055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1792939061
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379772,23 +379836,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1792939058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792939055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1793056521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381703,7 +381752,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 886791903}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1799777686
+--- !u!114 &1799777687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799777684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1799777690
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381722,23 +381786,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1799777687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799777684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &1800030017
 GameObject:
   m_ObjectHideFlags: 0
@@ -383379,7 +383428,7 @@ PrefabInstance:
       addedObject: {fileID: 1807526005}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1807526004}
+      addedObject: {fileID: 1807526006}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1807526002 stripped
 Transform:
@@ -383391,7 +383440,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1807526001}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1807526004
+--- !u!114 &1807526005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807526003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1807526006
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383410,22 +383473,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1807526005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807526003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1807792223
 GameObject:
   m_ObjectHideFlags: 0
@@ -391119,7 +391168,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1247650678}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1837420377
+--- !u!114 &1837420378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837420375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1837420381
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391138,23 +391202,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1837420378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837420375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1837756803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392157,7 +392206,7 @@ PrefabInstance:
       addedObject: {fileID: 525365906}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 525365905}
+      addedObject: {fileID: 525365909}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &1843435580
 PrefabInstance:
@@ -393787,7 +393836,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 381960995}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1850363641
+--- !u!114 &1850363642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850363639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1850363645
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393806,23 +393870,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1850363642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850363639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!4 &1850755684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9118707013261704997, guid: fd8a03a7d71d72644af42d3254ff46e2, type: 3}
@@ -393967,7 +394016,7 @@ PrefabInstance:
       addedObject: {fileID: 1851421759}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1851421758}
+      addedObject: {fileID: 1851421760}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1851421756 stripped
 Transform:
@@ -393979,7 +394028,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1851421755}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1851421758
+--- !u!114 &1851421759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851421757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1851421760
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393998,22 +394061,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1851421759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851421757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1851583892
 GameObject:
   m_ObjectHideFlags: 0
@@ -396014,7 +396063,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2061552830}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1862705182
+--- !u!114 &1862705183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862705180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1862705184
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396033,22 +396096,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1862705183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862705180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1863615911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403291,7 +403340,7 @@ PrefabInstance:
       addedObject: {fileID: 1894750883}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1894750882}
+      addedObject: {fileID: 1894750884}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1894750880 stripped
 Transform:
@@ -403303,7 +403352,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1894750879}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1894750882
+--- !u!114 &1894750883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894750881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1894750884
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403322,22 +403385,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1894750883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894750881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &1894802040
 GameObject:
   m_ObjectHideFlags: 0
@@ -406639,7 +406688,7 @@ PrefabInstance:
       addedObject: {fileID: 1908778578}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1908778577}
+      addedObject: {fileID: 1908778579}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1908778575 stripped
 Transform:
@@ -406651,7 +406700,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1908778574}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1908778577
+--- !u!114 &1908778578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908778576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1908778579
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406670,22 +406733,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1908778578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908778576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1909195811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408614,7 +408663,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1338238404}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1918147528
+--- !u!114 &1918147529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918147526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1918147532
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408633,23 +408697,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1918147529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918147526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1918244898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408919,6 +408968,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!1 &1919588595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 902625631485951683, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+  m_PrefabInstance: {fileID: 188877127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1919610915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409741,7 +409795,7 @@ PrefabInstance:
       addedObject: {fileID: 1923467420}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1923467419}
+      addedObject: {fileID: 1923467421}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1923467417 stripped
 Transform:
@@ -409753,7 +409807,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1923467416}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1923467419
+--- !u!114 &1923467420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923467418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1923467421
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409772,22 +409840,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1923467420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923467418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1923708394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410122,7 +410176,7 @@ PrefabInstance:
       addedObject: {fileID: 1924630530}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1924630529}
+      addedObject: {fileID: 1924630531}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1924630527 stripped
 Transform:
@@ -410134,7 +410188,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1924630526}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1924630529
+--- !u!114 &1924630530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924630528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1924630531
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -410153,22 +410221,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1924630530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924630528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1924826720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413550,7 +413604,7 @@ PrefabInstance:
       addedObject: {fileID: 776048631}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 776048630}
+      addedObject: {fileID: 776048634}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &1937438495
 GameObject:
@@ -419844,7 +419898,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1607916894}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1973546842
+--- !u!114 &1973546843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973546840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1973546846
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419863,23 +419932,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1973546843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973546840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &1974204660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cc0981408e7c8db4f9f80a57938fd5e3, type: 3}
@@ -420218,7 +420272,7 @@ PrefabInstance:
       addedObject: {fileID: 1975773881}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1975773880}
+      addedObject: {fileID: 1975773882}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1975773878 stripped
 Transform:
@@ -420230,7 +420284,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1975773877}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1975773880
+--- !u!114 &1975773881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975773879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1975773882
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420249,22 +420317,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1975773881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975773879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &1975852461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5029810784890142804, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -420347,7 +420401,7 @@ PrefabInstance:
       addedObject: {fileID: 1975947185}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1975947184}
+      addedObject: {fileID: 1975947186}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1975947182 stripped
 Transform:
@@ -420359,7 +420413,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1975947181}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1975947184
+--- !u!114 &1975947185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975947183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1975947186
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420378,22 +420446,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1975947185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975947183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1976050299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420748,7 +420802,7 @@ PrefabInstance:
       addedObject: {fileID: 1978496394}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1978496393}
+      addedObject: {fileID: 1978496395}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1978496391 stripped
 Transform:
@@ -420760,7 +420814,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1978496390}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1978496393
+--- !u!114 &1978496394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978496392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1978496395
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420779,22 +420847,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1978496394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978496392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!4 &1979209131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
@@ -423274,7 +423328,7 @@ PrefabInstance:
       addedObject: {fileID: 1991651694}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1991651693}
+      addedObject: {fileID: 1991651695}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &1991651691 stripped
 Transform:
@@ -423286,7 +423340,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 1991651690}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1991651693
+--- !u!114 &1991651694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991651692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &1991651695
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423305,22 +423373,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1991651694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991651692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &1992268142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423423,7 +423477,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 1752083962}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1992381896
+--- !u!114 &1992381897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992381894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &1992381900
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423442,23 +423511,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &1992381897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992381894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &1992400054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -431898,8 +431952,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1 &2033855786
 GameObject:
   m_ObjectHideFlags: 0
@@ -432695,7 +432749,7 @@ PrefabInstance:
       addedObject: {fileID: 2037504386}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2037504385}
+      addedObject: {fileID: 2037504387}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &2037504383 stripped
 Transform:
@@ -432707,7 +432761,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2037504382}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2037504385
+--- !u!114 &2037504386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037504384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &2037504387
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432726,22 +432794,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2037504386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037504384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &2037507728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434537,7 +434591,7 @@ PrefabInstance:
       addedObject: {fileID: 30991350}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 30991349}
+      addedObject: {fileID: 30991353}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1001 &2043844815
 PrefabInstance:
@@ -436627,7 +436681,7 @@ PrefabInstance:
       addedObject: {fileID: 2051545702}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2051545701}
+      addedObject: {fileID: 2051545703}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &2051545699 stripped
 Transform:
@@ -436639,7 +436693,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2051545698}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2051545701
+--- !u!114 &2051545702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051545700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &2051545703
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436658,22 +436726,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2051545702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051545700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1 &2052572913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b74c48c2e73e17c418c9394124b75daf, type: 3}
@@ -438068,7 +438122,7 @@ PrefabInstance:
       addedObject: {fileID: 1862705183}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1862705182}
+      addedObject: {fileID: 1862705184}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!1 &2061842451
 GameObject:
@@ -438520,7 +438574,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7840507bf6158df40a753368ac327847, type: 3}
   m_PrefabInstance: {fileID: 326799106}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2063601891
+--- !u!114 &2063601892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063601889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  healAmount: 10
+  bikeHealth: {fileID: 2080487968}
+--- !u!65 &2063601895
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438539,23 +438608,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019998375, y: 0.019999193, z: 0.05725274}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.000000007450581}
---- !u!114 &2063601892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063601889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c911e1c1987c748845945cdb8481ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  healAmount: 10
-  bikeHealth: {fileID: 2080487968}
+  m_Size: {x: 0.037701905, y: 0.10183441, z: 0.057252742}
+  m_Center: {x: 0.00093239936, y: -0.0055564074, z: 0.0000000069849837}
 --- !u!1001 &2064672547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438699,7 +438753,7 @@ PrefabInstance:
       addedObject: {fileID: 2065090504}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2065090503}
+      addedObject: {fileID: 2065090505}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &2065090501 stripped
 Transform:
@@ -438711,7 +438765,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2065090500}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2065090503
+--- !u!114 &2065090504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065090502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &2065090505
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438730,22 +438798,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2065090504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065090502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &2065759539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440018,7 +440072,7 @@ PrefabInstance:
       addedObject: {fileID: 2071645199}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2071645198}
+      addedObject: {fileID: 2071645200}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &2071645196 stripped
 Transform:
@@ -440030,7 +440084,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2071645195}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2071645198
+--- !u!114 &2071645199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071645197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &2071645200
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440049,22 +440117,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2071645199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071645197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &2072480936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449384,7 +449438,7 @@ PrefabInstance:
       addedObject: {fileID: 2115114409}
     - targetCorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2115114408}
+      addedObject: {fileID: 2115114410}
   m_SourcePrefab: {fileID: 100100000, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
 --- !u!4 &2115114406 stripped
 Transform:
@@ -449396,7 +449450,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
   m_PrefabInstance: {fileID: 2115114405}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2115114408
+--- !u!114 &2115114409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115114407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Bike
+  coinTaskManager: {fileID: 1205060924}
+--- !u!65 &2115114410
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449415,22 +449483,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2115114409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115114407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73f85547ee1d8e458be5a9f4bc9505c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Bike
-  coinTaskManager: {fileID: 1205060924}
+  m_Size: {x: 7.363937, y: 4.279437, z: 6.9524465}
+  m_Center: {x: -0.35554022, y: -0.20172252, z: 0.12723914}
 --- !u!1001 &2115429182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -451441,7 +451495,7 @@ PrefabInstance:
       addedObject: {fileID: 1367678569}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1367678568}
+      addedObject: {fileID: 1367678572}
   m_SourcePrefab: {fileID: 100100000, guid: 7840507bf6158df40a753368ac327847, type: 3}
 --- !u!1 &2125833535
 GameObject:
@@ -467988,7 +468042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050312253554387881, guid: fabda0d6295e918429b88dad63cdbaf2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4050312253554387881, guid: fabda0d6295e918429b88dad63cdbaf2, type: 3}
       propertyPath: m_TagString
