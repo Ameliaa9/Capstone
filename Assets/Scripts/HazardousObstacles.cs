@@ -13,6 +13,8 @@ public class HazardousObstacles : MonoBehaviour
         if (other.CompareTag("Bike"))
         {
             bikeHealth.SetHealth(-damageAmount);
+
+            FindObjectOfType<TaskManager>()?.OnHazardHit();
         }
     }
 }

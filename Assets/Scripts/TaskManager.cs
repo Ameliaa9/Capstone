@@ -205,7 +205,7 @@ public class TaskManager : MonoBehaviour
     {
         switch (type)
         {
-            case TaskType.CollectCoins: return $"Collect {targetCoins} Coins";
+            case TaskType.CollectCoins: return $"Collect {targetCoins} Coffee";
             case TaskType.NoHazardHit: return "No Hazard Hit";
             case TaskType.HitTargets: return $"Hit {targetHits} Targets";
             case TaskType.NoEnlargedMap: return "Don't Open Big Map";
