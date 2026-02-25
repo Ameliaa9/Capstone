@@ -9,7 +9,14 @@ public class BikeHealth : MonoBehaviour
     private RectTransform healthBar;
     [SerializeField]
     private TextMeshProUGUI value;
-    [SerializeField] private Transform respawnPoint;
+    [SerializeField]
+    private Transform respawnPoint;
+
+    [Header("Death Popup")]
+    [SerializeField]
+    private TextMeshProUGUI deathPopup;
+    [SerializeField]
+    private float popupDuration = 2f;
 
     public float Health;
     public float maxHealth;
@@ -28,6 +35,9 @@ public class BikeHealth : MonoBehaviour
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
         value.text = Health.ToString();
+
+        if (deathPopup != null)
+            deathPopup.gameObject.SetActive(false);
     }
 
     public void SetMaxHealth(float setMaxHealth)
@@ -66,11 +76,30 @@ public class BikeHealth : MonoBehaviour
             player.transform.rotation = respawnPoint.rotation;
         }
 
+        ShowDeathPopup();
+
         // reset health back to full
         Health = maxHealth;
 
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
         value.text = Health.ToString();
+    }
+
+    private void ShowDeathPopup()
+    {
+        if (deathPopup == null) return;
+
+        deathPopup.gameObject.SetActive(true);
+        deathPopup.text = "WASTED!";
+
+        CancelInvoke(nameof(HideDeathPopup));
+        Invoke(nameof(HideDeathPopup), popupDuration);
+    }
+
+    private void HideDeathPopup()
+    {
+        if (deathPopup != null)
+            deathPopup.gameObject.SetActive(false);
     }
 }
