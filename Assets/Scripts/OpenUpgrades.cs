@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,23 +15,19 @@ public class OpenUpgrades : MonoBehaviour
     public DeliverySystem deliverySystemScript;
     public BikeMovement bikeScript;
 
-    // Your personal star wallet ( separate from total amount of stars collected )
-    public int starWalletAmount;
-    public TextMeshProUGUI starWalletText;
-    public int starsSpent;
-
     // The shops upgrade buttons
-    public UnityEngine.UI.Button upgrade1; 
-    public UnityEngine.UI.Button upgrade2; 
+    public UnityEngine.UI.Button upgrade1;
+    public UnityEngine.UI.Button upgrade2;
 
     //custom cursors
-   // public JoystickCursor player1Cursor;
-    //public JoystickCursor player2Cursor;
+    // public JoystickCursor player1Cursor;
+    // public JoystickCursor player2Cursor;
 
     // Cost in stars for each upgrade type
     public int speedUpgradeCost = 10;      // Stars required to buy a speed upgrade
     public int inventoryUpgradeCost = 25;  // Stars required to buy a package inventory upgrade
 
+    // Upgrade values
     public int speedUpgradeAmount = 5;     // How much to increase bike leg power 
     public int inventoryUpgradeAmount = 1; // How many extra packages the player can carry 
 
@@ -41,9 +37,8 @@ public class OpenUpgrades : MonoBehaviour
     public bool speedUpgradePurchased = false;
     public bool inventoryUpgradePurchased = false;
 
-    
-    public GameObject speedUpgradeOwnedImage;      
-    public GameObject inventoryUpgradeOwnedImage;  
+    public GameObject speedUpgradeOwnedImage;
+    public GameObject inventoryUpgradeOwnedImage;
 
     void Start()
     {
@@ -53,10 +48,6 @@ public class OpenUpgrades : MonoBehaviour
 
         // Turn the uprade UI off until you collide with the shop
         upgradeUI.SetActive(false);
-
-        // Initialize the star wallet with the total stars collected
-        starWalletAmount = deliverySystemScript.totalStarsCollected;
-        starWalletText.text = ("= " + starWalletAmount.ToString());
 
         // Make sure the "not enough stars" popup starts hidden
         if (notEnoughStarsPopup != null)
@@ -83,15 +74,6 @@ public class OpenUpgrades : MonoBehaviour
             upgradeUI.SetActive(true);
             canvas1.SetActive(false);
 
-            // Re-initialize so recently collected stars are added to wallet before entry
-            starWalletAmount = deliverySystemScript.totalStarsCollected - starsSpent;
-            starWalletText.text = ("= " + starWalletAmount.ToString());
-
-            //GameManager.UnlockCursor(); // THANK YOU FOR UNLOCKING THE CURSOR =)
-
-           // if (player1Cursor) player1Cursor.gameObject.SetActive(true);
-            //if (player2Cursor) player2Cursor.gameObject.SetActive(true);
-
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
@@ -104,14 +86,8 @@ public class OpenUpgrades : MonoBehaviour
             upgradeUI.SetActive(false);
             canvas1.SetActive(true);
 
-            //hide custom cursors
-          //  if (player1Cursor) player1Cursor.gameObject.SetActive(false);
-            //if (player2Cursor) player2Cursor.gameObject.SetActive(false);
-
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-
-            //GameManager.LockCursor();
         }
     }
 
@@ -121,14 +97,8 @@ public class OpenUpgrades : MonoBehaviour
         upgradeUI.SetActive(false);
         canvas1.SetActive(true);
 
-        //hide custom cursors
-     //   if (player1Cursor) player1Cursor.gameObject.SetActive(false);
-       // if (player2Cursor) player2Cursor.gameObject.SetActive(false);
-
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
-        //GameManager.LockCursor();
     }
 
     public void UpgradeSpeed(int upgradeAmount) // Upgrade increment can vary
@@ -147,17 +117,17 @@ public class OpenUpgrades : MonoBehaviour
     public void BuySpeedUpgrade()
     {
         Debug.Log("BuySpeedUpgrade CALLED");
+        Debug.Log("Current stars: " + deliverySystemScript.totalStarsCollected);
 
         // Stop here if players already bought this upgrade once
         if (speedUpgradePurchased)
             return;
 
-        if (starWalletAmount >= speedUpgradeCost)
+        if (deliverySystemScript.totalStarsCollected >= speedUpgradeCost)
         {
-            // subtract stars
-            starWalletAmount -= speedUpgradeCost;
-            starsSpent += speedUpgradeCost;
-            starWalletText.text = ("= " + starWalletAmount.ToString());
+            // subtract stars directly from total stars
+            deliverySystemScript.totalStarsCollected -= speedUpgradeCost;
+            Debug.Log("Stars after purchase: " + deliverySystemScript.totalStarsCollected);
 
             // apply speed upgrade
             UpgradeSpeed(speedUpgradeAmount);
@@ -182,16 +152,18 @@ public class OpenUpgrades : MonoBehaviour
     // If not, show the "not enough stars" popup
     public void BuyInventoryUpgrade()
     {
+        Debug.Log("BuyInventoryUpgrade CALLED");
+        Debug.Log("Current stars: " + deliverySystemScript.totalStarsCollected);
+
         // Stop here if players already bought this upgrade once
         if (inventoryUpgradePurchased)
             return;
 
-        if (starWalletAmount >= inventoryUpgradeCost)
+        if (deliverySystemScript.totalStarsCollected >= inventoryUpgradeCost)
         {
             // subtract stars
-            starWalletAmount -= inventoryUpgradeCost;
-            starsSpent += inventoryUpgradeCost;
-            starWalletText.text = ("= " + starWalletAmount.ToString());
+            deliverySystemScript.totalStarsCollected -= inventoryUpgradeCost;
+            Debug.Log("Stars after purchase: " + deliverySystemScript.totalStarsCollected);
 
             // apply inventory upgrade
             UpgradePackageInventory(inventoryUpgradeAmount);
