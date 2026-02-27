@@ -147987,7 +147987,10 @@ MonoBehaviour:
   returnText: {fileID: 1131505489}
   successText: {fileID: 1131505489}
   failText: {fileID: 1131505489}
-  customerIds: []
+  customerIds:
+  - Junior
+  - Zarah
+  - Valarie
   successImage: {fileID: 493159904}
   failImage: {fileID: 1066133267}
   successBackground: {fileID: 815336156}
@@ -326530,7 +326533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1516597052
 Transform:
   m_ObjectHideFlags: 0
