@@ -138,7 +138,6 @@ public class DeliverySystem : MonoBehaviour
 
         TutorialManager.Instance?.CorrectDeliveryHit();
 
-
         if (timerText) timerText.text = "";
         if (currentPhone) currentPhone.SetActive(false);
         if (currentArrow) currentArrow.SetActive(false);
@@ -160,7 +159,6 @@ public class DeliverySystem : MonoBehaviour
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
 
         //
-
 
         int starsEarned = 0;
 
@@ -211,11 +209,11 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
         }
-        else 
+        else
         {
             starsEarned = 5;
-            GiveStars(6);
-            Debug.Log("Gets 6 stars. Omgosh! (Voice plays as 5-star)");
+            GiveStars(5);
+            Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
             StartCoroutine(ShowImageForSeconds(starIcon, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
             StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
@@ -225,7 +223,6 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log(totalStarsCollected);
 
-       
         string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
         if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
         {
@@ -235,7 +232,6 @@ public class DeliverySystem : MonoBehaviour
         {
             Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
         }
-       
 
         if (coinTaskManager != null)
             coinTaskManager.OnDeliveryFinished();
@@ -302,4 +298,3 @@ public class DeliverySystem : MonoBehaviour
         return customerIds[index];
     }
 }
-
