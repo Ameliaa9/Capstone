@@ -38278,6 +38278,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2065053584167756034, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 703654441}
+    - targetCorrespondingSourceObject: {fileID: 2065053584167756034, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 703654445}
   m_SourcePrefab: {fileID: 100100000, guid: 7e19525c18553924b99c3bf4a094f2d4, type: 3}
 --- !u!1001 &189105698
 PrefabInstance:
@@ -144899,6 +144902,24 @@ MonoBehaviour:
   starIcon3: {fileID: 1294068295}
   starIcon4: {fileID: 1298956496}
   coinTaskManager: {fileID: 1205060924}
+--- !u!114 &703654445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703654433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b705cdb0882a24ab4f498a5275f88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 703654440}
+  targetTag: NPC
+  activationRadius: 5
+  checkInterval: 0.01
+  autoDetectNew: 1
+  detectInterval: 0.1
 --- !u!1 &703770071
 GameObject:
   m_ObjectHideFlags: 0
@@ -230678,6 +230699,7 @@ GameObject:
   - component: {fileID: 1060584455}
   - component: {fileID: 1060584457}
   - component: {fileID: 1060584458}
+  - component: {fileID: 1060584459}
   m_Layer: 0
   m_Name: npc manager
   m_TagString: Untagged
@@ -230720,7 +230742,7 @@ MonoBehaviour:
     pivotMode: 4
     pivotOffset: {x: 0, y: 0.015, z: 0}
     requireRenderer: 1
-  swingAngle: 10
+  swingAngle: 15
   speed: 3
   targets:
   - label: 
@@ -230843,6 +230865,21 @@ MonoBehaviour:
   - {fileID: 1717242862}
   - {fileID: 1258524598}
   showSplineDrivers: 0
+--- !u!114 &1060584459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060584454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39687f362c941b74b89f3b727055fb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  loopDistance: 10
+  space: 1
 --- !u!1001 &1061275259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279038,7 +279075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2182505488511803393, guid: b7becc3234abff64e9a3819d4cc73e9b, type: 3}
       propertyPath: m_TagString
-      value: NPC
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8228075719552538588, guid: b7becc3234abff64e9a3819d4cc73e9b, type: 3}
@@ -449995,7 +450032,7 @@ GameObject:
   - component: {fileID: 112347382928140113}
   m_Layer: 0
   m_Name: FemaleNPCMaster
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
