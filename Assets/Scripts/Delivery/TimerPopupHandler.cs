@@ -3,17 +3,15 @@ using System.Collections;
 
 public class TimerPopupHandler : MonoBehaviour
 {
-    public GameObject popupImage; 
+    public GameObject popupImage;
+    public Animator popupAnimator;
 
     public void ShowPopup()
     {
-        StartCoroutine(ShowThenHide());
-    }
+        if (popupImage != null)
+            popupImage.SetActive(true);
 
-    IEnumerator ShowThenHide()
-    {
-        popupImage.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        popupImage.SetActive(false);
+        if (popupAnimator != null)
+            popupAnimator.Play("MessageSlideCombined", 0, 0f); 
     }
 }
