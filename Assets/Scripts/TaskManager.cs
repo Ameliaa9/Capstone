@@ -20,7 +20,7 @@ public class TaskManager : MonoBehaviour
     public GameObject bonusStarPopup;
 
     [Header("Settings")]
-    public float bonusPopupDuration = 5f;
+    public float bonusPopupDuration = 3f;
     public DeliverySystem deliverySystem;
 
     [Header("Task Params")]

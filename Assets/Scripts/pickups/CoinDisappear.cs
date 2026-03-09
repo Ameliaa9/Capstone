@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class DisappearOnTrigger : MonoBehaviour
 {
-    public string playerTag = "Bike";
+    public string playerTag = "Player";
 
     public TaskManager coinTaskManager;
-
-    public float boostAmount = 12f;
-    public float boostDuration = 2f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,12 +13,6 @@ public class DisappearOnTrigger : MonoBehaviour
         if (coinTaskManager != null)
         {
             coinTaskManager.OnCoinCollected();
-        }
-
-        BikeMovement bike = other.GetComponent<BikeMovement>();
-        if (bike != null)
-        {
-            bike.ApplySpeedBoost(boostAmount, boostDuration);
         }
 
         gameObject.SetActive(false);

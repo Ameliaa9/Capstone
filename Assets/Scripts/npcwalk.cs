@@ -8,18 +8,6 @@ using UnityEditor;
 public class MalePedestrianSystem : MonoBehaviour
 {
     // ========================================================================
-    // PAUSE SETTINGS
-    // ========================================================================
-    [Header("Pause Settings")]
-    [Tooltip("If true, animation freezes when game is paused. If false, uses unscaled time.")]
-    public bool freezeOnPause = true;
-    [Tooltip("If true, completely skip mesh deformation during pause (prevents corruption).")]
-    public bool skipDeformationOnPause = true;
-
-    // Track pause state to detect transitions
-    private bool wasPausedLastFrame = false;
-
-    // ========================================================================
     // MALE SETTINGS
     // ========================================================================
     [System.Serializable]
@@ -85,11 +73,6 @@ public class MalePedestrianSystem : MonoBehaviour
         public Transform leftLegPivot, rightLegPivot;
         public Transform leftArmPivot, rightArmPivot;
         public List<MeshData> activeMeshes = new List<MeshData>();
-        // Store last valid rotation to prevent jump on resume
-        public Quaternion lastLeftLegRot = Quaternion.identity;
-        public Quaternion lastRightLegRot = Quaternion.identity;
-        public Quaternion lastLeftArmRot = Quaternion.identity;
-        public Quaternion lastRightArmRot = Quaternion.identity;
     }
 
     [System.Serializable]
@@ -179,56 +162,6 @@ public class MalePedestrianSystem : MonoBehaviour
     }
 
     // ========================================================================
-    // PAUSE/RESUME API
-    // ========================================================================
-    public void SetSystemPaused(bool paused)
-    {
-        if (paused)
-        {
-            LogDebug("System PAUSED");
-            // Store current rotations before pausing
-            foreach (var npc in activeMaleNPCs)
-            {
-                npc.lastLeftLegRot = npc.leftLegPivot.localRotation;
-                npc.lastRightLegRot = npc.rightLegPivot.localRotation;
-                npc.lastLeftArmRot = npc.leftArmPivot.localRotation;
-                npc.lastRightArmRot = npc.rightArmPivot.localRotation;
-            }
-        }
-        else
-        {
-            LogDebug("System RESUMED");
-            // Force mesh refresh on resume
-            StartCoroutine(ForceMeshRefreshOnResume());
-        }
-    }
-
-    private System.Collections.IEnumerator ForceMeshRefreshOnResume()
-    {
-        // Wait one frame for timeScale to normalize
-        yield return null;
-
-        // Force a mesh bake refresh for all skinned meshes
-        foreach (var npc in activeMaleNPCs)
-        {
-            foreach (var mesh in npc.activeMeshes)
-            {
-                if (mesh.isSkinned && mesh.sourceSmr != null)
-                {
-                    mesh.sourceSmr.BakeMesh(mesh.bakeMesh);
-                    // Copy fresh data to output mesh
-                    mesh.outputMesh.vertices = mesh.bakeMesh.vertices;
-                    mesh.outputMesh.triangles = mesh.bakeMesh.triangles;
-                    mesh.outputMesh.normals = mesh.bakeMesh.normals;
-                    mesh.outputMesh.uv = mesh.bakeMesh.uv;
-                    mesh.outputMesh.tangents = mesh.bakeMesh.tangents;
-                }
-            }
-        }
-        LogDebug("Mesh refresh completed after resume");
-    }
-
-    // ========================================================================
     // INITIALIZATION
     // ========================================================================
     void Start()
@@ -272,7 +205,7 @@ public class MalePedestrianSystem : MonoBehaviour
         while (current != null && current != limit)
         {
             string n = current.name.ToLower();
-            if (n.Contains("male")) return current;
+            if (n.Contains("male")) return current; // Only looking for males now
             current = current.parent;
         }
         return null;
@@ -452,56 +385,21 @@ public class MalePedestrianSystem : MonoBehaviour
     }
 
     // ========================================================================
-    // UPDATE LOOP - FIXED FOR PAUSE
+    // UPDATE LOOP
     // ========================================================================
     void Update()
     {
-        // Detect pause state change
-        bool isPaused = Time.timeScale == 0f;
-
-        // Handle pause/resume transitions
-        if (isPaused && !wasPausedLastFrame)
-        {
-            // Just paused - store state
-            foreach (var npc in activeMaleNPCs)
-            {
-                npc.lastLeftLegRot = npc.leftLegPivot.localRotation;
-                npc.lastRightLegRot = npc.rightLegPivot.localRotation;
-                npc.lastLeftArmRot = npc.leftArmPivot.localRotation;
-                npc.lastRightArmRot = npc.rightArmPivot.localRotation;
-            }
-        }
-        else if (!isPaused && wasPausedLastFrame)
-        {
-            // Just resumed - force mesh refresh
-            StartCoroutine(ForceMeshRefreshOnResume());
-        }
-
-        wasPausedLastFrame = isPaused;
-
-        // Skip animation update if paused and freezeOnPause is enabled
-        if (isPaused && freezeOnPause)
-            return;
-
-        // Use unscaledDeltaTime to prevent division by zero and infinite speed
-        float delta = Time.unscaledDeltaTime;
-        // Protect against extremely small deltas
-        if (delta < 0.0001f) delta = 0.0001f;
-
+        // --- MALE ANIMATION ---
         foreach (var npc in activeMaleNPCs)
         {
-            // Calculate speed using unscaled delta to avoid division by zero
-            float distance = Vector3.Distance(npc.root.position, npc.lastPos);
-            float speed = distance / delta;
+            float speed = Vector3.Distance(npc.root.position, npc.lastPos) / Time.deltaTime;
             npc.lastPos = npc.root.position;
 
             if (speed > 0.01f)
             {
-                // Use unscaledDeltaTime so animation continues smoothly
-                npc.swingPhase += delta * npc.profile.swingSpeed * (speed * 0.7f);
+                npc.swingPhase += Time.deltaTime * npc.profile.swingSpeed * (speed * 0.7f);
             }
 
-            // Apply rotations
             npc.leftLegPivot.localRotation = Quaternion.Euler(Mathf.Sin(npc.swingPhase) * npc.profile.legSwingAngle, 0, 0);
             npc.rightLegPivot.localRotation = Quaternion.Euler(Mathf.Sin(npc.swingPhase + Mathf.PI) * npc.profile.legSwingAngle, 0, 0);
             npc.leftArmPivot.localRotation = Quaternion.Euler(Mathf.Sin(npc.swingPhase + Mathf.PI) * npc.profile.armSwingAngle, 0, 0);
@@ -510,14 +408,10 @@ public class MalePedestrianSystem : MonoBehaviour
     }
 
     // ========================================================================
-    // LATE UPDATE (MALE DEFORMATION) - FIXED FOR PAUSE
+    // LATE UPDATE (MALE DEFORMATION)
     // ========================================================================
     void LateUpdate()
     {
-        // Skip deformation entirely when paused if configured
-        if (Time.timeScale == 0f && skipDeformationOnPause)
-            return;
-
         foreach (var npc in activeMaleNPCs)
         {
             MaleGenderSettings p = npc.profile;
@@ -526,12 +420,8 @@ public class MalePedestrianSystem : MonoBehaviour
             {
                 if (!mesh.outputRenderer.isVisible) continue;
 
-                // Bake mesh - with error handling for pause state
                 if (mesh.isSkinned)
-                {
-                    if (mesh.sourceSmr == null) continue;
                     mesh.sourceSmr.BakeMesh(mesh.bakeMesh);
-                }
 
                 Vector3[] baseVerts = mesh.isSkinned ? mesh.bakeMesh.vertices : mesh.originalVerts;
                 Transform baseTransform = mesh.isSkinned ? mesh.sourceSmr.transform : mesh.meshTransform;
@@ -602,7 +492,10 @@ public class MalePedestrianSystem : MonoBehaviour
         if (maleProfile != null && showMaleGizmos)
         {
             Gizmos.color = maleGizmoColor;
+            // Draw a reference gizmo at 0,0,0 or you could assign a target
             Vector3 center = Vector3.zero;
+            // Original logic used masterPedestrian, you might want to re-add a reference field for this if needed
+            // For now drawing at world zero to keep script functional
             Gizmos.DrawWireCube(
                 center + Vector3.up * (maleProfile.hipHeight - maleProfile.falloffHeight),
                 new Vector3(maleProfile.hipWidth * 4, 0.02f, 0.5f));
@@ -637,14 +530,6 @@ public class MalePedestrianSystemEditor : Editor
         {
             string path = EditorUtility.OpenFilePanel("Import Male Settings", "Assets", "json");
             if (!string.IsNullOrEmpty(path)) { script.ImportSettings(path); Repaint(); }
-        }
-
-        GUILayout.Space(10);
-        GUILayout.Label("⏸️ PAUSE CONTROL", EditorStyles.boldLabel);
-
-        if (GUILayout.Button("Force Resume (Fix Stuck System)", GUILayout.Height(40)))
-        {
-            script.SetSystemPaused(false);
         }
     }
 }

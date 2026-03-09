@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System;
-using UnityEngine.InputSystem;
 
 public class RadioPlayerMP3 : MonoBehaviour
 {
@@ -28,13 +27,6 @@ public class RadioPlayerMP3 : MonoBehaviour
     [SerializeField]
     private Image songFill;
 
-    [Header("Volume")]
-    [SerializeField]
-    private Image volumeFill;
-
-    [SerializeField]
-    private float volumeStep = 0.1f;
-
     private bool isShuffling = false;
 
     [SerializeField]
@@ -47,13 +39,6 @@ public class RadioPlayerMP3 : MonoBehaviour
     {
         songIndex = UnityEngine.Random.Range(0, musicList.Length);
         songAudioSource = GetComponent<AudioSource>();
-        songAudioSource.volume = 1f;
-
-        if (volumeFill != null)
-        {
-            volumeFill.fillAmount = songAudioSource.volume;
-        }
-
         PlaySong();
     }
 
@@ -63,30 +48,7 @@ public class RadioPlayerMP3 : MonoBehaviour
         {
             songElapsed = songAudioSource.time;
             songFill.fillAmount = songElapsed / songDuration;
-            timeTextUI.text = MathF.Round(songElapsed, 1).ToString() + " / " + MathF.Round(songDuration, 1).ToString();
-        }
-
-        if (Gamepad.current != null)
-        {
-            if (Gamepad.current.dpad.left.wasPressedThisFrame)
-            {
-                PreviousSong();
-            }
-
-            if (Gamepad.current.dpad.right.wasPressedThisFrame)
-            {
-                NextSong();
-            }
-
-            if (Gamepad.current.dpad.up.wasPressedThisFrame)
-            {
-                VolumeUp();
-            }
-
-            if (Gamepad.current.dpad.down.wasPressedThisFrame)
-            {
-                VolumeDown();
-            }
+            timeTextUI.text = MathF.Round(songElapsed,1).ToString() + " / " + MathF.Round(songDuration,1).ToString();
         }
 
         // Next three lines are only here for PC testing
@@ -169,26 +131,6 @@ public class RadioPlayerMP3 : MonoBehaviour
         {
             isShuffling = true;
             shufflingStatus.text = "Shuffle is ON";
-        }
-    }
-
-    public void VolumeUp()
-    {
-        songAudioSource.volume = Mathf.Clamp01(songAudioSource.volume + volumeStep);
-
-        if (volumeFill != null)
-        {
-            volumeFill.fillAmount = songAudioSource.volume;
-        }
-    }
-
-    public void VolumeDown()
-    {
-        songAudioSource.volume = Mathf.Clamp01(songAudioSource.volume - volumeStep);
-
-        if (volumeFill != null)
-        {
-            volumeFill.fillAmount = songAudioSource.volume;
         }
     }
 }
