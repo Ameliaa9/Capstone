@@ -146,6 +146,7 @@ namespace ProjectileCurveVisualizerSystem
 
         void Throw()
         {
+            Debug.Log("THROW CALLED");
             if (projectilePrefab == null) return;
 
             Vector3 spawnPos = cachedStartPos + Vector3.up * spawnHeightOffset;
