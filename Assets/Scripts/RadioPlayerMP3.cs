@@ -163,12 +163,12 @@ public class RadioPlayerMP3 : MonoBehaviour
         if (isShuffling)
         {
             isShuffling = false;
-            shufflingStatus.text = "Shuffle is OFF";
+            shufflingStatus.text = "OFF";
         }
         else
         {
             isShuffling = true;
-            shufflingStatus.text = "Shuffle is ON";
+            shufflingStatus.text = "ON";
         }
     }
 
