@@ -21,7 +21,7 @@ public class DisappearOnTrigger : MonoBehaviour
         BikeMovement bike = other.GetComponent<BikeMovement>();
         if (bike != null)
         {
-            bike.ApplySpeedBoost(boostAmount, boostDuration);
+            //bike.ApplySpeedBoost(boostAmount, boostDuration);
         }
 
         gameObject.SetActive(false);
