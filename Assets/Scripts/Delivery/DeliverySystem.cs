@@ -31,6 +31,9 @@ public class DeliverySystem : MonoBehaviour
     public GameObject successBackground;
     public GameObject failBackground;
 
+    [Header("Popup Animation")]
+    public TimerPopupHandler popup;
+
     [Header("Minimap Arrows")]
     public GameObject[] deliveryArrows;
     private GameObject currentArrow;
@@ -91,7 +94,7 @@ public class DeliverySystem : MonoBehaviour
 
                 if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
-                if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 3f));
+                if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 5f));
             }
         }
     }
@@ -144,6 +147,11 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log($"? Delivery {currentDelivery} successful!");
 
+        if (popup != null)
+        {
+            popup.ShowPopup();
+        }
+
         if (LeaderboardManager.Instance != null)
         {
             float timeTaken = deliveryTimes[currentDelivery] - currentTimer;
@@ -156,7 +164,7 @@ public class DeliverySystem : MonoBehaviour
         }
 
         if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
-        if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 3f));
+        if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
 
         //
 
@@ -169,56 +177,56 @@ public class DeliverySystem : MonoBehaviour
             starsEarned = 1;
             GiveStars(1);
             Debug.Log("Gets 1 star.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
         }
         else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 1.5f)
         {
             starsEarned = 2;
             GiveStars(2);
             Debug.Log("Gets 2 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
         }
         else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 2f)
         {
             starsEarned = 3;
             GiveStars(3);
             Debug.Log("Gets 3 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
         }
         else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 3f)
         {
             starsEarned = 4;
             GiveStars(4);
             Debug.Log("Gets 4 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
         }
         else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 4f)
         {
             starsEarned = 5;
             GiveStars(5);
             Debug.Log("Gets 5 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
         }
         else
         {
             starsEarned = 5;
             GiveStars(5);
             Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
-            StartCoroutine(ShowImageForSeconds(starIcon, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 3f));
-            StartCoroutine(ShowImageForSeconds(starIcon4, 3f));
+            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+            StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
         }
 
         Debug.Log(totalStarsCollected);
