@@ -9965,6 +9965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -10052,6 +10056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &50955755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32712,6 +32718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34003,6 +34013,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36914,7 +36928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &178934723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39477,7 +39491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &192417778
 Transform:
   m_ObjectHideFlags: 0
@@ -39949,6 +39963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40371,7 +40389,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 718490834184948656, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2570019070509496261, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Name
@@ -40379,7 +40397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2857156927891175118, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2945734685990514047, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40423,7 +40441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7239619231078343460, guid: be350c9b657cfe6469b64df96d7ae69d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41919,6 +41937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -42006,6 +42028,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &207309814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45755,7 +45779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &228265345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45932,6 +45956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -46019,6 +46047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &228886099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54346,6 +54376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -54433,6 +54467,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &264995885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67920,6 +67956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -69900,6 +69940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -69987,6 +70031,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &334996247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70130,6 +70176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -70217,6 +70267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &336470904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74661,8 +74713,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 873160507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.3320185}
-  m_AnchorMax: {x: 1, y: 0.9999999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -77660,6 +77712,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80823,6 +80879,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89509,7 +89569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &435310071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -97122,6 +97182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -98574,6 +98638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -98661,6 +98729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &474676048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103975,6 +104045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -104062,6 +104136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &498251676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109492,6 +109568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -109579,6 +109659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &529807145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112047,6 +112129,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114906,6 +114992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -114993,6 +115083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &562715125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117307,6 +117399,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -132233,6 +132329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -132320,6 +132420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &635887257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150831,6 +150933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -150918,6 +151024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &722435931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154827,6 +154935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -155475,6 +155587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -155562,6 +155678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &747158748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158558,6 +158676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -158645,6 +158767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &766197505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -161026,6 +161150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -161113,6 +161241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &775765159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -167910,7 +168040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &814718246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -169111,6 +169241,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -170358,6 +170492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -170445,6 +170583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &833280149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -175790,10 +175930,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -920.6666}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859019771
 MonoBehaviour:
@@ -178670,10 +178810,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -1437.3333}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874424487
 MonoBehaviour:
@@ -179632,6 +179772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -179719,6 +179863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &879271201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -180328,6 +180474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -180415,6 +180565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &884150510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -180744,6 +180896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -180914,6 +181070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -181001,6 +181161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &887125706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -185066,6 +185228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -185153,6 +185319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &902852345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -199153,6 +199321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -199240,6 +199412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &948479005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202189,6 +202363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -204953,6 +205131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -205040,6 +205222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &973144590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -206712,6 +206896,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -211331,6 +211519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -211418,6 +211610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &998272673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -216389,6 +216583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -218549,6 +218747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -218636,6 +218838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1022265870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -219885,6 +220089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -219972,6 +220180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1029173674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -244674,6 +244884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -245632,6 +245846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -245719,6 +245937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1133541589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -249786,7 +250006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1146906428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -263091,6 +263311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -263178,6 +263402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1216717879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263598,7 +263824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1219027535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -268731,6 +268957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -270305,6 +270535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -270392,6 +270626,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1255015091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -270731,6 +270967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -270839,6 +271079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!1001 &1256622952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273671,7 +273913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697766993877367572, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1697766993877367572, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -273839,7 +274081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008080845424047618, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6008080845424047618, guid: 18abe1d57a0ff8045a30d7055a02eb03, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -279460,6 +279702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -279547,6 +279793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1294014005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286632,6 +286880,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -294107,10 +294359,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -145.66666}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370398589
 MonoBehaviour:
@@ -296040,6 +296292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -299052,6 +299308,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -309326,6 +309586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -309413,6 +309677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1443564677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -314522,6 +314788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -314609,6 +314879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1467977239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -316470,10 +316742,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -403.99997}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475976992
 MonoBehaviour:
@@ -319532,6 +319804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -319619,6 +319895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1492830419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -324401,7 +324679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1516597052
 Transform:
   m_ObjectHideFlags: 0
@@ -329280,6 +329558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -329367,6 +329649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1541913441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -331849,6 +332133,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -342207,6 +342495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -349982,6 +350274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -350069,6 +350365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1642733476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -358360,6 +358658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -358447,6 +358749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1686031512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -360378,6 +360682,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -366161,6 +366469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -366248,6 +366560,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1727009231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -369298,6 +369612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -369385,6 +369703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1746414711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -370330,6 +370650,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -382393,6 +382717,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -382480,6 +382808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1807526006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -391203,6 +391533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthpickup3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -392855,6 +393189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -392942,6 +393280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1851421760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -394938,6 +395278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1862705184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -405353,6 +405695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -405440,6 +405786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1908778579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -408349,6 +408697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -408436,6 +408788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1923467421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -412063,6 +412417,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -417134,6 +417492,19 @@ MonoBehaviour:
   mainmenuButton: {fileID: 1462480965}
   sceneToLoad: 
   mainMenuCanvas: {fileID: 1219027534}
+--- !u!114 &1968856464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968856450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0feb42527cfbf2245b39e9cc6e18040a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 30
 --- !u!1 &1969476262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -418273,6 +418644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -418360,6 +418735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1975773882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418401,6 +418778,10 @@ PrefabInstance:
     - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_Name
       value: coffeecup (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
@@ -418489,6 +418870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1975947186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418811,6 +419194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -418898,6 +419285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1978496395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -421255,6 +421644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -421343,6 +421736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &1991651695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -424350,10 +424745,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -662.3333}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2004909946
 MonoBehaviour:
@@ -426787,10 +427182,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2130520295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1478, y: -1178.9999}
-  m_SizeDelta: {x: 1400, y: 95.33333}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018493395
 MonoBehaviour:
@@ -431097,6 +431492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -431184,6 +431583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &2037504387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -432932,6 +433333,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -435132,6 +435537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -435219,6 +435628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &2051545703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -436560,6 +436971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -437191,6 +437606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -437278,6 +437697,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &2065090505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -438507,6 +438928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -438594,6 +439019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &2071645200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -447624,6 +448051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7203844221235818181, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 7544341409385591935, guid: 2fab06e83e6e4f1449bd3181ce03b058, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28032747
@@ -447711,6 +448142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Bike
   coinTaskManager: {fileID: 1205060924}
+  boostAmount: 12
+  boostDuration: 2
 --- !u!65 &2115114410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -449700,6 +450133,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
       propertyPath: m_Name
       value: healthpickup3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7840507bf6158df40a753368ac327847, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -455549,6 +455986,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 820605280740181320, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968856460}
+    - targetCorrespondingSourceObject: {fileID: 820605280740181320, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968856464}
   m_SourcePrefab: {fileID: 100100000, guid: 304ebe0a397f1c140b1e736370bdb142, type: 3}
 --- !u!33 &882660492944717802
 MeshFilter:
