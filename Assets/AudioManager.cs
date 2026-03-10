@@ -10,6 +10,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource voiceSource;
     [SerializeField] private AudioSource sfxSource;
 
+    [Header("Gameplay SFX")]
+    [SerializeField] private AudioClip deliveryMissedClip;
+    [SerializeField] private AudioClip packagePickupClip;
+    [SerializeField] private AudioClip menuButtonClickClip;
+    [SerializeField] private AudioClip menuPopupOpenClip;
+    [SerializeField] private AudioClip menuToggleClip;
+
     [Header("Customer Voice Tables")]
     [Tooltip("Map customerId (e.g. Junior/Valarie/Zarah) -> CustomerVoiceTable asset")]
     [SerializeField] private List<CustomerVoiceEntry> customerVoiceTables = new();
@@ -23,14 +30,13 @@ public class AudioManager : MonoBehaviour
 
     private AudioClip lastVoiceClip;
 
-    // runtime lookup
     private Dictionary<string, CustomerVoiceTable> tableLookup;
 
     [Serializable]
     public class CustomerVoiceEntry
     {
-        public string customerId;              // "Junior"
-        public CustomerVoiceTable voiceTable;  // Junior_VoiceTable
+        public string customerId;
+        public CustomerVoiceTable voiceTable;
     }
 
     private void Awake()
@@ -60,12 +66,10 @@ public class AudioManager : MonoBehaviour
             if (string.IsNullOrWhiteSpace(entry.customerId)) continue;
             if (entry.voiceTable == null) continue;
 
-            // last one wins if duplicates
             tableLookup[entry.customerId.Trim()] = entry.voiceTable;
         }
     }
 
-    
     public void PlayCustomerVoice(string customerId, int stars)
     {
         if (string.IsNullOrWhiteSpace(customerId))
@@ -99,11 +103,8 @@ public class AudioManager : MonoBehaviour
         if (!interruptVoice && voiceSource.isPlaying)
             return;
 
-        // avoid repeat (only matters if the chosen clip equals last)
         if (avoidRepeat && clip == lastVoiceClip)
         {
-            // if repeat happens and you have alternatives, you'd handle here.
-            // since this system is 1 clip per star, we just allow it.
         }
 
         if (interruptVoice)
@@ -120,5 +121,29 @@ public class AudioManager : MonoBehaviour
 
         sfxSource.PlayOneShot(clip, volume);
     }
-}
 
+    public void PlayDeliveryMissed(float volume = 0.8f)
+    {
+        PlaySFX(deliveryMissedClip, volume);
+    }
+
+    public void PlayPackagePickup(float volume = 0.8f)
+    {
+        PlaySFX(packagePickupClip, volume);
+    }
+
+    public void PlayMenuButtonClick(float volume = 0.8f)
+    {
+        PlaySFX(menuButtonClickClip, volume);
+    }
+
+    public void PlayMenuPopupOpen(float volume = 0.8f)
+    {
+        PlaySFX(menuPopupOpenClip, volume);
+    }
+
+    public void PlayMenuToggle(float volume = 0.8f)
+    {
+        PlaySFX(menuToggleClip, volume);
+    }
+}

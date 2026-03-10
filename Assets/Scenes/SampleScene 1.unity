@@ -351173,6 +351173,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceSource: {fileID: 1892013}
   sfxSource: {fileID: 1591739713}
+  deliveryMissedClip: {fileID: 8300000, guid: 2986235b8a13c514d802c8db867cc47c, type: 3}
+  packagePickupClip: {fileID: 8300000, guid: a9330b26ec5eeb244ae9642cc7450120, type: 3}
+  menuButtonClickClip: {fileID: 8300000, guid: 0dd8dd46ea99fe64c96c06802ee5c503, type: 3}
+  menuPopupOpenClip: {fileID: 0}
+  menuToggleClip: {fileID: 0}
   customerVoiceTables:
   - customerId: Junior
     voiceTable: {fileID: 11400000, guid: 1874df2e4bfc017458388ea9755a1e6a, type: 2}
