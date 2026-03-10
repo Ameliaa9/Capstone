@@ -21,6 +21,10 @@ public class DeliverySystem : MonoBehaviour
     public TMP_Text successText;
     public TMP_Text failText;
 
+    [Header("Timer Color Gradient")]
+    public Color timerStartColor = Color.black;
+    public Color timerEndColor = Color.red;
+
     [Header("Customer Voice")]
     [Tooltip("Must match AudioManager customerId exactly. Index must match currentDelivery.")]
     public string[] customerIds;
@@ -80,7 +84,7 @@ public class DeliverySystem : MonoBehaviour
         if (timerRunning)
         {
             currentTimer -= Time.deltaTime;
-            if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
+            UpdateTimerDisplay();
 
             if (currentTimer <= 0f)
             {
@@ -101,6 +105,29 @@ public class DeliverySystem : MonoBehaviour
         }
     }
 
+    private void UpdateTimerDisplay()
+    {
+        if (!timerText) return;
+
+        timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
+
+        float totalTime = deliveryTimes[currentDelivery];
+        float t = 1f - (currentTimer / totalTime);
+        t = Mathf.Clamp01(t);
+
+        Color baseColor = Color.Lerp(timerStartColor, timerEndColor, t);
+
+        if (currentTimer <= 30f)
+        {
+            float flash = Mathf.PingPong(Time.time * 5f, 1f);
+            timerText.color = Color.Lerp(baseColor, Color.white, flash);
+        }
+        else
+        {
+            timerText.color = baseColor;
+        }
+    }
+
     public void GiveStars(int starsGained)
     {
         totalStarsCollected = totalStarsCollected + starsGained;
@@ -114,7 +141,7 @@ public class DeliverySystem : MonoBehaviour
 
         AudioManager.I?.PlayPackagePickup();
 
-        if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
+        UpdateTimerDisplay();
         Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
 
         if (phones != null && depotIndex < phones.Length)
