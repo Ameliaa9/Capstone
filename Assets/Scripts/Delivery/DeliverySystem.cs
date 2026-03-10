@@ -92,6 +92,8 @@ public class DeliverySystem : MonoBehaviour
 
                 Debug.Log($"? Timer ran out for delivery {currentDelivery}");
 
+                AudioManager.I?.PlayDeliveryMissed(0.8f);
+
                 if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 5f));
@@ -109,6 +111,8 @@ public class DeliverySystem : MonoBehaviour
         currentTimer = deliveryTimes[currentDelivery];
         timerRunning = true;
         hasPackage = true;
+
+        AudioManager.I?.PlayPackagePickup();
 
         if (timerText) timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
         Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
@@ -165,8 +169,6 @@ public class DeliverySystem : MonoBehaviour
 
         if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
         if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
-
-        //
 
         int starsEarned = 0;
 
@@ -286,6 +288,9 @@ public class DeliverySystem : MonoBehaviour
         if (!textField) yield break;
         textField.gameObject.SetActive(true);
         textField.text = message;
+
+        AudioManager.I?.PlayMenuPopupOpen();
+
         yield return new WaitForSeconds(duration);
         textField.text = "";
     }
