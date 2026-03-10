@@ -23,10 +23,6 @@ public class PauseMenu : MonoBehaviour
     public Button mainmenuButton;
     public string sceneToLoad;
 
-    //[Header("Player Cursors")]
-    //public JoystickCursor player1Cursor;
-    //public JoystickCursor player2Cursor;
-
     [Header("Main Menu")]
     public GameObject mainMenuCanvas;
 
@@ -64,17 +60,13 @@ public class PauseMenu : MonoBehaviour
         nextPagePanel.SetActive(false);
         isPaused = true;
 
-       // if (player1Cursor != null) player1Cursor.gameObject.SetActive(true);
-        //if (player2Cursor != null) player2Cursor.gameObject.SetActive(true);
-
-    
+        AudioManager.I?.PlayMenuToggle();
 
         GameManager.UnlockCursor();
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         TutorialManager.Instance.PauseOpened();
-
     }
 
     public void ResumeGame()
@@ -84,17 +76,14 @@ public class PauseMenu : MonoBehaviour
         nextPagePanel.SetActive(false);
         isPaused = false;
 
-       // if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
-        //if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
+        AudioManager.I?.PlayMenuToggle();
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
         GameManager.LockCursor();
         TutorialManager.Instance.PauseClosed();
-
     }
-
 
     public void ShowNextPage()
     {
@@ -119,9 +108,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        //if (player1Cursor != null) player1Cursor.gameObject.SetActive(false);
-       // if (player2Cursor != null) player2Cursor.gameObject.SetActive(false);
-
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
@@ -131,13 +117,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(currentScene.buildIndex);
     }
 
-
     public void ExitGame()
     {
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #else
-        // If running in build, quit application
         Application.Quit();
 #endif
     }
