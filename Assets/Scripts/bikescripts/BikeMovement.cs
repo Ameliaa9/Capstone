@@ -5,6 +5,11 @@ public class BikeMovement : MonoBehaviour
     public float speed = 6f;
     public float turnSpeed = 180f;
 
+    [Header("Jump")]
+    public float jumpSpeed = 8f;
+    public float fallMultiplier = 3f;
+    public float groundCheckDistance = 0.6f;
+
     [Header("Leaning (Visual Only)")]
     public Transform bikeVisual;
     public float leanAngle = 20f;
@@ -12,7 +17,9 @@ public class BikeMovement : MonoBehaviour
 
     public float maxHealth = 100f;
 
-    Rigidbody rb;
+    private Rigidbody rb;
+    private bool jumpTriggered;
+    private bool isGrounded;
 
     void Awake()
     {
@@ -20,8 +27,19 @@ public class BikeMovement : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpTriggered = true;
+        }
+    }
+
     void FixedUpdate()
     {
+        // Check if bike is touching the ground
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
+
         // keyboard
         float keyboardMove = 0f;
         float keyboardTurn = 0f;
@@ -39,15 +57,29 @@ public class BikeMovement : MonoBehaviour
         float move = Mathf.Abs(keyboardMove) > 0 ? keyboardMove : controllerMove;
         float turn = Mathf.Abs(keyboardTurn) > 0 ? keyboardTurn : controllerTurn;
 
-        // move
-        rb.MovePosition(
-            rb.position + transform.forward * move * speed * Time.fixedDeltaTime
-        );
+        Vector3 velocity = transform.forward * move * speed;
+        velocity.y = rb.linearVelocity.y;
+
+        // Jump only if grounded
+        if (jumpTriggered && isGrounded)
+        {
+            velocity.y = jumpSpeed;
+        }
+
+        jumpTriggered = false;
+
+        rb.linearVelocity = velocity;
 
         // turn
         rb.MoveRotation(
             rb.rotation * Quaternion.Euler(0f, turn * turnSpeed * Time.fixedDeltaTime, 0f)
         );
+
+        // heavier fall
+        if (rb.linearVelocity.y < 0f)
+        {
+            rb.AddForce(Vector3.down * fallMultiplier, ForceMode.Acceleration);
+        }
 
         // lean
         if (bikeVisual != null)
@@ -76,11 +108,25 @@ public class BikeMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow)) keyboardMove = -1f;
 
         float controllerMove = Input.GetAxis("Joystick1Vertical");
-
         float moveInput = Mathf.Abs(keyboardMove) > 0 ? keyboardMove : controllerMove;
 
         float currentSpeedMps = Mathf.Abs(moveInput * speed);
-
         return currentSpeedMps * 3.6f;
+    }
+
+    public void ApplySpeedBoost(float boostAmount, float boostDuration)
+    {
+        StopAllCoroutines();
+        StartCoroutine(SpeedBoostRoutine(boostAmount, boostDuration));
+    }
+
+    private System.Collections.IEnumerator SpeedBoostRoutine(float boostAmount, float boostDuration)
+    {
+        float originalSpeed = speed;
+        speed += boostAmount;
+
+        yield return new WaitForSeconds(boostDuration);
+
+        speed = originalSpeed;
     }
 }
