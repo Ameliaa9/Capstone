@@ -9,6 +9,14 @@ public class CarHit : MonoBehaviour
 
     private bool onCooldown = false;
 
+    public AudioClip[] carHitSounds;         // honking sfx
+    public AudioClip[] secondarySounds;     // yelling sfx
+
+    [Range(0f, 1f)]
+    public float secondarySoundChance = 0.4f; // 40% chance
+
+    public float secondarySoundDelay = 0.15f; 
+
     private void OnTriggerEnter(Collider other)
     {
         if (onCooldown) return;
@@ -23,12 +31,14 @@ public class CarHit : MonoBehaviour
         BikeMovement bikeMovement = rb.GetComponent<BikeMovement>();
         if (bikeMovement == null) return;
 
+        onCooldown = true;
         StartCoroutine(HitBike(rb, bikeMovement));
     }
 
     IEnumerator HitBike(Rigidbody rb, BikeMovement bikeMovement)
     {
-        onCooldown = true;
+        PlayRandomMainSound();
+        StartCoroutine(PlaySecondarySoundSometimes());
 
         bikeMovement.enabled = false;
 
@@ -45,5 +55,32 @@ public class CarHit : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         onCooldown = false;
+    }
+
+    void PlayRandomMainSound()
+    {
+        if (carHitSounds == null || carHitSounds.Length == 0) return;
+
+        AudioClip randomClip = carHitSounds[Random.Range(0, carHitSounds.Length)];
+        if (randomClip != null)
+        {
+            AudioSource.PlayClipAtPoint(randomClip, transform.position);
+        }
+    }
+
+    IEnumerator PlaySecondarySoundSometimes()
+    {
+        if (secondarySounds == null || secondarySounds.Length == 0) yield break;
+
+        if (Random.value <= secondarySoundChance)
+        {
+            yield return new WaitForSeconds(secondarySoundDelay);
+
+            AudioClip randomClip = secondarySounds[Random.Range(0, secondarySounds.Length)];
+            if (randomClip != null)
+            {
+                AudioSource.PlayClipAtPoint(randomClip, transform.position);
+            }
+        }
     }
 }

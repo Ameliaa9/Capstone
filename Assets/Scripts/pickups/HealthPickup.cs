@@ -7,6 +7,8 @@ public class HealthPickup : MonoBehaviour
 
     public BikeHealth bikeHealth;
 
+    public AudioClip disappearSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(playerTag))
@@ -31,6 +33,12 @@ public class HealthPickup : MonoBehaviour
             if (TutorialManager.Instance != null)
             {
                 TutorialManager.Instance.HealthPickupCollected();
+
+                if (disappearSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(disappearSound, transform.position);
+                }
+
             }
 
             gameObject.SetActive(false);

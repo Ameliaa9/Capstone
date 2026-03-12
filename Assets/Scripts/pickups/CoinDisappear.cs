@@ -9,6 +9,8 @@ public class DisappearOnTrigger : MonoBehaviour
     public float boostAmount = 12f;
     public float boostDuration = 2f;
 
+    public AudioClip disappearSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag(playerTag)) return;
@@ -16,6 +18,11 @@ public class DisappearOnTrigger : MonoBehaviour
         if (coinTaskManager != null)
         {
             coinTaskManager.OnCoinCollected();
+
+            if (disappearSound != null)
+            {
+                AudioSource.PlayClipAtPoint(disappearSound, transform.position);
+            }
         }
 
         BikeMovement bike = other.GetComponent<BikeMovement>();

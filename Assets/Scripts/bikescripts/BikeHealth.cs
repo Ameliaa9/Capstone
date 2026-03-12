@@ -24,6 +24,9 @@ public class BikeHealth : MonoBehaviour
     public float width;
     public float height;
 
+    public AudioClip DeathSFX;
+    [SerializeField] private AudioSource audioSource;
+
     public void Start()
     {
         width = healthBar.sizeDelta.x;
@@ -62,6 +65,11 @@ public class BikeHealth : MonoBehaviour
 
     private void Respawn()
     {
+        if (audioSource != null && DeathSFX != null)
+        {
+            audioSource.PlayOneShot(DeathSFX, 2f);
+        }
+
         if (player != null && respawnPoint != null)
         {
             // teleport bike

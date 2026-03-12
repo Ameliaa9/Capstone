@@ -271,6 +271,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &499457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1248,7 +1249,7 @@ PrefabInstance:
       addedObject: {fileID: 6395078}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6395079}
+      addedObject: {fileID: 6395082}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &6395062 stripped
 Transform:
@@ -1364,7 +1365,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.85297716}
   m_Center: {x: -0.003008962, y: 1.0939842, z: 2.5396256}
---- !u!114 &6395079
+--- !u!114 &6395082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1379,6 +1380,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &7161653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
@@ -1652,6 +1662,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &7376448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6395,6 +6409,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &30991353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6573,6 +6588,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &31873655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9268,7 +9287,7 @@ PrefabInstance:
       addedObject: {fileID: 404769330}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 404769331}
+      addedObject: {fileID: 404769334}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &45767137
 PrefabInstance:
@@ -9346,7 +9365,7 @@ PrefabInstance:
       addedObject: {fileID: 45767154}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 45767155}
+      addedObject: {fileID: 45767158}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &45767138 stripped
 Transform:
@@ -9462,7 +9481,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.4553216}
   m_Center: {x: -0.0029937031, y: 1.0939842, z: 2.738453}
---- !u!114 &45767155
+--- !u!114 &45767158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9477,6 +9496,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &45843062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9674,6 +9702,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &47494274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -10064,6 +10096,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &50955755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13335,7 +13368,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.67345715}
   m_Center: {x: -0.00296712, y: 1.0939842, z: 2.629383}
---- !u!114 &66129212
+--- !u!114 &66129215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13350,6 +13383,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &66242704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6507901977716847365, guid: ba77c23ea1b527744ad07b162dd6754c, type: 3}
@@ -13981,7 +14023,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.54400086}
   m_Center: {x: -0.002978444, y: 1.0939842, z: 2.6941066}
---- !u!114 &69475112
+--- !u!114 &69475115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13996,6 +14038,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &69703898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14208,7 +14259,7 @@ PrefabInstance:
       addedObject: {fileID: 1697976568}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1697976569}
+      addedObject: {fileID: 1697976572}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &71730785
 PrefabInstance:
@@ -16942,6 +16993,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &84278155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17507,7 +17559,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.70940495}
   m_Center: {x: -0.0029784436, y: 1.0939842, z: 2.6114285}
---- !u!114 &86598023
+--- !u!114 &86598026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17522,6 +17574,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &86892240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22270,6 +22331,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &103561071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23923,6 +23993,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &114258909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d34e8533c8de8ec45869f9144584d929, type: 3}
@@ -26626,7 +26700,7 @@ PrefabInstance:
       addedObject: {fileID: 1566856730}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1566856731}
+      addedObject: {fileID: 1566856734}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1001 &131004732
 PrefabInstance:
@@ -28252,7 +28326,7 @@ PrefabInstance:
       addedObject: {fileID: 136939647}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 136939648}
+      addedObject: {fileID: 136939651}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &136939631 stripped
 Transform:
@@ -28368,7 +28442,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.7856113}
   m_Center: {x: -0.0013978482, y: 1.784227, z: 4.208263}
---- !u!114 &136939648
+--- !u!114 &136939651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28383,6 +28457,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &137000535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35038,7 +35121,7 @@ PrefabInstance:
       addedObject: {fileID: 170781832}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 170781833}
+      addedObject: {fileID: 170781836}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &170781816 stripped
 Transform:
@@ -35154,7 +35237,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.36390877}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.7851343}
---- !u!114 &170781833
+--- !u!114 &170781836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35169,6 +35252,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &171110105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7146521406498821007, guid: ec4114186405a7d49a5895f5aaf43444, type: 3}
@@ -35855,6 +35947,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &174445651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41790,6 +41886,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &207309814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44430,7 +44527,7 @@ PrefabInstance:
       addedObject: {fileID: 221445824}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 221445825}
+      addedObject: {fileID: 221445828}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &221445808 stripped
 Transform:
@@ -44546,7 +44643,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.8050029}
   m_Center: {x: -0.0029785635, y: 1.0939842, z: 2.5636144}
---- !u!114 &221445825
+--- !u!114 &221445828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44561,6 +44658,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &221749027
 GameObject:
   m_ObjectHideFlags: 0
@@ -45072,7 +45178,7 @@ PrefabInstance:
       addedObject: {fileID: 239002812}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 239002813}
+      addedObject: {fileID: 239002816}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &225638188
 GameObject:
@@ -45807,6 +45913,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &228886099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48272,7 +48379,7 @@ PrefabInstance:
       addedObject: {fileID: 973762555}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 973762556}
+      addedObject: {fileID: 973762559}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &237967020
 PrefabInstance:
@@ -48441,7 +48548,7 @@ PrefabInstance:
       addedObject: {fileID: 238150534}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 238150535}
+      addedObject: {fileID: 238150538}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &238150518 stripped
 Transform:
@@ -48557,7 +48664,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.4776287}
   m_Center: {x: -0.0030089617, y: 1.0939842, z: 2.727284}
---- !u!114 &238150535
+--- !u!114 &238150538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48572,6 +48679,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &239002800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
@@ -48686,7 +48802,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.7509937}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.5915918}
---- !u!114 &239002813
+--- !u!114 &239002816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48701,6 +48817,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &240655622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49052,7 +49177,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.47363383}
   m_Center: {x: -0.00638938, y: 1.2162137, z: 2.7302413}
---- !u!114 &241565083
+--- !u!114 &241565086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49067,6 +49192,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &241599775
 GameObject:
   m_ObjectHideFlags: 0
@@ -49587,6 +49721,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &242604749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -50446,7 +50584,7 @@ PrefabInstance:
       addedObject: {fileID: 1891128643}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1891128644}
+      addedObject: {fileID: 1891128647}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &244854229 stripped
 GameObject:
@@ -50631,7 +50769,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.65577704}
   m_Center: {x: -0.0013978482, y: 1.784227, z: 4.273183}
---- !u!114 &246167299
+--- !u!114 &246167302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50646,6 +50784,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &246446920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -50727,7 +50874,7 @@ PrefabInstance:
       addedObject: {fileID: 635423990}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 635423991}
+      addedObject: {fileID: 635423994}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1001 &247361761
 PrefabInstance:
@@ -50838,6 +50985,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &247959349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51989,6 +52137,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &256323411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54210,6 +54367,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &264995885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54821,7 +54979,7 @@ PrefabInstance:
       addedObject: {fileID: 362919282}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 362919283}
+      addedObject: {fileID: 362919286}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &269798812
 GameObject:
@@ -55025,7 +55183,7 @@ PrefabInstance:
       addedObject: {fileID: 86598022}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 86598023}
+      addedObject: {fileID: 86598026}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &270467149
 GameObject:
@@ -57720,7 +57878,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6461787}
   m_Center: {x: -0.002978443, y: 1.0939842, z: 2.643039}
---- !u!114 &280072864
+--- !u!114 &280072867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57735,6 +57893,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &280229428
 GameObject:
   m_ObjectHideFlags: 0
@@ -61599,7 +61766,7 @@ PrefabInstance:
       addedObject: {fileID: 1825569393}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1825569394}
+      addedObject: {fileID: 1825569397}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &298715445 stripped
 Transform:
@@ -62023,6 +62190,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &301200516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64051,6 +64222,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &310490793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -64832,7 +65007,7 @@ PrefabInstance:
       addedObject: {fileID: 718509403}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 718509404}
+      addedObject: {fileID: 718509407}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &313093343
 GameObject:
@@ -69993,6 +70168,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &334996247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70229,6 +70405,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &336470904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72350,7 +72527,7 @@ PrefabInstance:
       addedObject: {fileID: 349661957}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 349661958}
+      addedObject: {fileID: 349661961}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &349661941 stripped
 Transform:
@@ -72466,7 +72643,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946056, y: 3.5785658, z: 0.6298316}
   m_Center: {x: -0.0013978481, y: 1.784227, z: 4.286153}
---- !u!114 &349661958
+--- !u!114 &349661961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72481,6 +72658,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &350040322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 47ef019eb3bddab469e56e5a31eebf68, type: 3}
@@ -74921,7 +75107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6507592}
   m_Center: {x: -0.0029938214, y: 1.0939842, z: 2.6407359}
---- !u!114 &362919283
+--- !u!114 &362919286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74936,6 +75122,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &363268123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -76779,7 +76974,7 @@ PrefabInstance:
       addedObject: {fileID: 1944891829}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1944891830}
+      addedObject: {fileID: 1944891833}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &375500327
 PrefabInstance:
@@ -83121,7 +83316,7 @@ PrefabInstance:
       addedObject: {fileID: 403134503}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 403134504}
+      addedObject: {fileID: 403134507}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &403134487 stripped
 Transform:
@@ -83237,7 +83432,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.77853763}
   m_Center: {x: -0.0064084535, y: 1.2162137, z: 2.5778213}
---- !u!114 &403134504
+--- !u!114 &403134507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83252,6 +83447,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &403231619
 GameObject:
   m_ObjectHideFlags: 0
@@ -83550,7 +83754,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6476133}
   m_Center: {x: -0.0029784427, y: 1.0939842, z: 2.6423037}
---- !u!114 &404769331
+--- !u!114 &404769334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83565,6 +83769,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &405176710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87904,7 +88117,7 @@ PrefabInstance:
       addedObject: {fileID: 1731216871}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1731216872}
+      addedObject: {fileID: 1731216875}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &427526717
 PrefabInstance:
@@ -88386,6 +88599,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &431385766
 GameObject:
   m_ObjectHideFlags: 0
@@ -90520,7 +90737,7 @@ PrefabInstance:
       addedObject: {fileID: 439622320}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 439622321}
+      addedObject: {fileID: 439622324}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &439622304 stripped
 Transform:
@@ -90636,7 +90853,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.5258866}
   m_Center: {x: -0.001413107, y: 1.784227, z: 4.338131}
---- !u!114 &439622321
+--- !u!114 &439622324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90651,6 +90868,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &439650573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
@@ -90869,6 +91095,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &442122910
 GameObject:
   m_ObjectHideFlags: 0
@@ -93784,7 +94014,7 @@ PrefabInstance:
       addedObject: {fileID: 455043320}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 455043321}
+      addedObject: {fileID: 455043324}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &455043304 stripped
 Transform:
@@ -93900,7 +94130,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6554816}
   m_Center: {x: -0.0029938223, y: 1.0939842, z: 2.638373}
---- !u!114 &455043321
+--- !u!114 &455043324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93915,6 +94145,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &455426654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94090,7 +94329,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.62630796}
   m_Center: {x: -0.002963185, y: 1.0939842, z: 2.6529763}
---- !u!114 &456706472
+--- !u!114 &456706475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94105,6 +94344,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &457099329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95905,7 +96153,7 @@ PrefabInstance:
       addedObject: {fileID: 662834640}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 662834641}
+      addedObject: {fileID: 662834644}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &463543246 stripped
 GameObject:
@@ -96862,7 +97110,7 @@ PrefabInstance:
       addedObject: {fileID: 1003577724}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1003577725}
+      addedObject: {fileID: 1003577728}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1001 &467579025
 PrefabInstance:
@@ -98090,7 +98338,7 @@ PrefabInstance:
       addedObject: {fileID: 1479779844}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1479779845}
+      addedObject: {fileID: 1479779848}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &473171471
 GameObject:
@@ -98569,6 +98817,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &474676048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100147,6 +100396,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &482265860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101001,6 +101254,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &486228403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103119,7 +103373,7 @@ PrefabInstance:
       addedObject: {fileID: 494192169}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 494192170}
+      addedObject: {fileID: 494192173}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &494192153 stripped
 Transform:
@@ -103235,7 +103489,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.6817358}
   m_Center: {x: -0.0013978482, y: 1.784227, z: 4.2602205}
---- !u!114 &494192170
+--- !u!114 &494192173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103250,6 +103504,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &494535839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103889,6 +104152,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &498251676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104192,7 +104456,7 @@ PrefabInstance:
       addedObject: {fileID: 241565082}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 241565083}
+      addedObject: {fileID: 241565086}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &499795535
 PrefabInstance:
@@ -105613,7 +105877,7 @@ PrefabInstance:
       addedObject: {fileID: 1237671167}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1237671168}
+      addedObject: {fileID: 1237671171}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &507612711 stripped
 GameObject:
@@ -106911,6 +107175,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &514468801
 GameObject:
   m_ObjectHideFlags: 0
@@ -108703,6 +108971,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &525365909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109023,7 +109292,7 @@ PrefabInstance:
       addedObject: {fileID: 529015665}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 529015666}
+      addedObject: {fileID: 529015669}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &529015649 stripped
 Transform:
@@ -109139,7 +109408,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6310239}
   m_Center: {x: -0.0029785633, y: 1.0939842, z: 2.6506028}
---- !u!114 &529015666
+--- !u!114 &529015669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109154,6 +109423,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &529324122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109408,6 +109686,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &529807145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109657,6 +109936,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &532136608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110861,7 +111144,7 @@ PrefabInstance:
       addedObject: {fileID: 541646345}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 541646346}
+      addedObject: {fileID: 541646349}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &541646329 stripped
 Transform:
@@ -110977,7 +111260,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.7114849}
   m_Center: {x: -0.0029785624, y: 1.0939842, z: 2.6103723}
---- !u!114 &541646346
+--- !u!114 &541646349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110992,6 +111275,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &541776625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
@@ -114437,6 +114729,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &562715125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115056,7 +115349,7 @@ PrefabInstance:
       addedObject: {fileID: 1939225514}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1939225515}
+      addedObject: {fileID: 1939225518}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &565727923
 GameObject:
@@ -117390,7 +117683,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.9294721}
   m_Center: {x: -0.0064084535, y: 1.2162137, z: 2.5023615}
---- !u!114 &576265831
+--- !u!114 &576265834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117405,6 +117698,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &576494155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120472,6 +120774,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &589415927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121113,7 +121419,7 @@ PrefabInstance:
       addedObject: {fileID: 1826891357}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1826891358}
+      addedObject: {fileID: 1826891361}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &592634895
 GameObject:
@@ -121798,7 +122104,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.85850716}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.5378351}
---- !u!114 &592779684
+--- !u!114 &592779687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121813,6 +122119,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &593106345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122760,7 +123075,7 @@ PrefabInstance:
       addedObject: {fileID: 597092006}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 597092007}
+      addedObject: {fileID: 597092010}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &597091990 stripped
 Transform:
@@ -122876,7 +123191,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.7138272}
   m_Center: {x: -0.006408453, y: 1.2162137, z: 2.6101604}
---- !u!114 &597092007
+--- !u!114 &597092010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122891,6 +123206,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &597228289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -124645,6 +124969,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &605603213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126625,6 +126953,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &616656016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -127779,7 +128111,7 @@ PrefabInstance:
       addedObject: {fileID: 620273837}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 620273838}
+      addedObject: {fileID: 620273841}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &620273821 stripped
 Transform:
@@ -127895,7 +128227,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.6434803}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.6453485}
---- !u!114 &620273838
+--- !u!114 &620273841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127910,6 +128242,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &620499214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
@@ -128036,7 +128377,7 @@ PrefabInstance:
       addedObject: {fileID: 621856462}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 621856463}
+      addedObject: {fileID: 621856466}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &621856446 stripped
 Transform:
@@ -128152,7 +128493,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946056, y: 3.5785658, z: 0.65578395}
   m_Center: {x: -0.0013978481, y: 1.784227, z: 4.2731915}
---- !u!114 &621856463
+--- !u!114 &621856466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128167,6 +128508,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &622056610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -131566,7 +131916,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.42840767}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.7528849}
---- !u!114 &635423991
+--- !u!114 &635423994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131581,6 +131931,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &635887252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131690,6 +132049,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &635887257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132814,6 +133174,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &641295712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134630,6 +134991,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &650895940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -136775,7 +137140,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6913867}
   m_Center: {x: -0.0029633048, y: 1.0939842, z: 2.6204207}
---- !u!114 &662834641
+--- !u!114 &662834644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136790,6 +137155,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &662880802
 GameObject:
   m_ObjectHideFlags: 0
@@ -137078,7 +137452,7 @@ PrefabInstance:
       addedObject: {fileID: 663147366}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 663147367}
+      addedObject: {fileID: 663147370}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &663147350 stripped
 Transform:
@@ -137194,7 +137568,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.71384245}
   m_Center: {x: -0.006408453, y: 1.2162137, z: 2.6101823}
---- !u!114 &663147367
+--- !u!114 &663147370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137209,6 +137583,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &663375477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137564,7 +137947,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.7353881}
   m_Center: {x: -0.0064084535, y: 1.2162137, z: 2.5994248}
---- !u!114 &664658515
+--- !u!114 &664658518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137579,6 +137962,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &664894249
 GameObject:
   m_ObjectHideFlags: 0
@@ -145140,7 +145532,7 @@ PrefabInstance:
       addedObject: {fileID: 701381062}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 701381063}
+      addedObject: {fileID: 701381066}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &701381046 stripped
 Transform:
@@ -145256,7 +145648,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6458268}
   m_Center: {x: -0.0029785621, y: 1.0939842, z: 2.64323}
---- !u!114 &701381063
+--- !u!114 &701381066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145271,6 +145663,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &701463778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6458a4c9f91f22741a5064b5b7cfd892, type: 3}
@@ -146118,7 +146519,7 @@ PrefabInstance:
       addedObject: {fileID: 592779683}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 592779684}
+      addedObject: {fileID: 592779687}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!1 &705092877 stripped
 GameObject:
@@ -148740,7 +149141,7 @@ PrefabInstance:
       addedObject: {fileID: 1002930456}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1002930457}
+      addedObject: {fileID: 1002930460}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &716991769
 PrefabInstance:
@@ -149143,7 +149544,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.4929371}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.7206202}
---- !u!114 &718509404
+--- !u!114 &718509407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149158,6 +149559,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &718727266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150060,6 +150470,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &722435931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151500,6 +151911,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &730271481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -152394,7 +152809,7 @@ PrefabInstance:
       addedObject: {fileID: 734936893}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 734936894}
+      addedObject: {fileID: 734936897}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &734936877 stripped
 Transform:
@@ -152510,7 +152925,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.617106}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.6575613}
---- !u!114 &734936894
+--- !u!114 &734936897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152525,6 +152940,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &735292837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153811,7 +154235,7 @@ PrefabInstance:
       addedObject: {fileID: 456706471}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 456706472}
+      addedObject: {fileID: 456706475}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &743078825
 PrefabInstance:
@@ -154146,7 +154570,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.6297961}
   m_Center: {x: -0.0013978481, y: 1.784227, z: 4.286184}
---- !u!114 &745059060
+--- !u!114 &745059063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154161,6 +154585,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &745346334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154708,6 +155141,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &747158748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154922,6 +155356,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &747606100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -157926,6 +158361,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &766197505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158709,6 +159145,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &769408754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160400,6 +160837,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &775765159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160446,6 +160884,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &776048634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164775,6 +165214,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &803751567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166516,6 +166959,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &812749984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169279,7 +169723,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.8315369}
   m_Center: {x: -0.0029631853, y: 1.0939842, z: 2.5503433}
---- !u!114 &832148627
+--- !u!114 &832148630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169294,6 +169738,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &832563198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169678,6 +170131,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &833280149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171486,6 +171940,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &841883439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -173220,7 +173675,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.6706839}
   m_Center: {x: -0.006377936, y: 1.2162137, z: 2.6317773}
---- !u!114 &850501382
+--- !u!114 &850501385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173235,6 +173690,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &850784181
 GameObject:
   m_ObjectHideFlags: 0
@@ -175608,7 +176072,7 @@ PrefabInstance:
       addedObject: {fileID: 850501381}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 850501382}
+      addedObject: {fileID: 850501385}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &863965635
 PrefabInstance:
@@ -177761,7 +178225,7 @@ PrefabInstance:
       addedObject: {fileID: 874085508}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 874085509}
+      addedObject: {fileID: 874085512}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &874085492 stripped
 Transform:
@@ -177877,7 +178341,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.6004505}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.6668634}
---- !u!114 &874085509
+--- !u!114 &874085512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177892,6 +178356,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &874424485
 GameObject:
   m_ObjectHideFlags: 0
@@ -178081,7 +178554,7 @@ PrefabInstance:
       addedObject: {fileID: 875416840}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 875416841}
+      addedObject: {fileID: 875416844}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &875416824 stripped
 Transform:
@@ -178197,7 +178670,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.7077072}
   m_Center: {x: -0.0014283658, y: 1.784227, z: 4.2472157}
---- !u!114 &875416841
+--- !u!114 &875416844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178212,6 +178685,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &875699547
 GameObject:
   m_ObjectHideFlags: 0
@@ -178978,6 +179460,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &879271201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179680,6 +180163,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &884150510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -180276,6 +180760,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &887125706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182261,7 +182746,7 @@ PrefabInstance:
       addedObject: {fileID: 895025310}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 895025311}
+      addedObject: {fileID: 895025314}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &895025294 stripped
 Transform:
@@ -182377,7 +182862,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.5778933}
   m_Center: {x: -0.0013978482, y: 1.784227, z: 4.312126}
---- !u!114 &895025311
+--- !u!114 &895025314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182392,6 +182877,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &895422659
 GameObject:
   m_ObjectHideFlags: 0
@@ -184427,6 +184921,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &902852345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187137,7 +187632,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.63856226}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.6468172}
---- !u!114 &914591580
+--- !u!114 &914591583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187152,6 +187647,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &915616970
 GameObject:
   m_ObjectHideFlags: 0
@@ -192441,7 +192945,7 @@ PrefabInstance:
       addedObject: {fileID: 943077180}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 943077181}
+      addedObject: {fileID: 943077184}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &943077164 stripped
 Transform:
@@ -192557,7 +193061,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.60600144}
   m_Center: {x: -0.006377936, y: 1.2162137, z: 2.6640966}
---- !u!114 &943077181
+--- !u!114 &943077184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192572,6 +193076,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &943338476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198095,7 +198608,7 @@ PrefabInstance:
       addedObject: {fileID: 832148626}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 832148627}
+      addedObject: {fileID: 832148630}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &945538960 stripped
 GameObject:
@@ -198545,6 +199058,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &948479005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -199320,7 +199834,7 @@ PrefabInstance:
       addedObject: {fileID: 1136838945}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1136838946}
+      addedObject: {fileID: 1136838949}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &952127163
 GameObject:
@@ -202920,7 +203434,7 @@ PrefabInstance:
       addedObject: {fileID: 969215192}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 969215193}
+      addedObject: {fileID: 969215196}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &969215176 stripped
 Transform:
@@ -203036,7 +203550,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.7087574}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.61271}
---- !u!114 &969215193
+--- !u!114 &969215196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203051,6 +203565,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &969317948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204280,6 +204803,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &973144590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -204475,7 +204999,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.6661625}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.6340075}
---- !u!114 &973762556
+--- !u!114 &973762559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204490,6 +205014,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &974749693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -204915,7 +205448,7 @@ PrefabInstance:
       addedObject: {fileID: 745059059}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 745059060}
+      addedObject: {fileID: 745059063}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &976072516 stripped
 Transform:
@@ -206681,7 +207214,7 @@ PrefabInstance:
       addedObject: {fileID: 66129211}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 66129212}
+      addedObject: {fileID: 66129215}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &982897815
 PrefabInstance:
@@ -207002,6 +207535,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &983514809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -210800,6 +211337,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &998272673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211984,6 +212522,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1001856859
 GameObject:
   m_ObjectHideFlags: 0
@@ -212378,7 +212920,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.74576193}
   m_Center: {x: -0.002978444, y: 1.0939842, z: 2.5932474}
---- !u!114 &1002930457
+--- !u!114 &1002930460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212393,6 +212935,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1003350029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5934129722972032481, guid: ba77c23ea1b527744ad07b162dd6754c, type: 3}
@@ -212533,7 +213084,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.70770365}
   m_Center: {x: -0.0014283658, y: 1.784227, z: 4.2471995}
---- !u!114 &1003577725
+--- !u!114 &1003577728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212548,6 +213099,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1003837603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -218022,6 +218582,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1022265870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -219364,6 +219925,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1029173674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230663,6 +231225,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1057331090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232511,7 +233077,7 @@ PrefabInstance:
       addedObject: {fileID: 1062048583}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1062048584}
+      addedObject: {fileID: 1062048587}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1062048567 stripped
 Transform:
@@ -232627,7 +233193,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.7243181}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.6039248}
---- !u!114 &1062048584
+--- !u!114 &1062048587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232642,6 +233208,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1062275351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236303,7 +236878,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.6038571}
   m_Center: {x: -0.0014283658, y: 1.784227, z: 4.2991276}
---- !u!114 &1087530697
+--- !u!114 &1087530700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236318,6 +236893,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1087639151
 GameObject:
   m_ObjectHideFlags: 0
@@ -244376,6 +244960,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1131070474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245040,6 +245628,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1133541589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -246139,6 +246728,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1135353264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246671,7 +247264,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.58423686}
   m_Center: {x: -0.0029785626, y: 1.0939842, z: 2.6740005}
---- !u!114 &1136838946
+--- !u!114 &1136838949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246686,6 +247279,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1136896087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254002,6 +254604,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1173849418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255247,6 +255853,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1182222530
 GameObject:
   m_ObjectHideFlags: 0
@@ -257990,6 +258605,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1193823556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -259148,7 +259764,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6252816}
   m_Center: {x: -0.0029785633, y: 1.0939842, z: 2.653459}
---- !u!114 &1199002709
+--- !u!114 &1199002712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259163,6 +259779,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1199105072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262169,7 +262794,7 @@ PrefabInstance:
       addedObject: {fileID: 1215473143}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1215473144}
+      addedObject: {fileID: 1215473147}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1215473127 stripped
 Transform:
@@ -262285,7 +262910,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.7073164}
   m_Center: {x: -0.002978444, y: 1.0939842, z: 2.6124272}
---- !u!114 &1215473144
+--- !u!114 &1215473147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262300,6 +262925,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1216656379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262493,6 +263127,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1216717879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -266119,7 +266754,7 @@ PrefabInstance:
       addedObject: {fileID: 1623072879}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1623072880}
+      addedObject: {fileID: 1623072883}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1 &1236556617
 GameObject:
@@ -266343,7 +266978,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.76720226}
   m_Center: {x: -0.0029479268, y: 1.0939842, z: 2.582522}
---- !u!114 &1237671168
+--- !u!114 &1237671171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266358,6 +266993,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1237748826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268633,7 +269277,7 @@ PrefabInstance:
       addedObject: {fileID: 914591579}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 914591580}
+      addedObject: {fileID: 914591583}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!1001 &1250624270
 PrefabInstance:
@@ -269778,6 +270422,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1255015091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -270023,6 +270668,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1255175913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -270231,6 +270877,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!1001 &1256622952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270854,7 +271501,7 @@ PrefabInstance:
       addedObject: {fileID: 1258537939}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1258537940}
+      addedObject: {fileID: 1258537943}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1258537923 stripped
 Transform:
@@ -270970,7 +271617,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6384735}
   m_Center: {x: -0.002978564, y: 1.0939842, z: 2.6468763}
---- !u!114 &1258537940
+--- !u!114 &1258537943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270985,6 +271632,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &1258679239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5029810784890142804, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -271683,7 +272339,7 @@ PrefabInstance:
       addedObject: {fileID: 1199002708}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1199002709}
+      addedObject: {fileID: 1199002712}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1263546702
 PrefabInstance:
@@ -279021,6 +279677,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1294014005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280422,6 +281079,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1306584419
 GameObject:
   m_ObjectHideFlags: 0
@@ -281752,6 +282413,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1312991607
 GameObject:
   m_ObjectHideFlags: 0
@@ -285267,7 +285932,7 @@ PrefabInstance:
       addedObject: {fileID: 1334012852}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1334012853}
+      addedObject: {fileID: 1334012856}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1334012836 stripped
 Transform:
@@ -285383,7 +286048,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.60599715}
   m_Center: {x: -0.006377936, y: 1.2162137, z: 2.6640897}
---- !u!114 &1334012853
+--- !u!114 &1334012856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285398,6 +286063,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1334744174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2d5fb229ae2945742b900a405a5e7a0b, type: 3}
@@ -286333,6 +287007,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1338944147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290599,7 +291277,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.58443385}
   m_Center: {x: -0.0064084535, y: 1.2162137, z: 2.6749024}
---- !u!114 &1354775942
+--- !u!114 &1354775945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290614,6 +291292,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1354817043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291258,7 +291945,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.73538095}
   m_Center: {x: -0.006377936, y: 1.2162137, z: 2.5994058}
---- !u!114 &1357456076
+--- !u!114 &1357456079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291273,6 +291960,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1357554792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293499,6 +294195,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1367678572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -297850,7 +298547,7 @@ PrefabInstance:
       addedObject: {fileID: 1867879398}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1867879399}
+      addedObject: {fileID: 1867879402}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1394428628 stripped
 GameObject:
@@ -306226,6 +306923,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1431195965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -307290,7 +307991,7 @@ PrefabInstance:
       addedObject: {fileID: 1437158073}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1437158074}
+      addedObject: {fileID: 1437158077}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &1437158057 stripped
 Transform:
@@ -307406,7 +308107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.317875, z: 0.68647957}
   m_Center: {x: 0.0017923117, y: 1.1553164, z: 2.623849}
---- !u!114 &1437158074
+--- !u!114 &1437158077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307421,6 +308122,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1437813478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -307727,7 +308437,7 @@ PrefabInstance:
       addedObject: {fileID: 1438230013}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1438230014}
+      addedObject: {fileID: 1438230017}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1438229997 stripped
 Transform:
@@ -307843,7 +308553,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.59567696}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.668259}
---- !u!114 &1438230014
+--- !u!114 &1438230017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307858,6 +308568,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1438416594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308872,6 +309591,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1443564677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -313096,6 +313816,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1463676989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -314100,6 +314821,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1467977239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -314907,7 +315629,7 @@ PrefabInstance:
       addedObject: {fileID: 1806435628}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1806435629}
+      addedObject: {fileID: 1806435632}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1473167988 stripped
 GameObject:
@@ -314934,6 +315656,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1473167994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -317061,7 +317784,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.69226176}
   m_Center: {x: -0.0064084535, y: 1.2162137, z: 2.620974}
---- !u!114 &1479779845
+--- !u!114 &1479779848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317076,6 +317799,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1480154222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319109,6 +319841,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1492830419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -320219,7 +320952,7 @@ PrefabInstance:
       addedObject: {fileID: 1496863466}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1496863467}
+      addedObject: {fileID: 1496863470}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &1496863450 stripped
 Transform:
@@ -320335,7 +321068,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.58836937}
   m_Center: {x: -0.0029785642, y: 1.0939842, z: 2.6719148}
---- !u!114 &1496863467
+--- !u!114 &1496863470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320350,6 +321083,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1496878109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322297,7 +323039,7 @@ PrefabInstance:
       addedObject: {fileID: 1087530696}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1087530697}
+      addedObject: {fileID: 1087530700}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1512048518
 GameObject:
@@ -328452,6 +329194,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1541913441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -330131,6 +330874,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1552208161
 GameObject:
   m_ObjectHideFlags: 0
@@ -333375,7 +334122,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.6784392}
   m_Center: {x: -0.001413107, y: 1.784227, z: 4.2618523}
---- !u!114 &1566856731
+--- !u!114 &1566856734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333390,6 +334137,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1566883913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
@@ -334323,6 +335079,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1573253409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -334442,7 +335199,7 @@ PrefabInstance:
       addedObject: {fileID: 1573603464}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1573603465}
+      addedObject: {fileID: 1573603468}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!4 &1573603448 stripped
 Transform:
@@ -334558,7 +335315,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.6038354}
   m_Center: {x: -0.0014283658, y: 1.784227, z: 4.299169}
---- !u!114 &1573603465
+--- !u!114 &1573603468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334573,6 +335330,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &1573619747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -335091,7 +335857,7 @@ PrefabInstance:
       addedObject: {fileID: 1577674061}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1577674062}
+      addedObject: {fileID: 1577674065}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1577674045 stripped
 Transform:
@@ -335207,7 +335973,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.5742391}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.6789985}
---- !u!114 &1577674062
+--- !u!114 &1577674065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335222,6 +335988,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1577875535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341430,7 +342205,7 @@ PrefabInstance:
       addedObject: {fileID: 1354775941}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1354775942}
+      addedObject: {fileID: 1354775945}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1001 &1608808087
 PrefabInstance:
@@ -343943,7 +344718,7 @@ PrefabInstance:
       addedObject: {fileID: 280072863}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 280072864}
+      addedObject: {fileID: 280072867}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1619459501
 PrefabInstance:
@@ -344551,7 +345326,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.7560996}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.5880632}
---- !u!114 &1623072880
+--- !u!114 &1623072883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344566,6 +345341,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1623349911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
@@ -344937,7 +345721,7 @@ PrefabInstance:
       addedObject: {fileID: 1357456075}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1357456076}
+      addedObject: {fileID: 1357456079}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1627773381
 GameObject:
@@ -349087,6 +349871,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1642733476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -350159,7 +350944,7 @@ PrefabInstance:
       addedObject: {fileID: 69475111}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 69475112}
+      addedObject: {fileID: 69475115}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &1647024239
 PrefabInstance:
@@ -356617,6 +357402,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1680668175
 GameObject:
   m_ObjectHideFlags: 0
@@ -357610,6 +358399,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1686031512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -359000,7 +359790,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.5956784}
   m_Center: {x: -0.0029479268, y: 1.0939842, z: 2.6682744}
---- !u!114 &1697976569
+--- !u!114 &1697976572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359015,6 +359805,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1698132242
 GameObject:
   m_ObjectHideFlags: 0
@@ -361302,7 +362101,7 @@ PrefabInstance:
       addedObject: {fileID: 1708967386}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1708967387}
+      addedObject: {fileID: 1708967390}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1708967370 stripped
 Transform:
@@ -361418,7 +362217,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.95103204}
   m_Center: {x: -0.006377936, y: 1.2162137, z: 2.4915876}
---- !u!114 &1708967387
+--- !u!114 &1708967390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361433,6 +362232,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1709311395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 120449a04911a924ca1239be382ff0be, type: 3}
@@ -361610,7 +362418,7 @@ PrefabInstance:
       addedObject: {fileID: 246167298}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 246167299}
+      addedObject: {fileID: 246167302}
   m_SourcePrefab: {fileID: 100100000, guid: f269a0a343ed94c4e908a388c940ea06, type: 3}
 --- !u!1 &1711988910
 GameObject:
@@ -365513,6 +366321,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1727009231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -366556,7 +367365,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.7457538}
   m_Center: {x: -0.0029631853, y: 1.0939842, z: 2.5932515}
---- !u!114 &1731216872
+--- !u!114 &1731216875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366571,6 +367380,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1731702632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368649,6 +369467,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1746414711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -369184,7 +370003,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.5798986}
   m_Center: {x: -0.0029784436, y: 1.0939842, z: 2.6761565}
---- !u!114 &1749344823
+--- !u!114 &1749344826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -369199,6 +370018,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1749649208
 GameObject:
   m_ObjectHideFlags: 0
@@ -370857,6 +371685,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1757425258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -373852,7 +374681,7 @@ PrefabInstance:
       addedObject: {fileID: 664658514}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 664658515}
+      addedObject: {fileID: 664658518}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1769722448 stripped
 GameObject:
@@ -376533,7 +377362,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.6436441}
   m_Center: {x: -0.0029938237, y: 1.0939842, z: 2.6442933}
---- !u!114 &1782403796
+--- !u!114 &1782403799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376548,6 +377377,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1783982415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378038,6 +378876,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1792939061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -379898,6 +380737,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1799777690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -381273,7 +382113,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6946042, y: 3.5785658, z: 0.75965536}
   m_Center: {x: -0.0013978482, y: 1.784227, z: 4.22127}
---- !u!114 &1806435629
+--- !u!114 &1806435632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381288,6 +382128,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1806818963
 GameObject:
   m_ObjectHideFlags: 0
@@ -381651,6 +382500,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1807526006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -384090,7 +384940,7 @@ PrefabInstance:
       addedObject: {fileID: 1816323056}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1816323057}
+      addedObject: {fileID: 1816323060}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1816323040 stripped
 Transform:
@@ -384206,7 +385056,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.767223}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.5825024}
---- !u!114 &1816323057
+--- !u!114 &1816323060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -384221,6 +385071,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &1816764260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6898252654794513955, guid: ef33a9cc270857c47be0f6afd6fe8b71, type: 3}
@@ -386097,7 +386956,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.7138372}
   m_Center: {x: -0.006393194, y: 1.2162137, z: 2.6101704}
---- !u!114 &1825569394
+--- !u!114 &1825569397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386112,6 +386971,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1825672112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386536,7 +387404,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.7028852}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.614672}
---- !u!114 &1826891358
+--- !u!114 &1826891361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386551,6 +387419,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1827133723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389237,6 +390114,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1837420381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -391817,6 +392695,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1850363645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -392022,6 +392901,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1851421760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -393327,6 +394207,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &1859112583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -393982,6 +394866,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1862705184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -394872,7 +395757,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.670698}
   m_Center: {x: -0.006416083, y: 1.2162137, z: 2.63174}
---- !u!114 &1867879399
+--- !u!114 &1867879402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394887,6 +395772,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1868245290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397435,7 +398329,7 @@ PrefabInstance:
       addedObject: {fileID: 1878656008}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1878656009}
+      addedObject: {fileID: 1878656012}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!4 &1878655992 stripped
 Transform:
@@ -397551,7 +398445,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.433641, z: 0.7138267}
   m_Center: {x: -0.0063779354, y: 1.2162137, z: 2.6101754}
---- !u!114 &1878656009
+--- !u!114 &1878656012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397566,6 +398460,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1879453750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397734,7 +398637,7 @@ PrefabInstance:
       addedObject: {fileID: 1782403795}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1782403796}
+      addedObject: {fileID: 1782403799}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1 &1880299957 stripped
 GameObject:
@@ -398883,6 +399786,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1886795219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d4cfcf659200d7548b90a5580c3ab18f, type: 3}
@@ -399007,7 +399914,7 @@ PrefabInstance:
       addedObject: {fileID: 1887656181}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1887656182}
+      addedObject: {fileID: 1887656185}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &1887656165 stripped
 Transform:
@@ -399123,7 +400030,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.76719964}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.5825448}
---- !u!114 &1887656182
+--- !u!114 &1887656185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399138,6 +400045,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1888542378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -400192,7 +401108,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.8315288}
   m_Center: {x: -0.002978444, y: 1.0939842, z: 2.550303}
---- !u!114 &1891128644
+--- !u!114 &1891128647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400207,6 +401123,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &1892730930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 484404636ac422042a24ac95512dc2d3, type: 3}
@@ -404319,6 +405244,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1908778579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -406172,6 +407098,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1918147532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -407321,6 +408248,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1923467421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -408577,7 +409505,7 @@ PrefabInstance:
       addedObject: {fileID: 576265830}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 576265831}
+      addedObject: {fileID: 576265834}
   m_SourcePrefab: {fileID: 100100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
 --- !u!1 &1928505671 stripped
 GameObject:
@@ -411843,7 +412771,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.61711293}
   m_Center: {x: -0.003008962, y: 1.0939842, z: 2.6575723}
---- !u!114 &1939225515
+--- !u!114 &1939225518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411858,6 +412786,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!4 &1940197222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -412419,7 +413356,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.78863156}
   m_Center: {x: -0.0029631853, y: 1.0939842, z: 2.5718057}
---- !u!114 &1944891830
+--- !u!114 &1944891833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412434,6 +413371,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &1945368740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416890,6 +417836,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1973546846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -417281,6 +418228,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1975773882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -417416,6 +418364,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1975947186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -417831,6 +418780,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1978496395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -420309,6 +421259,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &1991651695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -420451,6 +421402,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &1992381900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -423064,6 +424016,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &2004909944
 GameObject:
   m_ObjectHideFlags: 0
@@ -425457,6 +426413,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &2018228376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429157,6 +430117,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &2033696817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -429380,7 +430341,7 @@ PrefabInstance:
       addedObject: {fileID: 2034542516}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2034542517}
+      addedObject: {fileID: 2034542520}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!4 &2034542500 stripped
 Transform:
@@ -429496,7 +430457,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580617, y: 2.1952403, z: 0.7572634}
   m_Center: {x: -0.002978445, y: 1.0939842, z: 2.5874982}
---- !u!114 &2034542517
+--- !u!114 &2034542520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429511,6 +430472,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &2034720421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
@@ -430095,6 +431065,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &2037504387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -434179,6 +435150,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &2051545703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -436052,6 +437024,7 @@ MonoBehaviour:
   playerTag: Bike
   healAmount: 10
   bikeHealth: {fileID: 2080487968}
+  disappearSound: {fileID: 8300000, guid: 494cf49f2908ba447883c739a1396c96, type: 3}
 --- !u!65 &2063601895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -436248,6 +437221,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &2065090505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -437570,6 +438544,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &2071645200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -438362,6 +439337,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &2075150126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439534,6 +440513,8 @@ MonoBehaviour:
   maxHealth: 0
   width: 0
   height: 0
+  DeathSFX: {fileID: 8300000, guid: 04895793e2907ce458f5e9460a7999b8, type: 3}
+  audioSource: {fileID: 7968853671154750682}
 --- !u!1001 &2080818531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441110,7 +442091,7 @@ PrefabInstance:
       addedObject: {fileID: 2087286106}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2087286107}
+      addedObject: {fileID: 2087286110}
   m_SourcePrefab: {fileID: 100100000, guid: c98da428142c39c42bb62c454958cd1f, type: 3}
 --- !u!4 &2087286090 stripped
 Transform:
@@ -441226,7 +442207,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9580615, y: 2.1952403, z: 0.72431594}
   m_Center: {x: -0.0029784443, y: 1.0939842, z: 2.6039553}
---- !u!114 &2087286107
+--- !u!114 &2087286110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441241,6 +442222,15 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds:
+  - {fileID: 8300000, guid: 039720fc1276b9c4da969d5ab4e00adc, type: 3}
+  - {fileID: 8300000, guid: 0010464bb378a354b9774a08afa0fac5, type: 3}
+  - {fileID: 8300000, guid: 1a602b702a15e96458db498e980cb670, type: 3}
+  - {fileID: 8300000, guid: 1d094060f66f1174a9a23d20d9ac04d1, type: 3}
+  - {fileID: 8300000, guid: f47809fceab769f4b9ba8243562ed514, type: 3}
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &2087461889
 GameObject:
   m_ObjectHideFlags: 0
@@ -441439,6 +442429,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1 &2088552563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cbc86bb57f673ba45a8426789eb0fac0, type: 3}
@@ -443536,6 +444530,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &2099323404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446685,6 +447683,7 @@ MonoBehaviour:
   coinTaskManager: {fileID: 1205060924}
   boostAmount: 12
   boostDuration: 2
+  disappearSound: {fileID: 8300000, guid: bb4eea9fd55eb0b41b9dc9b0e0469a47, type: 3}
 --- !u!65 &2115114410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -448052,7 +449051,7 @@ PrefabInstance:
       addedObject: {fileID: 1749344822}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1749344823}
+      addedObject: {fileID: 1749344826}
   m_SourcePrefab: {fileID: 100100000, guid: a119eb0fa059db34bbaef286c1af1696, type: 3}
 --- !u!1001 &2123083836
 PrefabInstance:
@@ -450873,6 +451872,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!1001 &2132627614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452842,6 +453845,10 @@ MonoBehaviour:
   launchSpeed: 12
   upwardSpeed: 6
   stunTime: 0.5
+  carHitSounds: []
+  secondarySounds: []
+  secondarySoundChance: 0.4
+  secondarySoundDelay: 0.15
 --- !u!23 &5677609779422401
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -457982,6 +458989,7 @@ GameObject:
   - component: {fileID: 703654445}
   - component: {fileID: 7968853671154750680}
   - component: {fileID: 7968853671154750681}
+  - component: {fileID: 7968853671154750682}
   m_Layer: 0
   m_Name: tandembike
   m_TagString: Bike
@@ -469897,6 +470905,103 @@ MonoBehaviour:
   rightControl: {fileID: 4644196919362575037}
   rightRadius: 0.65
   deformationStrength: 1
+--- !u!82 &7968853671154750682
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065053584012437573}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 04895793e2907ce458f5e9460a7999b8, type: 3}
+  m_Resource: {fileID: 8300000, guid: 04895793e2907ce458f5e9460a7999b8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &7973167714108948010
 Transform:
   m_ObjectHideFlags: 0
