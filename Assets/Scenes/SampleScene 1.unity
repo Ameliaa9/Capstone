@@ -455278,7 +455278,7 @@ GameObject:
   - component: {fileID: 5421583392695449169}
   - component: {fileID: 5082293062021837843}
   m_Layer: 0
-  m_Name: Cylinder.046
+  m_Name: left handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457981,6 +457981,7 @@ GameObject:
   - component: {fileID: 703654441}
   - component: {fileID: 703654445}
   - component: {fileID: 7968853671154750680}
+  - component: {fileID: 7968853671154750681}
   m_Layer: 0
   m_Name: tandembike
   m_TagString: Bike
@@ -468143,6 +468144,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -75.095
       objectReference: {fileID: 0}
+    - target: {fileID: 5859259852128964746, guid: 9a3e6ca7a192e20448a5e02ab2b82144, type: 3}
+      propertyPath: m_Name
+      value: a right arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146275318639410543, guid: 9a3e6ca7a192e20448a5e02ab2b82144, type: 3}
+      propertyPath: m_Name
+      value: a left arm
+      objectReference: {fileID: 0}
     - target: {fileID: 7686595075570546835, guid: 9a3e6ca7a192e20448a5e02ab2b82144, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -468928,6 +468937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: footright
       objectReference: {fileID: 0}
+    - target: {fileID: -352389591414561481, guid: 96c5690367982d14ebc4b9c8ca913ce1, type: 3}
+      propertyPath: m_Name
+      value: right arm
+      objectReference: {fileID: 0}
     - target: {fileID: 841032926054178663, guid: 96c5690367982d14ebc4b9c8ca913ce1, type: 3}
       propertyPath: m_Name
       value: footleft
@@ -468943,6 +468956,10 @@ PrefabInstance:
     - target: {fileID: 5461138444982260997, guid: 96c5690367982d14ebc4b9c8ca913ce1, type: 3}
       propertyPath: m_Name
       value: legright
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146275318639410543, guid: 96c5690367982d14ebc4b9c8ca913ce1, type: 3}
+      propertyPath: m_Name
+      value: left arm
       objectReference: {fileID: 0}
     - target: {fileID: 8549403022290207516, guid: 96c5690367982d14ebc4b9c8ca913ce1, type: 3}
       propertyPath: m_IsActive
@@ -469862,6 +469879,24 @@ MonoBehaviour:
   steerSensitivity: 0.2
   maxSteerAngle: 67
   smoothing: 8
+--- !u!114 &7968853671154750681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065053584012437573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c020ef808c4a434dbe2b42f995daae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshesParent: {fileID: 1151088342514474153}
+  leftControl: {fileID: 3450456507415638588}
+  leftRadius: 0.6
+  rightControl: {fileID: 4644196919362575037}
+  rightRadius: 0.75
+  deformationStrength: 1
 --- !u!4 &7973167714108948010
 Transform:
   m_ObjectHideFlags: 0
@@ -471133,7 +471168,7 @@ GameObject:
   - component: {fileID: 5771356830752582794}
   - component: {fileID: 9108013001784455395}
   m_Layer: 0
-  m_Name: Cylinder.047
+  m_Name: right handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
