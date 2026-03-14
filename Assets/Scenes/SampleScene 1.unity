@@ -425437,6 +425437,7 @@ GameObject:
   - component: {fileID: 1985935558}
   - component: {fileID: 1985935557}
   - component: {fileID: 1985935560}
+  - component: {fileID: 1985935561}
   m_Layer: 5
   m_Name: Quit button
   m_TagString: Untagged
@@ -425508,10 +425509,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1219027536}
-        m_TargetAssemblyTypeName: KikiNgao.SimpleBikeControl.MainMenuController,
-          Assembly-CSharp
-        m_MethodName: OnQuitButton
+      - m_Target: {fileID: 1985935560}
+        m_TargetAssemblyTypeName: UIButtonClickSFX, Assembly-CSharp
+        m_MethodName: PlayClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -425521,9 +425521,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1985935560}
-        m_TargetAssemblyTypeName: UIButtonClickSFX, Assembly-CSharp
-        m_MethodName: PlayClickSFX
+      - m_Target: {fileID: 1985935561}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -425584,6 +425584,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: 0.4
+--- !u!114 &1985935561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985935555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf73ca43f2a536847b874341448545ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985992722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
