@@ -275,7 +275,7 @@ public class TutorialManager : MonoBehaviour
         actionDone = false;
 
         ShowText(
-            "Go to the delivery location and throw the package at the outlined building"
+            "Go to the delivery location and throw (hold-to-charge) the package at the outlined building"
         );
         yield return new WaitUntil(() => actionDone);
 
