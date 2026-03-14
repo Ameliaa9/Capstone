@@ -171,7 +171,6 @@ public class TaskManager : MonoBehaviour
 
     void UpdateUI()
     {
-        
         if (taskTitleText != null)
             taskTitleText.text = GetTaskTitle(currentTask);
 
@@ -184,7 +183,7 @@ public class TaskManager : MonoBehaviour
                 break;
 
             case TaskType.NoHazardHit:
-                counterText.text = gotHitByHazard ? "Failed (Hit!)" : "0 Hits";
+                counterText.text = gotHitByHazard ? "Hit!" : "0 hits";
                 break;
 
             case TaskType.HitTargets:
@@ -192,11 +191,11 @@ public class TaskManager : MonoBehaviour
                 break;
 
             case TaskType.NoEnlargedMap:
-                counterText.text = openedLargeMap ? "Failed (Map Opened)" : "Map Not Opened";
+                counterText.text = openedLargeMap ? "Failed" : "Closed";
                 break;
 
             case TaskType.VisitLandmark:
-                counterText.text = visitedLandmark ? "Visited!" : "Not Visited Yet";
+                counterText.text = visitedLandmark ? "Visited!" : "Pending";
                 break;
         }
     }
@@ -205,11 +204,11 @@ public class TaskManager : MonoBehaviour
     {
         switch (type)
         {
-            case TaskType.CollectCoins: return $"Collect {targetCoins} Coffee";
-            case TaskType.NoHazardHit: return "Dodge cars";
-            case TaskType.HitTargets: return $"Hit {targetHits} Targets";
-            case TaskType.NoEnlargedMap: return "Don't Open Big Map";
-            case TaskType.VisitLandmark: return "Visit a Landmark";
+            case TaskType.CollectCoins: return $"Collect {targetCoins} Coffee cups for an extra star";
+            case TaskType.NoHazardHit: return "Dodge cars for an extra star";
+            case TaskType.HitTargets: return $"Hit {targetHits} Targets for an extra star";
+            case TaskType.NoEnlargedMap: return "Don't open the big map for an extra star";
+            case TaskType.VisitLandmark: return "Visit a landmark for an extra star";
         }
         return "Task";
     }
