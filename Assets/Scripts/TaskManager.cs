@@ -47,6 +47,16 @@ public class TaskManager : MonoBehaviour
     // VisitLandmark
     bool visitedLandmark;
 
+    void Update()
+    {
+        if (!taskActive) return;
+
+        if (deliverySystem != null && !deliverySystem.hasPackage)
+        {
+            OnDeliveryFailed();
+        }
+    }
+
     public void OnDeliveryStarted()
     {
         taskActive = true;
@@ -55,7 +65,7 @@ public class TaskManager : MonoBehaviour
         // randomy pick one task out of five
         currentTask = (TaskType)Random.Range(0, System.Enum.GetValues(typeof(TaskType)).Length);
 
-        
+
         currentCoins = 0;
         currentHits = 0;
         gotHitByHazard = false;
@@ -94,7 +104,7 @@ public class TaskManager : MonoBehaviour
         if (currentTask != TaskType.NoHazardHit) return;
 
         gotHitByHazard = true;
-        
+
         UpdateUI();
     }
 
@@ -132,15 +142,15 @@ public class TaskManager : MonoBehaviour
         UpdateUI();
     }
 
-    
+
     // Delivery End
-    
+
 
     public void OnDeliveryFinished()
     {
         if (!taskActive) return;
 
-        
+
         if (currentTask == TaskType.NoHazardHit)
         {
             // not hazard hit
@@ -167,6 +177,25 @@ public class TaskManager : MonoBehaviour
                 StartCoroutine(HideBonusPopup());
             }
         }
+    }
+
+    // Delivery Failed
+    public void OnDeliveryFailed()
+    {
+        if (!taskActive) return;
+
+        taskActive = false;
+
+        if (taskPanel != null)
+            taskPanel.SetActive(false);
+
+        // reset states so the next delivery starts clean
+        bonusEarned = false;
+        currentCoins = 0;
+        currentHits = 0;
+        gotHitByHazard = false;
+        openedLargeMap = false;
+        visitedLandmark = false;
     }
 
     void UpdateUI()
