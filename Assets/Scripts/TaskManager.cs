@@ -51,7 +51,7 @@ public class TaskManager : MonoBehaviour
     {
         if (!taskActive) return;
 
-        if (deliverySystem != null && !deliverySystem.hasPackage)
+        if (deliverySystem != null)
         {
             OnDeliveryFailed();
         }

@@ -1,28 +1,43 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
 
 public class DeliveryBoard : MonoBehaviour
 {
     // starts delivery, displays collected text, makes haspackage true
     public DeliverySystem deliverySystem;
     public GameObject deliveryUI;
-    public GameObject canvas1;
+
+    public Image[] deliveryIcons;
+    public TextMeshProUGUI[] deliveryTexts;
+
+    public int randomRoll;
+    public int myInt;
+
+    public int[] buttons;
 
     private void Start()
     {
         deliveryUI = GameObject.Find("DepotUI");
-        canvas1.SetActive(true);
         deliveryUI.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bike"))
         {
-            canvas1.SetActive(false);
+            buttons = new int[deliverySystem.Deliveries.Length];
             deliveryUI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            for (myInt = 0; myInt < 3; myInt++)
+            {
+                RollDelivery();
+            }
         }
     }
 
@@ -31,7 +46,6 @@ public class DeliveryBoard : MonoBehaviour
         if (other.gameObject.CompareTag("Bike"))
         {
             deliveryUI.SetActive(false);
-            canvas1.SetActive(true);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -41,22 +55,30 @@ public class DeliveryBoard : MonoBehaviour
     public void CloseDeliveryBoard()
     {
         deliveryUI.SetActive(false);
-        canvas1.SetActive(true);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    public void DeliveryInitiation(int deliveryIndex)
+    public void RollDelivery()
     {
-        if (deliverySystem.hasPackage)
-        {
-            Debug.Log("Delivery can't be activated twice.");
-        }
-        else
-        {
-            deliverySystem.currentDelivery = deliveryIndex;
-            deliverySystem.StartDelivery(deliveryIndex);
-        }
+        randomRoll = Random.Range(0, deliverySystem.Deliveries.Length);
+        
+
+            deliveryIcons[myInt].sprite = deliverySystem.Deliveries[randomRoll].customerIcon;
+            buttons[myInt] = randomRoll;
+            CompileDeliveryString();
+
+    }
+
+    public void CompileDeliveryString()
+    {
+        string customerName = deliverySystem.Deliveries[randomRoll].name;
+        string customerLocation = deliverySystem.Deliveries[randomRoll].location;
+        string customerTime = deliverySystem.Deliveries[randomRoll].deliveryTime.ToString();
+        string customerDifficulty = deliverySystem.Deliveries[randomRoll].difficulty;
+
+        string finalString = customerName + " - " + customerLocation + " - Time: " + customerTime + " - " + customerDifficulty;
+        deliveryTexts[myInt].text = finalString;
     }
 }

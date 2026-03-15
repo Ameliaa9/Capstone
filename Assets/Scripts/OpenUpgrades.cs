@@ -108,12 +108,9 @@ public class OpenUpgrades : MonoBehaviour
 
     public void UpgradePackageInventory(int upgradeAmount)
     {
-        //something.packageInventory += upgradeAmount;
+        deliverySystemScript.maxPackages += upgradeAmount;
     }
 
-    // Attempt to buy the speed boost upgrade:
-    // If the player has enough stars, subtract the cost and apply the upgrade
-    // If not, show the "not enough stars" popup
     public void BuySpeedUpgrade()
     {
         Debug.Log("BuySpeedUpgrade CALLED");

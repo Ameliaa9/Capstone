@@ -35,8 +35,7 @@ public class MinimapIconTracker : MonoBehaviour
         if (target == null || minimapCamera == null) return;
 
         bool deliveryActive = alwaysShow ||
-                              deliverySystem == null ||
-                              deliverySystem.hasPackage;
+                              deliverySystem == null;
 
         if (!deliveryActive)
         {

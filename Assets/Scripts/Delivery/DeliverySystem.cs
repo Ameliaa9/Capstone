@@ -6,13 +6,15 @@ using System;
 public class DeliverySystem : MonoBehaviour
 {
     [Header("Delivery Setup")]
-    public GameObject[] DeliveryLocations;
-    public int currentDelivery = 0;
-    public bool hasPackage = false;
+    public Delivery[] Deliveries; // The delivery scriptable object containing all of the delivery information
+    public GameObject[] DeliveryLocations; // The physical delivery locations ( for the Projectile script )
 
-    public float[] deliveryTimes;
-    private float currentTimer;
-    private bool timerRunning = false;
+    public int currentDelivery = 0;// Index for the delivery
+    public int maxPackages = 1;
+    public int currentPackages = 0; // New variable to count player package amount
+
+    private float currentTimer; // The current max time and the variable time which is changed by the value inside of Delivery scriptable object
+    private bool timerRunning = false; // Determines if the timer is running
 
     [Header("UI")]
     public TMP_Text timerText;
@@ -89,7 +91,6 @@ public class DeliverySystem : MonoBehaviour
             if (currentTimer <= 0f)
             {
                 timerRunning = false;
-                hasPackage = false;
                 if (timerText) timerText.text = "";
                 if (currentPhone) currentPhone.SetActive(false);
                 if (currentArrow) currentArrow.SetActive(false);
@@ -111,7 +112,7 @@ public class DeliverySystem : MonoBehaviour
 
         timerText.text = $"Time left: {Mathf.Ceil(currentTimer)}s";
 
-        float totalTime = deliveryTimes[currentDelivery];
+        float totalTime = Deliveries[currentDelivery].deliveryTime;
         float t = 1f - (currentTimer / totalTime);
         t = Mathf.Clamp01(t);
 
@@ -135,14 +136,33 @@ public class DeliverySystem : MonoBehaviour
 
     public void StartDelivery(int depotIndex)
     {
-        currentTimer = deliveryTimes[currentDelivery];
-        timerRunning = true;
-        hasPackage = true;
+        if (currentPackages < 1)
+        {
+            currentPackages += 1;
+            currentTimer = Deliveries[currentDelivery].deliveryTime;
+            timerRunning = true;
 
-        AudioManager.I?.PlayPackagePickup();
+            AudioManager.I?.PlayPackagePickup();
 
-        UpdateTimerDisplay();
-        Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
+            UpdateTimerDisplay();
+            Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
+        }
+        else if (currentPackages == 1 && maxPackages == 2)
+        {
+            currentPackages += 1;
+            currentTimer = currentTimer + Deliveries[currentDelivery].deliveryTime;
+            timerRunning = true;
+
+            AudioManager.I?.PlayPackagePickup();
+
+            UpdateTimerDisplay();
+            Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
+        }
+        else
+        {
+            Debug.Log(" Max package limit reached.");
+        }
+
 
         if (phones != null && depotIndex < phones.Length)
         {
@@ -168,7 +188,7 @@ public class DeliverySystem : MonoBehaviour
     void CompleteDelivery()
     {
         timerRunning = false;
-        hasPackage = false;
+        currentPackages -= 1;
 
         TutorialManager.Instance?.CorrectDeliveryHit();
 
@@ -185,7 +205,7 @@ public class DeliverySystem : MonoBehaviour
 
         if (LeaderboardManager.Instance != null)
         {
-            float timeTaken = deliveryTimes[currentDelivery] - currentTimer;
+            float timeTaken = Deliveries[currentDelivery].deliveryTime - currentTimer;
             LeaderboardManager.Instance.AddScore(timeTaken);
             Debug.Log("Leaderboard score saved: " + currentTimer);
         }
@@ -201,14 +221,14 @@ public class DeliverySystem : MonoBehaviour
 
         Debug.Log(currentTimer + " TIME LEFT TOTAL");
 
-        if (currentTimer <= deliveryTimes[currentDelivery] / 5f)
+        if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f)
         {
             starsEarned = 1;
             GiveStars(1);
             Debug.Log("Gets 1 star.");
             StartCoroutine(ShowImageForSeconds(starIcon, 5f));
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 1.5f)
+        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 1.5f)
         {
             starsEarned = 2;
             GiveStars(2);
@@ -216,7 +236,7 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon, 5f));
             StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 2f)
+        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 2f)
         {
             starsEarned = 3;
             GiveStars(3);
@@ -225,7 +245,7 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
             StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 3f)
+        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 3f)
         {
             starsEarned = 4;
             GiveStars(4);
@@ -235,7 +255,7 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
             StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
         }
-        else if (currentTimer <= deliveryTimes[currentDelivery] / 5f * 4f)
+        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 4f)
         {
             starsEarned = 5;
             GiveStars(5);
@@ -281,7 +301,7 @@ public class DeliverySystem : MonoBehaviour
 
     public void ProjectileHitHouse(int houseIndex)
     {
-        if (hasPackage && houseIndex == currentDelivery)
+        if ( currentPackages >= 1 && houseIndex == currentDelivery)
         {
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
             CompleteDelivery();

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeliverButtonSwitch : MonoBehaviour
 {
     //References
     public DeliverySystem deliverySystem;
+    public DeliveryBoard deliveryBoard;
 
     //Buttons / UI
     public GameObject closeXButton;
@@ -19,9 +21,9 @@ public class DeliverButtonSwitch : MonoBehaviour
         ClearSelection();
     }
 
-    public void SelectCustomer(int customerIndex)
+    public void SelectCustomer(int buttonyoujustclicked)
     {
-        selectedCustomerIndex = customerIndex;
+        selectedCustomerIndex = deliveryBoard.buttons[buttonyoujustclicked];
 
         if (closeXButton != null) closeXButton.SetActive(false);
         if (deliverButton != null) deliverButton.SetActive(true);
@@ -41,7 +43,7 @@ public class DeliverButtonSwitch : MonoBehaviour
         if (selectedCustomerIndex < 0) return;
 
         deliverySystem.currentDelivery = selectedCustomerIndex;
-        deliverySystem.StartDelivery(depotIndex);
+        deliverySystem.StartDelivery(selectedCustomerIndex);
     }
 
     public void CloseUI()
