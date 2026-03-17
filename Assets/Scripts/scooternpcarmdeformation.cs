@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class ScooterDeformSystem : MonoBehaviour
 {
+    [Header("Pause Settings")]
+    [Tooltip("Skip deformation when game is paused to prevent mesh corruption.")]
+    public bool skipOnPause = true;
+
     [Header("Whitelist Container")]
     [Tooltip("The parent object holding all scooter parts and NPC skins.")]
     public GameObject scooterRoot;
@@ -35,7 +39,6 @@ public class ScooterDeformSystem : MonoBehaviour
 
     void Start()
     {
-        // Short delay to ensure all 'unchecked' objects are registered by the engine
         Invoke(nameof(InitializeScooterElements), 0.15f);
     }
 
@@ -44,7 +47,6 @@ public class ScooterDeformSystem : MonoBehaviour
         activeElements.Clear();
         if (scooterRoot == null) return;
 
-        // Find every renderer (Mesh or Skinned) even if inactive
         Renderer[] allRenderers = scooterRoot.GetComponentsInChildren<Renderer>(true);
 
         foreach (Renderer ren in allRenderers)
@@ -89,7 +91,6 @@ public class ScooterDeformSystem : MonoBehaviour
 
         Transform t = r.transform;
 
-        // Capture the "Rest Pose" of the scooter parts relative to the grips
         if (leftGripSource) element.initialLeftMatrix = leftGripSource.transform.worldToLocalMatrix * t.localToWorldMatrix;
         if (rightGripSource) element.initialRightMatrix = rightGripSource.transform.worldToLocalMatrix * t.localToWorldMatrix;
 
@@ -115,6 +116,9 @@ public class ScooterDeformSystem : MonoBehaviour
 
     void LateUpdate()
     {
+        // FIX: Skip deformation during pause to prevent mesh corruption
+        if (skipOnPause && Time.timeScale == 0f) return;
+
         if (activeElements.Count == 0) return;
 
         foreach (DeformableElement el in activeElements)
@@ -140,7 +144,6 @@ public class ScooterDeformSystem : MonoBehaviour
 
             el.meshInstance.vertices = el.modifiedCoords;
 
-            // Only calculate normals for active scooter parts to save battery/CPU
             if (el.renderer.gameObject.activeInHierarchy) el.meshInstance.RecalculateNormals();
         }
     }
