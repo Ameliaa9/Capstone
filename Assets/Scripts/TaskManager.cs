@@ -47,15 +47,7 @@ public class TaskManager : MonoBehaviour
     // VisitLandmark
     bool visitedLandmark;
 
-    void Update()
-    {
-        if (!taskActive) return;
 
-        if (deliverySystem != null)
-        {
-            OnDeliveryFailed();
-        }
-    }
 
     public void OnDeliveryStarted()
     {
