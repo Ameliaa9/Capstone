@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class DeliveryBoard : MonoBehaviour
 {
@@ -26,9 +27,9 @@ public class DeliveryBoard : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Bike"))
+        if (other.gameObject.CompareTag("Bike") && deliverySystem.currentPackages < deliverySystem.maxPackages)
         {
-            buttons = new int[deliverySystem.Deliveries.Length];
+            buttons = new int[3] {999,999,999};
             deliveryUI.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
@@ -39,6 +40,11 @@ public class DeliveryBoard : MonoBehaviour
                 RollDelivery();
             }
         }
+        else
+        {
+            return;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -62,13 +68,19 @@ public class DeliveryBoard : MonoBehaviour
 
     public void RollDelivery()
     {
-        randomRoll = Random.Range(0, deliverySystem.Deliveries.Length);
-        
+        randomRoll = UnityEngine.Random.Range(0, deliverySystem.Deliveries.Length);
+        Debug.Log(randomRoll);
+        if (buttons.Contains(randomRoll))
+        {
+            RollDelivery();
 
+        }
+        else
+        {
             deliveryIcons[myInt].sprite = deliverySystem.Deliveries[randomRoll].customerIcon;
             buttons[myInt] = randomRoll;
             CompileDeliveryString();
-
+        }
     }
 
     public void CompileDeliveryString()

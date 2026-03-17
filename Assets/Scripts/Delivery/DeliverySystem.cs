@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class DeliverySystem : MonoBehaviour
     public GameObject[] DeliveryLocations; // The physical delivery locations ( for the Projectile script )
 
     public int currentDelivery = 0;// Index for the delivery
+    public int previousDelivery = 0;// Index for previous delivery
+    public int secondaryDelivery = 0;// Index for secondary delivery
     public int maxPackages = 1;
     public int currentPackages = 0; // New variable to count player package amount
 
@@ -45,8 +48,12 @@ public class DeliverySystem : MonoBehaviour
     private GameObject currentArrow;
 
     [Header("Phones")]
-    public GameObject[] phones;
-    private GameObject currentPhone;
+    public GameObject currentPhone;
+    public Image phoneImage;
+    public TextMeshProUGUI phoneText;
+
+    public Sprite combinedPhoneImage;
+    public string combinedPhoneText;
 
     [Header("Star System")]
     public int totalStarsCollected = 0;
@@ -64,10 +71,6 @@ public class DeliverySystem : MonoBehaviour
     {
         if (successImage) successImage.SetActive(false);
         if (failImage) failImage.SetActive(false);
-
-        if (phones != null)
-            foreach (var p in phones)
-                if (p != null) p.SetActive(false);
 
         if (deliveryArrows != null)
             foreach (var a in deliveryArrows)
@@ -142,6 +145,10 @@ public class DeliverySystem : MonoBehaviour
             currentTimer = Deliveries[currentDelivery].deliveryTime;
             timerRunning = true;
 
+            phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
+            phoneText.text = Deliveries[currentDelivery].name;
+            currentPhone.SetActive(true);
+
             AudioManager.I?.PlayPackagePickup();
 
             UpdateTimerDisplay();
@@ -153,6 +160,9 @@ public class DeliverySystem : MonoBehaviour
             currentTimer = currentTimer + Deliveries[currentDelivery].deliveryTime;
             timerRunning = true;
 
+            phoneImage.sprite = combinedPhoneImage;
+            phoneText.text = combinedPhoneText;
+
             AudioManager.I?.PlayPackagePickup();
 
             UpdateTimerDisplay();
@@ -163,13 +173,6 @@ public class DeliverySystem : MonoBehaviour
             Debug.Log(" Max package limit reached.");
         }
 
-
-        if (phones != null && depotIndex < phones.Length)
-        {
-            if (currentPhone) currentPhone.SetActive(false);
-            currentPhone = phones[depotIndex];
-            if (currentPhone) currentPhone.SetActive(true);
-        }
 
         int idx = currentDelivery;
         if (deliveryArrows != null && idx < deliveryArrows.Length)
@@ -185,113 +188,321 @@ public class DeliverySystem : MonoBehaviour
         TutorialManager.Instance?.DeliveryStarted();
     }
 
-    void CompleteDelivery()
+    void CompleteDelivery(int deliveryCompleted)
     {
-        timerRunning = false;
+        
         currentPackages -= 1;
-
-        TutorialManager.Instance?.CorrectDeliveryHit();
-
-        if (timerText) timerText.text = "";
-        if (currentPhone) currentPhone.SetActive(false);
-        if (currentArrow) currentArrow.SetActive(false);
-
-        Debug.Log($"? Delivery {currentDelivery} successful!");
-
-        if (popup != null)
+        if (currentPackages == 1 && deliveryCompleted == currentDelivery)
         {
-            popup.ShowPopup();
+            TutorialManager.Instance?.CorrectDeliveryHit();
+            Debug.Log($"? Delivery {currentDelivery} successful!");
+
+            if (popup != null)
+            {
+                popup.ShowPopup();
+            }
+
+            if (LeaderboardManager.Instance != null)
+            {
+                float timeTaken = Deliveries[currentDelivery].deliveryTime - currentTimer;
+                LeaderboardManager.Instance.AddScore(timeTaken);
+                Debug.Log("Leaderboard score saved: " + currentTimer);
+            }
+            else
+            {
+                Debug.LogWarning("LeaderboardManager not found!");
+            }
+
+            if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
+            if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
+
+            int starsEarned = 0;
+
+            Debug.Log(currentTimer + " TIME LEFT TOTAL");
+
+            if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f)
+            {
+                starsEarned = 1;
+                GiveStars(1);
+                Debug.Log("Gets 1 star.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 1.5f)
+            {
+                starsEarned = 2;
+                GiveStars(2);
+                Debug.Log("Gets 2 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 2f)
+            {
+                starsEarned = 3;
+                GiveStars(3);
+                Debug.Log("Gets 3 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 3f)
+            {
+                starsEarned = 4;
+                GiveStars(4);
+                Debug.Log("Gets 4 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 4f)
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+            else
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+
+            Debug.Log(totalStarsCollected);
+
+            string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
+            if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
+            {
+                AudioManager.I.PlayCustomerVoice(customerId, starsEarned);
+            }
+            else
+            {
+                Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
+            }
+
+            currentDelivery = secondaryDelivery;
+            phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
+            phoneText.text = Deliveries[currentDelivery].name;
         }
-
-        if (LeaderboardManager.Instance != null)
+        else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
-            float timeTaken = Deliveries[currentDelivery].deliveryTime - currentTimer;
-            LeaderboardManager.Instance.AddScore(timeTaken);
-            Debug.Log("Leaderboard score saved: " + currentTimer);
+            TutorialManager.Instance?.CorrectDeliveryHit();
+            Debug.Log($"? Delivery {secondaryDelivery} successful!");
+
+            if (popup != null)
+            {
+                popup.ShowPopup();
+            }
+
+            if (LeaderboardManager.Instance != null)
+            {
+                float timeTaken = Deliveries[secondaryDelivery].deliveryTime - currentTimer;
+                LeaderboardManager.Instance.AddScore(timeTaken);
+                Debug.Log("Leaderboard score saved: " + currentTimer);
+            }
+            else
+            {
+                Debug.LogWarning("LeaderboardManager not found!");
+            }
+
+            if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
+            if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
+
+            int starsEarned = 0;
+
+            Debug.Log(currentTimer + " TIME LEFT TOTAL");
+
+            if (currentTimer <= Deliveries[secondaryDelivery].deliveryTime / 5f)
+            {
+                starsEarned = 1;
+                GiveStars(1);
+                Debug.Log("Gets 1 star.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            }
+            else if (currentTimer <= Deliveries[secondaryDelivery].deliveryTime / 5f * 1.5f)
+            {
+                starsEarned = 2;
+                GiveStars(2);
+                Debug.Log("Gets 2 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            }
+            else if (currentTimer <= Deliveries[secondaryDelivery].deliveryTime / 5f * 2f)
+            {
+                starsEarned = 3;
+                GiveStars(3);
+                Debug.Log("Gets 3 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            }
+            else if (currentTimer <= Deliveries[secondaryDelivery].deliveryTime / 5f * 3f)
+            {
+                starsEarned = 4;
+                GiveStars(4);
+                Debug.Log("Gets 4 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+            }
+            else if (currentTimer <= Deliveries[secondaryDelivery].deliveryTime / 5f * 4f)
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+            else
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+
+            Debug.Log(totalStarsCollected);
+
+            string customerId = GetCustomerIdFromDeliveryIndex(secondaryDelivery);
+            if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
+            {
+                AudioManager.I.PlayCustomerVoice(customerId, starsEarned);
+            }
+            else
+            {
+                Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
+            }
+
+            secondaryDelivery = -1;
+            phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
+            phoneText.text = Deliveries[currentDelivery].name;
         }
         else
         {
-            Debug.LogWarning("LeaderboardManager not found!");
-        }
+            //previousDelivery = currentDelivery;
+            timerRunning = false;
 
-        if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
-        if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
+            TutorialManager.Instance?.CorrectDeliveryHit();
 
-        int starsEarned = 0;
+            if (timerText) timerText.text = "";
+            if (currentPhone) currentPhone.SetActive(false);
+            if (currentArrow) currentArrow.SetActive(false);
 
-        Debug.Log(currentTimer + " TIME LEFT TOTAL");
+            Debug.Log($"? Delivery {currentDelivery} successful!");
 
-        if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f)
-        {
-            starsEarned = 1;
-            GiveStars(1);
-            Debug.Log("Gets 1 star.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-        }
-        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 1.5f)
-        {
-            starsEarned = 2;
-            GiveStars(2);
-            Debug.Log("Gets 2 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
-        }
-        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 2f)
-        {
-            starsEarned = 3;
-            GiveStars(3);
-            Debug.Log("Gets 3 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
-        }
-        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 3f)
-        {
-            starsEarned = 4;
-            GiveStars(4);
-            Debug.Log("Gets 4 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
-        }
-        else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 4f)
-        {
-            starsEarned = 5;
-            GiveStars(5);
-            Debug.Log("Gets 5 stars.");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
-        }
-        else
-        {
-            starsEarned = 5;
-            GiveStars(5);
-            Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
-            StartCoroutine(ShowImageForSeconds(starIcon, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
-            StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
-        }
+            if (popup != null)
+            {
+                popup.ShowPopup();
+            }
 
-        Debug.Log(totalStarsCollected);
+            if (LeaderboardManager.Instance != null)
+            {
+                float timeTaken = Deliveries[currentDelivery].deliveryTime - currentTimer;
+                LeaderboardManager.Instance.AddScore(timeTaken);
+                Debug.Log("Leaderboard score saved: " + currentTimer);
+            }
+            else
+            {
+                Debug.LogWarning("LeaderboardManager not found!");
+            }
 
-        string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
-        if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
-        {
-            AudioManager.I.PlayCustomerVoice(customerId, starsEarned);
-        }
-        else
-        {
-            Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
-        }
+            if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
+            if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
 
-        if (coinTaskManager != null)
-            coinTaskManager.OnDeliveryFinished();
+            int starsEarned = 0;
+
+            Debug.Log(currentTimer + " TIME LEFT TOTAL");
+
+            if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f)
+            {
+                starsEarned = 1;
+                GiveStars(1);
+                Debug.Log("Gets 1 star.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 1.5f)
+            {
+                starsEarned = 2;
+                GiveStars(2);
+                Debug.Log("Gets 2 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 2f)
+            {
+                starsEarned = 3;
+                GiveStars(3);
+                Debug.Log("Gets 3 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 3f)
+            {
+                starsEarned = 4;
+                GiveStars(4);
+                Debug.Log("Gets 4 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+            }
+            else if (currentTimer <= Deliveries[currentDelivery].deliveryTime / 5f * 4f)
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars.");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+            else
+            {
+                starsEarned = 5;
+                GiveStars(5);
+                Debug.Log("Gets 5 stars. Omgosh! (Voice plays as 5-star)");
+                StartCoroutine(ShowImageForSeconds(starIcon, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon1, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon2, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon3, 5f));
+                StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
+            }
+
+            Debug.Log(totalStarsCollected);
+
+            string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
+            if (AudioManager.I != null && !string.IsNullOrWhiteSpace(customerId))
+            {
+                AudioManager.I.PlayCustomerVoice(customerId, starsEarned);
+            }
+            else
+            {
+                Debug.LogWarning($"[DeliverySystem] Voice not played. customerId='{customerId}', starsEarned={starsEarned}");
+            }
+
+            if (coinTaskManager != null)
+                coinTaskManager.OnDeliveryFinished();
+        }
+        
     }
 
     public void AddBonusStar()
@@ -301,10 +512,10 @@ public class DeliverySystem : MonoBehaviour
 
     public void ProjectileHitHouse(int houseIndex)
     {
-        if ( currentPackages >= 1 && houseIndex == currentDelivery)
+        if ( currentPackages >= 1)
         {
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
-            CompleteDelivery();
+            CompleteDelivery(houseIndex);
         }
     }
 

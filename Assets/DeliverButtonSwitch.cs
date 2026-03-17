@@ -42,8 +42,18 @@ public class DeliverButtonSwitch : MonoBehaviour
         if (deliverySystem == null) return;
         if (selectedCustomerIndex < 0) return;
 
-        deliverySystem.currentDelivery = selectedCustomerIndex;
-        deliverySystem.StartDelivery(selectedCustomerIndex);
+        if (deliverySystem.currentPackages == 1)
+        {
+            deliverySystem.secondaryDelivery = deliverySystem.currentDelivery;
+
+            deliverySystem.currentDelivery = selectedCustomerIndex;
+            deliverySystem.StartDelivery(selectedCustomerIndex);
+        }
+        else
+        {
+            deliverySystem.currentDelivery = selectedCustomerIndex;
+            deliverySystem.StartDelivery(selectedCustomerIndex);
+        }
     }
 
     public void CloseUI()
