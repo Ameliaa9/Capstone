@@ -70,7 +70,7 @@ public class DeliveryBoard : MonoBehaviour
     {
         randomRoll = UnityEngine.Random.Range(0, deliverySystem.Deliveries.Length);
         Debug.Log(randomRoll);
-        if (buttons.Contains(randomRoll))
+        if (buttons.Contains(randomRoll) || deliverySystem.currentDelivery == randomRoll)
         {
             RollDelivery();
 

@@ -10,7 +10,7 @@ public class DeliverySystem : MonoBehaviour
     public Delivery[] Deliveries; // The delivery scriptable object containing all of the delivery information
     public GameObject[] DeliveryLocations; // The physical delivery locations ( for the Projectile script )
 
-    public int currentDelivery = 0;// Index for the delivery
+    public int currentDelivery = 999;// Index for the delivery
     public int previousDelivery = 0;// Index for previous delivery
     public int secondaryDelivery = 0;// Index for secondary delivery
     public int maxPackages = 1;

@@ -130754,6 +130754,11 @@ MonoBehaviour:
   secondarySounds: []
   secondarySoundChance: 0.4
   secondarySoundDelay: 0.15
+--- !u!4 &635525687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
+  m_PrefabInstance: {fileID: 1564384942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &635887252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201348,7 +201353,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1393321467}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1ee1f89625ea0a4489a253d6b5859b37, type: 3}
       propertyPath: m_LocalScale.x
@@ -201380,7 +201385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1ee1f89625ea0a4489a253d6b5859b37, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1ee1f89625ea0a4489a253d6b5859b37, type: 3}
       propertyPath: m_LocalRotation.y
@@ -201388,7 +201393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1ee1f89625ea0a4489a253d6b5859b37, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1ee1f89625ea0a4489a253d6b5859b37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -244856,6 +244861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d8a5f7ed8090b4991b7ef716bbbb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeOnPause: 1
   bikeBodyTransform: {fileID: 1119431665}
   handlebarPivotTransform: {fileID: 952420774}
   additionalFollowers:
@@ -266320,6 +266326,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be2c885f3f8e1c64089603bc0180a37e, type: 3}
       propertyPath: m_Name
       value: Depot3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be2c885f3f8e1c64089603bc0180a37e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2560688654309438184, guid: be2c885f3f8e1c64089603bc0180a37e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -305068,6 +305078,8 @@ Transform:
   - {fileID: 324537378}
   - {fileID: 448799248}
   - {fileID: 1109137954}
+  - {fileID: 635525687}
+  - {fileID: 435862447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393443172
@@ -339864,7 +339876,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1393321467}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -339884,15 +339896,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13b28b0faa243f240ba7be87e10982b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -387604,6 +387616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d8a5f7ed8090b4991b7ef716bbbb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeOnPause: 1
   bikeBodyTransform: {fileID: 1804794870}
   handlebarPivotTransform: {fileID: 1804794872}
   additionalFollowers:
@@ -480200,6 +480213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18975a4889b8ab4fad412e2c97eed75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipOnPause: 1
   scooterRoot: {fileID: 1652020187}
   includeRiggedParts: 1
   leftGripSource: {fileID: 1053414164}
@@ -480236,6 +480250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18975a4889b8ab4fad412e2c97eed75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipOnPause: 1
   scooterRoot: {fileID: 1446595816}
   includeRiggedParts: 1
   leftGripSource: {fileID: 1905005680}
@@ -481090,5 +481105,3 @@ SceneRoots:
   - {fileID: 662880803}
   - {fileID: 750479111}
   - {fileID: 807013435}
-  - {fileID: 1564384942}
-  - {fileID: 949048933}
