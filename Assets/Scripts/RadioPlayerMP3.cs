@@ -191,4 +191,14 @@ public class RadioPlayerMP3 : MonoBehaviour
             volumeFill.fillAmount = songAudioSource.volume;
         }
     }
+
+    public void InstanceNewSong(string musicInstance)
+    {
+        songAudioSource.Stop();
+        Music newSong = Resources.Load<Music>(musicInstance);
+        songAudioSource.clip = newSong.musicAudioClip;
+        songAlbumCoverImage.sprite = newSong.albumCover;
+        phoneTextUI.text = newSong.name;
+        songAudioSource.Play();
+    }
 }
