@@ -30,6 +30,9 @@ public class DeliverySystem : MonoBehaviour
     public Image[] previousImages;
     public int previousCount;
 
+    public GameObject[] inventoryPackages;
+    public Image[] packageImages;
+
     [Header("Timer Color Gradient")]
     public Color timerStartColor = Color.black;
     public Color timerEndColor = Color.red;
@@ -87,6 +90,10 @@ public class DeliverySystem : MonoBehaviour
         if (returnText) returnText.gameObject.SetActive(false);
         if (successText) successText.gameObject.SetActive(false);
         if (failText) failText.gameObject.SetActive(false);
+
+
+        inventoryPackages[0].SetActive(false);
+        inventoryPackages[1].SetActive(false);
     }
 
     void Update()
@@ -147,6 +154,10 @@ public class DeliverySystem : MonoBehaviour
         if (currentPackages < 1)
         {
             currentPackages += 1;
+
+            packageImages[0].sprite = Deliveries[currentDelivery].customerIcon;
+            inventoryPackages[0].SetActive(true);
+
             currentTimer = Deliveries[currentDelivery].deliveryTime;
             timerRunning = true;
 
@@ -162,7 +173,13 @@ public class DeliverySystem : MonoBehaviour
         else if (currentPackages == 1 && maxPackages == 2)
         {
             currentPackages += 1;
-            currentTimer = currentTimer + Deliveries[currentDelivery].deliveryTime;
+
+            packageImages[0].sprite = Deliveries[currentDelivery].customerIcon;
+            inventoryPackages[0].SetActive(true);
+            packageImages[1].sprite = Deliveries[secondaryDelivery].customerIcon;
+            inventoryPackages[1].SetActive(true);
+
+            currentTimer = currentTimer + Deliveries[secondaryDelivery].deliveryTime;
             timerRunning = true;
 
             phoneImage.sprite = combinedPhoneImage;
@@ -199,6 +216,7 @@ public class DeliverySystem : MonoBehaviour
         currentPackages -= 1;
         if (currentPackages == 1 && deliveryCompleted == currentDelivery)
         {
+            inventoryPackages[0].SetActive(false);
             TutorialManager.Instance?.CorrectDeliveryHit();
             Debug.Log($"? Delivery {currentDelivery} successful!");
 
@@ -300,6 +318,7 @@ public class DeliverySystem : MonoBehaviour
         }
         else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
+            inventoryPackages[1].SetActive(false);
             TutorialManager.Instance?.CorrectDeliveryHit();
             Debug.Log($"? Delivery {secondaryDelivery} successful!");
 
@@ -401,6 +420,8 @@ public class DeliverySystem : MonoBehaviour
         }
         else
         {
+            inventoryPackages[0].SetActive(false);
+            inventoryPackages[1].SetActive(false);
             timerRunning = false;
 
             TutorialManager.Instance?.CorrectDeliveryHit();
