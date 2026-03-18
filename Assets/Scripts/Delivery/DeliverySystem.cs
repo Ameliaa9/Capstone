@@ -26,6 +26,10 @@ public class DeliverySystem : MonoBehaviour
     public TMP_Text successText;
     public TMP_Text failText;
 
+    public TextMeshProUGUI[] previousTexts;
+    public Image[] previousImages;
+    public int previousCount;
+
     [Header("Timer Color Gradient")]
     public Color timerStartColor = Color.black;
     public Color timerEndColor = Color.red;
@@ -62,6 +66,7 @@ public class DeliverySystem : MonoBehaviour
     public GameObject starIcon2;
     public GameObject starIcon3;
     public GameObject starIcon4;
+    private int starsEarned;
 
     private bool speedBoostUnlockShown = false;
 
@@ -190,7 +195,7 @@ public class DeliverySystem : MonoBehaviour
 
     void CompleteDelivery(int deliveryCompleted)
     {
-        
+        previousDelivery = deliveryCompleted;
         currentPackages -= 1;
         if (currentPackages == 1 && deliveryCompleted == currentDelivery)
         {
@@ -215,8 +220,6 @@ public class DeliverySystem : MonoBehaviour
 
             if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
             if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
-
-            int starsEarned = 0;
 
             Debug.Log(currentTimer + " TIME LEFT TOTAL");
 
@@ -277,6 +280,8 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            CompilePastDeliveryInfo();
+
             Debug.Log(totalStarsCollected);
 
             string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
@@ -316,8 +321,6 @@ public class DeliverySystem : MonoBehaviour
 
             if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
             if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
-
-            int starsEarned = 0;
 
             Debug.Log(currentTimer + " TIME LEFT TOTAL");
 
@@ -378,6 +381,8 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            CompilePastDeliveryInfo();
+
             Debug.Log(totalStarsCollected);
 
             string customerId = GetCustomerIdFromDeliveryIndex(secondaryDelivery);
@@ -396,7 +401,6 @@ public class DeliverySystem : MonoBehaviour
         }
         else
         {
-            //previousDelivery = currentDelivery;
             timerRunning = false;
 
             TutorialManager.Instance?.CorrectDeliveryHit();
@@ -425,8 +429,6 @@ public class DeliverySystem : MonoBehaviour
 
             if (successText) StartCoroutine(ShowSuccessThenUnlockMessage());
             if (successImage) StartCoroutine(ShowImageForSeconds(successImage, 5f));
-
-            int starsEarned = 0;
 
             Debug.Log(currentTimer + " TIME LEFT TOTAL");
 
@@ -487,6 +489,8 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            CompilePastDeliveryInfo();
+
             Debug.Log(totalStarsCollected);
 
             string customerId = GetCustomerIdFromDeliveryIndex(currentDelivery);
@@ -508,6 +512,7 @@ public class DeliverySystem : MonoBehaviour
     public void AddBonusStar()
     {
         GiveStars(1);
+        starsEarned = starsEarned + 1;
     }
 
     public void ProjectileHitHouse(int houseIndex)
@@ -516,6 +521,32 @@ public class DeliverySystem : MonoBehaviour
         {
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
             CompleteDelivery(houseIndex);
+        }
+    }
+
+    public void CompilePastDeliveryInfo()
+    {
+        float timeElapsedCalculation = Deliveries[previousDelivery].deliveryTime - currentTimer;
+        string customerName = Deliveries[previousDelivery].name;
+        string customerLocation = Deliveries[previousDelivery].location;
+        string customerTimeElapsed = timeElapsedCalculation.ToString();
+        string customerTimeTotal = Deliveries[previousDelivery].deliveryTime.ToString();
+        string customerDifficulty = Deliveries[previousDelivery].difficulty;
+
+        string finalString = customerName + " - " + customerLocation + " - Time: " + customerTimeElapsed + " / " + customerTimeTotal + " - " + customerDifficulty + " - Rating: " + starsEarned;
+
+        if (previousCount >= 6 )
+        {
+            previousCount = 0;
+            previousTexts[previousCount].text = finalString;
+            previousImages[previousCount].sprite = Deliveries[previousDelivery].customerIcon;
+        }
+        else
+        {
+            
+            previousTexts[previousCount].text = finalString;
+            previousImages[previousCount].sprite = Deliveries[previousDelivery].customerIcon;
+            previousCount += 1;
         }
     }
 
