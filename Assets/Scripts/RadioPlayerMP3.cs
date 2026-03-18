@@ -89,6 +89,11 @@ public class RadioPlayerMP3 : MonoBehaviour
             }
         }
 
+        if (MathF.Round(songElapsed, 0) +1 == MathF.Round(songDuration, 0))
+        {
+            NextSong();
+        }
+
         // Next three lines are only here for PC testing
         GameManager.UnlockCursor();
         Cursor.visible = true;
