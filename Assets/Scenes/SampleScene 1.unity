@@ -149750,6 +149750,7 @@ MonoBehaviour:
   secondaryDelivery: 0
   maxPackages: 1
   currentPackages: 0
+  rpmp3: {fileID: 907881077}
   timerText: {fileID: 1563262292}
   collectedText: {fileID: 976327105}
   returnText: {fileID: 1131505489}
@@ -188786,6 +188787,7 @@ MonoBehaviour:
   volumeFill: {fileID: 1146075586}
   volumeStep: 0.1
   shufflingStatus: {fileID: 709605356}
+  songAudioSource: {fileID: 0}
 --- !u!82 &907881078
 AudioSource:
   m_ObjectHideFlags: 0
@@ -338944,6 +338946,7 @@ MonoBehaviour:
   secondaryDelivery: 0
   maxPackages: 1
   currentPackages: 0
+  rpmp3: {fileID: 0}
   timerText: {fileID: 1563262292}
   collectedText: {fileID: 976327105}
   returnText: {fileID: 1131505489}

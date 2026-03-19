@@ -19,6 +19,8 @@ public class DeliverySystem : MonoBehaviour
     private float currentTimer; // The current max time and the variable time which is changed by the value inside of Delivery scriptable object
     private bool timerRunning = false; // Determines if the timer is running
 
+    public RadioPlayerMP3 rpmp3;
+
     [Header("UI")]
     public TMP_Text timerText;
     public TMP_Text collectedText;
@@ -32,6 +34,10 @@ public class DeliverySystem : MonoBehaviour
 
     public GameObject[] inventoryPackages;
     public Image[] packageImages;
+
+    private bool pitch0Active = true;
+    private bool pitch1Active;
+    private bool pitch2Active;
 
     [Header("Timer Color Gradient")]
     public Color timerStartColor = Color.black;
@@ -117,7 +123,14 @@ public class DeliverySystem : MonoBehaviour
                 if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
                 if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 5f));
+
+                rpmp3.songAudioSource.pitch = 1;
+                inventoryPackages[0].SetActive(false);
+                inventoryPackages[1].SetActive(false);
+                currentPackages = 0;
             }
+
+            MusicSpeedUp();
         }
     }
 
@@ -420,6 +433,8 @@ public class DeliverySystem : MonoBehaviour
         }
         else
         {
+
+            rpmp3.songAudioSource.pitch = 1;
             inventoryPackages[0].SetActive(false);
             inventoryPackages[1].SetActive(false);
             timerRunning = false;
@@ -547,7 +562,7 @@ public class DeliverySystem : MonoBehaviour
 
     public void CompilePastDeliveryInfo()
     {
-        float timeElapsedCalculation = Deliveries[previousDelivery].deliveryTime - currentTimer;
+        float timeElapsedCalculation = MathF.Round(Deliveries[previousDelivery].deliveryTime - currentTimer, 2);
         string customerName = Deliveries[previousDelivery].name;
         string customerLocation = Deliveries[previousDelivery].location;
         string customerTimeElapsed = timeElapsedCalculation.ToString();
@@ -568,6 +583,75 @@ public class DeliverySystem : MonoBehaviour
             previousTexts[previousCount].text = finalString;
             previousImages[previousCount].sprite = Deliveries[previousDelivery].customerIcon;
             previousCount += 1;
+        }
+    }
+
+    public void MusicSpeedUp()
+    {
+
+        if (currentPackages == 2)
+        {
+            float mTotalTime = Deliveries[currentDelivery].deliveryTime + Deliveries[secondaryDelivery].deliveryTime;
+
+            if (currentTimer <= mTotalTime / 1.5f && pitch0Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.1f;
+                pitch1Active = true;
+                pitch0Active = false;
+            }
+            else if (currentTimer <= mTotalTime / 2f && pitch1Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.2f;
+                pitch2Active = true;
+                pitch1Active = false;
+            }
+            else if (currentTimer <= mTotalTime / 3f && pitch2Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.3f;
+
+            }
+            else if (currentTimer > mTotalTime / 1.5f)
+            {
+                rpmp3.songAudioSource.pitch = 1f;
+            }
+            else
+            {
+                return;
+            }
+        }
+        else if (currentPackages == 1)
+        {
+            float mTotalTime = Deliveries[currentDelivery].deliveryTime;
+
+            if (currentTimer <= mTotalTime / 1.5f && pitch0Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.1f;
+                pitch1Active = true;
+                pitch0Active = false;
+            }
+            else if (currentTimer <= mTotalTime / 2f && pitch1Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.2f;
+                pitch2Active = true;
+                pitch1Active = false;
+            }
+            else if (currentTimer <= mTotalTime / 3f && pitch2Active)
+            {
+                rpmp3.songAudioSource.pitch = 1.3f;
+            }
+            else if (currentTimer > mTotalTime / 1.5f)
+            {
+                rpmp3.songAudioSource.pitch = 1f;
+                pitch0Active = true;
+            }
+            else
+            {
+                return;
+            }
+        }
+        else
+        {
+            rpmp3.songAudioSource.pitch = 1;
         }
     }
 

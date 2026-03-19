@@ -40,7 +40,7 @@ public class RadioPlayerMP3 : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI shufflingStatus;
 
-    private AudioSource songAudioSource;
+    public AudioSource songAudioSource;
 
 
     void Start()
