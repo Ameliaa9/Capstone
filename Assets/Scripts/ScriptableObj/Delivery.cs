@@ -9,4 +9,6 @@ public class Delivery : ScriptableObject
 
     public string location;
     public string difficulty;
+
+    public string[] dialogue;
 }

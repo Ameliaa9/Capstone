@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e04bdc07552934298d3a1ed18a5ff0, type: 3}
   m_Name: Zarah
   m_EditorClassIdentifier: 
-  deliveryIndex: 1
-  deliveryTime: 120
+  deliveryTime: 60
   customerIcon: {fileID: 21300000, guid: 6ad477043a8c12845a469273ffc27bad, type: 3}
   customerPhoneIcon: {fileID: 21300000, guid: 736247724c309f743a18431aea6ef3ef, type: 3}
   location: Coffee Shop
   difficulty: Easy
+  dialogue:
+  - Hey! ^-^   Just wanted to let you know the coffee I made for you is getting cold!
+  - Hey! ^-^  You're still on your way, right?
+  - Please arrive quickly, thank you.

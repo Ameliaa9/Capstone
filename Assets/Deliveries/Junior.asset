@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e04bdc07552934298d3a1ed18a5ff0, type: 3}
   m_Name: Junior
   m_EditorClassIdentifier: 
-  deliveryIndex: 0
   deliveryTime: 120
   customerIcon: {fileID: 21300000, guid: cf728af1f149ffa49a14e4a71364cc73, type: 3}
   customerPhoneIcon: {fileID: 21300000, guid: 197f3f2b8439ce1478d2f5449743adc3, type: 3}
   location: Red House
   difficulty: Easy
+  dialogue:
+  - Yo, isn't it supposed to be same day delivery?
+  - Yo, you there??
+  - You better be here soon or you can keep it dawg

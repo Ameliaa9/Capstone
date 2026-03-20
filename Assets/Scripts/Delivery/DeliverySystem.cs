@@ -19,8 +19,6 @@ public class DeliverySystem : MonoBehaviour
     private float currentTimer; // The current max time and the variable time which is changed by the value inside of Delivery scriptable object
     private bool timerRunning = false; // Determines if the timer is running
 
-    public RadioPlayerMP3 rpmp3;
-
     [Header("UI")]
     public TMP_Text timerText;
     public TMP_Text collectedText;
@@ -35,6 +33,8 @@ public class DeliverySystem : MonoBehaviour
     public GameObject[] inventoryPackages;
     public Image[] packageImages;
 
+    [Header("Radio Stuff")]
+    public RadioPlayerMP3 rpmp3;
     private bool pitch0Active = true;
     private bool pitch1Active;
     private bool pitch2Active;
@@ -47,14 +47,17 @@ public class DeliverySystem : MonoBehaviour
     [Tooltip("Must match AudioManager customerId exactly. Index must match currentDelivery.")]
     public string[] customerIds;
 
-    [Header("Images")]
+    [Header("Popup Image Objects")]
     public GameObject successImage;
     public GameObject failImage;
     public GameObject successBackground;
     public GameObject failBackground;
 
+    public GameObject newPopupObj;
+
     [Header("Popup Animation")]
     public TimerPopupHandler popup;
+    public TimerPopupHandler newPopup;
 
     [Header("Minimap Arrows")]
     public GameObject[] deliveryArrows;
@@ -85,6 +88,7 @@ public class DeliverySystem : MonoBehaviour
     {
         if (successImage) successImage.SetActive(false);
         if (failImage) failImage.SetActive(false);
+        if (newPopupObj) newPopupObj.SetActive(false);
 
         if (deliveryArrows != null)
             foreach (var a in deliveryArrows)
@@ -202,6 +206,10 @@ public class DeliverySystem : MonoBehaviour
 
             UpdateTimerDisplay();
             Debug.Log($"?? Started delivery {currentDelivery} with {currentTimer} seconds");
+
+            pitch0Active = true;
+            pitch1Active = false;
+            pitch2Active = false;
         }
         else
         {
@@ -598,16 +606,23 @@ public class DeliverySystem : MonoBehaviour
                 rpmp3.songAudioSource.pitch = 1.1f;
                 pitch1Active = true;
                 pitch0Active = false;
+
+                CustomerDialogue(0, true);
             }
             else if (currentTimer <= mTotalTime / 2f && pitch1Active)
             {
                 rpmp3.songAudioSource.pitch = 1.2f;
                 pitch2Active = true;
                 pitch1Active = false;
+
+                CustomerDialogue(1, true);
             }
             else if (currentTimer <= mTotalTime / 3f && pitch2Active)
             {
                 rpmp3.songAudioSource.pitch = 1.3f;
+
+                CustomerDialogue(2, true);
+                pitch2Active = false;
 
             }
             else if (currentTimer > mTotalTime / 1.5f)
@@ -628,16 +643,22 @@ public class DeliverySystem : MonoBehaviour
                 rpmp3.songAudioSource.pitch = 1.1f;
                 pitch1Active = true;
                 pitch0Active = false;
+
+                CustomerDialogue(0, false);
             }
             else if (currentTimer <= mTotalTime / 2f && pitch1Active)
             {
                 rpmp3.songAudioSource.pitch = 1.2f;
                 pitch2Active = true;
                 pitch1Active = false;
+
+                CustomerDialogue(1, false);
             }
             else if (currentTimer <= mTotalTime / 3f && pitch2Active)
             {
                 rpmp3.songAudioSource.pitch = 1.3f;
+                CustomerDialogue(2, false);
+                pitch2Active = false;
             }
             else if (currentTimer > mTotalTime / 1.5f)
             {
@@ -653,6 +674,35 @@ public class DeliverySystem : MonoBehaviour
         {
             rpmp3.songAudioSource.pitch = 1;
         }
+    }
+
+    public void CustomerDialogue(int dialogueIndex, bool isRandom)
+    {
+        if (isRandom)
+        {
+            int coinFlip = UnityEngine.Random.Range(0, 2);
+            if (coinFlip == 0)
+            {
+                newPopup.popupTextName.text = Deliveries[secondaryDelivery].name;
+                newPopup.popupText.text = Deliveries[secondaryDelivery].dialogue[dialogueIndex];
+                newPopup.popupImage.sprite = Deliveries[secondaryDelivery].customerIcon;
+            }
+            else
+            {
+                newPopup.popupTextName.text = Deliveries[currentDelivery].name;
+                newPopup.popupText.text = Deliveries[currentDelivery].dialogue[dialogueIndex];
+                newPopup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
+            }
+        }
+        else
+        {
+            newPopup.popupTextName.text = Deliveries[currentDelivery].name;
+            newPopup.popupText.text = Deliveries[currentDelivery].dialogue[dialogueIndex];
+            newPopup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
+        }
+        
+        newPopup.ShowPopup();
+        if (newPopupObj) StartCoroutine(ShowImageForSeconds(newPopupObj, 5f));
     }
 
     private IEnumerator ShowSuccessThenUnlockMessage()
