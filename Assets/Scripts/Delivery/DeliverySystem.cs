@@ -47,9 +47,9 @@ public class DeliverySystem : MonoBehaviour
     [Tooltip("Must match AudioManager customerId exactly. Index must match currentDelivery.")]
     public string[] customerIds;
 
-    [Header("Popup Image Objects")]
+    [Header("Popup Objects")]
     public GameObject successImage;
-    public GameObject failImage;
+    public GameObject failObject;
     public GameObject successBackground;
     public GameObject failBackground;
 
@@ -58,6 +58,7 @@ public class DeliverySystem : MonoBehaviour
     [Header("Popup Animation")]
     public TimerPopupHandler popup;
     public TimerPopupHandler newPopup;
+    public TimerPopupHandler failPopup;
 
     [Header("Minimap Arrows")]
     public GameObject[] deliveryArrows;
@@ -87,7 +88,7 @@ public class DeliverySystem : MonoBehaviour
     void Start()
     {
         if (successImage) successImage.SetActive(false);
-        if (failImage) failImage.SetActive(false);
+        if (failObject) failObject.SetActive(false);
         if (newPopupObj) newPopupObj.SetActive(false);
 
         if (deliveryArrows != null)
@@ -125,8 +126,13 @@ public class DeliverySystem : MonoBehaviour
                 AudioManager.I?.PlayDeliveryMissed(0.8f);
 
                 if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
-                if (failImage) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
-                if (failImage) StartCoroutine(ShowImageForSeconds(failImage, 5f));
+                if (failObject) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
+
+
+                failPopup.popupTextName.text = Deliveries[currentDelivery].name;
+                failPopup.popupText.text = Deliveries[currentDelivery].dialogue[3];
+                failPopup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
+                if (failObject) StartCoroutine(ShowImageForSeconds(failObject, 5f));
 
                 rpmp3.songAudioSource.pitch = 1;
                 inventoryPackages[0].SetActive(false);
@@ -243,6 +249,9 @@ public class DeliverySystem : MonoBehaviour
 
             if (popup != null)
             {
+                popup.popupTextName.text = Deliveries[currentDelivery].name;
+                popup.popupText.text = Deliveries[currentDelivery].dialogue[4];
+                popup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
                 popup.ShowPopup();
             }
 
@@ -345,6 +354,9 @@ public class DeliverySystem : MonoBehaviour
 
             if (popup != null)
             {
+                popup.popupTextName.text = Deliveries[secondaryDelivery].name;
+                popup.popupText.text = Deliveries[secondaryDelivery].dialogue[4];
+                popup.popupImage.sprite = Deliveries[secondaryDelivery].customerIcon;
                 popup.ShowPopup();
             }
 
@@ -457,6 +469,9 @@ public class DeliverySystem : MonoBehaviour
 
             if (popup != null)
             {
+                popup.popupTextName.text = Deliveries[currentDelivery].name;
+                popup.popupText.text = Deliveries[currentDelivery].dialogue[4];
+                popup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
                 popup.ShowPopup();
             }
 
