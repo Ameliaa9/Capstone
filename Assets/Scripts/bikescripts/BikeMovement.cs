@@ -29,7 +29,14 @@ public class BikeMovement : MonoBehaviour
 
     void Update()
     {
+        // keyboard jump
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpTriggered = true;
+        }
+
+        // player 2 controller
+        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
         {
             jumpTriggered = true;
         }
