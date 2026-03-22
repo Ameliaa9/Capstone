@@ -66448,6 +66448,9 @@ MonoBehaviour:
   randomRoll: 0
   myInt: 0
   buttons: 
+  audioSource: {fileID: 310851400}
+  garageOpenSFX: {fileID: 8300000, guid: b3f86ae76bc431e4a9345280dabbfb62, type: 3}
+  garageCloseSFX: {fileID: 8300000, guid: 38db1019859c4094c950424902f83066, type: 3}
 --- !u!136 &310851399
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66485,12 +66488,12 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.99
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 200
+  Priority: 225
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -164258,13 +164261,13 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1e6065282512f7541b4ee8f67b85554d, type: 3}
   m_Resource: {fileID: 8300000, guid: 1e6065282512f7541b4ee8f67b85554d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.408
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 191
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -173967,13 +173970,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.751
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 146
   DopplerLevel: 0
   MinDistance: 20
   MaxDistance: 150
@@ -191160,7 +191163,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &895422662
@@ -194127,7 +194130,7 @@ MonoBehaviour:
   volumeFill: {fileID: 1146075586}
   volumeStep: 0.1
   shufflingStatus: {fileID: 709605356}
-  songAudioSource: {fileID: 0}
+  songAudioSource: {fileID: 907881078}
 --- !u!82 &907881078
 AudioSource:
   m_ObjectHideFlags: 0
@@ -194141,13 +194144,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.455
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 173
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -310210,7 +310213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 318479296}
-  fadeDuration: 0.8
+  fadeDuration: 3
 --- !u!114 &1368868910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378699,6 +378702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c9bb16b48cf934687b2e4245f30a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactClip: {fileID: 0}
 --- !u!82 &1702040909
 AudioSource:
   m_ObjectHideFlags: 0

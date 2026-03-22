@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
-    public float fadeDuration = 0.5f;
+    public float fadeDuration = 3f;
 
     private Canvas canvas;
 
@@ -36,7 +36,7 @@ public class ScreenFader : MonoBehaviour
 
     public IEnumerator FadeIn()
     {
-        yield return StartCoroutine(Fade(1f, 0f));
+        yield return StartCoroutine(Fade(2, 0f));
     }
 
     private IEnumerator Fade(float startAlpha, float endAlpha)

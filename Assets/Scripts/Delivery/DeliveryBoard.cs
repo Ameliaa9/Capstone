@@ -18,6 +18,10 @@ public class DeliveryBoard : MonoBehaviour
 
     public int[] buttons;
 
+    public AudioSource audioSource;
+    public AudioClip garageOpenSFX;
+    public AudioClip garageCloseSFX;
+
     private bool isTransitioning = false;
     private bool boardOpen = false;
 
@@ -40,6 +44,11 @@ public class DeliveryBoard : MonoBehaviour
     private IEnumerator OpenDeliveryBoardRoutine()
     {
         isTransitioning = true;
+
+        if (audioSource != null && garageOpenSFX != null)
+        {
+            audioSource.PlayOneShot(garageOpenSFX);
+        }
 
         if (screenFader != null)
         {
@@ -76,6 +85,12 @@ public class DeliveryBoard : MonoBehaviour
     public void CloseDeliveryBoard()
     {
         if (!boardOpen || isTransitioning) return;
+
+        if (audioSource != null && garageCloseSFX != null)
+        {
+            audioSource.PlayOneShot(garageCloseSFX);
+        }
+
         StartCoroutine(CloseDeliveryBoardRoutine());
     }
 
