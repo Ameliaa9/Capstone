@@ -43,8 +43,7 @@ public class DeliveryBoard : MonoBehaviour
 
         if (screenFader != null)
         {
-           
-            screenFader.SetSortOrder(200);
+            screenFader.SetSortOrder(50);
             yield return StartCoroutine(screenFader.FadeOut());
         }
 
@@ -58,13 +57,6 @@ public class DeliveryBoard : MonoBehaviour
         for (myInt = 0; myInt < 3; myInt++)
         {
             RollDelivery();
-        }
-
-        if (screenFader != null)
-        {
-            
-            screenFader.SetSortOrder(50);
-            yield return StartCoroutine(screenFader.FadeIn());
         }
 
         isTransitioning = false;
@@ -91,13 +83,6 @@ public class DeliveryBoard : MonoBehaviour
     {
         isTransitioning = true;
 
-        if (screenFader != null)
-        {
-           
-            screenFader.SetSortOrder(200);
-            yield return StartCoroutine(screenFader.FadeOut());
-        }
-
         deliveryUI.SetActive(false);
         boardOpen = false;
 
@@ -106,11 +91,7 @@ public class DeliveryBoard : MonoBehaviour
 
         if (screenFader != null)
         {
-           
             yield return StartCoroutine(screenFader.FadeIn());
-
-           
-            screenFader.SetSortOrder(50);
         }
 
         isTransitioning = false;
