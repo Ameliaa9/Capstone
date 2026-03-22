@@ -2,13 +2,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using System;
+using System.Collections;
 
 public class DeliveryBoard : MonoBehaviour
 {
-    // starts delivery, displays collected text, makes haspackage true
     public DeliverySystem deliverySystem;
     public GameObject deliveryUI;
+    public ScreenFader screenFader;
 
     public Image[] deliveryIcons;
     public TextMeshProUGUI[] deliveryTexts;
@@ -18,38 +18,61 @@ public class DeliveryBoard : MonoBehaviour
 
     public int[] buttons;
 
+    private bool isTransitioning = false;
+    private bool boardOpen = false;
+
     private void Start()
     {
         deliveryUI = GameObject.Find("DepotUI");
         deliveryUI.SetActive(false);
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isTransitioning || boardOpen) return;
+
         if (other.gameObject.CompareTag("Bike") && deliverySystem.currentPackages < deliverySystem.maxPackages)
         {
-            buttons = new int[3] {999,999,999};
-            deliveryUI.SetActive(true);
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            for (myInt = 0; myInt < 3; myInt++)
-            {
-                RollDelivery();
-            }
+            StartCoroutine(OpenDeliveryBoardRoutine());
         }
-        else
+    }
+
+    private IEnumerator OpenDeliveryBoardRoutine()
+    {
+        isTransitioning = true;
+
+        if (screenFader != null)
         {
-            return;
+           
+            screenFader.SetSortOrder(200);
+            yield return StartCoroutine(screenFader.FadeOut());
         }
 
+        buttons = new int[3] { 999, 999, 999 };
+        deliveryUI.SetActive(true);
+        boardOpen = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        for (myInt = 0; myInt < 3; myInt++)
+        {
+            RollDelivery();
+        }
+
+        if (screenFader != null)
+        {
+            
+            screenFader.SetSortOrder(50);
+            yield return StartCoroutine(screenFader.FadeIn());
+        }
+
+        isTransitioning = false;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Bike"))
+        if (other.gameObject.CompareTag("Bike") && !boardOpen && !isTransitioning)
         {
             deliveryUI.SetActive(false);
 
@@ -60,20 +83,47 @@ public class DeliveryBoard : MonoBehaviour
 
     public void CloseDeliveryBoard()
     {
+        if (!boardOpen || isTransitioning) return;
+        StartCoroutine(CloseDeliveryBoardRoutine());
+    }
+
+    private IEnumerator CloseDeliveryBoardRoutine()
+    {
+        isTransitioning = true;
+
+        if (screenFader != null)
+        {
+           
+            screenFader.SetSortOrder(200);
+            yield return StartCoroutine(screenFader.FadeOut());
+        }
+
         deliveryUI.SetActive(false);
+        boardOpen = false;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (screenFader != null)
+        {
+           
+            yield return StartCoroutine(screenFader.FadeIn());
+
+           
+            screenFader.SetSortOrder(50);
+        }
+
+        isTransitioning = false;
     }
 
     public void RollDelivery()
     {
         randomRoll = UnityEngine.Random.Range(0, deliverySystem.Deliveries.Length);
         Debug.Log(randomRoll);
+
         if (buttons.Contains(randomRoll) || deliverySystem.currentDelivery == randomRoll)
         {
             RollDelivery();
-
         }
         else
         {
