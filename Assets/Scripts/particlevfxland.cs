@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class PackageDrop : MonoBehaviour
 {
-    public ParticleSystem landingVFX;
-    private bool hasLanded = false; // Optional: prevents double-triggering on bounces
+    public GameObject landingVFXPrefab;
+    public float cooldown = 0.1f; // Prevents spam during rolling
+    private float lastImpactTime = -1f;
 
     void OnCollisionEnter(Collision collision)
     {
-        // Remove the "if (collision.gameObject.CompareTag("Ground"))" line completely
+        if (Time.time - lastImpactTime < cooldown) return;
+        lastImpactTime = Time.time;
 
-        // Optional safety check: only trigger once
-        if (hasLanded) return;
-        hasLanded = true;
+        // Get impact info
+        ContactPoint contact = collision.GetContact(0);
+        Vector3 point = contact.point;
+        Vector3 normal = contact.normal; // Direction the surface is facing
 
-        // Move VFX to impact point and play
-        landingVFX.transform.position = collision.contacts[0].point;
-        landingVFX.Play();
+        // KEY: Rotate so particle "up" matches the surface normal
+        // This means dust sprays AWAY from the wall/floor/ceiling
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
 
-        // Optional: Destroy this script so it never triggers again
-        // Destroy(this);
+        GameObject vfxInstance = Instantiate(landingVFXPrefab, point, rotation);
+        vfxInstance.transform.SetParent(null); // Detach from moving projectile
     }
 }
