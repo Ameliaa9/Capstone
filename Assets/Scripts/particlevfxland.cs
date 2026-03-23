@@ -3,24 +3,41 @@ using UnityEngine;
 public class PackageDrop : MonoBehaviour
 {
     public GameObject landingVFXPrefab;
-    public float cooldown = 0.1f; // Prevents spam during rolling
+    public float cooldown = 0.05f; // Prevents frame-perfect spam
     private float lastImpactTime = -1f;
+
+    public enum WorldAxis { Y_Up, X_Right, Z_Forward }
+    [Tooltip("Force VFX to align to this world axis, ignoring prefab rotation")]
+    public WorldAxis rotationAxis = WorldAxis.Y_Up;
 
     void OnCollisionEnter(Collision collision)
     {
         if (Time.time - lastImpactTime < cooldown) return;
         lastImpactTime = Time.time;
 
-        // Get impact info
-        ContactPoint contact = collision.GetContact(0);
-        Vector3 point = contact.point;
-        Vector3 normal = contact.normal; // Direction the surface is facing
+        Vector3 impactPoint = collision.contacts[0].point;
+        Quaternion forcedRotation = GetAxisRotation();
 
-        // KEY: Rotate so particle "up" matches the surface normal
-        // This means dust sprays AWAY from the wall/floor/ceiling
-        Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
+        GameObject vfxInstance = Instantiate(landingVFXPrefab, impactPoint, forcedRotation);
+        vfxInstance.transform.SetParent(null);
+    }
 
-        GameObject vfxInstance = Instantiate(landingVFXPrefab, point, rotation);
-        vfxInstance.transform.SetParent(null); // Detach from moving projectile
+    Quaternion GetAxisRotation()
+    {
+        switch (rotationAxis)
+        {
+            case WorldAxis.X_Right:
+                // Rotates so the particle system's "up" points world X+ (good for left/right wall hits)
+                return Quaternion.Euler(0, 0, -90f);
+
+            case WorldAxis.Z_Forward:
+                // Rotates so the particle system's "up" points world Z+ (good for front/back wall hits)
+                return Quaternion.Euler(90f, 0, 0);
+
+            case WorldAxis.Y_Up:
+            default:
+                // Standard upright (good for ground/floor hits)
+                return Quaternion.identity;
+        }
     }
 }
