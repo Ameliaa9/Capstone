@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3311439150536398537}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Package
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileRigidbody: {fileID: 7877657679694937259}
   projectileMeshCollider: {fileID: 4090084212195739673}
-  notificationUI: {fileID: 0}
+  deliverySystem: {fileID: 0}
+  lifetimeInWorld: 5
 --- !u!1 &6486169691521818736
 GameObject:
   m_ObjectHideFlags: 0
