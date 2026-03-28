@@ -11,6 +11,8 @@ public class BikeHealth : MonoBehaviour
     private TextMeshProUGUI value;
     [SerializeField]
     private Transform respawnPoint;
+    [SerializeField]
+    private string deathText;
 
     [Header("Death Popup")]
     [SerializeField]
@@ -112,7 +114,7 @@ public class BikeHealth : MonoBehaviour
         if (deathPopup == null) return;
 
         deathPopup.gameObject.SetActive(true);
-        deathPopup.text = "WASTED!";
+        deathPopup.text = deathText;
 
         CancelInvoke(nameof(HideDeathPopup));
         Invoke(nameof(HideDeathPopup), popupDuration);

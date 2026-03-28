@@ -11,7 +11,8 @@ public class npcInstancer : MonoBehaviour
     [SerializeField]
     private int instanceQuantity;
 
-    private float instanceRadius = 5f;
+    [SerializeField]
+    private float instanceRadius = 10f;
 
     [SerializeField]
     private float minimumRadius = 0f;
@@ -26,9 +27,9 @@ public class npcInstancer : MonoBehaviour
 
     public void Instance(int npcIndex)
     {
-        float rand0 = Random.Range(minimumRadius, instanceRadius);
-        float rand1 = Random.Range(minimumRadius, instanceRadius);
-        Vector3 randomDir = new Vector3 (rand0, 0, rand1) * instanceRadius;
+        float rand0 = Random.Range(-instanceRadius, instanceRadius);
+        float rand1 = Random.Range(-instanceRadius, instanceRadius);
+        Vector3 randomDir = new Vector3 (rand0, 0, rand1);
 
         if (minimumRadius > 0)
         {

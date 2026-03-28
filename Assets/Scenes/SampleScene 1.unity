@@ -101240,6 +101240,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c7327ddbb4f55824eb37461c53fdd55d, type: 3}
+--- !u!1 &464065362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464065363}
+  - component: {fileID: 464065364}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464065363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464065362}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -120, y: 7.1, z: 291}
+  m_LocalScale: {x: 1058.7085, y: 1, z: 1080}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1161767888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &464065364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464065362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &464188771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125177,6 +125230,7 @@ MonoBehaviour:
   - {fileID: 3413876597721751073}
   npcListInstance: 0
   instanceQuantity: 20
+  instanceRadius: 10
   minimumRadius: 0
 --- !u!1 &580852152 stripped
 GameObject:
@@ -265998,7 +266052,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150940297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 500}
   m_LocalScale: {x: 3.45651, y: 3.45651, z: 3.45651}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -266030,7 +266084,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WASTED!
+  m_text: Well you didn't technically die but your bike was destroyed and you have
+    to travel back to the depot on foot or maybe take public transit, or even an
+    uber.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
   m_sharedMaterial: {fileID: 1865203752328652188, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
@@ -266057,15 +266113,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -266095,7 +266151,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -57.29487, y: -20.302383, z: -45.198143, w: -35.006557}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -267731,6 +267787,7 @@ Transform:
   - {fileID: 594962902}
   - {fileID: 715890172}
   - {fileID: 1057821796}
+  - {fileID: 464065363}
   - {fileID: 625851105}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -274568,7 +274625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 5806107158084792361}
-  offset: {x: 0, y: 2, z: -6}
+  offset: {x: -5, y: 5, z: 5}
   rotationSpeed: 85
   verticalSpeed: 65
   minPitch: -20
@@ -371567,7 +371624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1628316123
 RectTransform:
   m_ObjectHideFlags: 0
@@ -387433,6 +387490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c9bb16b48cf934687b2e4245f30a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactClip: {fileID: 0}
 --- !u!82 &1702040909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -471567,6 +471625,7 @@ MonoBehaviour:
   healthBar: {fileID: 1490764925}
   value: {fileID: 851520000}
   respawnPoint: {fileID: 1176256900}
+  deathText: BIKE DESTROYED!
   deathPopup: {fileID: 1150940299}
   popupDuration: 3
   damageFlashUI: {fileID: 700531415}
@@ -503506,7 +503565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2080487968}
-  damageAmount: 11
+  damageAmount: 4
 --- !u!23 &7338051092206015357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -504545,7 +504604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikeHealth: {fileID: 2080487968}
-  damageAmount: 7
+  damageAmount: 2
 --- !u!33 &7837514028504913911
 MeshFilter:
   m_ObjectHideFlags: 0

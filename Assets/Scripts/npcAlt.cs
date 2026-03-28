@@ -14,10 +14,14 @@ public class npcAlt : MonoBehaviour
 
     private Vector3 npcUpdateDir;
 
+    private void Start()
+    {
+        npcSpeed = Random.Range(npcSpeed - 0.2f, npcSpeed + 0.2f);
+    }
+
     void Update()
     {
         Vector3 direction = (npcRelativity.position - transform.position).normalized;
-        npcSpeed = Random.Range(npcSpeed - 0.2f, npcSpeed + 0.2f);
         if (npcRelativity)
         {
             transform.position += direction * npcSpeed * Time.deltaTime;
