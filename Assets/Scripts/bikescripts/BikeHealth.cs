@@ -18,6 +18,10 @@ public class BikeHealth : MonoBehaviour
     [SerializeField]
     private float popupDuration = 2f;
 
+    [Header("Damage Flash")]
+    [SerializeField]
+    private DamageFlashUI damageFlashUI;
+
     public float Health;
     public float maxHealth;
 
@@ -50,8 +54,17 @@ public class BikeHealth : MonoBehaviour
 
     public void SetHealth(float setHealth)
     {
+        float oldHealth = Health;
+
         Health += setHealth;
         Health = Mathf.Clamp(Health, 0f, maxHealth);
+
+        // only got damage to flash 
+        if (Health < oldHealth)
+        {
+            if (damageFlashUI != null)
+                damageFlashUI.Flash();
+        }
 
         float newWidth = (Health / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
