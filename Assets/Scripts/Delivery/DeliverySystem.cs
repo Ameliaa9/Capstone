@@ -102,9 +102,28 @@ public class DeliverySystem : MonoBehaviour
         if (successText) successText.gameObject.SetActive(false);
         if (failText) failText.gameObject.SetActive(false);
 
-
         inventoryPackages[0].SetActive(false);
         inventoryPackages[1].SetActive(false);
+
+        previousCount = 0;
+
+        if (previousTexts != null)
+        {
+            for (int i = 0; i < previousTexts.Length; i++)
+            {
+                if (previousTexts[i] != null)
+                    previousTexts[i].text = "";
+            }
+        }
+
+        if (previousImages != null)
+        {
+            for (int i = 0; i < previousImages.Length; i++)
+            {
+                if (previousImages[i] != null)
+                    previousImages[i].enabled = false;
+            }
+        }
     }
 
     void Update()
@@ -127,7 +146,6 @@ public class DeliverySystem : MonoBehaviour
 
                 if (failText) StartCoroutine(ShowTMPMessage(failText, "Time ran out! Return to depot.", 5f));
                 if (failObject) StartCoroutine(ShowImageForSeconds(failBackground, 5f));
-
 
                 failPopup.popupTextName.text = Deliveries[currentDelivery].name;
                 failPopup.popupText.text = Deliveries[currentDelivery].dialogue[3];
@@ -221,7 +239,6 @@ public class DeliverySystem : MonoBehaviour
         {
             Debug.Log(" Max package limit reached.");
         }
-
 
         int idx = currentDelivery;
         if (deliveryArrows != null && idx < deliveryArrows.Length)
@@ -453,7 +470,6 @@ public class DeliverySystem : MonoBehaviour
         }
         else
         {
-
             rpmp3.songAudioSource.pitch = 1;
             inventoryPackages[0].SetActive(false);
             inventoryPackages[1].SetActive(false);
@@ -565,7 +581,6 @@ public class DeliverySystem : MonoBehaviour
             if (coinTaskManager != null)
                 coinTaskManager.OnDeliveryFinished();
         }
-        
     }
 
     public void AddBonusStar()
@@ -599,19 +614,19 @@ public class DeliverySystem : MonoBehaviour
             previousCount = 0;
             previousTexts[previousCount].text = finalString;
             previousImages[previousCount].sprite = Deliveries[previousDelivery].customerIcon;
+            previousImages[previousCount].enabled = true;
         }
         else
         {
-            
             previousTexts[previousCount].text = finalString;
             previousImages[previousCount].sprite = Deliveries[previousDelivery].customerIcon;
+            previousImages[previousCount].enabled = true;
             previousCount += 1;
         }
     }
 
     public void MusicSpeedUp()
     {
-
         if (currentPackages == 2)
         {
             float mTotalTime = Deliveries[currentDelivery].deliveryTime + Deliveries[secondaryDelivery].deliveryTime;
@@ -638,7 +653,6 @@ public class DeliverySystem : MonoBehaviour
 
                 CustomerDialogue(2, true);
                 pitch2Active = false;
-
             }
             else if (currentTimer > mTotalTime / 1.5f)
             {
@@ -715,7 +729,7 @@ public class DeliverySystem : MonoBehaviour
             newPopup.popupText.text = Deliveries[currentDelivery].dialogue[dialogueIndex];
             newPopup.popupImage.sprite = Deliveries[currentDelivery].customerIcon;
         }
-        
+
         newPopup.ShowPopup();
         if (newPopupObj) StartCoroutine(ShowImageForSeconds(newPopupObj, 5f));
     }
