@@ -81,6 +81,13 @@ public class DeliverySystem : MonoBehaviour
     public GameObject starIcon4;
     private int starsEarned;
 
+    [Header("5 Star Fireworks")]
+    public GameObject fireworkPrefab;
+    public Camera celebrationCamera;
+    public Vector3 leftFireworkLocalPos = new Vector3(-2.2f, 1.6f, 6f);
+    public Vector3 rightFireworkLocalPos = new Vector3(2.2f, 1.6f, 6f);
+    public float fireworkDestroyDelay = 4f;
+
     private bool speedBoostUnlockShown = false;
 
     public TaskManager coinTaskManager;
@@ -345,6 +352,7 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            TryTriggerFiveStarFireworks();
             CompilePastDeliveryInfo();
 
             Debug.Log(totalStarsCollected);
@@ -450,6 +458,7 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            TryTriggerFiveStarFireworks();
             CompilePastDeliveryInfo();
 
             Debug.Log(totalStarsCollected);
@@ -564,6 +573,7 @@ public class DeliverySystem : MonoBehaviour
                 StartCoroutine(ShowImageForSeconds(starIcon4, 5f));
             }
 
+            TryTriggerFiveStarFireworks();
             CompilePastDeliveryInfo();
 
             Debug.Log(totalStarsCollected);
@@ -591,7 +601,7 @@ public class DeliverySystem : MonoBehaviour
 
     public void ProjectileHitHouse(int houseIndex)
     {
-        if ( currentPackages >= 1)
+        if (currentPackages >= 1)
         {
             Debug.Log($"?? Projectile delivered to correct house {houseIndex}");
             CompleteDelivery(houseIndex);
@@ -609,7 +619,7 @@ public class DeliverySystem : MonoBehaviour
 
         string finalString = customerName + " - " + customerLocation + " - Time: " + customerTimeElapsed + " / " + customerTimeTotal + " - " + customerDifficulty + " - Rating: " + starsEarned;
 
-        if (previousCount >= 6 )
+        if (previousCount >= 6)
         {
             previousCount = 0;
             previousTexts[previousCount].text = finalString;
@@ -774,6 +784,36 @@ public class DeliverySystem : MonoBehaviour
         imageObj.SetActive(true);
         yield return new WaitForSeconds(duration);
         imageObj.SetActive(false);
+    }
+
+    private void TriggerFiveStarFireworks()
+    {
+        if (fireworkPrefab == null || celebrationCamera == null) return;
+
+        GameObject leftFx = Instantiate(fireworkPrefab, celebrationCamera.transform);
+        leftFx.transform.localPosition = leftFireworkLocalPos;
+        leftFx.transform.localRotation = Quaternion.identity;
+
+        GameObject rightFx = Instantiate(fireworkPrefab, celebrationCamera.transform);
+        rightFx.transform.localPosition = rightFireworkLocalPos;
+        rightFx.transform.localRotation = Quaternion.identity;
+
+        foreach (ParticleSystem ps in leftFx.GetComponentsInChildren<ParticleSystem>())
+            ps.Play();
+
+        foreach (ParticleSystem ps in rightFx.GetComponentsInChildren<ParticleSystem>())
+            ps.Play();
+
+        Destroy(leftFx, fireworkDestroyDelay);
+        Destroy(rightFx, fireworkDestroyDelay);
+    }
+
+    private void TryTriggerFiveStarFireworks()
+    {
+        if (starsEarned >= 5)
+        {
+            TriggerFiveStarFireworks();
+        }
     }
 
     private string GetCustomerIdFromDeliveryIndex(int index)
