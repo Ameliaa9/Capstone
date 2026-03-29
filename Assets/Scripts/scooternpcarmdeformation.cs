@@ -74,7 +74,7 @@ public class ScooterDeformSystem : MonoBehaviour
             if (targetMesh != null) RegisterElement(targetMesh, ren);
         }
 
-        Debug.Log($"Scooter System: {activeElements.Count} parts bound and ready.");
+       // Debug.Log($"Scooter System: {activeElements.Count} parts bound and ready.");
     }
 
     void RegisterElement(Mesh m, Renderer r)

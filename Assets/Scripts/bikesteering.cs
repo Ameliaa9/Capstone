@@ -23,7 +23,6 @@ public class BikeHandleController : MonoBehaviour
     [Tooltip("How smoothly the handlebar reacts to rotation.")]
     public float smoothing = 8f;
 
-    // Internal state variables
     private float previousYRotation;
     private Vector3 previousPosition;
     private float currentSteerAngle;
@@ -31,7 +30,7 @@ public class BikeHandleController : MonoBehaviour
     void Start()
     {
         if (bikeTransform == null)
-            bikeTransform = this.transform;
+            bikeTransform = transform;
 
         previousYRotation = bikeTransform.eulerAngles.y;
         previousPosition = bikeTransform.position;
@@ -41,39 +40,40 @@ public class BikeHandleController : MonoBehaviour
     {
         if (bikeTransform == null || handlebarTransform == null) return;
 
-        // --- 1. Calculate Bike Rotation Speed (Yaw) ---
+        if (Time.deltaTime <= 0f)
+            return;
+
         float currentYRotation = bikeTransform.eulerAngles.y;
         float deltaAngle = Mathf.DeltaAngle(previousYRotation, currentYRotation);
         float rotationSpeed = deltaAngle / Time.deltaTime;
         previousYRotation = currentYRotation;
 
-        // --- 2. Calculate Forward Speed ---
         Vector3 displacement = bikeTransform.position - previousPosition;
         float forwardSpeed = Vector3.Dot(displacement, bikeTransform.forward) / Time.deltaTime;
         previousPosition = bikeTransform.position;
 
-        // --- ORIENTATION FIX ---
-        // If the model is inverted, we flip the speed detection so the script knows we are moving forward
         if (isInvertedBikeModel)
         {
             forwardSpeed *= -1f;
         }
 
-        // --- 3. Calculate Target Steering Angle ---
         float targetAngle = rotationSpeed * steerSensitivity;
 
-        // --- REVERSE LOGIC ---
-        // If moving backward, invert steering direction
         if (forwardSpeed < -0.1f)
         {
             targetAngle *= -1f;
         }
 
-        // Clamp the angle
         targetAngle = Mathf.Clamp(targetAngle, -maxSteerAngle, maxSteerAngle);
 
-        // --- 4. Apply Smooth Rotation ---
+        if (float.IsNaN(targetAngle) || float.IsInfinity(targetAngle))
+            targetAngle = 0f;
+
         currentSteerAngle = Mathf.Lerp(currentSteerAngle, targetAngle, Time.deltaTime * smoothing);
+
+        if (float.IsNaN(currentSteerAngle) || float.IsInfinity(currentSteerAngle))
+            currentSteerAngle = 0f;
+
         handlebarTransform.localRotation = Quaternion.Euler(0f, currentSteerAngle, 0f);
     }
 }

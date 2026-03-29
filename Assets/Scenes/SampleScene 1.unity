@@ -24340,7 +24340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
   m_sharedMaterial: {fileID: 1865203752328652188, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
@@ -124565,7 +124565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
   m_sharedMaterial: {fileID: 1865203752328652188, guid: 3c2953f24e66c6b4a9252ff22a9a396b, type: 2}
@@ -264302,7 +264302,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: aa6ed4dfe3d1a3d40b62f48112a8d7b4, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -264316,7 +264316,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -366861,8 +366861,8 @@ MonoBehaviour:
   bikeScript: {fileID: 703654436}
   upgrade1: {fileID: 1962640810}
   upgrade2: {fileID: 22877588}
-  speedUpgradeCost: 10
-  inventoryUpgradeCost: 0
+  speedUpgradeCost: 8
+  inventoryUpgradeCost: 8
   speedUpgradeAmount: 5
   inventoryUpgradeAmount: 1
   notEnoughStarsPopup: {fileID: 1867093697}

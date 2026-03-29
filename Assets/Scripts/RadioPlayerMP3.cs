@@ -121,6 +121,7 @@ public class RadioPlayerMP3 : MonoBehaviour
             if (songIndex != songPreviousIndex)
             {
                 PlaySong();
+                TutorialManager.Instance?.RadioSongChanged();
                 Debug.Log("CASE 0 : Shuffle On, New song picked");
             }
             else
@@ -135,12 +136,14 @@ public class RadioPlayerMP3 : MonoBehaviour
             {
                 songIndex++;
                 PlaySong();
+                TutorialManager.Instance?.RadioSongChanged();
                 Debug.Log("CASE 2 : Shuffle Off, Song index increased");
             }
             else
             {
                 songIndex = 0;
                 PlaySong();
+                TutorialManager.Instance?.RadioSongChanged();
                 Debug.Log("CASE 3 : Shuffle Off, Song index reset");
             }
         }
@@ -153,12 +156,14 @@ public class RadioPlayerMP3 : MonoBehaviour
         {
             songIndex--;
             PlaySong();
+            TutorialManager.Instance?.RadioSongChanged();
             Debug.Log("CASE 4 : Previous Song, Song index decreased");
         }
         else
         {
             songIndex = musicList.Length - 1;
             PlaySong();
+            TutorialManager.Instance?.RadioSongChanged();
             Debug.Log("CASE 5 : Previous Song, Song index maxed");
         }
     }

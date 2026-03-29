@@ -27,16 +27,18 @@ public class TrafficLight : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Traffic" && !isGreen)
+        if (col.CompareTag("Traffic") && !isGreen)
         {
-            Debug.Log("Trigger Entered.");
+          //  Debug.Log("Trigger Entered.");
             NPCPatrol = col.GetComponent<NPCPatrol>();
-            NPCPatrol.moveSpeed = 0;
-            NPCPatrol.vehicleStopped = true;
-            Debug.Log(col);
-        }
 
-        
+            if (NPCPatrol != null)
+            {
+                NPCPatrol.moveSpeed = 0;
+                NPCPatrol.vehicleStopped = true;
+               // Debug.Log(col);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider col)
@@ -56,13 +58,6 @@ public class TrafficLight : MonoBehaviour
             ChangeState();
             currentTime -= lightInterval;
         }
-
-        if(isGreen)
-        {
-            int random = Random.Range(8, 13);
-            NPCPatrol.moveSpeed = random;
-            NPCPatrol.vehicleStopped = false;
-        }
     }
 
     public void ChangeState()
@@ -70,17 +65,23 @@ public class TrafficLight : MonoBehaviour
         if (isGreen)
         {
             isGreen = false;
-            Debug.Log("STATE CHANGE RED");
+           // Debug.Log("STATE CHANGE RED");
             greenLightCover.SetActive(true);
             redLightCover.SetActive(false);
         }
         else
         {
             isGreen = true;
-            Debug.Log("STATE CHANGE GREEN");
+          //  Debug.Log("STATE CHANGE GREEN");
             greenLightCover.SetActive(false);
             redLightCover.SetActive(true);
+
+            if (NPCPatrol != null)
+            {
+                int random = Random.Range(8, 13);
+                NPCPatrol.moveSpeed = random;
+                NPCPatrol.vehicleStopped = false;
+            }
         }
     }
-
 }

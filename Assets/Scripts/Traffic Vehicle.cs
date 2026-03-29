@@ -7,11 +7,11 @@ public class TrafficVehicle : MonoBehaviour
     {
         if (col.gameObject.tag == "Traffic")
         {
-            Debug.Log("Vehicle Trigger Entered.");
+           // Debug.Log("Vehicle Trigger Entered.");
             NPCPatrol = col.GetComponent<NPCPatrol>();
             NPCPatrol.moveSpeed = 0;
             NPCPatrol.vehicleStopped = true;
-            Debug.Log(col);
+           // Debug.Log(col);
         }
 
     }
@@ -20,12 +20,12 @@ public class TrafficVehicle : MonoBehaviour
     {
         if (col.gameObject.tag == "Traffic")
         {
-            Debug.Log("Vehicle Trigger Exited.");
+            //Debug.Log("Vehicle Trigger Exited.");
             NPCPatrol = col.GetComponent<NPCPatrol>();
             int random = Random.Range(8, 13);
             NPCPatrol.moveSpeed = random;
             NPCPatrol.vehicleStopped = false;
-            Debug.Log(col);
+            //Debug.Log(col);
         }
     }
 }

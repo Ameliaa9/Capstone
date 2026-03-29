@@ -36,11 +36,12 @@ namespace ProjectileCurveVisualizerSystem
             if (collision.gameObject == deliverySystem.DeliveryLocations[deliverySystem.currentDelivery])
             {
                 deliverySystem.ProjectileHitHouse(deliverySystem.currentDelivery);
-                
+                Destroy(gameObject);
             }
             else if (collision.gameObject == deliverySystem.DeliveryLocations[deliverySystem.secondaryDelivery])
             {
                 deliverySystem.ProjectileHitHouse(deliverySystem.secondaryDelivery);
+                Destroy(gameObject);
             }
             else
             {

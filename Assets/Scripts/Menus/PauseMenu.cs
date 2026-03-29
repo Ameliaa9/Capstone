@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
         resumeButton.onClick.AddListener(ResumeGame);
         nextPageButton.onClick.AddListener(ShowNextPage);
         backButton.onClick.AddListener(ShowPausePage);
-        loadSceneButton.onClick.AddListener(LoadNewScene);
+       // loadSceneButton.onClick.AddListener(LoadNewScene);
         exitButton.onClick.AddListener(ExitGame);
 
         mainmenuButton.onClick.AddListener(GoToMainMenu);

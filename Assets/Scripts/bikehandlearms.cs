@@ -64,7 +64,7 @@ public class RadiusMeshDeformer : MonoBehaviour
                 RegisterMeshData(instancedMesh, smr.transform, null, smr);
             }
         }
-        Debug.Log($"Successfully bound {whitelistedMeshes.Count} meshes (including hidden ones).");
+       // Debug.Log($"Successfully bound {whitelistedMeshes.Count} meshes (including hidden ones).");
     }
 
     void RegisterMeshData(Mesh m, Transform t, MeshFilter mf, SkinnedMeshRenderer smr)

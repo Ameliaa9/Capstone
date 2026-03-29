@@ -125,20 +125,20 @@ public class MalePedestrianSystem : MonoBehaviour
     // ========================================================================
     // LOGGING HELPER
     // ========================================================================
-    void LogDebug(string message)
-    {
-        if (verboseLogging) Debug.Log($"[MaleSystem] {message}");
-    }
+  //  void LogDebug(string message)
+   // {
+    //    if (verboseLogging) Debug.Log($"[MaleSystem] {message}");
+   // }
 
-    void LogWarning(string message)
-    {
-        Debug.LogWarning($"[MaleSystem] ⚠️ {message}");
-    }
+   // void LogWarning(string message)
+   // {
+   //     Debug.LogWarning($"[MaleSystem] ⚠️ {message}");
+   // }
 
-    void LogError(string message)
-    {
-        Debug.LogError($"[MaleSystem] ❌ {message}");
-    }
+   // void LogError(string message)
+  //  {
+  //      Debug.LogError($"[MaleSystem] ❌ {message}");
+  //  }
 
     // ========================================================================
     // IMPORT/EXPORT
@@ -155,7 +155,7 @@ public class MalePedestrianSystem : MonoBehaviour
         File.WriteAllText(path, JsonUtility.ToJson(container, true));
 #if UNITY_EDITOR
         AssetDatabase.Refresh();
-        LogDebug($"Settings exported to: {path}");
+       // LogDebug($"Settings exported to: {path}");
 #endif
     }
 
@@ -168,14 +168,14 @@ public class MalePedestrianSystem : MonoBehaviour
 
         if (container == null)
         {
-            LogError($"Failed to import settings from {path}");
+           // LogError($"Failed to import settings from {path}");
             return;
         }
 
         if (container.maleProfile != null)
             JsonUtility.FromJsonOverwrite(JsonUtility.ToJson(container.maleProfile), maleProfile);
 
-        LogDebug($"Settings imported from: {path}");
+      //  LogDebug($"Settings imported from: {path}");
     }
 
     // ========================================================================
@@ -185,7 +185,7 @@ public class MalePedestrianSystem : MonoBehaviour
     {
         if (paused)
         {
-            LogDebug("System PAUSED");
+          //  LogDebug("System PAUSED");
             // Store current rotations before pausing
             foreach (var npc in activeMaleNPCs)
             {
@@ -197,7 +197,7 @@ public class MalePedestrianSystem : MonoBehaviour
         }
         else
         {
-            LogDebug("System RESUMED");
+           // LogDebug("System RESUMED");
             // Force mesh refresh on resume
             StartCoroutine(ForceMeshRefreshOnResume());
         }
@@ -225,7 +225,7 @@ public class MalePedestrianSystem : MonoBehaviour
                 }
             }
         }
-        LogDebug("Mesh refresh completed after resume");
+       // LogDebug("Mesh refresh completed after resume");
     }
 
     // ========================================================================
@@ -233,12 +233,12 @@ public class MalePedestrianSystem : MonoBehaviour
     // ========================================================================
     void Start()
     {
-        LogDebug($"=== MALE SYSTEM START ===");
-        LogDebug($"pathObjects count: {pathObjects?.Count ?? 0}");
+      //  LogDebug($"=== MALE SYSTEM START ===");
+      //  LogDebug($"pathObjects count: {pathObjects?.Count ?? 0}");
 
         if (pathObjects == null || pathObjects.Count == 0)
         {
-            LogError("NO pathObjects assigned! Drag NPC parents into 'pathObjects' list.");
+            //LogError("NO pathObjects assigned! Drag NPC parents into 'pathObjects' list.");
             return;
         }
 
@@ -247,7 +247,7 @@ public class MalePedestrianSystem : MonoBehaviour
         foreach (Transform pathParent in pathObjects)
         {
             if (pathParent == null) continue;
-            LogDebug($"Processing path: {pathParent.name}");
+           // LogDebug($"Processing path: {pathParent.name}");
 
             foreach (Renderer r in pathParent.GetComponentsInChildren<Renderer>(true))
             {
@@ -264,7 +264,7 @@ public class MalePedestrianSystem : MonoBehaviour
             }
         }
 
-        LogDebug($"=== INITIALIZED: {activeMaleNPCs.Count} male NPCs ===");
+       // LogDebug($"=== INITIALIZED: {activeMaleNPCs.Count} male NPCs ===");
     }
 
     Transform FindNPCRoot(Transform current, Transform limit)
@@ -406,7 +406,7 @@ public class MalePedestrianSystem : MonoBehaviour
             data.activeMeshes.Add(mData);
         }
         activeMaleNPCs.Add(data);
-        LogDebug($"✓ Male NPC '{npc.name}' set up with {data.activeMeshes.Count} meshes");
+      //  LogDebug($"✓ Male NPC '{npc.name}' set up with {data.activeMeshes.Count} meshes");
     }
 
     // ========================================================================

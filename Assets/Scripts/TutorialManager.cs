@@ -105,12 +105,10 @@ public class TutorialManager : MonoBehaviour
 
         if (currentStep == TutorialStep.UpgradeShop && !actionDone && upgradeShopUI != null)
         {
-          
             if (upgradeShopUI.activeSelf)
             {
                 upgradeWasOpened = true;
             }
-          
             else if (upgradeWasOpened)
             {
                 ActionCompleted();
@@ -135,6 +133,14 @@ public class TutorialManager : MonoBehaviour
 
 
         StartTutorial();
+    }
+
+    public void RadioSongChanged()
+    {
+        if (currentStep != TutorialStep.RadioChange)
+            return;
+
+        ActionCompleted();
     }
 
     public void OnSkipTutorialPressed()
@@ -175,36 +181,53 @@ public class TutorialManager : MonoBehaviour
     {
         // Greeting
         currentStep = TutorialStep.None;
-        ShowText($"Hello, Team {TeamNameManager.CurrentTeamName}!\n" + "<size=70%>Press O to continue</size>");
+        ShowText($"Hello, Team {TeamNameManager.CurrentTeamName}!\n" + "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>");
+
         yield return WaitForSquare();
 
-        ShowText("Welcome to Hamilton Express.\n" + "<size=70%>Press O to continue</size>");
+        ShowText("Welcome to Hamilton Express.\n" + "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>");
+
         yield return WaitForSquare();
 
         // Step 1: Roles
         ShowText(
-            "Player 1 controls the bike & Player 2 controls the camera and throws packages\n" +
-             "<size=70%>Press O to continue</size>"
-        );
+"Player 1 controls the bike & Player 2 controls the camera and throws packages\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+);
         yield return WaitForSquare();
 
         // Step 2: Player 1 move
         currentStep = TutorialStep.P1_Move;
         actionDone = false;
-        ShowText("Player 1: Move the bike");
+        ShowText("Player 1: Move the bike using                                          .<voffset=10><sprite name=\"joystick\"></voffset>                  .");
+
         yield return new WaitUntil(() => actionDone);
 
-        ShowText("Nice!\n" + "<size=70%>Press O to continue</size>");
+        ShowText("Nice!\n" + "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>");
+
         yield return WaitForSquare();
 
         // Step 3: Player 2 camera
         currentStep = TutorialStep.P2_Camera;
         actionDone = false;
-        ShowText("Player 2: Move the camera");
+        ShowText("Player 2: Move the camera using   <voffset=8><sprite name=\"joystick\"></voffset>                     .");
+
         yield return new WaitUntil(() => actionDone);
 
-        ShowText("Nice!\n" + "<size=70%>Press O to continue</size>");
+        ShowText("Nice!\n" + "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>");
         yield return WaitForSquare();
+
+        // Radio Switch step
+        currentStep = TutorialStep.RadioChange;
+        actionDone = false;
+        ShowText("Press left or right on   <voffset=8><sprite name=\"dpad\"></voffset>   to change the radio song");
+
+        yield return new WaitUntil(() => actionDone);
+
+        ShowText("Nice!\n" + "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>");
+
+        yield return WaitForSquare();
+
 
         // Step 4: Manhole hazard
         currentStep = TutorialStep.Manhole;
@@ -213,9 +236,9 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "Ouch! You have a health bar...Watch out for hazards around the map!\n" +
-             "<size=70%>Press O to continue</size>"
-        );
+"Ouch! You have a health bar...Watch out for hazards around the map!\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+);
         yield return WaitForSquare();
 
         // Step 5: Health pickup
@@ -225,9 +248,9 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-       "Nice! This restores your health.\n" +
-       "<size=70%>Press O to continue</size>"
-   );
+ "Nice! This restores your health.\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+ );
 
         yield return WaitForSquare();
 
@@ -238,21 +261,21 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "Delivery started! Follow the minimap and deliver within the time limit.\n" +
-             "<size=70%>Press O to continue</size>"
-        );
+ "Delivery started! Follow the minimap and deliver within the time limit.\n" +
+  "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+ );
         yield return WaitForSquare();
 
         // Step 7: Open Map
         currentStep = TutorialStep.OpenMap;
         actionDone = false;
-        ShowText("Press touchpad to open the map");
+        ShowText("Press   <voffset=8><sprite name=\"touchpad\"></voffset>   to open the map");
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "Here you can find the exact locations of Delivery points, Depot, Upgrade shop\n" +
-             "<size=70%>Press O to continue</size>"
-        );
+"Here you can find the exact locations of Delivery points, Depot, Upgrade shop\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+);
         yield return WaitForSquare();
 
         // Step 8: Pause game
@@ -261,13 +284,14 @@ public class TutorialManager : MonoBehaviour
         pauseOpened = false;
         waitingForPauseClose = true;
 
-        ShowText("Press options to pause the game");
+        ShowText("Press   <voffset=15><sprite name=\"options\"></voffset>   to pause the game");
+
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "This is where you can find: help screen, leaderboard, and more \n" +
-            "<size=70%>Press O to continue</size>"
-        );
+ "This is where you can find: help screen, leaderboard, and more \n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+ );
         yield return WaitForSquare();
 
         // Step 9: Deliver package to outlined building
@@ -275,15 +299,15 @@ public class TutorialManager : MonoBehaviour
         actionDone = false;
 
         ShowText(
-            "Go to the delivery location and throw (hold-to-charge) the package at the outlined building"
-        );
+ "Go to the delivery location and throw the package with   <voffset=8>           .<sprite name=\"r2\"></voffset> (hold to charge) at the outlined building"
+ );
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "Nice! This is how you earn stars.\n" +
-            "The faster your deliveries are, the more stars you earn.\n" +
-            "<size=70%>Press O to continue</size>"
-        );
+ "Nice! This is how you earn stars.\n" +
+ "The faster your deliveries are, the more stars you earn.\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+ );
         yield return WaitForSquare();
 
         // Step 10: Upgrade Shop
@@ -295,9 +319,9 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitUntil(() => actionDone);
 
         ShowText(
-            "This is where you can buy upgrades using the stars you earn\n" +
-            "<size=70%>Press O to continue</size>"
-        );
+ "This is where you can buy upgrades using the stars you earn\n" +
+ "<size=70%>Press   <voffset=8><sprite name=\"circle\"></voffset>   to continue</size>"
+ );
         yield return WaitForSquare();
 
 
@@ -450,6 +474,7 @@ public class TutorialManager : MonoBehaviour
         P1_Move,
         P2_Camera,
         Manhole,
+        RadioChange,
         HealthPickup,
         StartDelivery,
         OpenMap,
