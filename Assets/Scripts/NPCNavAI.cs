@@ -6,17 +6,24 @@ public class NPCNavAI : MonoBehaviour
     public enum State
     {
         Wander,
-        Wait
+        Wait,
+        Chase
     }
 
     [Header("References")]
     public NavMeshAgent agent;
+    public Transform playerTarget;
 
     [Header("Wander Settings")]
-    public float wanderRadius = 40f;
+    public float wanderRadius = 10f;
     public float minWaitTime = 1f;
     public float maxWaitTime = 2f;
     public float normalSpeed = 1.8f;
+
+    [Header("Chase Settings")]
+    public float chaseSpeed = 3.8f;
+    public float chaseDuration = 3f;
+    public float loseDistance = 20f;
 
     [Header("Area")]
     public Vector3 homePosition;
@@ -46,8 +53,13 @@ public class NPCNavAI : MonoBehaviour
             case State.Wander:
                 UpdateWander();
                 break;
+
             case State.Wait:
                 UpdateWait();
+                break;
+
+            case State.Chase:
+                UpdateChase();
                 break;
         }
     }
@@ -64,10 +76,29 @@ public class NPCNavAI : MonoBehaviour
     void UpdateWait()
     {
         stateTimer -= Time.deltaTime;
+
         if (stateTimer <= 0f)
         {
             currentState = State.Wander;
             PickNewWanderPoint();
+        }
+    }
+
+    void UpdateChase()
+    {
+        if (playerTarget == null)
+        {
+            ReturnToWander();
+            return;
+        }
+
+        stateTimer -= Time.deltaTime;
+        agent.SetDestination(playerTarget.position);
+
+        float dist = Vector3.Distance(transform.position, playerTarget.position);
+        if (stateTimer <= 0f || dist > loseDistance)
+        {
+            ReturnToWander();
         }
     }
 
@@ -88,5 +119,24 @@ public class NPCNavAI : MonoBehaviour
         }
 
         agent.SetDestination(homePosition);
+    }
+
+    public void TriggerChase(Transform target)
+    {
+        if (target == null) return;
+
+        playerTarget = target;
+        currentState = State.Chase;
+        stateTimer = chaseDuration;
+        agent.speed = chaseSpeed;
+        agent.SetDestination(playerTarget.position);
+    }
+
+    void ReturnToWander()
+    {
+        playerTarget = null;
+        currentState = State.Wander;
+        agent.speed = normalSpeed;
+        PickNewWanderPoint();
     }
 }
