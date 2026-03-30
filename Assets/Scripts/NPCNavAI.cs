@@ -15,7 +15,7 @@ public class NPCNavAI : MonoBehaviour
     public Transform playerTarget;
 
     [Header("Spawn Settings")]
-    public float initialScatterRadius = 20f;
+    public float initialScatterRadius = 8f;
 
     [Header("Wander Settings")]
     public float wanderRadius = 40f;
@@ -28,6 +28,9 @@ public class NPCNavAI : MonoBehaviour
     public float chaseDuration = 3f;
     public float loseDistance = 20f;
 
+    [Header("Car Avoidance")]
+    public float minAvoidStopTime = 0.5f;
+
     [Header("Area")]
     public Vector3 homePosition;
 
@@ -35,6 +38,9 @@ public class NPCNavAI : MonoBehaviour
     public State currentState = State.Wander;
 
     private float stateTimer;
+    private bool isAvoidingCar = false;
+    private float avoidTimer = 0f;
+    private int nearbyTrafficCount = 0;
 
     private void Awake()
     {
@@ -51,6 +57,11 @@ public class NPCNavAI : MonoBehaviour
 
     private void Update()
     {
+        UpdateCarAvoidance();
+
+        if (isAvoidingCar)
+            return;
+
         switch (currentState)
         {
             case State.Wander:
@@ -162,7 +173,11 @@ public class NPCNavAI : MonoBehaviour
         currentState = State.Chase;
         stateTimer = chaseDuration;
         agent.speed = chaseSpeed;
-        agent.SetDestination(playerTarget.position);
+
+        if (!isAvoidingCar)
+        {
+            agent.SetDestination(playerTarget.position);
+        }
     }
 
     void ReturnToWander()
@@ -170,6 +185,51 @@ public class NPCNavAI : MonoBehaviour
         playerTarget = null;
         currentState = State.Wander;
         agent.speed = normalSpeed;
-        PickNewWanderPoint();
+
+        if (!isAvoidingCar)
+        {
+            PickNewWanderPoint();
+        }
+    }
+
+    public void NotifyTrafficEnter()
+    {
+        nearbyTrafficCount++;
+        isAvoidingCar = true;
+        avoidTimer = minAvoidStopTime;
+        agent.isStopped = true;
+    }
+
+    public void NotifyTrafficExit()
+    {
+        nearbyTrafficCount = Mathf.Max(0, nearbyTrafficCount - 1);
+    }
+
+    void UpdateCarAvoidance()
+    {
+        if (!isAvoidingCar)
+            return;
+
+        avoidTimer -= Time.deltaTime;
+
+        bool shouldKeepStopping = nearbyTrafficCount > 0 || avoidTimer > 0f;
+
+        if (shouldKeepStopping)
+        {
+            agent.isStopped = true;
+            return;
+        }
+
+        isAvoidingCar = false;
+        agent.isStopped = false;
+
+        if (currentState == State.Chase && playerTarget != null)
+        {
+            agent.SetDestination(playerTarget.position);
+        }
+        else
+        {
+            PickNewWanderPoint();
+        }
     }
 }
