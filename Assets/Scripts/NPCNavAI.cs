@@ -14,8 +14,11 @@ public class NPCNavAI : MonoBehaviour
     public NavMeshAgent agent;
     public Transform playerTarget;
 
+    [Header("Spawn Settings")]
+    public float initialScatterRadius = 20f;
+
     [Header("Wander Settings")]
-    public float wanderRadius = 10f;
+    public float wanderRadius = 40f;
     public float minWaitTime = 1f;
     public float maxWaitTime = 2f;
     public float normalSpeed = 1.8f;
@@ -41,7 +44,7 @@ public class NPCNavAI : MonoBehaviour
 
     private void Start()
     {
-        homePosition = transform.position;
+        ScatterOnStart();
         agent.speed = normalSpeed;
         PickNewWanderPoint();
     }
@@ -61,6 +64,36 @@ public class NPCNavAI : MonoBehaviour
             case State.Chase:
                 UpdateChase();
                 break;
+        }
+    }
+
+    void ScatterOnStart()
+    {
+        Vector3 basePos = transform.position;
+
+        for (int i = 0; i < 12; i++)
+        {
+            Vector2 random2D = Random.insideUnitCircle * initialScatterRadius;
+            Vector3 testPoint = basePos + new Vector3(random2D.x, 0f, random2D.y);
+
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(testPoint, out hit, 3f, NavMesh.AllAreas))
+            {
+                agent.Warp(hit.position);
+                homePosition = hit.position;
+                return;
+            }
+        }
+
+        NavMeshHit fallbackHit;
+        if (NavMesh.SamplePosition(basePos, out fallbackHit, 3f, NavMesh.AllAreas))
+        {
+            agent.Warp(fallbackHit.position);
+            homePosition = fallbackHit.position;
+        }
+        else
+        {
+            homePosition = transform.position;
         }
     }
 
