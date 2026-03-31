@@ -19,6 +19,10 @@ public class DeliverySystem : MonoBehaviour
     private float currentTimer; // The current max time and the variable time which is changed by the value inside of Delivery scriptable object
     private bool timerRunning = false; // Determines if the timer is running
 
+    [Header("Delivery Building Layers")]
+    public string normalBuildingLayer = "Default";
+    public string activeDeliveryLayer = "deliveryoutline";
+
     [Header("UI")]
     public TMP_Text timerText;
     public TMP_Text collectedText;
@@ -131,6 +135,7 @@ public class DeliverySystem : MonoBehaviour
                     previousImages[i].enabled = false;
             }
         }
+
     }
 
     void Update()
@@ -163,6 +168,7 @@ public class DeliverySystem : MonoBehaviour
                 inventoryPackages[0].SetActive(false);
                 inventoryPackages[1].SetActive(false);
                 currentPackages = 0;
+                UpdateActiveDeliveryLayers();
             }
 
             MusicSpeedUp();
@@ -259,12 +265,16 @@ public class DeliverySystem : MonoBehaviour
             coinTaskManager.OnDeliveryStarted();
 
         TutorialManager.Instance?.DeliveryStarted();
+
+        UpdateActiveDeliveryLayers();
     }
 
     void CompleteDelivery(int deliveryCompleted)
     {
         previousDelivery = deliveryCompleted;
         currentPackages -= 1;
+
+        SetDeliveryBuildingLayer(deliveryCompleted, normalBuildingLayer);
         if (currentPackages == 1 && deliveryCompleted == currentDelivery)
         {
             inventoryPackages[0].SetActive(false);
@@ -370,6 +380,7 @@ public class DeliverySystem : MonoBehaviour
             currentDelivery = secondaryDelivery;
             phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
             phoneText.text = Deliveries[currentDelivery].name;
+            UpdateActiveDeliveryLayers();
         }
         else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
@@ -476,6 +487,7 @@ public class DeliverySystem : MonoBehaviour
             secondaryDelivery = -1;
             phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
             phoneText.text = Deliveries[currentDelivery].name;
+            UpdateActiveDeliveryLayers();
         }
         else
         {
@@ -590,6 +602,8 @@ public class DeliverySystem : MonoBehaviour
 
             if (coinTaskManager != null)
                 coinTaskManager.OnDeliveryFinished();
+
+            UpdateActiveDeliveryLayers();
         }
     }
 
@@ -822,5 +836,48 @@ public class DeliverySystem : MonoBehaviour
             return "";
 
         return customerIds[index];
+    }
+
+    void SetDeliveryBuildingLayer(int deliveryIndex, string layerName)
+    {
+        if (deliveryIndex < 0 || deliveryIndex >= DeliveryLocations.Length) return;
+        if (DeliveryLocations[deliveryIndex] == null) return;
+
+        int layer = LayerMask.NameToLayer(layerName);
+        if (layer == -1)
+        {
+            Debug.LogWarning("Layer not found: " + layerName);
+            return;
+        }
+
+        SetLayerRecursively(DeliveryLocations[deliveryIndex], layer);
+    }
+
+    void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        obj.layer = newLayer;
+
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, newLayer);
+        }
+    }
+
+    void UpdateActiveDeliveryLayers()
+    {
+        for (int i = 0; i < DeliveryLocations.Length; i++)
+        {
+            SetDeliveryBuildingLayer(i, normalBuildingLayer);
+        }
+
+        if (currentPackages >= 1 && currentDelivery >= 0 && currentDelivery < DeliveryLocations.Length)
+        {
+            SetDeliveryBuildingLayer(currentDelivery, activeDeliveryLayer);
+        }
+
+        if (currentPackages >= 2 && secondaryDelivery >= 0 && secondaryDelivery < DeliveryLocations.Length)
+        {
+            SetDeliveryBuildingLayer(secondaryDelivery, activeDeliveryLayer);
+        }
     }
 }
