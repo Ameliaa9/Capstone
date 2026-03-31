@@ -4,6 +4,12 @@ using UnityEngine.AI;
 
 public class GooseChase : MonoBehaviour
 {
+    public enum GooseState
+    {
+        Wandering,
+        Chasing
+    }
+
     public NavMeshAgent agent;
 
     [Header("Target")]
@@ -13,10 +19,17 @@ public class GooseChase : MonoBehaviour
     [Header("Chase")]
     public float chaseDuration = 8f;
     public float ignoreHitTimeAtStart = 0.5f;
-    public float hitCooldown = 0.3f;
+    public bool allowChaseRefresh = true;
 
-    private float lastHitTime = -999f;
-    private Coroutine chaseRoutine;
+    [Header("Wander")]
+    public float wanderDistance = 8f;
+    public float wanderMinWait = 1f;
+    public float wanderMaxWait = 2.5f;
+    public float navMeshSampleRadius = 4f;
+
+    private Coroutine stateRoutine;
+    private GooseState currentState = GooseState.Wandering;
+    private float chaseEndTime = -1f;
 
     private void Reset()
     {
@@ -25,11 +38,15 @@ public class GooseChase : MonoBehaviour
 
     private void Start()
     {
-        if (agent != null)
-        {
-            agent.isStopped = true;
-            agent.autoBraking = true;
-        }
+        if (agent == null)
+            return;
+
+        agent.autoBraking = true;
+
+        if (stateRoutine != null)
+            StopCoroutine(stateRoutine);
+
+        stateRoutine = StartCoroutine(WanderRoutine());
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,38 +57,45 @@ public class GooseChase : MonoBehaviour
         if (!collision.gameObject.CompareTag(bikeTag))
             return;
 
-        if (Time.time - lastHitTime < hitCooldown)
-            return;
-
-        lastHitTime = Time.time;
-
         if (player == null)
             player = collision.transform;
 
-        if (chaseRoutine != null)
-            StopCoroutine(chaseRoutine);
+        if (currentState == GooseState.Chasing)
+        {
+            if (allowChaseRefresh)
+            {
+                chaseEndTime = Time.time + chaseDuration;
+            }
+            return;
+        }
 
-        chaseRoutine = StartCoroutine(ChaseRoutine());
+        StartChasing();
+    }
+
+    private void StartChasing()
+    {
+        if (agent == null || player == null)
+            return;
+
+        if (!agent.isOnNavMesh)
+            return;
+
+        currentState = GooseState.Chasing;
+        chaseEndTime = Time.time + chaseDuration;
+
+        if (stateRoutine != null)
+            StopCoroutine(stateRoutine);
+
+        stateRoutine = StartCoroutine(ChaseRoutine());
     }
 
     private IEnumerator ChaseRoutine()
     {
-        if (agent == null || player == null)
-            yield break;
-
-        if (!agent.isOnNavMesh)
-            yield break;
-
         agent.isStopped = false;
         agent.ResetPath();
-        agent.SetDestination(player.position);
 
-        float timer = 0f;
-
-        while (timer < chaseDuration)
+        while (Time.time < chaseEndTime)
         {
-            timer += Time.deltaTime;
-
             if (agent != null && agent.isOnNavMesh && player != null)
             {
                 agent.SetDestination(player.position);
@@ -80,10 +104,55 @@ public class GooseChase : MonoBehaviour
             yield return null;
         }
 
-        if (agent != null && agent.isOnNavMesh)
+        currentState = GooseState.Wandering;
+
+        if (stateRoutine != null)
+            StopCoroutine(stateRoutine);
+
+        stateRoutine = StartCoroutine(WanderRoutine());
+    }
+
+    private IEnumerator WanderRoutine()
+    {
+        while (currentState == GooseState.Wandering)
         {
-            agent.ResetPath();
-            agent.isStopped = true;
+            if (agent != null && agent.isOnNavMesh)
+            {
+                Vector3 nextPoint = GetRandomWanderPoint();
+
+                agent.isStopped = false;
+                agent.SetDestination(nextPoint);
+
+                while (agent.pathPending)
+                    yield return null;
+
+                while (agent.remainingDistance > agent.stoppingDistance + 0.05f)
+                    yield return null;
+
+                agent.ResetPath();
+                agent.isStopped = true;
+            }
+
+            float waitTime = Random.Range(wanderMinWait, wanderMaxWait);
+            yield return new WaitForSeconds(waitTime);
         }
+    }
+
+    private Vector3 GetRandomWanderPoint()
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            Vector3 randomDirection = Random.insideUnitSphere * wanderDistance;
+            randomDirection.y = 0f;
+
+            Vector3 target = transform.position + randomDirection;
+
+            if (NavMesh.SamplePosition(target, out NavMeshHit hit, navMeshSampleRadius, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+
+        return transform.position;
     }
 }
