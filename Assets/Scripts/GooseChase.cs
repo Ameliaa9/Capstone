@@ -12,7 +12,6 @@ public class GooseChase : MonoBehaviour
 
     [Header("Chase")]
     public float chaseDuration = 8f;
-    public float repathInterval = 0.2f;
     public float ignoreHitTimeAtStart = 0.5f;
     public float hitCooldown = 0.3f;
 
@@ -29,6 +28,7 @@ public class GooseChase : MonoBehaviour
         if (agent != null)
         {
             agent.isStopped = true;
+            agent.autoBraking = true;
         }
     }
 
@@ -59,7 +59,12 @@ public class GooseChase : MonoBehaviour
         if (agent == null || player == null)
             yield break;
 
+        if (!agent.isOnNavMesh)
+            yield break;
+
         agent.isStopped = false;
+        agent.ResetPath();
+        agent.SetDestination(player.position);
 
         float timer = 0f;
 
@@ -67,19 +72,18 @@ public class GooseChase : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (agent.isOnNavMesh)
+            if (agent != null && agent.isOnNavMesh && player != null)
             {
                 agent.SetDestination(player.position);
             }
 
-            yield return new WaitForSeconds(repathInterval);
+            yield return null;
         }
 
-        if (agent.isOnNavMesh)
+        if (agent != null && agent.isOnNavMesh)
         {
             agent.ResetPath();
+            agent.isStopped = true;
         }
-
-        agent.isStopped = true;
     }
 }
