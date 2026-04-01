@@ -8,6 +8,13 @@ using UnityEditor;
 
 public class MultiArmSwing : MonoBehaviour
 {
+    [System.Serializable]
+    public class ArmOverride
+    {
+        public bool useCustomOffset = false;
+        public Vector3 customOffset = Vector3.zero;
+    }
+
     [Header("Arm Meshes")]
     [Tooltip("Drag any mesh transforms here - can be from anywhere in the scene")]
     public List<Transform> armMeshes = new List<Transform>();
@@ -23,10 +30,14 @@ public class MultiArmSwing : MonoBehaviour
     [SerializeField] private Vector3 rotationAxis = Vector3.right;
 
     [Header("Pivot Point Offset")]
-    [Tooltip("Offset from the mesh transform position to create a custom rotation pivot")]
+    [Tooltip("Global offset from the mesh transform position to create a custom rotation pivot")]
     [SerializeField] private Vector3 pivotOffset = Vector3.zero;
     [Tooltip("Show the offset pivot point in gizmos instead of the transform position")]
     [SerializeField] private bool showOffsetPivot = true;
+
+    [Header("Per-Arm Pivot Overrides")]
+    [Tooltip("Allow overriding the pivot offset for specific arms if their 3D model origins are different")]
+    public List<ArmOverride> armOverrides = new List<ArmOverride>();
 
     [Header("Alternation")]
     [SerializeField] private bool alternateArms = true;
@@ -49,7 +60,6 @@ public class MultiArmSwing : MonoBehaviour
     private List<Transform> originalParents = new List<Transform>();
     private List<bool> isSwinging = new List<bool>();
 
-    // Robust tracking to prevent broken states when interrupts happen
     private List<Coroutine> swingCoroutines = new List<Coroutine>();
     private List<GameObject> activePivots = new List<GameObject>();
 
@@ -83,12 +93,23 @@ public class MultiArmSwing : MonoBehaviour
                 activePivots.Add(null);
             }
         }
+
+        while (armOverrides.Count < armMeshes.Count) armOverrides.Add(new ArmOverride());
+        while (armOverrides.Count > armMeshes.Count) armOverrides.RemoveAt(armOverrides.Count - 1);
     }
 
-    public Vector3 GetPivotPosition(Transform arm)
+    public Vector3 GetPivotPosition(Transform arm, int index = -1)
     {
         if (arm == null) return Vector3.zero;
-        return arm.position + arm.TransformDirection(pivotOffset);
+
+        Vector3 usedOffset = pivotOffset;
+
+        if (index >= 0 && index < armOverrides.Count && armOverrides[index].useCustomOffset)
+        {
+            usedOffset = armOverrides[index].customOffset;
+        }
+
+        return arm.position + arm.TransformDirection(usedOffset);
     }
 
     void OnDrawGizmos()
@@ -103,10 +124,10 @@ public class MultiArmSwing : MonoBehaviour
             bool swinging = (i < isSwinging.Count) ? isSwinging[i] : false;
             Gizmos.color = swinging ? activeSwingColor : gizmoColor;
 
-            Vector3 pivotPos = showOffsetPivot ? GetPivotPosition(mesh) : mesh.position;
+            Vector3 pivotPos = showOffsetPivot ? GetPivotPosition(mesh, i) : mesh.position;
             Gizmos.DrawSphere(pivotPos, gizmoSize);
 
-            if (showOffsetPivot && pivotOffset != Vector3.zero)
+            if (showOffsetPivot)
             {
                 Gizmos.color = Color.gray;
                 Gizmos.DrawLine(mesh.position, pivotPos);
@@ -127,7 +148,9 @@ public class MultiArmSwing : MonoBehaviour
             }
 
 #if UNITY_EDITOR
-            Handles.Label(pivotPos + Vector3.up * gizmoSize * 2, $"Arm {i}");
+            string label = $"Arm {i}";
+            if (i < armOverrides.Count && armOverrides[i].useCustomOffset) label += " (Custom)";
+            Handles.Label(pivotPos + Vector3.up * gizmoSize * 2, label);
 #endif
         }
     }
@@ -138,13 +161,10 @@ public class MultiArmSwing : MonoBehaviour
 
         Transform arm = armMeshes[index];
         if (arm == null) return;
-
-        // FIX: Use activeInHierarchy so it correctly detects if the arm itself OR its parents are unchecked
         if (!arm.gameObject.activeInHierarchy) return;
 
         if (!allowRetrigger && isSwinging[index]) return;
 
-        // Stop existing swing safely using the Coroutine reference (prevents breaking other arms)
         if (isSwinging[index])
         {
             if (index < swingCoroutines.Count && swingCoroutines[index] != null)
@@ -171,7 +191,8 @@ public class MultiArmSwing : MonoBehaviour
         }
         else
         {
-            do { nextIndex = Random.Range(0, armMeshes.Count); }
+            // FIX: Explicitly use UnityEngine.Random to prevent clash
+            do { nextIndex = UnityEngine.Random.Range(0, armMeshes.Count); }
             while (nextIndex == lastArmIndex && armMeshes.Count > 1);
         }
 
@@ -184,7 +205,7 @@ public class MultiArmSwing : MonoBehaviour
         for (int i = 0; i < armMeshes.Count; i++)
         {
             if (armMeshes[i] == null) continue;
-            if (!armMeshes[i].gameObject.activeInHierarchy) continue; // FIX: Hierarchy check
+            if (!armMeshes[i].gameObject.activeInHierarchy) continue;
 
             TriggerArm(i, forceRetrigger);
         }
@@ -197,7 +218,8 @@ public class MultiArmSwing : MonoBehaviour
 
     public void TriggerRandom()
     {
-        if (armMeshes.Count > 0) TriggerArm(Random.Range(0, armMeshes.Count), false);
+        // FIX: Explicitly use UnityEngine.Random to prevent clash
+        if (armMeshes.Count > 0) TriggerArm(UnityEngine.Random.Range(0, armMeshes.Count), false);
     }
 
     public void TriggerWave(float delay = 0.1f)
@@ -209,7 +231,7 @@ public class MultiArmSwing : MonoBehaviour
     {
         for (int i = 0; i < armMeshes.Count; i++)
         {
-            if (armMeshes[i] == null || !armMeshes[i].gameObject.activeInHierarchy) continue; // FIX: Hierarchy check
+            if (armMeshes[i] == null || !armMeshes[i].gameObject.activeInHierarchy) continue;
 
             TriggerArm(i, false);
             yield return new WaitForSeconds(delay);
@@ -227,7 +249,7 @@ public class MultiArmSwing : MonoBehaviour
 
         GameObject pivotObj = new GameObject("SwingPivot");
         pivotObj.hideFlags = HideFlags.HideAndDontSave;
-        pivotObj.transform.position = GetPivotPosition(target);
+        pivotObj.transform.position = GetPivotPosition(target, index);
         pivotObj.transform.rotation = target.rotation;
 
         activePivots[index] = pivotObj;
@@ -235,7 +257,6 @@ public class MultiArmSwing : MonoBehaviour
 
         float timer = 0f;
 
-        // Forward swing
         while (timer < swingDuration * 0.5f)
         {
             timer += Time.deltaTime;
@@ -245,7 +266,6 @@ public class MultiArmSwing : MonoBehaviour
             yield return null;
         }
 
-        // Backward swing
         timer = 0f;
         while (timer < swingDuration * 0.5f)
         {
@@ -256,15 +276,12 @@ public class MultiArmSwing : MonoBehaviour
             yield return null;
         }
 
-        // Restore original parent while preserving world transform
         if (originalParent != null) target.SetParent(originalParent, true);
 
-        // Restore exact local values
         target.localPosition = defaultPos;
         target.localRotation = defaultRot;
         target.localScale = defaultScale;
 
-        // Cleanup pivot safely
         if (activePivots[index] != null)
         {
             Destroy(activePivots[index]);
@@ -303,7 +320,6 @@ public class MultiArmSwing : MonoBehaviour
         {
             if (armMeshes[i] != null)
             {
-                // If it's currently swinging, safely interrupt and snap it back to its proper parent first
                 if (isSwinging[i])
                 {
                     if (i < swingCoroutines.Count && swingCoroutines[i] != null)
@@ -392,6 +408,7 @@ public class MultiArmSwing : MonoBehaviour
         isSwinging.Add(false);
         swingCoroutines.Add(null);
         activePivots.Add(null);
+        armOverrides.Add(new ArmOverride());
     }
 
     public void RemoveArm(int index)
@@ -408,6 +425,7 @@ public class MultiArmSwing : MonoBehaviour
             if (index < isSwinging.Count) isSwinging.RemoveAt(index);
             if (index < swingCoroutines.Count) swingCoroutines.RemoveAt(index);
             if (index < activePivots.Count) activePivots.RemoveAt(index);
+            if (index < armOverrides.Count) armOverrides.RemoveAt(index);
         }
     }
 
@@ -422,6 +440,7 @@ public class MultiArmSwing : MonoBehaviour
         isSwinging.Clear();
         swingCoroutines.Clear();
         activePivots.Clear();
+        armOverrides.Clear();
     }
 
     [ContextMenu("Test Trigger Next")]
