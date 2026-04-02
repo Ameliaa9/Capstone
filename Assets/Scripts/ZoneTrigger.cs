@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class ZoneTrigger : MonoBehaviour
 {
-    [SerializeField] private string zoneName = "Zone 1";
+    [SerializeField] private string zoneName = "Zone";
     [SerializeField] private ZoneNPCController[] zoneNPCs;
     [SerializeField] private float initialDelay = 3f;
+
+    [Header("Linked Zones")]
+    [SerializeField] private ZoneTrigger[] linkedZones;
 
     private bool playerInside = false;
 
@@ -20,12 +23,7 @@ public class ZoneTrigger : MonoBehaviour
 
         if (!playerInside)
         {
-            foreach (ZoneNPCController npc in zoneNPCs)
-            {
-                if (npc != null)
-                    npc.SetActiveState(false);
-            }
-
+            SetZoneState(false);
             Debug.Log(zoneName + " NPCs set to sleep after initial delay.");
         }
     }
@@ -37,10 +35,17 @@ public class ZoneTrigger : MonoBehaviour
             playerInside = true;
             Debug.Log("Entered " + zoneName);
 
-            foreach (ZoneNPCController npc in zoneNPCs)
+            SetZoneState(true);
+
+            if (linkedZones != null)
             {
-                if (npc != null)
-                    npc.SetActiveState(true);
+                foreach (ZoneTrigger linkedZone in linkedZones)
+                {
+                    if (linkedZone != null)
+                    {
+                        linkedZone.SetZoneState(true);
+                    }
+                }
             }
         }
     }
@@ -52,11 +57,35 @@ public class ZoneTrigger : MonoBehaviour
             playerInside = false;
             Debug.Log("Exited " + zoneName);
 
+            SetZoneState(false);
+
+            if (linkedZones != null)
+            {
+                foreach (ZoneTrigger linkedZone in linkedZones)
+                {
+                    if (linkedZone != null && !linkedZone.IsPlayerInside())
+                    {
+                        linkedZone.SetZoneState(false);
+                    }
+                }
+            }
+        }
+    }
+
+    public void SetZoneState(bool isActive)
+    {
+        if (zoneNPCs != null)
+        {
             foreach (ZoneNPCController npc in zoneNPCs)
             {
                 if (npc != null)
-                    npc.SetActiveState(false);
+                    npc.SetActiveState(isActive);
             }
         }
+    }
+
+    public bool IsPlayerInside()
+    {
+        return playerInside;
     }
 }
