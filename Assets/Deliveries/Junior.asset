@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e04bdc07552934298d3a1ed18a5ff0, type: 3}
   m_Name: Junior
   m_EditorClassIdentifier: 
-  deliveryTime: 120
+  deliveryTime: 100
   customerIcon: {fileID: 21300000, guid: cf728af1f149ffa49a14e4a71364cc73, type: 3}
   customerPhoneIcon: {fileID: 21300000, guid: 197f3f2b8439ce1478d2f5449743adc3, type: 3}
   location: Red House
   difficulty: Easy
   dialogue:
-  - Yo, isn't it supposed to be same day delivery?
-  - Yo, you there??
+  - Yo, isn't it supposed to be same day delivery?    <voffset=15><size=130%><sprite
+    name="sideeye"></size></voffset>
+  - Yo, you there??    <voffset=15><size=130%><sprite name="!?"></size></voffset>
   - You better be here soon or you can keep it dawg
-  - Forget about it
-  - Appreciate you dawg, catch you again sometime soon.
+  - Forget about it    <voffset=15><size=130%><sprite name="sleep"></size></voffset>   
+    <voffset=15><size=130%><sprite name="nomouth"></size></voffset>
+  - Appreciate you dawg, catch you again sometime soon.    <voffset=15><size=130%><sprite
+    name="pray"></size></voffset>

@@ -181,6 +181,7 @@ public class DeliverySystem : MonoBehaviour
                 UpdateActiveDeliveryLayers();
                 UpdateActiveDeliveryWorldIcons();
                 UpdateActiveDeliveryBeams();
+                UpdateActiveDeliveryArrows();
             }
 
             MusicSpeedUp();
@@ -265,13 +266,7 @@ public class DeliverySystem : MonoBehaviour
             Debug.Log(" Max package limit reached.");
         }
 
-        int idx = currentDelivery;
-        if (deliveryArrows != null && idx < deliveryArrows.Length)
-        {
-            if (currentArrow) currentArrow.SetActive(false);
-            currentArrow = deliveryArrows[idx];
-            if (currentArrow) currentArrow.SetActive(true);
-        }
+        UpdateActiveDeliveryArrows();
 
         if (coinTaskManager != null)
             coinTaskManager.OnDeliveryStarted();
@@ -397,6 +392,7 @@ public class DeliverySystem : MonoBehaviour
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
             UpdateActiveDeliveryBeams();
+            UpdateActiveDeliveryArrows();
         }
         else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
@@ -506,6 +502,7 @@ public class DeliverySystem : MonoBehaviour
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
             UpdateActiveDeliveryBeams();
+            UpdateActiveDeliveryArrows();
         }
         else
         {
@@ -624,6 +621,7 @@ public class DeliverySystem : MonoBehaviour
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
             UpdateActiveDeliveryBeams();
+            UpdateActiveDeliveryArrows();
         }
     }
 
@@ -944,6 +942,29 @@ public class DeliverySystem : MonoBehaviour
         {
             if (deliveryBeams[secondaryDelivery] != null)
                 deliveryBeams[secondaryDelivery].SetActive(true);
+        }
+    }
+
+    void UpdateActiveDeliveryArrows()
+    {
+        if (deliveryArrows == null) return;
+
+        for (int i = 0; i < deliveryArrows.Length; i++)
+        {
+            if (deliveryArrows[i] != null)
+                deliveryArrows[i].SetActive(false);
+        }
+
+        if (currentPackages >= 1 && currentDelivery >= 0 && currentDelivery < deliveryArrows.Length)
+        {
+            if (deliveryArrows[currentDelivery] != null)
+                deliveryArrows[currentDelivery].SetActive(true);
+        }
+
+        if (currentPackages >= 2 && secondaryDelivery >= 0 && secondaryDelivery < deliveryArrows.Length)
+        {
+            if (deliveryArrows[secondaryDelivery] != null)
+                deliveryArrows[secondaryDelivery].SetActive(true);
         }
     }
 }

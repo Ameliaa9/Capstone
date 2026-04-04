@@ -18,8 +18,10 @@ MonoBehaviour:
   location: Yellow Flat
   difficulty: Moderate
   dialogue:
-  - Are you still coming??  I've been waiting a while.
+  - Are you still coming??  I've been waiting a while.    <voffset=15><size=130%><sprite
+    name="eyeroll"></size></voffset>
   - Hello?? Any day now!  I'm still waiting for that package I ordered.
-  - I'm about to order from somewhere else
+  - I'm about to order from somewhere else  <voffset=15><size=130%><sprite name="mad"></size></voffset>
   - Alexa order from somewhere else.  Alexa?  Oh it's still texting.
-  - That wasn't too bad, I'd order from you again.
+  - That wasn't too bad, I'd order from you again.    <voffset=15><size=130%><sprite
+    name="happy"></size></voffset>
