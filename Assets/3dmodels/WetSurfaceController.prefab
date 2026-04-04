@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8507469650923029197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789856674200643364}
+  - component: {fileID: 3136109091705091149}
+  m_Layer: 0
+  m_Name: WetSurfaceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789856674200643364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507469650923029197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.179865, y: 4.5465775, z: 227.40364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3136109091705091149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507469650923029197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d14c1b7d9b3a58458273c05c414a9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weatherManager: {fileID: 0}
+  mainRoadMaterial: {fileID: 2100000, guid: a704c10a7d0fd4d468dab7783f3255b5, type: 2}
+  sideRoadMaterial: {fileID: 2100000, guid: e04e812578b9e524ba93545faa8eb37e, type: 2}
+  mainRoadDryColor: {r: 0.24705882, g: 0.24705882, b: 0.24705882, a: 1}
+  sideRoadDryColor: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  mainRoadWetColor: {r: 0.22, g: 0.22, b: 0.22, a: 1}
+  sideRoadWetColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  mainRoadDrySmoothness: 0.1
+  mainRoadWetSmoothness: 0.6
+  sideRoadDrySmoothness: 0.1
+  sideRoadWetSmoothness: 0.45
+  wetTransitionSpeed: 1.5
