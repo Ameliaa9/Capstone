@@ -10,6 +10,7 @@ public class DeliverySystem : MonoBehaviour
     public Delivery[] Deliveries; // The delivery scriptable object containing all of the delivery information
     public GameObject[] DeliveryLocations; // The physical delivery locations ( for the Projectile script )
     public GameObject[] deliveryWorldIcons;
+    public GameObject[] deliveryBeams;
 
     public int currentDelivery = 999;// Index for the delivery
     public int previousDelivery = 0;// Index for previous delivery
@@ -111,6 +112,10 @@ public class DeliverySystem : MonoBehaviour
             foreach (var icon in deliveryWorldIcons)
                 if (icon != null) icon.SetActive(false);
 
+        if (deliveryBeams != null)
+            foreach (var beam in deliveryBeams)
+                if (beam != null) beam.SetActive(false);
+
         if (timerText) timerText.text = "";
 
         if (collectedText) collectedText.gameObject.SetActive(false);
@@ -175,6 +180,7 @@ public class DeliverySystem : MonoBehaviour
                 currentPackages = 0;
                 UpdateActiveDeliveryLayers();
                 UpdateActiveDeliveryWorldIcons();
+                UpdateActiveDeliveryBeams();
             }
 
             MusicSpeedUp();
@@ -274,6 +280,7 @@ public class DeliverySystem : MonoBehaviour
 
         UpdateActiveDeliveryLayers();
         UpdateActiveDeliveryWorldIcons();
+        UpdateActiveDeliveryBeams();
     }
 
     void CompleteDelivery(int deliveryCompleted)
@@ -389,6 +396,7 @@ public class DeliverySystem : MonoBehaviour
             phoneText.text = Deliveries[currentDelivery].name;
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
+            UpdateActiveDeliveryBeams();
         }
         else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
@@ -497,6 +505,7 @@ public class DeliverySystem : MonoBehaviour
             phoneText.text = Deliveries[currentDelivery].name;
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
+            UpdateActiveDeliveryBeams();
         }
         else
         {
@@ -614,6 +623,7 @@ public class DeliverySystem : MonoBehaviour
 
             UpdateActiveDeliveryLayers();
             UpdateActiveDeliveryWorldIcons();
+            UpdateActiveDeliveryBeams();
         }
     }
 
@@ -911,6 +921,29 @@ public class DeliverySystem : MonoBehaviour
         {
             if (deliveryWorldIcons[secondaryDelivery] != null)
                 deliveryWorldIcons[secondaryDelivery].SetActive(true);
+        }
+    }
+
+    void UpdateActiveDeliveryBeams()
+    {
+        if (deliveryBeams == null) return;
+
+        for (int i = 0; i < deliveryBeams.Length; i++)
+        {
+            if (deliveryBeams[i] != null)
+                deliveryBeams[i].SetActive(false);
+        }
+
+        if (currentPackages >= 1 && currentDelivery >= 0 && currentDelivery < deliveryBeams.Length)
+        {
+            if (deliveryBeams[currentDelivery] != null)
+                deliveryBeams[currentDelivery].SetActive(true);
+        }
+
+        if (currentPackages >= 2 && secondaryDelivery >= 0 && secondaryDelivery < deliveryBeams.Length)
+        {
+            if (deliveryBeams[secondaryDelivery] != null)
+                deliveryBeams[secondaryDelivery].SetActive(true);
         }
     }
 }
