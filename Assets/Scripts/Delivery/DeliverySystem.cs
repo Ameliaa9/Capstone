@@ -9,6 +9,7 @@ public class DeliverySystem : MonoBehaviour
     [Header("Delivery Setup")]
     public Delivery[] Deliveries; // The delivery scriptable object containing all of the delivery information
     public GameObject[] DeliveryLocations; // The physical delivery locations ( for the Projectile script )
+    public GameObject[] deliveryWorldIcons;
 
     public int currentDelivery = 999;// Index for the delivery
     public int previousDelivery = 0;// Index for previous delivery
@@ -106,6 +107,10 @@ public class DeliverySystem : MonoBehaviour
             foreach (var a in deliveryArrows)
                 if (a != null) a.SetActive(false);
 
+        if (deliveryWorldIcons != null)
+            foreach (var icon in deliveryWorldIcons)
+                if (icon != null) icon.SetActive(false);
+
         if (timerText) timerText.text = "";
 
         if (collectedText) collectedText.gameObject.SetActive(false);
@@ -169,6 +174,7 @@ public class DeliverySystem : MonoBehaviour
                 inventoryPackages[1].SetActive(false);
                 currentPackages = 0;
                 UpdateActiveDeliveryLayers();
+                UpdateActiveDeliveryWorldIcons();
             }
 
             MusicSpeedUp();
@@ -267,6 +273,7 @@ public class DeliverySystem : MonoBehaviour
         TutorialManager.Instance?.DeliveryStarted();
 
         UpdateActiveDeliveryLayers();
+        UpdateActiveDeliveryWorldIcons();
     }
 
     void CompleteDelivery(int deliveryCompleted)
@@ -381,6 +388,7 @@ public class DeliverySystem : MonoBehaviour
             phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
             phoneText.text = Deliveries[currentDelivery].name;
             UpdateActiveDeliveryLayers();
+            UpdateActiveDeliveryWorldIcons();
         }
         else if (currentPackages == 1 && deliveryCompleted == secondaryDelivery)
         {
@@ -488,6 +496,7 @@ public class DeliverySystem : MonoBehaviour
             phoneImage.sprite = Deliveries[currentDelivery].customerPhoneIcon;
             phoneText.text = Deliveries[currentDelivery].name;
             UpdateActiveDeliveryLayers();
+            UpdateActiveDeliveryWorldIcons();
         }
         else
         {
@@ -604,6 +613,7 @@ public class DeliverySystem : MonoBehaviour
                 coinTaskManager.OnDeliveryFinished();
 
             UpdateActiveDeliveryLayers();
+            UpdateActiveDeliveryWorldIcons();
         }
     }
 
@@ -878,6 +888,29 @@ public class DeliverySystem : MonoBehaviour
         if (currentPackages >= 2 && secondaryDelivery >= 0 && secondaryDelivery < DeliveryLocations.Length)
         {
             SetDeliveryBuildingLayer(secondaryDelivery, activeDeliveryLayer);
+        }
+    }
+
+    void UpdateActiveDeliveryWorldIcons()
+    {
+        if (deliveryWorldIcons == null) return;
+
+        for (int i = 0; i < deliveryWorldIcons.Length; i++)
+        {
+            if (deliveryWorldIcons[i] != null)
+                deliveryWorldIcons[i].SetActive(false);
+        }
+
+        if (currentPackages >= 1 && currentDelivery >= 0 && currentDelivery < deliveryWorldIcons.Length)
+        {
+            if (deliveryWorldIcons[currentDelivery] != null)
+                deliveryWorldIcons[currentDelivery].SetActive(true);
+        }
+
+        if (currentPackages >= 2 && secondaryDelivery >= 0 && secondaryDelivery < deliveryWorldIcons.Length)
+        {
+            if (deliveryWorldIcons[secondaryDelivery] != null)
+                deliveryWorldIcons[secondaryDelivery].SetActive(true);
         }
     }
 }
