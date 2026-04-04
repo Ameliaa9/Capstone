@@ -17,31 +17,38 @@ public class WeatherManager : MonoBehaviour
     public WeatherType currentWeather = WeatherType.Sunny;
 
     [Header("Transition")]
-    public float transitionSpeed = 1.5f;
-    public float rainTransitionSpeed = 2f;
+    public float transitionSpeed = 1.0f;
+    public float rainTransitionSpeed = 1.2f;
+    public float fogTransitionSpeed = 1.0f;
 
     [Header("Sunny Settings")]
     public float sunnySunMultiplier = 1.0f;
     public float sunnyAmbientMultiplier = 1.0f;
-    public float sunnyFogMultiplier = 1.0f;
     public float sunnyRainRate = 0f;
+    public bool sunnyUseFog = false;
+    public float sunnyFogMultiplier = 0f;
 
     [Header("Cloudy Settings")]
     public float cloudySunMultiplier = 0.75f;
     public float cloudyAmbientMultiplier = 0.9f;
-    public float cloudyFogMultiplier = 1.5f;
     public float cloudyRainRate = 0f;
+    public bool cloudyUseFog = false;
+    public float cloudyFogMultiplier = 0.4f;
 
     [Header("Rainy Settings")]
     public float rainySunMultiplier = 0.6f;
     public float rainyAmbientMultiplier = 0.8f;
-    public float rainyFogMultiplier = 2.0f;
     public float rainyRainRate = 600f;
+    public bool rainyUseFog = true;
+    public float rainyFogMultiplier = 1.2f;
 
     private float targetSunMultiplier;
     private float targetAmbientMultiplier;
-    private float targetFogMultiplier;
     private float targetRainRate;
+
+    private bool targetUseFog;
+    private float targetFogMultiplier;
+    private float currentFogMultiplier = 0f;
 
     private void Start()
     {
@@ -51,10 +58,10 @@ public class WeatherManager : MonoBehaviour
         {
             timeOfDayManager.sunIntensityMultiplier = targetSunMultiplier;
             timeOfDayManager.ambientIntensityMultiplier = targetAmbientMultiplier;
-            timeOfDayManager.fogDensityMultiplier = targetFogMultiplier;
         }
 
         InitializeRain();
+        InitializeFog();
     }
 
     private void Update()
@@ -75,13 +82,8 @@ public class WeatherManager : MonoBehaviour
             Time.deltaTime * transitionSpeed
         );
 
-        timeOfDayManager.fogDensityMultiplier = Mathf.Lerp(
-            timeOfDayManager.fogDensityMultiplier,
-            targetFogMultiplier,
-            Time.deltaTime * transitionSpeed
-        );
-
         UpdateRainEmission();
+        UpdateFog();
     }
 
     private void UpdateWeatherTargets()
@@ -91,22 +93,25 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Sunny:
                 targetSunMultiplier = sunnySunMultiplier;
                 targetAmbientMultiplier = sunnyAmbientMultiplier;
-                targetFogMultiplier = sunnyFogMultiplier;
                 targetRainRate = sunnyRainRate;
+                targetUseFog = sunnyUseFog;
+                targetFogMultiplier = sunnyFogMultiplier;
                 break;
 
             case WeatherType.Cloudy:
                 targetSunMultiplier = cloudySunMultiplier;
                 targetAmbientMultiplier = cloudyAmbientMultiplier;
-                targetFogMultiplier = cloudyFogMultiplier;
                 targetRainRate = cloudyRainRate;
+                targetUseFog = cloudyUseFog;
+                targetFogMultiplier = cloudyFogMultiplier;
                 break;
 
             case WeatherType.Rainy:
                 targetSunMultiplier = rainySunMultiplier;
                 targetAmbientMultiplier = rainyAmbientMultiplier;
-                targetFogMultiplier = rainyFogMultiplier;
                 targetRainRate = rainyRainRate;
+                targetUseFog = rainyUseFog;
+                targetFogMultiplier = rainyFogMultiplier;
                 break;
         }
     }
@@ -139,5 +144,45 @@ public class WeatherManager : MonoBehaviour
 
         if (!rainParticleSystem.isPlaying)
             rainParticleSystem.Play();
+    }
+
+    private void InitializeFog()
+    {
+        currentFogMultiplier = targetUseFog ? targetFogMultiplier : 0f;
+
+        if (targetUseFog && currentFogMultiplier > 0.001f)
+        {
+            RenderSettings.fog = true;
+            RenderSettings.fogColor = timeOfDayManager.GetCurrentFogColor();
+            RenderSettings.fogDensity = timeOfDayManager.GetCurrentFogDensity() * currentFogMultiplier;
+        }
+        else
+        {
+            RenderSettings.fog = false;
+            RenderSettings.fogDensity = 0f;
+        }
+    }
+
+    private void UpdateFog()
+    {
+        float targetFogValue = targetUseFog ? targetFogMultiplier : 0f;
+
+        currentFogMultiplier = Mathf.Lerp(
+            currentFogMultiplier,
+            targetFogValue,
+            Time.deltaTime * fogTransitionSpeed
+        );
+
+        if (currentFogMultiplier > 0.001f)
+        {
+            RenderSettings.fog = true;
+            RenderSettings.fogColor = timeOfDayManager.GetCurrentFogColor();
+            RenderSettings.fogDensity = timeOfDayManager.GetCurrentFogDensity() * currentFogMultiplier;
+        }
+        else
+        {
+            RenderSettings.fog = false;
+            RenderSettings.fogDensity = 0f;
+        }
     }
 }

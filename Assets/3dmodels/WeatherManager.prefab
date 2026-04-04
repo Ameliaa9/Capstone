@@ -46,18 +46,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeOfDayManager: {fileID: 0}
   rainParticleSystem: {fileID: 0}
-  currentWeather: 2
-  transitionSpeed: 0.8
-  rainTransitionSpeed: 1
+  currentWeather: 0
+  transitionSpeed: 1
+  rainTransitionSpeed: 1.2
+  fogTransitionSpeed: 1
   sunnySunMultiplier: 1
   sunnyAmbientMultiplier: 1
-  sunnyFogMultiplier: 1
   sunnyRainRate: 0
+  sunnyUseFog: 0
+  sunnyFogMultiplier: 0
   cloudySunMultiplier: 0.75
   cloudyAmbientMultiplier: 0.9
-  cloudyFogMultiplier: 1.5
   cloudyRainRate: 0
+  cloudyUseFog: 0
+  cloudyFogMultiplier: 0.4
   rainySunMultiplier: 0.6
   rainyAmbientMultiplier: 0.8
-  rainyFogMultiplier: 2
   rainyRainRate: 440
+  rainyUseFog: 1
+  rainyFogMultiplier: 1.2

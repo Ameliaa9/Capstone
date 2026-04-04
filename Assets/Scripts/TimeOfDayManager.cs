@@ -24,15 +24,13 @@ public class TimeOfDayManager : MonoBehaviour
     public Gradient ambientColorOverDay;
     public AnimationCurve ambientIntensityOverDay = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
-    [Header("Fog")]
-    public bool useFog = true;
+    [Header("Fog Reference Only")]
     public Gradient fogColorOverDay;
     public AnimationCurve fogDensityOverDay = AnimationCurve.Linear(0f, 0.01f, 1f, 0.01f);
 
     [Header("Weather Multipliers")]
     public float sunIntensityMultiplier = 1f;
     public float ambientIntensityMultiplier = 1f;
-    public float fogDensityMultiplier = 1f;
 
     private void Update()
     {
@@ -48,7 +46,6 @@ public class TimeOfDayManager : MonoBehaviour
         UpdateSunRotation();
         UpdateSunLighting();
         UpdateAmbientLighting();
-        UpdateFog();
     }
 
     private void UpdateSunRotation()
@@ -102,15 +99,15 @@ public class TimeOfDayManager : MonoBehaviour
             ambientIntensityOverDay.Evaluate(normalizedTime) * ambientIntensityMultiplier;
     }
 
-    private void UpdateFog()
+    public Color GetCurrentFogColor()
     {
         float normalizedTime = currentTime / 24f;
+        return fogColorOverDay.Evaluate(normalizedTime);
+    }
 
-        RenderSettings.fog = useFog;
-        if (!useFog) return;
-
-        RenderSettings.fogColor = fogColorOverDay.Evaluate(normalizedTime);
-        RenderSettings.fogDensity =
-            fogDensityOverDay.Evaluate(normalizedTime) * fogDensityMultiplier;
+    public float GetCurrentFogDensity()
+    {
+        float normalizedTime = currentTime / 24f;
+        return fogDensityOverDay.Evaluate(normalizedTime);
     }
 }
