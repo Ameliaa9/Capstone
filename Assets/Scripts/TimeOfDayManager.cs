@@ -8,7 +8,7 @@ public class TimeOfDayManager : MonoBehaviour
     [Header("Time Settings")]
     [Range(0f, 24f)]
     public float currentTime = 12f;
-    public float dayDurationInMinutes = 5f;
+    public float dayDurationInMinutes = 12f;
 
     [Header("Sun Rotation")]
     public Vector3 sunriseRotation = new Vector3(15f, -30f, 0f);
@@ -28,6 +28,11 @@ public class TimeOfDayManager : MonoBehaviour
     public bool useFog = true;
     public Gradient fogColorOverDay;
     public AnimationCurve fogDensityOverDay = AnimationCurve.Linear(0f, 0.01f, 1f, 0.01f);
+
+    [Header("Weather Multipliers")]
+    public float sunIntensityMultiplier = 1f;
+    public float ambientIntensityMultiplier = 1f;
+    public float fogDensityMultiplier = 1f;
 
     private void Update()
     {
@@ -81,8 +86,10 @@ public class TimeOfDayManager : MonoBehaviour
         if (directionalLight == null) return;
 
         float normalizedTime = currentTime / 24f;
+
         directionalLight.color = lightColorOverDay.Evaluate(normalizedTime);
-        directionalLight.intensity = lightIntensityOverDay.Evaluate(normalizedTime);
+        directionalLight.intensity =
+            lightIntensityOverDay.Evaluate(normalizedTime) * sunIntensityMultiplier;
     }
 
     private void UpdateAmbientLighting()
@@ -91,7 +98,8 @@ public class TimeOfDayManager : MonoBehaviour
 
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
         RenderSettings.ambientLight = ambientColorOverDay.Evaluate(normalizedTime);
-        RenderSettings.ambientIntensity = ambientIntensityOverDay.Evaluate(normalizedTime);
+        RenderSettings.ambientIntensity =
+            ambientIntensityOverDay.Evaluate(normalizedTime) * ambientIntensityMultiplier;
     }
 
     private void UpdateFog()
@@ -102,85 +110,7 @@ public class TimeOfDayManager : MonoBehaviour
         if (!useFog) return;
 
         RenderSettings.fogColor = fogColorOverDay.Evaluate(normalizedTime);
-        RenderSettings.fogDensity = fogDensityOverDay.Evaluate(normalizedTime);
-    }
-
-    private void Reset()
-    {
-        lightColorOverDay = new Gradient();
-        lightColorOverDay.SetKeys(
-            new GradientColorKey[]
-            {
-                new GradientColorKey(new Color(0.15f, 0.18f, 0.28f), 0f),
-                new GradientColorKey(new Color(1f, 0.7f, 0.45f), 0.25f),
-                new GradientColorKey(new Color(1f, 0.98f, 0.92f), 0.5f),
-                new GradientColorKey(new Color(1f, 0.55f, 0.35f), 0.75f),
-                new GradientColorKey(new Color(0.15f, 0.18f, 0.28f), 1f)
-            },
-            new GradientAlphaKey[]
-            {
-                new GradientAlphaKey(1f, 0f),
-                new GradientAlphaKey(1f, 1f)
-            }
-        );
-
-        lightIntensityOverDay = new AnimationCurve(
-            new Keyframe(0f, 0f),
-            new Keyframe(0.2f, 0.35f),
-            new Keyframe(0.3f, 1f),
-            new Keyframe(0.5f, 1.1f),
-            new Keyframe(0.75f, 0.5f),
-            new Keyframe(1f, 0f)
-        );
-
-        ambientColorOverDay = new Gradient();
-        ambientColorOverDay.SetKeys(
-            new GradientColorKey[]
-            {
-                new GradientColorKey(new Color(0.06f, 0.08f, 0.14f), 0f),
-                new GradientColorKey(new Color(0.4f, 0.35f, 0.3f), 0.25f),
-                new GradientColorKey(new Color(0.75f, 0.78f, 0.82f), 0.5f),
-                new GradientColorKey(new Color(0.45f, 0.32f, 0.28f), 0.75f),
-                new GradientColorKey(new Color(0.06f, 0.08f, 0.14f), 1f)
-            },
-            new GradientAlphaKey[]
-            {
-                new GradientAlphaKey(1f, 0f),
-                new GradientAlphaKey(1f, 1f)
-            }
-        );
-
-        ambientIntensityOverDay = new AnimationCurve(
-            new Keyframe(0f, 0.2f),
-            new Keyframe(0.25f, 0.45f),
-            new Keyframe(0.5f, 0.95f),
-            new Keyframe(0.75f, 0.5f),
-            new Keyframe(1f, 0.2f)
-        );
-
-        fogColorOverDay = new Gradient();
-        fogColorOverDay.SetKeys(
-            new GradientColorKey[]
-            {
-                new GradientColorKey(new Color(0.05f, 0.07f, 0.12f), 0f),
-                new GradientColorKey(new Color(0.75f, 0.55f, 0.45f), 0.25f),
-                new GradientColorKey(new Color(0.75f, 0.85f, 0.95f), 0.5f),
-                new GradientColorKey(new Color(0.8f, 0.5f, 0.4f), 0.75f),
-                new GradientColorKey(new Color(0.05f, 0.07f, 0.12f), 1f)
-            },
-            new GradientAlphaKey[]
-            {
-                new GradientAlphaKey(1f, 0f),
-                new GradientAlphaKey(1f, 1f)
-            }
-        );
-
-        fogDensityOverDay = new AnimationCurve(
-            new Keyframe(0f, 0.01f),
-            new Keyframe(0.25f, 0.006f),
-            new Keyframe(0.5f, 0.003f),
-            new Keyframe(0.75f, 0.006f),
-            new Keyframe(1f, 0.01f)
-        );
+        RenderSettings.fogDensity =
+            fogDensityOverDay.Evaluate(normalizedTime) * fogDensityMultiplier;
     }
 }
