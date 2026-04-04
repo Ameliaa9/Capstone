@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 7.702593
       objectReference: {fileID: 0}
+    - target: {fileID: -1071359958148435772, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
       propertyPath: m_Name
       value: light
@@ -108,6 +112,11 @@ PrefabInstance:
 --- !u!4 &774786918177575397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
+  m_PrefabInstance: {fileID: 957615140954797582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &8965508174699906762 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: -1071359958148435772, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
   m_PrefabInstance: {fileID: 957615140954797582}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7821852029595048456
@@ -132,31 +141,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.26
+      value: -4.117401
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 4.2196755
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1553.94
+      value: 22.369202
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69340193
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7205511
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -164,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -184,8 +193,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 774786918177575397}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3342747731834570494}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+--- !u!1 &6939384206990731097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+  m_PrefabInstance: {fileID: 7821852029595048456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3342747731834570494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939384206990731097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b4027df489fa54cb21a6609a148020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOfDayManager: {fileID: 0}
+  weatherManager: {fileID: 0}
+  streetLight: {fileID: 8965508174699906762}
+  turnOnAtNight: 1
+  turnOnWhenRainy: 1
+  nightStartHour: 18
+  nightEndHour: 6
+  offIntensity: 0
+  onIntensity: 112.2
+  transitionSpeed: 2
 --- !u!4 &7711980638409276899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
