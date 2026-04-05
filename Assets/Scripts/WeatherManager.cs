@@ -13,6 +13,8 @@ public class WeatherManager : MonoBehaviour
     public TimeOfDayManager timeOfDayManager;
     public ParticleSystem rainMainParticleSystem;
     public ParticleSystem rainNearParticleSystem;
+    public ParticleSystem rainSplashBaseParticleSystem;
+    public ParticleSystem rainSplashAccentParticleSystem;
 
     [Header("Current Weather")]
     public WeatherType currentWeather = WeatherType.Sunny;
@@ -27,6 +29,8 @@ public class WeatherManager : MonoBehaviour
     public float sunnyAmbientMultiplier = 1.0f;
     public float sunnyRainMainRate = 0f;
     public float sunnyRainNearRate = 0f;
+    public float sunnyRainSplashBaseRate = 0f;
+    public float sunnyRainSplashAccentRate = 0f;
     public bool sunnyUseFog = false;
     public float sunnyFogMultiplier = 0f;
 
@@ -35,6 +39,8 @@ public class WeatherManager : MonoBehaviour
     public float cloudyAmbientMultiplier = 0.9f;
     public float cloudyRainMainRate = 0f;
     public float cloudyRainNearRate = 0f;
+    public float cloudyRainSplashBaseRate = 0f;
+    public float cloudyRainSplashAccentRate = 0f;
     public bool cloudyUseFog = false;
     public float cloudyFogMultiplier = 0.4f;
 
@@ -43,6 +49,8 @@ public class WeatherManager : MonoBehaviour
     public float rainyAmbientMultiplier = 0.8f;
     public float rainyRainMainRate = 600f;
     public float rainyRainNearRate = 180f;
+    public float rainyRainSplashBaseRate = 260f;
+    public float rainyRainSplashAccentRate = 50f;
     public bool rainyUseFog = true;
     public float rainyFogMultiplier = 1.2f;
 
@@ -50,6 +58,8 @@ public class WeatherManager : MonoBehaviour
     private float targetAmbientMultiplier;
     private float targetRainMainRate;
     private float targetRainNearRate;
+    private float targetRainSplashBaseRate;
+    private float targetRainSplashAccentRate;
 
     private bool targetUseFog;
     private float targetFogMultiplier;
@@ -67,6 +77,9 @@ public class WeatherManager : MonoBehaviour
 
         InitializeRainSystem(rainMainParticleSystem, targetRainMainRate);
         InitializeRainSystem(rainNearParticleSystem, targetRainNearRate);
+        InitializeRainSystem(rainSplashBaseParticleSystem, targetRainSplashBaseRate);
+        InitializeRainSystem(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
+
         InitializeFog();
     }
 
@@ -90,6 +103,8 @@ public class WeatherManager : MonoBehaviour
 
         UpdateRainEmission(rainMainParticleSystem, targetRainMainRate);
         UpdateRainEmission(rainNearParticleSystem, targetRainNearRate);
+        UpdateRainEmission(rainSplashBaseParticleSystem, targetRainSplashBaseRate);
+        UpdateRainEmission(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
 
         UpdateFog();
     }
@@ -103,6 +118,8 @@ public class WeatherManager : MonoBehaviour
                 targetAmbientMultiplier = sunnyAmbientMultiplier;
                 targetRainMainRate = sunnyRainMainRate;
                 targetRainNearRate = sunnyRainNearRate;
+                targetRainSplashBaseRate = sunnyRainSplashBaseRate;
+                targetRainSplashAccentRate = sunnyRainSplashAccentRate;
                 targetUseFog = sunnyUseFog;
                 targetFogMultiplier = sunnyFogMultiplier;
                 break;
@@ -112,6 +129,8 @@ public class WeatherManager : MonoBehaviour
                 targetAmbientMultiplier = cloudyAmbientMultiplier;
                 targetRainMainRate = cloudyRainMainRate;
                 targetRainNearRate = cloudyRainNearRate;
+                targetRainSplashBaseRate = cloudyRainSplashBaseRate;
+                targetRainSplashAccentRate = cloudyRainSplashAccentRate;
                 targetUseFog = cloudyUseFog;
                 targetFogMultiplier = cloudyFogMultiplier;
                 break;
@@ -121,6 +140,8 @@ public class WeatherManager : MonoBehaviour
                 targetAmbientMultiplier = rainyAmbientMultiplier;
                 targetRainMainRate = rainyRainMainRate;
                 targetRainNearRate = rainyRainNearRate;
+                targetRainSplashBaseRate = rainyRainSplashBaseRate;
+                targetRainSplashAccentRate = rainyRainSplashAccentRate;
                 targetUseFog = rainyUseFog;
                 targetFogMultiplier = rainyFogMultiplier;
                 break;
