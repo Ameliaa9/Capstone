@@ -6,6 +6,7 @@ public class StreetLightController : MonoBehaviour
     public TimeOfDayManager timeOfDayManager;
     public WeatherManager weatherManager;
     public Light streetLight;
+    public GameObject mapMarker;
 
     [Header("Activation Rules")]
     public bool turnOnAtNight = true;
@@ -19,6 +20,10 @@ public class StreetLightController : MonoBehaviour
     public float offIntensity = 0f;
     public float onIntensity = 112.2f;
     public float transitionSpeed = 2f;
+
+    [Header("Map Marker Settings")]
+    public bool useMapMarker = true;
+    public float markerOnThreshold = 0.01f;
 
     private void Reset()
     {
@@ -50,7 +55,15 @@ public class StreetLightController : MonoBehaviour
             Time.deltaTime * transitionSpeed
         );
 
-        streetLight.enabled = streetLight.intensity > 0.01f;
+        streetLight.enabled = streetLight.intensity > markerOnThreshold;
+
+        if (useMapMarker && mapMarker != null)
+        {
+            bool markerShouldBeActive = streetLight.intensity > markerOnThreshold;
+
+            if (mapMarker.activeSelf != markerShouldBeActive)
+                mapMarker.SetActive(markerShouldBeActive);
+        }
     }
 
     private bool IsNightTime(float currentHour)

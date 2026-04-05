@@ -365,6 +365,7 @@ MonoBehaviour:
   timeOfDayManager: {fileID: 0}
   weatherManager: {fileID: 0}
   streetLight: {fileID: 8965508174699906762}
+  mapMarker: {fileID: 5334628746129367257}
   turnOnAtNight: 1
   turnOnWhenRainy: 1
   nightStartHour: 18
@@ -372,6 +373,8 @@ MonoBehaviour:
   offIntensity: 0
   onIntensity: 112.2
   transitionSpeed: 2
+  useMapMarker: 1
+  markerOnThreshold: 0.01
 --- !u!4 &7711980638409276899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
