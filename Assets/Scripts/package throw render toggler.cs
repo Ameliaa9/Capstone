@@ -21,56 +21,52 @@ public class RendererVisibilityToggle : MonoBehaviour
 
     void Start()
     {
-        // Scan the watched object for a renderer
         if (watchObject != null)
         {
             watchRenderer = watchObject.GetComponentInChildren<Renderer>();
 
             if (watchRenderer != null)
             {
-                // Sync the initial state so it doesn't trigger a false toggle on frame 1
                 lastWatchState = watchRenderer.enabled;
             }
             else
             {
-                Debug.LogWarning($"RendererVisibilityToggle: No MeshRenderer or SkinnedMeshRenderer found on '{watchObject.name}'!", watchObject);
+                Debug.LogWarning($"RendererVisibilityToggle: No Renderer found on '{watchObject.name}'!", watchObject);
             }
         }
 
-        // Scan the target object for a renderer to toggle
         if (targetObject != null)
         {
             targetRenderer = targetObject.GetComponentInChildren<Renderer>();
 
             if (targetRenderer == null)
             {
-                Debug.LogWarning($"RendererVisibilityToggle: No MeshRenderer or SkinnedMeshRenderer found on Target '{targetObject.name}'!", targetObject);
+                Debug.LogWarning($"RendererVisibilityToggle: No Renderer found on Target '{targetObject.name}'!", targetObject);
             }
+        }
+
+        // FIX: Instantly apply the correct visibility state on Start so they are synced
+        if (watchRenderer != null && targetRenderer != null)
+        {
+            bool desiredTargetState = invertLogic ? lastWatchState : !lastWatchState;
+            targetRenderer.enabled = desiredTargetState;
         }
     }
 
     void Update()
     {
-        // Do nothing if we didn't find both renderers
         if (watchRenderer == null || targetRenderer == null) return;
 
-        // Check if the watched renderer's enabled checkbox has changed
         bool currentWatchState = watchRenderer.enabled;
 
         if (currentWatchState != lastWatchState)
         {
-            // Update our tracked state
             lastWatchState = currentWatchState;
-
-            // Apply inversion if needed
             bool desiredTargetState = invertLogic ? currentWatchState : !currentWatchState;
-
-            // Toggle the TARGET'S renderer visibility (not the GameObject itself)
             targetRenderer.enabled = desiredTargetState;
         }
     }
 
-    // Status properties for the custom inspector
     public GameObject CurrentTarget => targetObject;
     public GameObject CurrentWatch => watchObject;
     public bool IsWatchRendererEnabled => watchRenderer != null && watchRenderer.enabled;
@@ -78,7 +74,6 @@ public class RendererVisibilityToggle : MonoBehaviour
     public bool RenderersFound => watchRenderer != null && targetRenderer != null;
 }
 
-// Custom Inspector
 #if UNITY_EDITOR
 [CustomEditor(typeof(RendererVisibilityToggle))]
 public class RendererVisibilityToggleEditor : Editor
@@ -113,7 +108,6 @@ public class RendererVisibilityToggleEditor : Editor
             EditorGUILayout.HelpBox("Enter Play Mode to see status", MessageType.Info);
         }
 
-        // Force inspector to repaint so status updates live
         Repaint();
     }
 }

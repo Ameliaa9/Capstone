@@ -15,28 +15,24 @@ public class GameObjectToggle : MonoBehaviour
     [Tooltip("Reverse the logic (Target checks when Renderer is enabled, unchecks when disabled)")]
     [SerializeField] private bool invertLogic = false;
 
-    // We use the base 'Renderer' class so it automatically supports 
-    // both MeshRenderer and SkinnedMeshRenderer (used by characters)
     private Renderer cachedRenderer;
     private bool lastRendererState;
 
     void Start()
     {
-        // If no target specified, use this object
-        if (targetObject == null)
-        {
-            targetObject = gameObject;
-        }
+        if (targetObject == null) targetObject = gameObject;
 
-        // Scan the watched object (and its children) for a renderer
         if (watchObject != null)
         {
             cachedRenderer = watchObject.GetComponentInChildren<Renderer>();
 
             if (cachedRenderer != null)
             {
-                // Sync the initial state so it doesn't trigger a false toggle on frame 1
                 lastRendererState = cachedRenderer.enabled;
+
+                // FIX: Instantly apply the correct state on Start so they are synced
+                bool desiredTargetState = invertLogic ? lastRendererState : !lastRendererState;
+                targetObject.SetActive(desiredTargetState);
             }
             else
             {
@@ -47,26 +43,18 @@ public class GameObjectToggle : MonoBehaviour
 
     void Update()
     {
-        // Do nothing if we didn't find a renderer or a target
         if (cachedRenderer == null || targetObject == null) return;
 
-        // Check if the renderer's enabled checkbox has changed
         bool currentRendererState = cachedRenderer.enabled;
 
         if (currentRendererState != lastRendererState)
         {
-            // Update our tracked state
             lastRendererState = currentRendererState;
-
-            // Apply inversion if needed
             bool desiredTargetState = invertLogic ? currentRendererState : !currentRendererState;
-
-            // Apply the state to the target GameObject
             targetObject.SetActive(desiredTargetState);
         }
     }
 
-    // Status properties for the custom inspector
     public GameObject CurrentTarget => targetObject;
     public GameObject CurrentWatch => watchObject;
     public bool IsRendererEnabled => cachedRenderer != null && cachedRenderer.enabled;
@@ -74,7 +62,6 @@ public class GameObjectToggle : MonoBehaviour
     public bool RendererFound => cachedRenderer != null;
 }
 
-// Custom Inspector
 #if UNITY_EDITOR
 [CustomEditor(typeof(GameObjectToggle))]
 public class GameObjectToggleEditor : Editor
@@ -102,7 +89,6 @@ public class GameObjectToggleEditor : Editor
             }
 
             EditorGUILayout.Space(5);
-
             EditorGUILayout.LabelField($"Target Object: {(script.CurrentTarget != null ? script.CurrentTarget.name : "None")}");
             EditorGUILayout.LabelField($"Target Active: {script.IsTargetActive}");
         }
@@ -111,7 +97,6 @@ public class GameObjectToggleEditor : Editor
             EditorGUILayout.HelpBox("Enter Play Mode to see status", MessageType.Info);
         }
 
-        // Force inspector to repaint so status updates live
         Repaint();
     }
 }
