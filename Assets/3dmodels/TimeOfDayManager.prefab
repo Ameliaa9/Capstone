@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionalLight: {fileID: 0}
-  currentTime: 12
+  currentTime: 11
   dayDurationInMinutes: 12
   sunriseRotation: {x: 15, y: -30, z: 0}
   noonRotation: {x: 60, y: -30, z: 0}
@@ -186,7 +186,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  useFog: 1
   fogColorOverDay:
     serializedVersion: 2
     key0: {r: 0.30799806, g: 0.33202443, b: 0.5471698, a: 1}
@@ -270,4 +269,3 @@ MonoBehaviour:
     m_RotationOrder: 4
   sunIntensityMultiplier: 1
   ambientIntensityMultiplier: 1
-  fogDensityMultiplier: 1

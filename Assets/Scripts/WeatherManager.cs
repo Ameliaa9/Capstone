@@ -11,7 +11,8 @@ public class WeatherManager : MonoBehaviour
 
     [Header("References")]
     public TimeOfDayManager timeOfDayManager;
-    public ParticleSystem rainParticleSystem;
+    public ParticleSystem rainMainParticleSystem;
+    public ParticleSystem rainNearParticleSystem;
 
     [Header("Current Weather")]
     public WeatherType currentWeather = WeatherType.Sunny;
@@ -24,27 +25,31 @@ public class WeatherManager : MonoBehaviour
     [Header("Sunny Settings")]
     public float sunnySunMultiplier = 1.0f;
     public float sunnyAmbientMultiplier = 1.0f;
-    public float sunnyRainRate = 0f;
+    public float sunnyRainMainRate = 0f;
+    public float sunnyRainNearRate = 0f;
     public bool sunnyUseFog = false;
     public float sunnyFogMultiplier = 0f;
 
     [Header("Cloudy Settings")]
     public float cloudySunMultiplier = 0.75f;
     public float cloudyAmbientMultiplier = 0.9f;
-    public float cloudyRainRate = 0f;
+    public float cloudyRainMainRate = 0f;
+    public float cloudyRainNearRate = 0f;
     public bool cloudyUseFog = false;
     public float cloudyFogMultiplier = 0.4f;
 
     [Header("Rainy Settings")]
     public float rainySunMultiplier = 0.6f;
     public float rainyAmbientMultiplier = 0.8f;
-    public float rainyRainRate = 600f;
+    public float rainyRainMainRate = 600f;
+    public float rainyRainNearRate = 180f;
     public bool rainyUseFog = true;
     public float rainyFogMultiplier = 1.2f;
 
     private float targetSunMultiplier;
     private float targetAmbientMultiplier;
-    private float targetRainRate;
+    private float targetRainMainRate;
+    private float targetRainNearRate;
 
     private bool targetUseFog;
     private float targetFogMultiplier;
@@ -60,7 +65,8 @@ public class WeatherManager : MonoBehaviour
             timeOfDayManager.ambientIntensityMultiplier = targetAmbientMultiplier;
         }
 
-        InitializeRain();
+        InitializeRainSystem(rainMainParticleSystem, targetRainMainRate);
+        InitializeRainSystem(rainNearParticleSystem, targetRainNearRate);
         InitializeFog();
     }
 
@@ -82,7 +88,9 @@ public class WeatherManager : MonoBehaviour
             Time.deltaTime * transitionSpeed
         );
 
-        UpdateRainEmission();
+        UpdateRainEmission(rainMainParticleSystem, targetRainMainRate);
+        UpdateRainEmission(rainNearParticleSystem, targetRainNearRate);
+
         UpdateFog();
     }
 
@@ -93,7 +101,8 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Sunny:
                 targetSunMultiplier = sunnySunMultiplier;
                 targetAmbientMultiplier = sunnyAmbientMultiplier;
-                targetRainRate = sunnyRainRate;
+                targetRainMainRate = sunnyRainMainRate;
+                targetRainNearRate = sunnyRainNearRate;
                 targetUseFog = sunnyUseFog;
                 targetFogMultiplier = sunnyFogMultiplier;
                 break;
@@ -101,7 +110,8 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Cloudy:
                 targetSunMultiplier = cloudySunMultiplier;
                 targetAmbientMultiplier = cloudyAmbientMultiplier;
-                targetRainRate = cloudyRainRate;
+                targetRainMainRate = cloudyRainMainRate;
+                targetRainNearRate = cloudyRainNearRate;
                 targetUseFog = cloudyUseFog;
                 targetFogMultiplier = cloudyFogMultiplier;
                 break;
@@ -109,41 +119,42 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Rainy:
                 targetSunMultiplier = rainySunMultiplier;
                 targetAmbientMultiplier = rainyAmbientMultiplier;
-                targetRainRate = rainyRainRate;
+                targetRainMainRate = rainyRainMainRate;
+                targetRainNearRate = rainyRainNearRate;
                 targetUseFog = rainyUseFog;
                 targetFogMultiplier = rainyFogMultiplier;
                 break;
         }
     }
 
-    private void InitializeRain()
+    private void InitializeRainSystem(ParticleSystem ps, float startRate)
     {
-        if (rainParticleSystem == null) return;
+        if (ps == null) return;
 
-        var emission = rainParticleSystem.emission;
-        emission.rateOverTime = targetRainRate;
+        var emission = ps.emission;
+        emission.rateOverTime = startRate;
 
-        if (!rainParticleSystem.isPlaying)
-            rainParticleSystem.Play();
+        if (!ps.isPlaying)
+            ps.Play();
     }
 
-    private void UpdateRainEmission()
+    private void UpdateRainEmission(ParticleSystem ps, float targetRate)
     {
-        if (rainParticleSystem == null) return;
+        if (ps == null) return;
 
-        var emission = rainParticleSystem.emission;
+        var emission = ps.emission;
         float currentRate = emission.rateOverTime.constant;
 
         float newRate = Mathf.Lerp(
             currentRate,
-            targetRainRate,
+            targetRate,
             Time.deltaTime * rainTransitionSpeed
         );
 
         emission.rateOverTime = newRate;
 
-        if (!rainParticleSystem.isPlaying)
-            rainParticleSystem.Play();
+        if (!ps.isPlaying)
+            ps.Play();
     }
 
     private void InitializeFog()

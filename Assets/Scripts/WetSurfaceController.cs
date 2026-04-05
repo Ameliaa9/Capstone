@@ -6,8 +6,8 @@ public class WetSurfaceController : MonoBehaviour
     public WeatherManager weatherManager;
 
     [Header("Road Materials")]
-    public Material mainRoadMaterial;   
-    public Material sideRoadMaterial;   
+    public Material mainRoadMaterial;   // Material.001 13
+    public Material sideRoadMaterial;   // Material.002 13
 
     [Header("Dry Colors")]
     public Color mainRoadDryColor = Color.white;
@@ -19,13 +19,13 @@ public class WetSurfaceController : MonoBehaviour
 
     [Header("Smoothness")]
     public float mainRoadDrySmoothness = 0.1f;
-    public float mainRoadWetSmoothness = 0.6f;
+    public float mainRoadWetSmoothness = 0.68f;
 
     public float sideRoadDrySmoothness = 0.1f;
-    public float sideRoadWetSmoothness = 0.45f;
+    public float sideRoadWetSmoothness = 0.5f;
 
     [Header("Transition")]
-    public float wetTransitionSpeed = 1.5f;
+    public float wetTransitionDuration = 10f;
 
     private float wetAmount = 0f;
 
@@ -40,13 +40,35 @@ public class WetSurfaceController : MonoBehaviour
         float targetWetAmount =
             weatherManager.currentWeather == WeatherManager.WeatherType.Rainy ? 1f : 0f;
 
-        wetAmount = Mathf.Lerp(wetAmount, targetWetAmount, Time.deltaTime * wetTransitionSpeed);
+        wetAmount = Mathf.MoveTowards(
+            wetAmount,
+            targetWetAmount,
+            Time.deltaTime / wetTransitionDuration
+        );
 
-        UpdateMaterial(mainRoadMaterial, mainRoadDryColor, mainRoadWetColor, mainRoadDrySmoothness, mainRoadWetSmoothness);
-        UpdateMaterial(sideRoadMaterial, sideRoadDryColor, sideRoadWetColor, sideRoadDrySmoothness, sideRoadWetSmoothness);
+        UpdateMaterial(
+            mainRoadMaterial,
+            mainRoadDryColor,
+            mainRoadWetColor,
+            mainRoadDrySmoothness,
+            mainRoadWetSmoothness
+        );
+
+        UpdateMaterial(
+            sideRoadMaterial,
+            sideRoadDryColor,
+            sideRoadWetColor,
+            sideRoadDrySmoothness,
+            sideRoadWetSmoothness
+        );
     }
 
-    private void UpdateMaterial(Material mat, Color dryColor, Color wetColor, float drySmoothness, float wetSmoothness)
+    private void UpdateMaterial(
+        Material mat,
+        Color dryColor,
+        Color wetColor,
+        float drySmoothness,
+        float wetSmoothness)
     {
         Color currentColor = Color.Lerp(dryColor, wetColor, wetAmount);
         float currentSmoothness = Mathf.Lerp(drySmoothness, wetSmoothness, wetAmount);

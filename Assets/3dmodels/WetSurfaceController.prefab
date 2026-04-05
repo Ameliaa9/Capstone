@@ -49,10 +49,10 @@ MonoBehaviour:
   sideRoadMaterial: {fileID: 2100000, guid: e04e812578b9e524ba93545faa8eb37e, type: 2}
   mainRoadDryColor: {r: 0.24705882, g: 0.24705882, b: 0.24705882, a: 1}
   sideRoadDryColor: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
-  mainRoadWetColor: {r: 0.22, g: 0.22, b: 0.22, a: 1}
-  sideRoadWetColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  mainRoadWetColor: {r: 0.2264151, g: 0.2214311, b: 0.2214311, a: 1}
+  sideRoadWetColor: {r: 0.33962262, g: 0.33855462, b: 0.33855462, a: 1}
   mainRoadDrySmoothness: 0.1
-  mainRoadWetSmoothness: 0.6
+  mainRoadWetSmoothness: 0.68
   sideRoadDrySmoothness: 0.1
-  sideRoadWetSmoothness: 0.45
-  wetTransitionSpeed: 1.5
+  sideRoadWetSmoothness: 0.55
+  wetTransitionDuration: 12
