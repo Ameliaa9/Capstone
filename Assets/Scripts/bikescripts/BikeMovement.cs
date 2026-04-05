@@ -15,6 +15,12 @@ public class BikeMovement : MonoBehaviour
     public float leanAngle = 20f;
     public float leanSpeed = 8f;
 
+    [Header("Stability")]
+    public Vector3 centerOfMassOffset = new Vector3(0f, -0.8f, 0f);
+    public float angularDragAmount = 6f;
+    public float maxTiltAngle = 25f;
+    public float uprightCorrectionSpeed = 6f;
+
     public float maxHealth = 100f;
 
     private Rigidbody rb;
@@ -25,6 +31,8 @@ public class BikeMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.centerOfMass = centerOfMassOffset;
+        rb.angularDamping = angularDragAmount;
     }
 
     void Update()
@@ -86,6 +94,16 @@ public class BikeMovement : MonoBehaviour
         if (rb.linearVelocity.y < 0f)
         {
             rb.AddForce(Vector3.down * fallMultiplier, ForceMode.Acceleration);
+        }
+
+        // auto-upright if tipped too far
+        float currentX = Mathf.DeltaAngle(0f, transform.eulerAngles.x);
+        float currentZ = Mathf.DeltaAngle(0f, transform.eulerAngles.z);
+
+        if (Mathf.Abs(currentX) > maxTiltAngle || Mathf.Abs(currentZ) > maxTiltAngle)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, uprightCorrectionSpeed * Time.fixedDeltaTime));
         }
 
         // lean
