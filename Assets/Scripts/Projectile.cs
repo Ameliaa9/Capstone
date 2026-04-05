@@ -6,10 +6,9 @@ namespace ProjectileCurveVisualizerSystem
     {
         public Rigidbody projectileRigidbody;
         public MeshCollider projectileMeshCollider;
-        
+
         public DeliverySystem deliverySystem;
         public float lifetimeInWorld = 5f;
-
 
         public void Throw(Vector3 velocity)
         {
@@ -23,7 +22,7 @@ namespace ProjectileCurveVisualizerSystem
         void OnCollisionEnter(Collision collision)
         {
             // hit target start counting
-            if (collision.gameObject.CompareTag("Target"))
+            if (collision.gameObject.CompareTag("TargetBuilding"))
             {
                 var hitOnce = collision.gameObject.GetComponent<TargetHitOnce>();
                 if (hitOnce == null || hitOnce.TryMarkHit())
@@ -32,13 +31,16 @@ namespace ProjectileCurveVisualizerSystem
                 return;
             }
 
+            Transform hitTransform = collision.transform;
+
             // hit correct house
-            if (collision.gameObject == deliverySystem.DeliveryLocations[deliverySystem.currentDelivery])
+            if (IsSameOrChildOf(hitTransform, deliverySystem.DeliveryLocations[deliverySystem.currentDelivery]))
             {
                 deliverySystem.ProjectileHitHouse(deliverySystem.currentDelivery);
                 Destroy(gameObject);
             }
-            else if (collision.gameObject == deliverySystem.DeliveryLocations[deliverySystem.secondaryDelivery])
+            else if (deliverySystem.secondaryDelivery >= 0 &&
+                     IsSameOrChildOf(hitTransform, deliverySystem.DeliveryLocations[deliverySystem.secondaryDelivery]))
             {
                 deliverySystem.ProjectileHitHouse(deliverySystem.secondaryDelivery);
                 Destroy(gameObject);
@@ -47,6 +49,12 @@ namespace ProjectileCurveVisualizerSystem
             {
                 Debug.Log($"Projectile collided with wrong gameObject: {collision.gameObject.name}");
             }
+        }
+
+        bool IsSameOrChildOf(Transform hitObject, GameObject targetObject)
+        {
+            if (hitObject == null || targetObject == null) return false;
+            return hitObject == targetObject.transform || hitObject.IsChildOf(targetObject.transform);
         }
     }
 }
