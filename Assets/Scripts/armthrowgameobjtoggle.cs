@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Threading;
-using System.Threading.Tasks;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -11,26 +9,16 @@ public class GameObjectToggle : MonoBehaviour
     [Tooltip("The GameObject to toggle (leave empty to toggle this object)")]
     [SerializeField] private GameObject targetObject;
 
-    [Header("Timing Settings")]
-    [Tooltip("Time in seconds between toggles")]
-    [SerializeField] private float toggleInterval = 2f;
-    [Tooltip("Randomize interval by +/- this amount")]
-    [SerializeField] private float randomVariance = 0f;
-    [Tooltip("Start with target disabled")]
-    [SerializeField] private bool startDisabled = false;
+    [Header("Watch Settings")]
+    [Tooltip("The GameObject that holds the Mesh Renderer to watch")]
+    [SerializeField] private GameObject watchObject;
+    [Tooltip("Reverse the logic (Target checks when Renderer is enabled, unchecks when disabled)")]
+    [SerializeField] private bool invertLogic = false;
 
-    [Header("Options")]
-    [Tooltip("Begin toggling automatically on Start")]
-    [SerializeField] private bool autoStart = true;
-    [Tooltip("Stop after this many toggles (0 = infinite)")]
-    [SerializeField] private int maxToggleCount = 0;
-
-    private float nextToggleTime;
-    private int toggleCount;
-    private bool isWaiting;
-
-    // Used to safely cancel the background timer when the object is destroyed
-    private CancellationTokenSource cancellationTokenSource;
+    // We use the base 'Renderer' class so it automatically supports 
+    // both MeshRenderer and SkinnedMeshRenderer (used by characters)
+    private Renderer cachedRenderer;
+    private bool lastRendererState;
 
     void Start()
     {
@@ -40,93 +28,50 @@ public class GameObjectToggle : MonoBehaviour
             targetObject = gameObject;
         }
 
-        if (startDisabled)
+        // Scan the watched object (and its children) for a renderer
+        if (watchObject != null)
         {
-            targetObject.SetActive(false);
-        }
+            cachedRenderer = watchObject.GetComponentInChildren<Renderer>();
 
-        if (autoStart)
-        {
-            StartToggling();
-        }
-    }
-
-    public async void StartToggling()
-    {
-        if (isWaiting) return; // Prevent multiple loops running at once
-
-        isWaiting = true;
-        toggleCount = 0;
-
-        // Reset cancellation token
-        cancellationTokenSource?.Cancel();
-        cancellationTokenSource = new CancellationTokenSource();
-
-        try
-        {
-            // Start the asynchronous loop
-            await ToggleLoop(cancellationTokenSource.Token);
-        }
-        catch (TaskCanceledException)
-        {
-            // This is expected when the loop is stopped or the object is destroyed
-        }
-    }
-
-    private async Task ToggleLoop(CancellationToken token)
-    {
-        while (isWaiting && !token.IsCancellationRequested)
-        {
-            // Calculate the interval
-            float interval = toggleInterval + Random.Range(-randomVariance, randomVariance);
-            interval = Mathf.Max(0.01f, interval);
-
-            // Use realtime since Time.time stops updating for disabled objects
-            nextToggleTime = Time.realtimeSinceStartup + interval;
-
-            // Wait asynchronously (this does not stop when the GameObject is disabled!)
-            await Task.Delay(Mathf.RoundToInt(interval * 1000), token);
-
-            // Double check cancellation before executing toggle
-            if (token.IsCancellationRequested || !isWaiting || targetObject == null) break;
-
-            // Toggle target state
-            targetObject.SetActive(!targetObject.activeSelf);
-            toggleCount++;
-
-            // Check max count
-            if (maxToggleCount > 0 && toggleCount >= maxToggleCount)
+            if (cachedRenderer != null)
             {
-                isWaiting = false;
-                break;
+                // Sync the initial state so it doesn't trigger a false toggle on frame 1
+                lastRendererState = cachedRenderer.enabled;
+            }
+            else
+            {
+                Debug.LogWarning($"GameObjectToggle: No MeshRenderer or SkinnedMeshRenderer found on '{watchObject.name}' or its children!", watchObject);
             }
         }
     }
 
-    public void StopToggling()
+    void Update()
     {
-        isWaiting = false;
-        cancellationTokenSource?.Cancel();
+        // Do nothing if we didn't find a renderer or a target
+        if (cachedRenderer == null || targetObject == null) return;
+
+        // Check if the renderer's enabled checkbox has changed
+        bool currentRendererState = cachedRenderer.enabled;
+
+        if (currentRendererState != lastRendererState)
+        {
+            // Update our tracked state
+            lastRendererState = currentRendererState;
+
+            // Apply inversion if needed
+            bool desiredTargetState = invertLogic ? currentRendererState : !currentRendererState;
+
+            // Apply the state to the target GameObject
+            targetObject.SetActive(desiredTargetState);
+        }
     }
 
-    public void ResetToggle()
-    {
-        StopToggling();
-        toggleCount = 0;
-    }
-
-    // Clean up the background task if this script/object gets deleted
-    private void OnDestroy()
-    {
-        StopToggling();
-        cancellationTokenSource?.Dispose();
-    }
-
-    // Status
-    public bool IsRunning => isWaiting;
-    public int CurrentToggleCount => toggleCount;
-    public float TimeUntilNextToggle => isWaiting ? Mathf.Max(0, nextToggleTime - Time.realtimeSinceStartup) : 0f;
+    // Status properties for the custom inspector
     public GameObject CurrentTarget => targetObject;
+    public GameObject CurrentWatch => watchObject;
+    public bool IsRendererEnabled => cachedRenderer != null && cachedRenderer.enabled;
+    public bool IsTargetActive => targetObject != null && targetObject.activeInHierarchy;
+    public bool RendererFound => cachedRenderer != null;
 }
 
 // Custom Inspector
@@ -145,20 +90,28 @@ public class GameObjectToggleEditor : Editor
 
         if (Application.isPlaying)
         {
-            EditorGUILayout.LabelField($"Running: {script.IsRunning}");
-            EditorGUILayout.LabelField($"Toggle Count: {script.CurrentToggleCount}");
-            EditorGUILayout.LabelField($"Target: {(script.CurrentTarget != null ? script.CurrentTarget.name : "None")}");
-            if (script.IsRunning)
+            EditorGUILayout.LabelField($"Watch Object: {(script.CurrentWatch != null ? script.CurrentWatch.name : "None")}");
+
+            if (script.RendererFound)
             {
-                EditorGUILayout.LabelField($"Time Until Next: {script.TimeUntilNextToggle:F2}s");
+                EditorGUILayout.LabelField($"Renderer Enabled: {script.IsRendererEnabled}");
             }
+            else
+            {
+                EditorGUILayout.HelpBox("No Renderer found on Watch Object!", MessageType.Error);
+            }
+
+            EditorGUILayout.Space(5);
+
+            EditorGUILayout.LabelField($"Target Object: {(script.CurrentTarget != null ? script.CurrentTarget.name : "None")}");
+            EditorGUILayout.LabelField($"Target Active: {script.IsTargetActive}");
         }
         else
         {
             EditorGUILayout.HelpBox("Enter Play Mode to see status", MessageType.Info);
         }
 
-        // Force inspector to repaint so the countdown timer updates smoothly
+        // Force inspector to repaint so status updates live
         Repaint();
     }
 }
