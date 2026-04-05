@@ -47,7 +47,9 @@ MonoBehaviour:
   timeOfDayManager: {fileID: 0}
   rainMainParticleSystem: {fileID: 0}
   rainNearParticleSystem: {fileID: 0}
-  currentWeather: 1
+  rainSplashBaseParticleSystem: {fileID: 0}
+  rainSplashAccentParticleSystem: {fileID: 0}
+  currentWeather: 0
   transitionSpeed: 1
   rainTransitionSpeed: 1.2
   fogTransitionSpeed: 1
@@ -55,17 +57,23 @@ MonoBehaviour:
   sunnyAmbientMultiplier: 1
   sunnyRainMainRate: 0
   sunnyRainNearRate: 0
+  sunnyRainSplashBaseRate: 0
+  sunnyRainSplashAccentRate: 0
   sunnyUseFog: 0
   sunnyFogMultiplier: 0
   cloudySunMultiplier: 0.75
   cloudyAmbientMultiplier: 0.9
   cloudyRainMainRate: 0
   cloudyRainNearRate: 0
+  cloudyRainSplashBaseRate: 0
+  cloudyRainSplashAccentRate: 0
   cloudyUseFog: 0
   cloudyFogMultiplier: 0.4
   rainySunMultiplier: 0.6
   rainyAmbientMultiplier: 0.8
   rainyRainMainRate: 600
   rainyRainNearRate: 180
+  rainyRainSplashBaseRate: 260
+  rainyRainSplashAccentRate: 50
   rainyUseFog: 1
   rainyFogMultiplier: 1.2
