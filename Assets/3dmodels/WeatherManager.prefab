@@ -49,6 +49,7 @@ MonoBehaviour:
   rainNearParticleSystem: {fileID: 0}
   rainSplashBaseParticleSystem: {fileID: 0}
   rainSplashAccentParticleSystem: {fileID: 0}
+  rainAudioSource: {fileID: 0}
   currentWeather: 0
   useAutomaticWeather: 0
   weatherDurationRange: {x: 5, y: 10}
@@ -57,12 +58,17 @@ MonoBehaviour:
   transitionSpeed: 1
   rainTransitionSpeed: 1.2
   fogTransitionSpeed: 1
+  rainIntensityTransitionSpeed: 0.6
+  currentRainIntensity: 0
+  minRainIntensity: 0.35
+  maxRainIntensity: 1
   sunnySunMultiplier: 1
   sunnyAmbientMultiplier: 1
   sunnyRainMainRate: 0
   sunnyRainNearRate: 0
   sunnyRainSplashBaseRate: 0
   sunnyRainSplashAccentRate: 0
+  sunnyRainAudioVolume: 0
   sunnyUseFog: 0
   sunnyFogMultiplier: 0
   cloudySunMultiplier: 0.65
@@ -71,6 +77,7 @@ MonoBehaviour:
   cloudyRainNearRate: 0
   cloudyRainSplashBaseRate: 0
   cloudyRainSplashAccentRate: 0
+  cloudyRainAudioVolume: 0
   cloudyUseFog: 1
   cloudyFogMultiplier: 0.18
   rainySunMultiplier: 0.6
@@ -79,6 +86,7 @@ MonoBehaviour:
   rainyRainNearRate: 180
   rainyRainSplashBaseRate: 260
   rainyRainSplashAccentRate: 50
+  rainyRainAudioVolume: 1
   rainyUseFog: 1
   rainyFogMultiplier: 1.2
   sunnyToSunnyChance: 0.35

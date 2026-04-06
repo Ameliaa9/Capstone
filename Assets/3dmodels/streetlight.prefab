@@ -371,8 +371,13 @@ MonoBehaviour:
   nightStartHour: 18
   nightEndHour: 6
   offIntensity: 0
-  onIntensity: 112.2
+  normalNightIntensity: 112
+  rainyDayIntensity: 40
+  rainyNightBonusIntensity: 20
   transitionSpeed: 2
+  rainyDayMinThreshold: 0.1
+  scaleRainyDayByRainIntensity: 1
+  scaleRainyNightBonusByRainIntensity: 1
   useMapMarker: 1
   markerOnThreshold: 0.01
 --- !u!4 &7711980638409276899 stripped

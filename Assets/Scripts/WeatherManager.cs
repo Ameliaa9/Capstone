@@ -22,6 +22,7 @@ public class WeatherManager : MonoBehaviour
     public ParticleSystem rainNearParticleSystem;
     public ParticleSystem rainSplashBaseParticleSystem;
     public ParticleSystem rainSplashAccentParticleSystem;
+    public AudioSource rainAudioSource;
 
     [Header("Current Weather")]
     public WeatherType currentWeather = WeatherType.Sunny;
@@ -43,6 +44,13 @@ public class WeatherManager : MonoBehaviour
     public float transitionSpeed = 1.0f;
     public float rainTransitionSpeed = 1.2f;
     public float fogTransitionSpeed = 1.0f;
+    public float rainIntensityTransitionSpeed = 0.6f;
+
+    [Header("Rain Intensity")]
+    [Range(0f, 1f)] public float currentRainIntensity = 0f;
+    [Range(0f, 1f)] public float minRainIntensity = 0.35f;
+    [Range(0f, 1f)] public float maxRainIntensity = 1.0f;
+    private float targetRainIntensity = 0f;
 
     [Header("Sunny Settings")]
     public float sunnySunMultiplier = 1.0f;
@@ -51,18 +59,20 @@ public class WeatherManager : MonoBehaviour
     public float sunnyRainNearRate = 0f;
     public float sunnyRainSplashBaseRate = 0f;
     public float sunnyRainSplashAccentRate = 0f;
+    public float sunnyRainAudioVolume = 0f;
     public bool sunnyUseFog = false;
     public float sunnyFogMultiplier = 0f;
 
     [Header("Cloudy Settings")]
-    public float cloudySunMultiplier = 0.75f;
-    public float cloudyAmbientMultiplier = 0.9f;
+    public float cloudySunMultiplier = 0.6f;
+    public float cloudyAmbientMultiplier = 0.82f;
     public float cloudyRainMainRate = 0f;
     public float cloudyRainNearRate = 0f;
     public float cloudyRainSplashBaseRate = 0f;
     public float cloudyRainSplashAccentRate = 0f;
-    public bool cloudyUseFog = false;
-    public float cloudyFogMultiplier = 0.4f;
+    public float cloudyRainAudioVolume = 0f;
+    public bool cloudyUseFog = true;
+    public float cloudyFogMultiplier = 0.18f;
 
     [Header("Rainy Settings")]
     public float rainySunMultiplier = 0.6f;
@@ -71,10 +81,11 @@ public class WeatherManager : MonoBehaviour
     public float rainyRainNearRate = 180f;
     public float rainyRainSplashBaseRate = 260f;
     public float rainyRainSplashAccentRate = 50f;
+    public float rainyRainAudioVolume = 0.8f;
     public bool rainyUseFog = true;
     public float rainyFogMultiplier = 1.2f;
 
-    [Header("Base Automatic Weather Weights")]
+    [Header("Automatic Weather Weights")]
     [Range(0f, 1f)] public float sunnyToSunnyChance = 0.35f;
 
     [Range(0f, 1f)] public float cloudyToSunnyChance = 0.30f;
@@ -103,6 +114,7 @@ public class WeatherManager : MonoBehaviour
     private float targetRainNearRate;
     private float targetRainSplashBaseRate;
     private float targetRainSplashAccentRate;
+    private float targetRainAudioVolume;
 
     private bool targetUseFog;
     private float targetFogMultiplier;
@@ -121,6 +133,7 @@ public class WeatherManager : MonoBehaviour
         previousWeather = currentWeather;
         lastAutomaticWeatherState = useAutomaticWeather;
 
+        RefreshRainIntensityTarget(true);
         UpdateWeatherTargets();
 
         if (timeOfDayManager != null)
@@ -134,6 +147,7 @@ public class WeatherManager : MonoBehaviour
         InitializeRainSystem(rainSplashBaseParticleSystem, targetRainSplashBaseRate);
         InitializeRainSystem(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
 
+        InitializeRainAudio();
         InitializeFog();
         ResetWeatherTimer();
     }
@@ -146,6 +160,7 @@ public class WeatherManager : MonoBehaviour
         HandleManualWeatherChange();
         HandleAutomaticWeather();
 
+        UpdateRainIntensity();
         UpdateWeatherTargets();
 
         timeOfDayManager.sunIntensityMultiplier = Mathf.Lerp(
@@ -165,6 +180,7 @@ public class WeatherManager : MonoBehaviour
         UpdateRainEmission(rainSplashBaseParticleSystem, targetRainSplashBaseRate);
         UpdateRainEmission(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
 
+        UpdateRainAudio();
         UpdateFog();
     }
 
@@ -182,6 +198,7 @@ public class WeatherManager : MonoBehaviour
         if (!useAutomaticWeather && previousWeather != currentWeather)
         {
             previousWeather = currentWeather;
+            RefreshRainIntensityTarget(false);
             ResetWeatherTimer();
         }
     }
@@ -196,6 +213,7 @@ public class WeatherManager : MonoBehaviour
         {
             currentWeather = GetNextWeather(currentWeather);
             previousWeather = currentWeather;
+            RefreshRainIntensityTarget(false);
             ResetWeatherTimer();
         }
     }
@@ -204,6 +222,32 @@ public class WeatherManager : MonoBehaviour
     {
         weatherTimer = 0f;
         currentWeatherDuration = Random.Range(weatherDurationRange.x, weatherDurationRange.y);
+    }
+
+    private void RefreshRainIntensityTarget(bool immediate)
+    {
+        if (currentWeather == WeatherType.Rainy)
+        {
+            targetRainIntensity = Random.Range(minRainIntensity, maxRainIntensity);
+        }
+        else
+        {
+            targetRainIntensity = 0f;
+        }
+
+        if (immediate)
+        {
+            currentRainIntensity = targetRainIntensity;
+        }
+    }
+
+    private void UpdateRainIntensity()
+    {
+        currentRainIntensity = Mathf.Lerp(
+            currentRainIntensity,
+            targetRainIntensity,
+            Time.deltaTime * rainIntensityTransitionSpeed
+        );
     }
 
     private WeatherType GetNextWeather(WeatherType current)
@@ -419,6 +463,8 @@ public class WeatherManager : MonoBehaviour
 
     private void UpdateWeatherTargets()
     {
+        float rainFactor = currentRainIntensity;
+
         switch (currentWeather)
         {
             case WeatherType.Sunny:
@@ -428,6 +474,7 @@ public class WeatherManager : MonoBehaviour
                 targetRainNearRate = sunnyRainNearRate;
                 targetRainSplashBaseRate = sunnyRainSplashBaseRate;
                 targetRainSplashAccentRate = sunnyRainSplashAccentRate;
+                targetRainAudioVolume = sunnyRainAudioVolume;
                 targetUseFog = sunnyUseFog;
                 targetFogMultiplier = sunnyFogMultiplier;
                 break;
@@ -439,6 +486,7 @@ public class WeatherManager : MonoBehaviour
                 targetRainNearRate = cloudyRainNearRate;
                 targetRainSplashBaseRate = cloudyRainSplashBaseRate;
                 targetRainSplashAccentRate = cloudyRainSplashAccentRate;
+                targetRainAudioVolume = cloudyRainAudioVolume;
                 targetUseFog = cloudyUseFog;
                 targetFogMultiplier = cloudyFogMultiplier;
                 break;
@@ -446,12 +494,25 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Rainy:
                 targetSunMultiplier = rainySunMultiplier;
                 targetAmbientMultiplier = rainyAmbientMultiplier;
-                targetRainMainRate = rainyRainMainRate;
-                targetRainNearRate = rainyRainNearRate;
-                targetRainSplashBaseRate = rainyRainSplashBaseRate;
-                targetRainSplashAccentRate = rainyRainSplashAccentRate;
+                targetRainMainRate = rainyRainMainRate * rainFactor;
+                targetRainNearRate = rainyRainNearRate * rainFactor;
+                targetRainSplashBaseRate = rainyRainSplashBaseRate * rainFactor;
+                targetRainSplashAccentRate = rainyRainSplashAccentRate * rainFactor;
+                targetRainAudioVolume = rainyRainAudioVolume * rainFactor;
                 targetUseFog = rainyUseFog;
-                targetFogMultiplier = rainyFogMultiplier;
+                targetFogMultiplier = rainyFogMultiplier * Mathf.Lerp(0.7f, 1f, rainFactor);
+                break;
+
+            default:
+                targetSunMultiplier = sunnySunMultiplier;
+                targetAmbientMultiplier = sunnyAmbientMultiplier;
+                targetRainMainRate = 0f;
+                targetRainNearRate = 0f;
+                targetRainSplashBaseRate = 0f;
+                targetRainSplashAccentRate = 0f;
+                targetRainAudioVolume = 0f;
+                targetUseFog = false;
+                targetFogMultiplier = 0f;
                 break;
         }
     }
@@ -484,6 +545,30 @@ public class WeatherManager : MonoBehaviour
 
         if (!ps.isPlaying)
             ps.Play();
+    }
+
+    private void InitializeRainAudio()
+    {
+        if (rainAudioSource == null) return;
+
+        rainAudioSource.volume = targetRainAudioVolume;
+
+        if (!rainAudioSource.isPlaying)
+            rainAudioSource.Play();
+    }
+
+    private void UpdateRainAudio()
+    {
+        if (rainAudioSource == null) return;
+
+        rainAudioSource.volume = Mathf.Lerp(
+            rainAudioSource.volume,
+            targetRainAudioVolume,
+            Time.deltaTime * rainTransitionSpeed
+        );
+
+        if (!rainAudioSource.isPlaying)
+            rainAudioSource.Play();
     }
 
     private void InitializeFog()

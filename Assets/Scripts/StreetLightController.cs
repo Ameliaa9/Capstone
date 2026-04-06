@@ -16,10 +16,19 @@ public class StreetLightController : MonoBehaviour
     public float nightStartHour = 18f;
     public float nightEndHour = 6f;
 
-    [Header("Light Settings")]
+    [Header("Base Light Settings")]
     public float offIntensity = 0f;
-    public float onIntensity = 112.2f;
+    public float normalNightIntensity = 112.2f;
+    public float rainyDayIntensity = 45f;
+    public float rainyNightBonusIntensity = 20f;
     public float transitionSpeed = 2f;
+
+    [Header("Rain Response")]
+   
+    [Range(0f, 1f)]
+    public float rainyDayMinThreshold = 0.1f;
+    public bool scaleRainyDayByRainIntensity = true;
+    public bool scaleRainyNightBonusByRainIntensity = true;
 
     [Header("Map Marker Settings")]
     public bool useMapMarker = true;
@@ -39,15 +48,42 @@ public class StreetLightController : MonoBehaviour
         bool isNight = IsNightTime(timeOfDayManager.currentTime);
         bool isRainy = weatherManager.currentWeather == WeatherManager.WeatherType.Rainy;
 
-        bool shouldBeOn = false;
+        float rainIntensity = 0f;
+        if (isRainy)
+        {
+            rainIntensity = Mathf.Clamp01(weatherManager.currentRainIntensity);
+        }
+
+        float targetIntensity = offIntensity;
 
         if (turnOnAtNight && isNight)
-            shouldBeOn = true;
+        {
+            targetIntensity = normalNightIntensity;
 
-        if (turnOnWhenRainy && isRainy)
-            shouldBeOn = true;
+            if (turnOnWhenRainy && isRainy)
+            {
+                float rainyNightBonus = rainyNightBonusIntensity;
 
-        float targetIntensity = shouldBeOn ? onIntensity : offIntensity;
+                if (scaleRainyNightBonusByRainIntensity)
+                    rainyNightBonus *= rainIntensity;
+
+                targetIntensity += rainyNightBonus;
+            }
+        }
+        else if (turnOnWhenRainy && isRainy)
+        {
+            if (rainIntensity >= rainyDayMinThreshold)
+            {
+                if (scaleRainyDayByRainIntensity)
+                {
+                    targetIntensity = Mathf.Lerp(offIntensity, rainyDayIntensity, rainIntensity);
+                }
+                else
+                {
+                    targetIntensity = rainyDayIntensity;
+                }
+            }
+        }
 
         streetLight.intensity = Mathf.Lerp(
             streetLight.intensity,
