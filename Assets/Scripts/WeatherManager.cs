@@ -9,6 +9,13 @@ public class WeatherManager : MonoBehaviour
         Rainy
     }
 
+    public enum TimePeriod
+    {
+        Day,
+        Evening,
+        Night
+    }
+
     [Header("References")]
     public TimeOfDayManager timeOfDayManager;
     public ParticleSystem rainMainParticleSystem;
@@ -18,6 +25,19 @@ public class WeatherManager : MonoBehaviour
 
     [Header("Current Weather")]
     public WeatherType currentWeather = WeatherType.Sunny;
+
+    [Header("Automatic Weather")]
+    public bool useAutomaticWeather = false;
+    public Vector2 weatherDurationRange = new Vector2(45f, 90f);
+
+    [Tooltip("If enabled, the system randomizes the starting weather at play start. If disabled, it uses Current Weather.")]
+    public bool randomizeInitialWeather = false;
+
+    [Header("Time Weighted Weather")]
+    public bool useTimeWeightedWeather = true;
+
+    private float weatherTimer;
+    private float currentWeatherDuration;
 
     [Header("Transition")]
     public float transitionSpeed = 1.0f;
@@ -54,6 +74,29 @@ public class WeatherManager : MonoBehaviour
     public bool rainyUseFog = true;
     public float rainyFogMultiplier = 1.2f;
 
+    [Header("Base Automatic Weather Weights")]
+    [Range(0f, 1f)] public float sunnyToSunnyChance = 0.35f;
+
+    [Range(0f, 1f)] public float cloudyToSunnyChance = 0.30f;
+    [Range(0f, 1f)] public float cloudyToCloudyChance = 0.35f;
+
+    [Range(0f, 1f)] public float rainyToCloudyChance = 0.65f;
+
+    [Header("Time Period Multipliers - Day")]
+    public float daySunnyWeight = 1.4f;
+    public float dayCloudyWeight = 1.0f;
+    public float dayRainyWeight = 0.6f;
+
+    [Header("Time Period Multipliers - Evening")]
+    public float eveningSunnyWeight = 0.9f;
+    public float eveningCloudyWeight = 1.25f;
+    public float eveningRainyWeight = 1.0f;
+
+    [Header("Time Period Multipliers - Night")]
+    public float nightSunnyWeight = 0.5f;
+    public float nightCloudyWeight = 1.2f;
+    public float nightRainyWeight = 1.35f;
+
     private float targetSunMultiplier;
     private float targetAmbientMultiplier;
     private float targetRainMainRate;
@@ -65,8 +108,19 @@ public class WeatherManager : MonoBehaviour
     private float targetFogMultiplier;
     private float currentFogMultiplier = 0f;
 
+    private WeatherType previousWeather;
+    private bool lastAutomaticWeatherState;
+
     private void Start()
     {
+        if (randomizeInitialWeather)
+        {
+            currentWeather = (WeatherType)Random.Range(0, System.Enum.GetValues(typeof(WeatherType)).Length);
+        }
+
+        previousWeather = currentWeather;
+        lastAutomaticWeatherState = useAutomaticWeather;
+
         UpdateWeatherTargets();
 
         if (timeOfDayManager != null)
@@ -81,11 +135,16 @@ public class WeatherManager : MonoBehaviour
         InitializeRainSystem(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
 
         InitializeFog();
+        ResetWeatherTimer();
     }
 
     private void Update()
     {
         if (timeOfDayManager == null) return;
+
+        HandleModeSwitch();
+        HandleManualWeatherChange();
+        HandleAutomaticWeather();
 
         UpdateWeatherTargets();
 
@@ -107,6 +166,255 @@ public class WeatherManager : MonoBehaviour
         UpdateRainEmission(rainSplashAccentParticleSystem, targetRainSplashAccentRate);
 
         UpdateFog();
+    }
+
+    private void HandleModeSwitch()
+    {
+        if (lastAutomaticWeatherState != useAutomaticWeather)
+        {
+            lastAutomaticWeatherState = useAutomaticWeather;
+            ResetWeatherTimer();
+        }
+    }
+
+    private void HandleManualWeatherChange()
+    {
+        if (!useAutomaticWeather && previousWeather != currentWeather)
+        {
+            previousWeather = currentWeather;
+            ResetWeatherTimer();
+        }
+    }
+
+    private void HandleAutomaticWeather()
+    {
+        if (!useAutomaticWeather) return;
+
+        weatherTimer += Time.deltaTime;
+
+        if (weatherTimer >= currentWeatherDuration)
+        {
+            currentWeather = GetNextWeather(currentWeather);
+            previousWeather = currentWeather;
+            ResetWeatherTimer();
+        }
+    }
+
+    private void ResetWeatherTimer()
+    {
+        weatherTimer = 0f;
+        currentWeatherDuration = Random.Range(weatherDurationRange.x, weatherDurationRange.y);
+    }
+
+    private WeatherType GetNextWeather(WeatherType current)
+    {
+        if (!useTimeWeightedWeather)
+        {
+            return GetBaseNextWeather(current);
+        }
+
+        TimePeriod period = GetCurrentTimePeriod();
+
+        switch (current)
+        {
+            case WeatherType.Sunny:
+                {
+                    float sunnyWeight;
+                    float cloudyWeight;
+
+                    GetWeightedPair(period, out sunnyWeight, out cloudyWeight);
+
+                    return GetWeightedChoice(
+                        WeatherType.Sunny, sunnyWeight,
+                        WeatherType.Cloudy, cloudyWeight
+                    );
+                }
+
+            case WeatherType.Cloudy:
+                {
+                    float sunnyWeight;
+                    float cloudyWeight;
+                    float rainyWeight;
+
+                    GetWeightedTriple(period, out sunnyWeight, out cloudyWeight, out rainyWeight);
+
+                    return GetWeightedChoice(
+                        WeatherType.Sunny, sunnyWeight,
+                        WeatherType.Cloudy, cloudyWeight,
+                        WeatherType.Rainy, rainyWeight
+                    );
+                }
+
+            case WeatherType.Rainy:
+                {
+                    float cloudyWeight;
+                    float rainyWeight;
+
+                    GetWeightedRainPair(period, out cloudyWeight, out rainyWeight);
+
+                    return GetWeightedChoice(
+                        WeatherType.Cloudy, cloudyWeight,
+                        WeatherType.Rainy, rainyWeight
+                    );
+                }
+        }
+
+        return WeatherType.Cloudy;
+    }
+
+    private WeatherType GetBaseNextWeather(WeatherType current)
+    {
+        float roll = Random.value;
+
+        switch (current)
+        {
+            case WeatherType.Sunny:
+                if (roll < sunnyToSunnyChance)
+                    return WeatherType.Sunny;
+                else
+                    return WeatherType.Cloudy;
+
+            case WeatherType.Cloudy:
+                if (roll < cloudyToSunnyChance)
+                    return WeatherType.Sunny;
+                else if (roll < cloudyToSunnyChance + cloudyToCloudyChance)
+                    return WeatherType.Cloudy;
+                else
+                    return WeatherType.Rainy;
+
+            case WeatherType.Rainy:
+                if (roll < rainyToCloudyChance)
+                    return WeatherType.Cloudy;
+                else
+                    return WeatherType.Rainy;
+        }
+
+        return WeatherType.Cloudy;
+    }
+
+    private TimePeriod GetCurrentTimePeriod()
+    {
+        float hour = timeOfDayManager.currentTime;
+
+        if (hour >= 6f && hour < 16f)
+            return TimePeriod.Day;
+
+        if (hour >= 16f && hour < 20f)
+            return TimePeriod.Evening;
+
+        return TimePeriod.Night;
+    }
+
+    private void GetWeightedPair(TimePeriod period, out float sunnyWeight, out float cloudyWeight)
+    {
+        float baseSunny = sunnyToSunnyChance;
+        float baseCloudy = 1f - sunnyToSunnyChance;
+
+        switch (period)
+        {
+            case TimePeriod.Day:
+                sunnyWeight = baseSunny * daySunnyWeight;
+                cloudyWeight = baseCloudy * dayCloudyWeight;
+                break;
+
+            case TimePeriod.Evening:
+                sunnyWeight = baseSunny * eveningSunnyWeight;
+                cloudyWeight = baseCloudy * eveningCloudyWeight;
+                break;
+
+            default:
+                sunnyWeight = baseSunny * nightSunnyWeight;
+                cloudyWeight = baseCloudy * nightCloudyWeight;
+                break;
+        }
+    }
+
+    private void GetWeightedTriple(TimePeriod period, out float sunnyWeight, out float cloudyWeight, out float rainyWeight)
+    {
+        float baseSunny = cloudyToSunnyChance;
+        float baseCloudy = cloudyToCloudyChance;
+        float baseRainy = Mathf.Max(0f, 1f - cloudyToSunnyChance - cloudyToCloudyChance);
+
+        switch (period)
+        {
+            case TimePeriod.Day:
+                sunnyWeight = baseSunny * daySunnyWeight;
+                cloudyWeight = baseCloudy * dayCloudyWeight;
+                rainyWeight = baseRainy * dayRainyWeight;
+                break;
+
+            case TimePeriod.Evening:
+                sunnyWeight = baseSunny * eveningSunnyWeight;
+                cloudyWeight = baseCloudy * eveningCloudyWeight;
+                rainyWeight = baseRainy * eveningRainyWeight;
+                break;
+
+            default:
+                sunnyWeight = baseSunny * nightSunnyWeight;
+                cloudyWeight = baseCloudy * nightCloudyWeight;
+                rainyWeight = baseRainy * nightRainyWeight;
+                break;
+        }
+    }
+
+    private void GetWeightedRainPair(TimePeriod period, out float cloudyWeight, out float rainyWeight)
+    {
+        float baseCloudy = rainyToCloudyChance;
+        float baseRainy = 1f - rainyToCloudyChance;
+
+        switch (period)
+        {
+            case TimePeriod.Day:
+                cloudyWeight = baseCloudy * dayCloudyWeight;
+                rainyWeight = baseRainy * dayRainyWeight;
+                break;
+
+            case TimePeriod.Evening:
+                cloudyWeight = baseCloudy * eveningCloudyWeight;
+                rainyWeight = baseRainy * eveningRainyWeight;
+                break;
+
+            default:
+                cloudyWeight = baseCloudy * nightCloudyWeight;
+                rainyWeight = baseRainy * nightRainyWeight;
+                break;
+        }
+    }
+
+    private WeatherType GetWeightedChoice(
+        WeatherType a, float weightA,
+        WeatherType b, float weightB)
+    {
+        float total = weightA + weightB;
+        if (total <= 0f) return a;
+
+        float roll = Random.Range(0f, total);
+
+        if (roll < weightA)
+            return a;
+
+        return b;
+    }
+
+    private WeatherType GetWeightedChoice(
+        WeatherType a, float weightA,
+        WeatherType b, float weightB,
+        WeatherType c, float weightC)
+    {
+        float total = weightA + weightB + weightC;
+        if (total <= 0f) return b;
+
+        float roll = Random.Range(0f, total);
+
+        if (roll < weightA)
+            return a;
+
+        roll -= weightA;
+
+        if (roll < weightB)
+            return b;
+
+        return c;
     }
 
     private void UpdateWeatherTargets()

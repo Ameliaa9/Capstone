@@ -50,6 +50,10 @@ MonoBehaviour:
   rainSplashBaseParticleSystem: {fileID: 0}
   rainSplashAccentParticleSystem: {fileID: 0}
   currentWeather: 0
+  useAutomaticWeather: 0
+  weatherDurationRange: {x: 5, y: 10}
+  randomizeInitialWeather: 0
+  useTimeWeightedWeather: 0
   transitionSpeed: 1
   rainTransitionSpeed: 1.2
   fogTransitionSpeed: 1
@@ -77,3 +81,16 @@ MonoBehaviour:
   rainyRainSplashAccentRate: 50
   rainyUseFog: 1
   rainyFogMultiplier: 1.2
+  sunnyToSunnyChance: 0.35
+  cloudyToSunnyChance: 0.3
+  cloudyToCloudyChance: 0.35
+  rainyToCloudyChance: 0.65
+  daySunnyWeight: 1.4
+  dayCloudyWeight: 1
+  dayRainyWeight: 0.6
+  eveningSunnyWeight: 0.9
+  eveningCloudyWeight: 1.25
+  eveningRainyWeight: 1
+  nightSunnyWeight: 0.5
+  nightCloudyWeight: 1.2
+  nightRainyWeight: 1.35
