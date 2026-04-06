@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038730444654434510
 Transform:
   m_ObjectHideFlags: 0
@@ -198,6 +198,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4889201344145374300, guid: 60054d41bf0157d42876b93fd920f130, type: 3}
@@ -344,7 +348,37 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3342747731834570494}
+    - targetCorrespondingSourceObject: {fileID: 3849762623622064168, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5600275130927289084}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+--- !u!1 &6476693374182093344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3849762623622064168, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
+  m_PrefabInstance: {fileID: 7821852029595048456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &5600275130927289084
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476693374182093344}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -125435165217083709, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
 --- !u!1 &6939384206990731097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1aa9641066908e9458f40ed798e4a856, type: 3}
