@@ -52,6 +52,26 @@ public class WeatherManager : MonoBehaviour
     [Range(0f, 1f)] public float maxRainIntensity = 1.0f;
     private float targetRainIntensity = 0f;
 
+    [Header("Heavy Rain Event")]
+    public bool useHeavyRainEvents = true;
+    [Range(0f, 1f)] public float heavyRainEventChancePerSecond = 0.03f;
+    public Vector2 heavyRainEventDurationRange = new Vector2(8f, 15f);
+    public float heavyRainEventMultiplier = 1.35f;
+
+    [Range(0f, 1f)] public float heavyRainFogBonusMultiplier = 0.2f;
+    [Range(0f, 1f)] public float heavyRainAudioBonusMultiplier = 0.2f;
+
+    public bool heavyRainEventActive = false;
+
+    private float heavyRainEventTimer = 0f;
+    private float currentHeavyRainEventDuration = 0f;
+    private bool heavyRainWasActiveLastFrame = false;
+
+    [Header("Post-Storm Sunny Boost")]
+    public bool usePostStormSunnyBoost = true;
+    [Range(0f, 1f)] public float postStormSunnyChance = 0.35f;
+    public bool postStormSunnyBoostActive = false;
+
     [Header("Sunny Settings")]
     public float sunnySunMultiplier = 1.0f;
     public float sunnyAmbientMultiplier = 1.0f;
@@ -85,7 +105,7 @@ public class WeatherManager : MonoBehaviour
     public bool rainyUseFog = true;
     public float rainyFogMultiplier = 1.2f;
 
-    [Header("Automatic Weather Weights")]
+    [Header("Base Automatic Weather Weights")]
     [Range(0f, 1f)] public float sunnyToSunnyChance = 0.35f;
 
     [Range(0f, 1f)] public float cloudyToSunnyChance = 0.30f;
@@ -134,6 +154,8 @@ public class WeatherManager : MonoBehaviour
         lastAutomaticWeatherState = useAutomaticWeather;
 
         RefreshRainIntensityTarget(true);
+        ResetHeavyRainEvent();
+        postStormSunnyBoostActive = false;
         UpdateWeatherTargets();
 
         if (timeOfDayManager != null)
@@ -161,6 +183,7 @@ public class WeatherManager : MonoBehaviour
         HandleAutomaticWeather();
 
         UpdateRainIntensity();
+        UpdateHeavyRainEvent();
         UpdateWeatherTargets();
 
         timeOfDayManager.sunIntensityMultiplier = Mathf.Lerp(
@@ -199,6 +222,8 @@ public class WeatherManager : MonoBehaviour
         {
             previousWeather = currentWeather;
             RefreshRainIntensityTarget(false);
+            ResetHeavyRainEvent();
+            postStormSunnyBoostActive = false;
             ResetWeatherTimer();
         }
     }
@@ -214,6 +239,7 @@ public class WeatherManager : MonoBehaviour
             currentWeather = GetNextWeather(currentWeather);
             previousWeather = currentWeather;
             RefreshRainIntensityTarget(false);
+            ResetHeavyRainEvent();
             ResetWeatherTimer();
         }
     }
@@ -248,6 +274,64 @@ public class WeatherManager : MonoBehaviour
             targetRainIntensity,
             Time.deltaTime * rainIntensityTransitionSpeed
         );
+    }
+
+    private void ResetHeavyRainEvent()
+    {
+        heavyRainEventActive = false;
+        heavyRainEventTimer = 0f;
+        currentHeavyRainEventDuration = 0f;
+    }
+
+    private void UpdateHeavyRainEvent()
+    {
+        if (!useHeavyRainEvents)
+        {
+            heavyRainEventActive = false;
+            heavyRainWasActiveLastFrame = false;
+            return;
+        }
+
+        if (currentWeather != WeatherType.Rainy)
+        {
+            ResetHeavyRainEvent();
+            heavyRainWasActiveLastFrame = false;
+            return;
+        }
+
+        if (heavyRainEventActive)
+        {
+            heavyRainEventTimer += Time.deltaTime;
+
+            if (heavyRainEventTimer >= currentHeavyRainEventDuration)
+            {
+                ResetHeavyRainEvent();
+            }
+        }
+        else
+        {
+            float triggerChance = heavyRainEventChancePerSecond * Time.deltaTime;
+
+            if (Random.value < triggerChance)
+            {
+                heavyRainEventActive = true;
+                heavyRainEventTimer = 0f;
+                currentHeavyRainEventDuration = Random.Range(
+                    heavyRainEventDurationRange.x,
+                    heavyRainEventDurationRange.y
+                );
+            }
+        }
+
+        if (usePostStormSunnyBoost)
+        {
+            if (heavyRainWasActiveLastFrame && !heavyRainEventActive)
+            {
+                postStormSunnyBoostActive = true;
+            }
+        }
+
+        heavyRainWasActiveLastFrame = heavyRainEventActive;
     }
 
     private WeatherType GetNextWeather(WeatherType current)
@@ -291,15 +375,35 @@ public class WeatherManager : MonoBehaviour
 
             case WeatherType.Rainy:
                 {
-                    float cloudyWeight;
-                    float rainyWeight;
+                    if (usePostStormSunnyBoost && postStormSunnyBoostActive)
+                    {
+                        float sunnyWeight = postStormSunnyChance;
+                        float cloudyWeight;
+                        float rainyWeight;
 
-                    GetWeightedRainPair(period, out cloudyWeight, out rainyWeight);
+                        GetWeightedRainPair(period, out cloudyWeight, out rainyWeight);
 
-                    return GetWeightedChoice(
-                        WeatherType.Cloudy, cloudyWeight,
-                        WeatherType.Rainy, rainyWeight
-                    );
+                        WeatherType result = GetWeightedChoice(
+                            WeatherType.Sunny, sunnyWeight,
+                            WeatherType.Cloudy, cloudyWeight,
+                            WeatherType.Rainy, rainyWeight
+                        );
+
+                        postStormSunnyBoostActive = false;
+                        return result;
+                    }
+                    else
+                    {
+                        float cloudyWeight;
+                        float rainyWeight;
+
+                        GetWeightedRainPair(period, out cloudyWeight, out rainyWeight);
+
+                        return GetWeightedChoice(
+                            WeatherType.Cloudy, cloudyWeight,
+                            WeatherType.Rainy, rainyWeight
+                        );
+                    }
                 }
         }
 
@@ -327,6 +431,14 @@ public class WeatherManager : MonoBehaviour
                     return WeatherType.Rainy;
 
             case WeatherType.Rainy:
+                if (usePostStormSunnyBoost && postStormSunnyBoostActive)
+                {
+                    postStormSunnyBoostActive = false;
+
+                    if (roll < postStormSunnyChance)
+                        return WeatherType.Sunny;
+                }
+
                 if (roll < rainyToCloudyChance)
                     return WeatherType.Cloudy;
                 else
@@ -464,6 +576,7 @@ public class WeatherManager : MonoBehaviour
     private void UpdateWeatherTargets()
     {
         float rainFactor = currentRainIntensity;
+        float eventFactor = heavyRainEventActive ? heavyRainEventMultiplier : 1f;
 
         switch (currentWeather)
         {
@@ -494,13 +607,24 @@ public class WeatherManager : MonoBehaviour
             case WeatherType.Rainy:
                 targetSunMultiplier = rainySunMultiplier;
                 targetAmbientMultiplier = rainyAmbientMultiplier;
-                targetRainMainRate = rainyRainMainRate * rainFactor;
-                targetRainNearRate = rainyRainNearRate * rainFactor;
-                targetRainSplashBaseRate = rainyRainSplashBaseRate * rainFactor;
-                targetRainSplashAccentRate = rainyRainSplashAccentRate * rainFactor;
+                targetRainMainRate = rainyRainMainRate * rainFactor * eventFactor;
+                targetRainNearRate = rainyRainNearRate * rainFactor * eventFactor;
+                targetRainSplashBaseRate = rainyRainSplashBaseRate * rainFactor * eventFactor;
+                targetRainSplashAccentRate = rainyRainSplashAccentRate * rainFactor * eventFactor;
                 targetRainAudioVolume = rainyRainAudioVolume * rainFactor;
+
+                if (heavyRainEventActive)
+                {
+                    targetRainAudioVolume *= (1f + heavyRainAudioBonusMultiplier);
+                }
+
                 targetUseFog = rainyUseFog;
                 targetFogMultiplier = rainyFogMultiplier * Mathf.Lerp(0.7f, 1f, rainFactor);
+
+                if (heavyRainEventActive)
+                {
+                    targetFogMultiplier *= (1f + heavyRainFogBonusMultiplier);
+                }
                 break;
 
             default:

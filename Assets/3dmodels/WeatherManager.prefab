@@ -51,10 +51,10 @@ MonoBehaviour:
   rainSplashAccentParticleSystem: {fileID: 0}
   rainAudioSource: {fileID: 0}
   currentWeather: 0
-  useAutomaticWeather: 0
-  weatherDurationRange: {x: 5, y: 10}
-  randomizeInitialWeather: 0
-  useTimeWeightedWeather: 0
+  useAutomaticWeather: 1
+  weatherDurationRange: {x: 20, y: 40}
+  randomizeInitialWeather: 1
+  useTimeWeightedWeather: 1
   transitionSpeed: 1
   rainTransitionSpeed: 1.2
   fogTransitionSpeed: 1
@@ -62,6 +62,16 @@ MonoBehaviour:
   currentRainIntensity: 0
   minRainIntensity: 0.35
   maxRainIntensity: 1
+  useHeavyRainEvents: 1
+  heavyRainEventChancePerSecond: 0.075
+  heavyRainEventDurationRange: {x: 8, y: 15}
+  heavyRainEventMultiplier: 1.35
+  heavyRainFogBonusMultiplier: 0.2
+  heavyRainAudioBonusMultiplier: 0.2
+  heavyRainEventActive: 0
+  usePostStormSunnyBoost: 1
+  postStormSunnyChance: 0.35
+  postStormSunnyBoostActive: 0
   sunnySunMultiplier: 1
   sunnyAmbientMultiplier: 1
   sunnyRainMainRate: 0
